@@ -17,35 +17,6 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
     with TickerProviderStateMixin {
   late DeskrdyhjModel _model;
 
-  final animationsMap = {
-    'stackOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.linear,
-          delay: 0.ms,
-          duration: 800.ms,
-          begin: const Offset(1.0, 1.0),
-          end: const Offset(3.0, 1.5),
-        ),
-      ],
-    ),
-    'textOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.linear,
-          delay: 0.ms,
-          duration: 800.ms,
-          begin: const Offset(1.0, 1.0),
-          end: const Offset(0.3333, 0.6666),
-        ),
-      ],
-    ),
-  };
-
   @override
   void setState(VoidCallback callback) {
     super.setState(callback);
@@ -56,13 +27,6 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => DeskrdyhjModel());
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
   }
 
   @override
@@ -125,14 +89,10 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                                       letterSpacing: 6.0,
                                       fontWeight: FontWeight.bold,
                                     ),
-                              ).animateOnActionTrigger(
-                                animationsMap['textOnActionTriggerAnimation']!,
                               ),
                             ),
                           ),
                         ],
-                      ).animateOnActionTrigger(
-                        animationsMap['stackOnActionTriggerAnimation']!,
                       ),
                     ),
                   ),
