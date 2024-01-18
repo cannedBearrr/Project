@@ -1,21 +1,11 @@
 import '/assets/deskrdyhj/deskrdyhj_widget.dart';
-import '/assets/menu/menu_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
 import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
 import 'parent_portal_widget.dart' show ParentPortalWidget;
 import 'package:expandable/expandable.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
   ///  State fields for stateful widgets in this page.
@@ -69,6 +59,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
     mobilefixinfdCopyModel =
         createModel(context, () => MobilefixinfdCopyModel());
@@ -76,6 +67,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
     deskrdyhjModel = createModel(context, () => DeskrdyhjModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     mobilefixinfdCopyModel.dispose();

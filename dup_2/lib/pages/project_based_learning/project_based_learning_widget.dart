@@ -1,15 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'project_based_learning_model.dart';
 export 'project_based_learning_model.dart';
 
 class ProjectBasedLearningWidget extends StatefulWidget {
-  const ProjectBasedLearningWidget({Key? key}) : super(key: key);
+  const ProjectBasedLearningWidget({super.key});
 
   @override
   _ProjectBasedLearningWidgetState createState() =>

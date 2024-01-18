@@ -1,15 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'partnership_with_companies_model.dart';
 export 'partnership_with_companies_model.dart';
 
 class PartnershipWithCompaniesWidget extends StatefulWidget {
-  const PartnershipWithCompaniesWidget({Key? key}) : super(key: key);
+  const PartnershipWithCompaniesWidget({super.key});
 
   @override
   _PartnershipWithCompaniesWidgetState createState() =>

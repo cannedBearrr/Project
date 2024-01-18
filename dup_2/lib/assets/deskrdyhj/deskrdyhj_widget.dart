@@ -2,16 +2,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'deskrdyhj_model.dart';
 export 'deskrdyhj_model.dart';
 
 class DeskrdyhjWidget extends StatefulWidget {
-  const DeskrdyhjWidget({Key? key}) : super(key: key);
+  const DeskrdyhjWidget({super.key});
 
   @override
   _DeskrdyhjWidgetState createState() => _DeskrdyhjWidgetState();
@@ -30,8 +26,8 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
           curve: Curves.linear,
           delay: 0.ms,
           duration: 800.ms,
-          begin: Offset(1.0, 1.0),
-          end: Offset(3.0, 1.5),
+          begin: const Offset(1.0, 1.0),
+          end: const Offset(3.0, 1.5),
         ),
       ],
     ),
@@ -43,8 +39,8 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
           curve: Curves.linear,
           delay: 0.ms,
           duration: 800.ms,
-          begin: Offset(1.0, 1.0),
-          end: Offset(0.3333, 0.6666),
+          begin: const Offset(1.0, 1.0),
+          end: const Offset(0.3333, 0.6666),
         ),
       ],
     ),
@@ -92,7 +88,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.2,
                       height: MediaQuery.sizeOf(context).height * 0.5,
@@ -102,7 +98,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
@@ -114,9 +110,9 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(1.0, 1.0),
+                            alignment: const AlignmentDirectional(1.0, 1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 15.0, 15.0),
                               child: Text(
                                 'REWARD',
@@ -142,37 +138,37 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.05,
                       height: MediaQuery.sizeOf(context).height * 0.35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFF1F4477),
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 20.0)),
+                ].divide(const SizedBox(width: 20.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 0.5,
                   height: MediaQuery.sizeOf(context).height * 0.5,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0x00FFFFFF),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
+                    alignment: const AlignmentDirectional(1.0, -1.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.4,
                       height: MediaQuery.sizeOf(context).height * 0.22,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x00FFFFFF),
                       ),
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
@@ -184,9 +180,9 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 1.0),
+                            alignment: const AlignmentDirectional(-1.0, 1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   15.0, 0.0, 0.0, 15.0),
                               child: Text(
                                 'NETWORKING',
@@ -217,25 +213,25 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(100.0, 0.0, 0.0, 100.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(100.0, 0.0, 0.0, 100.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 0.49,
                   height: MediaQuery.sizeOf(context).height * 0.5,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0x00FFFFFF),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(1.0, 1.0),
+                    alignment: const AlignmentDirectional(1.0, 1.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.6,
                       height: MediaQuery.sizeOf(context).height * 0.3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x00FFFFFF),
                       ),
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
@@ -247,16 +243,16 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 15.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, -1.0),
+                                    alignment: const AlignmentDirectional(1.0, -1.0),
                                     child: Text(
                                       'Professional',
                                       style: FlutterFlowTheme.of(context)
@@ -292,7 +288,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 100.0, 100.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 100.0, 100.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -301,7 +297,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                     Container(
                       width: MediaQuery.sizeOf(context).width * 0.05,
                       height: MediaQuery.sizeOf(context).height * 0.35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFEEB609),
                       ),
                     ),
@@ -323,7 +319,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 15.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -359,7 +355,7 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                         ],
                       ),
                     ),
-                  ].divide(SizedBox(width: 20.0)),
+                  ].divide(const SizedBox(width: 20.0)),
                 ),
               ),
             ],
