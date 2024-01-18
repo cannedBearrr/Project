@@ -1,14 +1,11 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menu_model.dart';
 export 'menu_model.dart';
 
 class MenuWidget extends StatefulWidget {
-  const MenuWidget({Key? key}) : super(key: key);
+  const MenuWidget({super.key});
 
   @override
   _MenuWidgetState createState() => _MenuWidgetState();
@@ -57,7 +54,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
               'ABOUT US',
               style: FlutterFlowTheme.of(context).bodyMedium,
@@ -87,7 +84,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             'WORK WITH US',
             style: FlutterFlowTheme.of(context).bodyMedium,
           ),
-        ].divide(SizedBox(height: 50.0)).addToStart(SizedBox(height: 50.0)),
+        ].divide(const SizedBox(height: 50.0)).addToStart(const SizedBox(height: 50.0)),
       ),
     );
   }
