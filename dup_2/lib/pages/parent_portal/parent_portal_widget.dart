@@ -1,4 +1,4 @@
-import '/assets/deskrdyhj/deskrdyhj_widget.dart';
+import '/assets/animation/animation_widget.dart';
 import '/assets/menu/menu_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
 import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
@@ -1814,9 +1814,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           height: MediaQuery.sizeOf(context).height * 1.08,
                           decoration: const BoxDecoration(),
                           child: wrapWithModel(
-                            model: _model.deskrdyhjModel,
+                            model: _model.animationModel,
                             updateCallback: () => setState(() {}),
-                            child: const DeskrdyhjWidget(),
+                            child: const AnimationWidget(),
                           ),
                         ),
                       ],

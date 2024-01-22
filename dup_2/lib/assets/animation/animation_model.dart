@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'deskrdyhj_widget.dart' show DeskrdyhjWidget;
+import 'animation_widget.dart' show AnimationWidget;
 import 'package:flutter/material.dart';
 
-class DeskrdyhjModel extends FlutterFlowModel<DeskrdyhjWidget> {
+class AnimationModel extends FlutterFlowModel<AnimationWidget> {
   /// Initialization and disposal methods.
 
   @override
