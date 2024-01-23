@@ -96,7 +96,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
                   padding: const EdgeInsetsDirectional.fromSTEB(
                       100.0, 100.0, 0.0, 0.0),
                   child: TweenAnimationBuilder<double>(
-                    curve: Curves.easeOutCubic,
+                    curve: Curves.easeOutQuart,
                     tween: Tween<double>(begin: tW_1, end: tW,),
                     duration: const Duration(milliseconds: 600),
                     builder:
@@ -119,8 +119,11 @@ class _AnimationWidgetState extends State<AnimationWidget>
                             Widget? child) {
                           return GestureDetector(
                             onTap: () async {
+                              // Reset all other
                               yV_1 = yV = 0.44;
                               yW_1 = yW = 0.22;
+                              trPri = 0;
+                              _05to1tr = 0.5;
                               setState(() {
                                 tV_1 = value;
                                 tW_1 = value2;
@@ -214,7 +217,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
               padding:
                   const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
               child: TweenAnimationBuilder<double>(
-                curve: Curves.easeOutCubic,
+                curve: Curves.easeOutQuart,
                 tween: Tween<double>(begin: yW_1, end: yW,),
                 duration: const Duration(milliseconds: 600),
                 builder: (BuildContext context, double value3, Widget? child) {
@@ -236,8 +239,11 @@ class _AnimationWidgetState extends State<AnimationWidget>
                     builder: (BuildContext context, double value1, Widget? child) {
                       return GestureDetector(
                         onTap: () async {
+                          // Reset all other
                           tV_1 = tV = 0.2;
                           tW_1 = tW = 0.4;
+                          tlPri = 0;
+                          _05to1tl = 0.5;
                           setState(() {
                             yV_1 = value1;
                             yW_1 = value3;
