@@ -22,8 +22,12 @@ class _AnimationWidgetState extends State<AnimationWidget>
 
   double tV = 0.2;
   double tV_1 = 0.2;
-  double yV = 0.22;
-  double yV_1 = 0.22;
+  double tW = 0.4;
+  double tW_1 = 0.4;
+  double yV = 0.44;
+  double yV_1 = 0.44;
+  double yW = 0.22;
+  double yW_1 = 0.22;
   double uV = 0.2;
   double uV_1 = 0.2;
   double iV = 0.2;
@@ -92,78 +96,93 @@ class _AnimationWidgetState extends State<AnimationWidget>
                   padding: const EdgeInsetsDirectional.fromSTEB(
                       100.0, 100.0, 0.0, 0.0),
                   child: TweenAnimationBuilder<double>(
-                    curve: Curves.easeOutQuart,
-                    tween: Tween<double>(
-                      begin: tV_1,
-                      end: tV,
-                    ),
+                    curve: Curves.easeOutCubic,
+                    tween: Tween<double>(begin: tW_1, end: tW,),
                     duration: const Duration(milliseconds: 600),
-                    onEnd: () async {
-                      if (tV == 0.2) {
-                        tlPri = 0;
-                        print("low");
-                        _05to1tl = 0.5;
-                      }
-                    },
                     builder:
-                        (BuildContext context, double value, Widget? child) {
-                      return GestureDetector(
-                        onTap: () async {
-                          setState(() {
-                            tV_1 = value;
-                            tV = tV == 0.2 ? 0.6 : 0.2;
-                            if (tV == 0.6) {
-                              tlPri = 1;
-                              print("hi");
-                              _05to1tl = 1.0;
-                            }
-                            print(tV);
-                          });
-                        },
-                        child: Container(
-                          width: MediaQuery.sizeOf(context).width * value,
-                          height: MediaQuery.sizeOf(context).height *
-                              ((value + 0.3) / 2 + 0.25),
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/658/600',
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(1.0, 1.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 15.0, 15.0),
-                                  child: Text(
-                                    'REWARD',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 38.0,
-                                          letterSpacing: 6.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                        (BuildContext context, double value2, Widget? child) {
+                      return TweenAnimationBuilder<double>(
+                        curve: Curves.easeOutQuart,
+                        tween: Tween<double>(
+                          begin: tV_1,
+                          end: tV,
                         ),
+                        duration: const Duration(milliseconds: 600),
+                        onEnd: () async {
+                          if (tV == 0.2) {
+                            tlPri = 0;
+                            print("low");
+                            _05to1tl = 0.5;
+                          }
+                        },
+                        builder: (BuildContext context, double value,
+                            Widget? child) {
+                          return GestureDetector(
+                            onTap: () async {
+                              yV_1 = yV = 0.44;
+                              yW_1 = yW = 0.22;
+                              setState(() {
+                                tV_1 = value;
+                                tW_1 = value2;
+                                tV = tV == 0.2 ? 0.6 : 0.2;
+                                tW = tW == 0.4 ? 0.75 : 0.4;
+                                if (tV == 0.6) {
+                                  tlPri = 1;
+                                  print("hi");
+                                  _05to1tl = 1.0;
+                                }
+                                print(tV);
+                              });
+                            },
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * value,
+                              height:
+                                  MediaQuery.sizeOf(context).height * value2,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child: Stack(
+                                children: [
+                                  Align(
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
+                                    child: ClipRRect(
+                                      borderRadius:
+                                          BorderRadius.circular(0.0),
+                                      child: Image.network(
+                                        'https://picsum.photos/seed/658/600',
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional
+                                          .fromSTEB(0.0, 0.0, 15.0, 15.0),
+                                      child: Text(
+                                        'REWARD',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 38.0,
+                                              letterSpacing: 6.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
                       );
                     },
                   ),
@@ -195,82 +214,90 @@ class _AnimationWidgetState extends State<AnimationWidget>
               padding:
                   const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
               child: TweenAnimationBuilder<double>(
-                curve: Curves.easeOutQuart,
-                tween: Tween<double>(
-                  begin: yV_1,
-                  end: yV,
-                ),
+                curve: Curves.easeOutCubic,
+                tween: Tween<double>(begin: yW_1, end: yW,),
                 duration: const Duration(milliseconds: 600),
-                onEnd: () async {
-                  if (yV == 0.22) {
-                    trPri = 0;
-                    print("low1");
-                    _05to1tr = 0.5;
-                  }
-                  print(_05to1tr);
-                },
-                builder: (BuildContext context, double value1, Widget? child) {
-                  return GestureDetector(
-                    onTap: () async {
-                      setState(() {
-                        yV_1 = value1;
-                        yV = yV == 0.22 ? 0.5 : 0.22;
-                        if (yV == 0.5) {
-                          trPri = 1;
-                          print("hi1");
-                          _05to1tr = 1.0;
-                        }
-                        print(yV);
-                      });
+                builder: (BuildContext context, double value3, Widget? child) {
+                  return TweenAnimationBuilder<double>(
+                    curve: Curves.easeOutQuart,
+                    tween: Tween<double>(
+                      begin: yV_1,
+                      end: yV,
+                    ),
+                    duration: const Duration(milliseconds: 600),
+                    onEnd: () async {
+                      if (yV == 0.44) {
+                        trPri = 0;
+                        print("low1");
+                        _05to1tr = 0.5;
+                      }
+                      print(_05to1tr);
                     },
-                    child: Align(
-                      alignment: const AlignmentDirectional(1.0, -1.0),
-                      child: Container(
-                        width: MediaQuery.sizeOf(context).width *
-                            (value1 + 0.38),
-                        height: MediaQuery.sizeOf(context).height * value1,
-                        decoration: const BoxDecoration(
-                          color: Color(0x00FFFFFF),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment:
-                                  const AlignmentDirectional(-1.0, 0.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/567/600',
-                                  width: double.infinity,
-                                  height: double.infinity,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
+                    builder: (BuildContext context, double value1, Widget? child) {
+                      return GestureDetector(
+                        onTap: () async {
+                          tV_1 = tV = 0.2;
+                          tW_1 = tW = 0.4;
+                          setState(() {
+                            yV_1 = value1;
+                            yW_1 = value3;
+                            yV = yV == 0.44 ? 0.75 : 0.44;
+                            yW = yW == 0.22 ? 0.6 : 0.22;
+                            if (yV == 0.75) {
+                              trPri = 1;
+                              print("hi1");
+                              _05to1tr = 1.0;
+                            }
+                            print(yV);
+                          });
+                        },
+                        child: Align(
+                          alignment: const AlignmentDirectional(1.0, -1.0),
+                          child: Container(
+                            width: MediaQuery.sizeOf(context).width * value1,
+                            height: MediaQuery.sizeOf(context).height * value3,
+                            decoration: const BoxDecoration(
+                              color: Color(0x00FFFFFF),
                             ),
-                            Align(
-                              alignment:
-                                  const AlignmentDirectional(-1.0, 1.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    15.0, 0.0, 0.0, 15.0),
-                                child: Text(
-                                  'NETWORKING',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
+                            child: Stack(
+                              children: [
+                                Align(
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    child: Image.network(
+                                      'https://picsum.photos/seed/567/600',
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(-1.0, 1.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        15.0, 0.0, 0.0, 15.0),
+                                    child: Text(
+                                      'NETWORKING',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
                                         fontFamily: 'Readex Pro',
                                         color: Colors.white,
                                         fontSize: 38.0,
                                         letterSpacing: 6.0,
                                         fontWeight: FontWeight.bold,
                                       ),
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   );
                 },
               ),
