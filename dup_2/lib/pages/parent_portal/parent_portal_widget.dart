@@ -2651,7 +2651,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         'https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzAxMzkxNTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080',
                                         width:
                                             MediaQuery.sizeOf(context).width *
-                                                0.334,
+                                                0.332,
                                         height:
                                             MediaQuery.sizeOf(context).height *
                                                 1.0,
@@ -2670,7 +2670,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
-                                                0.28,
+                                                0.2,
                                         height:
                                             MediaQuery.sizeOf(context).height *
                                                 0.18,
