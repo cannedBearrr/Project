@@ -339,8 +339,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       MediaQuery.sizeOf(context).height * 0.03,
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding:
+                                      const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
                                   color: const Color(0x004B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
@@ -431,10 +432,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               children: [
                                 const Spacer(),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, 1.0),
+                                  alignment:
+                                      const AlignmentDirectional(1.0, 1.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        75.0, 0.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            75.0, 0.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -443,9 +446,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 100.0, 0.0, 0.0),
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(0.0, 100.0, 0.0, 0.0),
                                           child: Text(
                                             'WHERE LEARNING MEETS',
                                             style: FlutterFlowTheme.of(context)
@@ -527,9 +529,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 0.0, 0.0),
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(0.0, 15.0, 0.0, 0.0),
                                           child: Container(
                                             width: 155.0,
                                             height: 40.0,
@@ -542,8 +543,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                              alignment:
+                                                  const AlignmentDirectional(
+                                                      0.0, 0.0),
                                               child: Text(
                                                 'Read More',
                                                 style:
@@ -559,7 +561,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                           ),
                                         ),
-                                      ].addToStart(const SizedBox(height: 15.0)),
+                                      ].addToStart(
+                                          const SizedBox(height: 15.0)),
                                     ),
                                   ),
                                 ),
@@ -603,7 +606,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'BENEFITS',
                                       style: FlutterFlowTheme.of(context)
@@ -698,8 +702,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Color(0x80000000),
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                         ),
                                         Container(
                                           width: double.infinity,
@@ -708,8 +712,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Colors.transparent,
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Container(
                                             width: 200.0,
                                             height: 52.0,
@@ -721,8 +725,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                              alignment:
+                                                  const AlignmentDirectional(
+                                                      0.0, 0.0),
                                               child: Text(
                                                 'Reward',
                                                 style:
@@ -780,7 +785,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(
+                                                    0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -792,7 +798,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -806,8 +813,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -821,7 +828,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -835,8 +843,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -897,8 +905,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Color(0x80000000),
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                         ),
                                         Container(
                                           width: double.infinity,
@@ -907,8 +915,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Colors.transparent,
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Container(
                                             width: 230.0,
                                             height: 52.0,
@@ -920,8 +928,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                              alignment:
+                                                  const AlignmentDirectional(
+                                                      0.0, 0.0),
                                               child: Text(
                                                 'Networking',
                                                 style:
@@ -979,7 +988,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(
+                                                    0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -991,7 +1001,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1005,8 +1016,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1020,7 +1031,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1034,8 +1046,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1049,7 +1061,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1063,8 +1076,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1078,7 +1091,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1092,8 +1106,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1154,8 +1168,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Color(0x80000000),
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                         ),
                                         Container(
                                           width: double.infinity,
@@ -1164,8 +1178,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Colors.transparent,
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Container(
                                             width: 250.0,
                                             height: 52.0,
@@ -1177,8 +1191,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                              alignment:
+                                                  const AlignmentDirectional(
+                                                      0.0, 0.0),
                                               child: Text(
                                                 'Build Portfolio',
                                                 style:
@@ -1236,7 +1251,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(
+                                                    0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -1248,7 +1264,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1262,8 +1279,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1277,7 +1294,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1291,8 +1309,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1353,8 +1371,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Color(0x60000000),
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                         ),
                                         Container(
                                           width: double.infinity,
@@ -1363,8 +1381,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             color: Colors.transparent,
                                             shape: BoxShape.rectangle,
                                           ),
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Container(
                                             width: 270.0,
                                             height: 52.0,
@@ -1376,8 +1394,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                              alignment:
+                                                  const AlignmentDirectional(
+                                                      0.0, 0.0),
                                               child: Text(
                                                 'Professional Skills',
                                                 style:
@@ -1435,7 +1454,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(
+                                                    0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -1447,7 +1467,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1461,8 +1482,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1476,7 +1497,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1490,8 +1512,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1505,7 +1527,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1519,8 +1542,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1534,7 +1557,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1548,8 +1572,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1563,7 +1587,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1577,8 +1602,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1592,7 +1617,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1606,8 +1632,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1621,7 +1647,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1635,8 +1662,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1650,7 +1677,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.transparent,
                                                     border: Border.all(
-                                                      color: const Color(0xDDFFFFFF),
+                                                      color: const Color(
+                                                          0xDDFFFFFF),
                                                     ),
                                                   ),
                                                   alignment:
@@ -1664,8 +1692,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xDDFFFFFF),
+                                                          color: const Color(
+                                                              0xDDFFFFFF),
                                                           fontSize: 19.0,
                                                           letterSpacing: 2.0,
                                                           fontWeight:
@@ -1728,7 +1756,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'BENEFITS',
                                       textAlign: TextAlign.center,
@@ -1791,7 +1820,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'BENEFITS',
                                       style: FlutterFlowTheme.of(context)
@@ -1949,11 +1979,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 desktop: false,
                               ))
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width:
-                                        MediaQuery.sizeOf(context).width * 0.6,
-                                    height: MediaQuery.sizeOf(context).height *
+                                        MediaQuery.of(context).size.width * 0.6,
+                                    height: MediaQuery.of(context).size.height *
                                         0.084,
                                     decoration: BoxDecoration(
                                       color: const Color(0x00FFFFFF),
@@ -1962,7 +1993,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         'Project - Based\nLearning',
                                         style: FlutterFlowTheme.of(context)
@@ -2014,11 +2046,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 desktop: false,
                               ))
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width:
-                                        MediaQuery.sizeOf(context).width * 0.6,
-                                    height: MediaQuery.sizeOf(context).height *
+                                        MediaQuery.of(context).size.width * 0.6,
+                                    height: MediaQuery.of(context).size.height *
                                         0.084,
                                     decoration: BoxDecoration(
                                       color: const Color(0x00FFFFFF),
@@ -2027,7 +2060,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         'Career - Oriented\nSkills',
                                         style: FlutterFlowTheme.of(context)
@@ -2079,7 +2113,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 desktop: false,
                               ))
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.6,
@@ -2092,7 +2127,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         'Partnerships with\nCompanies',
                                         style: FlutterFlowTheme.of(context)
@@ -2165,7 +2201,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Project - Based Learning',
                                       style: FlutterFlowTheme.of(context)
@@ -2227,7 +2264,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Career - Oriented Skills',
                                       style: FlutterFlowTheme.of(context)
@@ -2289,7 +2327,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       'Partnerships with Companies',
                                       style: FlutterFlowTheme.of(context)
@@ -2324,76 +2363,81 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Stack(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              children: [
-                                Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxzcGFjZXxlbnwwfHx8fDE3MDE0NDAyMjJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.334,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              1.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                                if (responsiveVisibility(
-                                  context: context,
-                                  phone: false,
-                                  tablet: false,
-                                ))
+                            Flexible(
+                              child: Stack(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: Container(
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.28,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.18,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0x00FFFFFF),
-                                        border: Border.all(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      child: Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'Project - Based\nLearning',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: Colors.white,
-                                                fontSize: 33.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(0.0),
+                                      child: Image.network(
+                                        'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxzcGFjZXxlbnwwfHx8fDE3MDE0NDAyMjJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.334,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                1.0,
+                                        fit: BoxFit.cover,
                                       ),
                                     ),
                                   ),
-                              ],
+                                  if (responsiveVisibility(
+                                    context: context,
+                                    phone: false,
+                                    tablet: false,
+                                  ))
+                                    Align(
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.18,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0x00FFFFFF),
+                                          border: Border.all(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        child: Align(
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
+                                          child: Text(
+                                            'Project - Based\nLearning',
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 33.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                ],
+                              ),
                             ),
                             Stack(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.network(
                                       'https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzAxMzkxNTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.334,
+                                      width: MediaQuery.of(context).size.width,
                                       height:
-                                          MediaQuery.sizeOf(context).height *
+                                          MediaQuery.of(context).size.height *
                                               1.0,
                                       fit: BoxFit.cover,
                                     ),
@@ -2405,12 +2449,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   tablet: false,
                                 ))
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Container(
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.28,
+                                      width: MediaQuery.of(context).size.width,
                                       height:
-                                          MediaQuery.sizeOf(context).height *
+                                          MediaQuery.of(context).size.height *
                                               0.18,
                                       decoration: BoxDecoration(
                                         color: const Color(0x00FFFFFF),
@@ -2419,8 +2463,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       child: Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(
+                                            0.0, 0.0),
                                         child: Text(
                                           'Career - Oriented\nSkills',
                                           textAlign: TextAlign.center,
@@ -2442,15 +2486,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.network(
                                       'https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHx0ZWF8ZW58MHx8fHwxNzAxNDAwNDUyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                      width: MediaQuery.sizeOf(context).width *
+                                      width: MediaQuery.of(context).size.width *
                                           0.334,
                                       height:
-                                          MediaQuery.sizeOf(context).height *
+                                          MediaQuery.of(context).size.height *
                                               1.0,
                                       fit: BoxFit.cover,
                                     ),
@@ -2462,7 +2507,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   tablet: false,
                                 ))
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.28,
@@ -2476,8 +2522,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       child: Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(
+                                            0.0, 0.0),
                                         child: Text(
                                           'Partnerships with\nCompanies',
                                           textAlign: TextAlign.center,
@@ -2527,7 +2573,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: Image.network(
@@ -2548,7 +2595,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     tablet: false,
                                   ))
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
@@ -2563,8 +2611,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         child: Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Text(
                                             'Project - Based\nLearning',
                                             textAlign: TextAlign.center,
@@ -2595,7 +2643,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: Image.network(
@@ -2616,7 +2665,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     tablet: false,
                                   ))
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(0.0, 0.0),
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
@@ -2631,8 +2681,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         child: Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Text(
                                             'Career - Oriented\nSkills',
                                             textAlign: TextAlign.center,
@@ -2663,7 +2713,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: Image.network(
@@ -2684,7 +2735,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     tablet: false,
                                   ))
                                     Align(
-                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                      alignment:
+                                          const AlignmentDirectional(1.0, 0.0),
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
@@ -2699,8 +2751,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         child: Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Text(
                                             'Partnerships with\nCompanies',
                                             textAlign: TextAlign.center,
@@ -2731,8 +2783,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                   desktop: false,
                 ))
                   Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 13.0, 0.0, 11.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 13.0, 0.0, 11.0),
                     child: Container(
                       width: double.infinity,
                       height: 315.0,
@@ -2797,8 +2849,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                   desktop: false,
                 ))
                   Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 26.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 25.0, 0.0, 26.0),
                     child: Stack(
                       children: [
                         Align(
@@ -2996,7 +3048,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     children: [
                                       ClipRRect(
                                         borderRadius:
-                                            BorderRadius.circular(8.0),
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3005,14 +3057,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(
+                                            0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
                                                       0.0, 55.0, 0.0, 0.0),
                                               child: Container(
                                                 width: 100.0,
@@ -3033,8 +3086,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Column(
                                                     mainAxisSize:
@@ -3080,7 +3134,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.9,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration:
+                                                      const BoxDecoration(),
                                                   child: Text(
                                                     '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
                                                     style: FlutterFlowTheme.of(
@@ -3096,7 +3151,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(height: 20.0)),
+                                              ].divide(
+                                                  const SizedBox(height: 20.0)),
                                             ),
                                           ],
                                         ),
@@ -3112,8 +3168,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3177,8 +3231,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xAAFFFFFF),
+                                                          color: const Color(
+                                                              0xAAFFFFFF),
                                                           fontSize: 22.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -3188,7 +3242,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                               Container(
                                                 width: 400.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration:
+                                                    const BoxDecoration(),
                                                 child: Text(
                                                   '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
                                                   style: FlutterFlowTheme.of(
@@ -3204,7 +3259,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(height: 20.0)),
+                                            ].divide(
+                                                const SizedBox(height: 20.0)),
                                           ),
                                         ].divide(const SizedBox(width: 65.0)),
                                       ),
@@ -3219,8 +3275,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3297,18 +3351,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               FontWeight.w200,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 20.0)),
+                                            ].divide(
+                                                const SizedBox(height: 20.0)),
                                           ),
                                         ]
                                             .divide(const SizedBox(width: 25.0))
-                                            .addToStart(const SizedBox(width: 100.0)),
+                                            .addToStart(
+                                                const SizedBox(width: 100.0)),
                                       ),
                                     ],
                                   ),
                               ],
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/226/600',
                                 width: 300.0,
@@ -3317,7 +3372,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/541/600',
                                 width: 300.0,
@@ -3326,7 +3380,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/850/600',
                                 width: 300.0,
@@ -3335,7 +3388,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/905/600',
                                 width: 300.0,
@@ -3413,14 +3465,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(
+                                            0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
                                                       0.0, 55.0, 0.0, 0.0),
                                               child: Container(
                                                 width: 100.0,
@@ -3441,8 +3494,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Column(
                                                     mainAxisSize:
@@ -3488,7 +3542,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.9,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration:
+                                                      const BoxDecoration(),
                                                   child: Text(
                                                     '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
                                                     style: FlutterFlowTheme.of(
@@ -3504,7 +3559,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(height: 20.0)),
+                                              ].divide(
+                                                  const SizedBox(height: 20.0)),
                                             ),
                                           ],
                                         ),
@@ -3585,8 +3641,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color:
-                                                              const Color(0xAAFFFFFF),
+                                                          color: const Color(
+                                                              0xAAFFFFFF),
                                                           fontSize: 22.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -3596,7 +3652,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                               Container(
                                                 width: 400.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration:
+                                                    const BoxDecoration(),
                                                 child: Text(
                                                   '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
                                                   style: FlutterFlowTheme.of(
@@ -3612,7 +3669,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(height: 20.0)),
+                                            ].divide(
+                                                const SizedBox(height: 20.0)),
                                           ),
                                         ].divide(const SizedBox(width: 65.0)),
                                       ),
@@ -3705,11 +3763,13 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               FontWeight.w200,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 20.0)),
+                                            ].divide(
+                                                const SizedBox(height: 20.0)),
                                           ),
                                         ]
                                             .divide(const SizedBox(width: 25.0))
-                                            .addToStart(const SizedBox(width: 100.0)),
+                                            .addToStart(
+                                                const SizedBox(width: 100.0)),
                                       ),
                                     ],
                                   ),
@@ -3788,8 +3848,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 20.0, 0.0, 20.0),
                     child: Stack(
                       children: [
                         Align(
@@ -3822,30 +3882,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   focusColor: Colors.transparent,
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
-                                  // onTap: () async {
-                                  //   await showModalBottomSheet(
-                                  //     isScrollControlled: true,
-                                  //     backgroundColor: const Color(0x00A86D6D),
-                                  //     enableDrag: false,
-                                  //     context: context,
-                                  //     // builder: (context) {
-                                  //     //   // return GestureDetector(
-                                  //     //   //   onTap: () => _model
-                                  //     //   //           .unfocusNode.canRequestFocus
-                                  //     //   //       ? FocusScope.of(context)
-                                  //     //   //           .requestFocus(
-                                  //     //   //               _model.unfocusNode)
-                                  //     //   //       : FocusScope.of(context)
-                                  //     //   //           .unfocus(),
-                                  //     //   //   // child: Padding(
-                                  //     //   //   //   padding: MediaQuery.viewInsetsOf(
-                                  //     //   //   //       context),
-                                  //     //   //   //   // child: const MenuWidget(),
-                                  //     //   //   // ),
-                                  //     //   // );
-                                  //     // },
-                                  //   // ).then((value) => safeSetState(() {}));
-                                  // },
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.network(
@@ -3893,9 +3929,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                         ),
                                         Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 0.0, 2.0, 0.0),
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(2.0, 0.0, 2.0, 0.0),
                                           child: Text(
                                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eros sed ullamcorper accumsan. Aenean condimentum, massa in dapibus tempor, leo velit feugiat dui, nec tristique tortor erat ut nisl.',
                                             textAlign: TextAlign.center,
@@ -3909,9 +3944,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                         Flexible(
                                           child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 11.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 0.0, 11.0),
                                             child: SizedBox(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
@@ -3935,7 +3969,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           .labelMedium,
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: const BorderSide(
+                                                    borderSide:
+                                                        const BorderSide(
                                                       color: Colors.black,
                                                       width: 1.0,
                                                     ),
@@ -4007,7 +4042,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ]
                                           .divide(const SizedBox(height: 15.0))
-                                          .addToStart(const SizedBox(height: 25.0)),
+                                          .addToStart(
+                                              const SizedBox(height: 25.0)),
                                     ),
                                   ),
                                 if (responsiveVisibility(
@@ -4042,9 +4078,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                         ),
                                         Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 0.0, 2.0, 0.0),
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(2.0, 0.0, 2.0, 0.0),
                                           child: Text(
                                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eros sed ullamcorper accumsan. Aenean condimentum, massa in dapibus tempor, leo velit feugiat dui, nec tristique tortor erat ut nisl.',
                                             textAlign: TextAlign.center,
@@ -4054,9 +4089,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                         Flexible(
                                           child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 11.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 0.0, 11.0),
                                             child: SizedBox(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
@@ -4080,7 +4114,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           .labelMedium,
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: const BorderSide(
+                                                    borderSide:
+                                                        const BorderSide(
                                                       color: Colors.black,
                                                       width: 1.0,
                                                     ),
@@ -4152,7 +4187,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ]
                                           .divide(const SizedBox(height: 15.0))
-                                          .addToStart(const SizedBox(height: 25.0)),
+                                          .addToStart(
+                                              const SizedBox(height: 25.0)),
                                     ),
                                   ),
                               ].divide(const SizedBox(height: 20.0)),
@@ -4201,8 +4237,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 10.0, 0.0, 0.0),
                                       child: Text(
                                         'Hello World',
                                         style: FlutterFlowTheme.of(context)
@@ -4244,8 +4281,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 10.0, 0.0, 0.0),
                                       child: Text(
                                         'Hello World',
                                         style: FlutterFlowTheme.of(context)
@@ -4287,8 +4325,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 10.0, 0.0, 0.0),
                                       child: Text(
                                         'Hello World',
                                         style: FlutterFlowTheme.of(context)
@@ -4330,8 +4369,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 10.0, 0.0, 0.0),
                                       child: Text(
                                         'Hello World',
                                         style: FlutterFlowTheme.of(context)
@@ -4438,8 +4478,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 6.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 6.0, 0.0, 0.0),
                                     child: Text(
                                       'Hello World',
                                       style: FlutterFlowTheme.of(context)
@@ -4478,8 +4519,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 6.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 6.0, 0.0, 0.0),
                                     child: Text(
                                       'Hello World',
                                       style: FlutterFlowTheme.of(context)
@@ -4518,8 +4560,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 6.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 6.0, 0.0, 0.0),
                                     child: Text(
                                       'Hello World',
                                       style: FlutterFlowTheme.of(context)
@@ -4558,8 +4601,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 6.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 6.0, 0.0, 0.0),
                                     child: Text(
                                       'Hello World',
                                       style: FlutterFlowTheme.of(context)
