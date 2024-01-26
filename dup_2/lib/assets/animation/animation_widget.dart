@@ -1,10 +1,7 @@
-import 'dart:ui';
 
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'animation_model.dart';
 export 'animation_model.dart';
 import 'package:indexed/indexed.dart';
@@ -35,8 +32,8 @@ class _AnimationWidgetState extends State<AnimationWidget>
   int brPri = 0;
   double _05to1tl = 0.5;
   double _05to1tr = 0.5;
-  double _05to1bl = 0.5;
-  double _05to1br = 0.5;
+  final double _05to1bl = 0.5;
+  final double _05to1br = 0.5;
 
   // double lerp(double a, double b, double t) {
   //   return lerp(a, b, t);
@@ -223,51 +220,56 @@ class _AnimationWidgetState extends State<AnimationWidget>
                         print(yV);
                       });
                     },
-                    child: Align(
-                      alignment: const AlignmentDirectional(1.0, -1.0),
-                      child: Container(
-                        width: MediaQuery.sizeOf(context).width *
-                            (value1 + 0.38),
-                        height: MediaQuery.sizeOf(context).height * value1,
-                        decoration: const BoxDecoration(
-                          color: Color(0x00FFFFFF),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment:
-                                  const AlignmentDirectional(-1.0, 0.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/567/600',
-                                  width: double.infinity,
-                                  height: double.infinity,
-                                  fit: BoxFit.cover,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0x00FFFFFF),
+                      ),
+                      child: Align(
+                        alignment: const AlignmentDirectional(1.0, -1.0),
+                        child: Container(
+                          width: MediaQuery.sizeOf(context).width *
+                              (value1 + 0.38),
+                          height: MediaQuery.sizeOf(context).height * value1,
+                          decoration: const BoxDecoration(
+                            color: Color(0x00FFFFFF),
+                          ),
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment:
+                                    const AlignmentDirectional(-1.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(0.0),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/567/600',
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Align(
-                              alignment:
-                                  const AlignmentDirectional(-1.0, 1.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    15.0, 0.0, 0.0, 15.0),
-                                child: Text(
-                                  'NETWORKING',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: Colors.white,
-                                        fontSize: 38.0,
-                                        letterSpacing: 6.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              Align(
+                                alignment:
+                                    const AlignmentDirectional(-1.0, 1.0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      15.0, 0.0, 0.0, 15.0),
+                                  child: Text(
+                                    'NETWORKING',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                          fontSize: 38.0,
+                                          letterSpacing: 6.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
