@@ -2827,6 +2827,58 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                         ],
                       ),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 26.0),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 7.0),
+                                child: Text(
+                                  'How to get started ?',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 45.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 300.0,
+                                child: Divider(
+                                  thickness: 1.0,
+                                  color: Color(0xCC000000),
+                                ),
+                              ),
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      15.0, 5.0, 15.0, 0.0),
+                                  child: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 if (responsiveVisibility(
@@ -3798,31 +3850,35 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                GestureDetector(
-                                  // onTap: () async {
-                                  //   await showModalBottomSheet(
-                                  //     isScrollControlled: true,
-                                  //     backgroundColor: const Color(0x00A86D6D),
-                                  //     enableDrag: false,
-                                  //     context: context,
-                                  //     // builder: (context) {
-                                  //     //   // return GestureDetector(
-                                  //     //   //   onTap: () => _model
-                                  //     //   //           .unfocusNode.canRequestFocus
-                                  //     //   //       ? FocusScope.of(context)
-                                  //     //   //           .requestFocus(
-                                  //     //   //               _model.unfocusNode)
-                                  //     //   //       : FocusScope.of(context)
-                                  //     //   //           .unfocus(),
-                                  //     //   //   // child: Padding(
-                                  //     //   //   //   padding: MediaQuery.viewInsetsOf(
-                                  //     //   //   //       context),
-                                  //     //   //   //   // child: const MenuWidget(),
-                                  //     //   //   // ),
-                                  //     //   // );
-                                  //     // },
-                                  //   // ).then((value) => safeSetState(() {}));
-                                  // },
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: const Color(0x00A86D6D),
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child: const MenuWidget(),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
+                                  },
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.network(
