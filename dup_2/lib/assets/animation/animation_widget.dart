@@ -42,7 +42,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
   Color d2 = const Color(0xffeeb609);
   Color d2_1 = const Color(0xffeeb609);
 
-  Curve easeOutOrEaseInForColor = Curves.easeInQuart;
+  Curve easeOutOrEaseInForColor = const FlippedCurve(Curves.easeOutQuart);
 
   int tlPri = 0;
   int trPri = 0;
@@ -164,9 +164,9 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                         d1_1 = c!;
                                         easeOutOrEaseInForColor =
                                             easeOutOrEaseInForColor ==
-                                                    Curves.easeInQuart
+                                                const FlippedCurve(Curves.easeOutQuart)
                                                 ? Curves.easeOutQuart
-                                                : Curves.easeInQuart;
+                                                : const FlippedCurve(Curves.easeOutQuart);
                                         tV = tV == 0.2 ? 0.6 : 0.2;
                                         tW = tW == 0.4 ? 0.75 : 0.4;
                                         d1 = d1 == const Color(0xff1f4477)
@@ -608,9 +608,9 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                             d2_1 = c1!;
                                             easeOutOrEaseInForColor =
                                                 easeOutOrEaseInForColor ==
-                                                        Curves.easeInQuart
+                                                    const FlippedCurve(Curves.easeOutQuart)
                                                     ? Curves.easeOutQuart
-                                                    : Curves.easeInQuart;
+                                                    : const FlippedCurve(Curves.easeOutQuart);
                                             iV = iV == 0.25 ? 0.69 : 0.25;
                                             iW = iW == 0.47 ? 0.75 : 0.47;
                                             d2 = d2 == const Color(0xffeeb609)
