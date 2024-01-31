@@ -1789,26 +1789,35 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 370.0,
-                                  height: 75.0,
+                                  height: 77.0,
                                   decoration: BoxDecoration(
                                     color: const Color(0x00272727),
                                     border: Border.all(
                                       color: Colors.black,
                                     ),
                                   ),
-                                  child: Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.0, 0.0),
-                                    child: Text(
-                                      'BENEFITS',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 60.0,
-                                            letterSpacing: 5.0,
-                                            fontWeight: FontWeight.w900,
-                                          ),
+                                  child: OverflowBox(
+                                    minWidth: 0,
+                                    minHeight: 0,
+                                    maxWidth: double.infinity,
+                                    maxHeight: double.infinity,
+                                    child: SizedBox(
+                                      height: 90.0,
+                                      child: Align(
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: Text(
+                                          'BENEFITS',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 60.0,
+                                                letterSpacing: 5.0,
+                                                fontWeight: FontWeight.w900,
+                                              color: Colors.black,
+                                              ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -2739,7 +2748,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   29.0, 0.0, 29.0, 0.0),
                               child: Text(
-                                'How to get started ?',
+                                'How to get started ?',
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -2798,7 +2807,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 7.0),
                             child: Text(
-                              'How to get started ?',
+                              'How to get started ?',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -2857,7 +2866,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'How to get\nstarted ?',
+                            'How to get\nstarted ?',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -2921,13 +2930,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'How to get\nstarted ?',
+                            'How to get\nstarted ?',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
                                   fontSize: 90.0,
                                   fontWeight: FontWeight.bold,
+                                lineHeight: 1.08,
                                 ),
                           ),
                           const SizedBox(
@@ -2965,6 +2975,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           controller: _model.pageViewController1 ??=
                               PageController(initialPage: 0),
                           scrollDirection: Axis.horizontal,
+
                           children: [
                             Stack(
                               children: [
@@ -3097,6 +3108,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3204,6 +3217,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3389,7 +3404,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     children: [
                                       ClipRRect(
                                         borderRadius:
-                                            BorderRadius.circular(8.0),
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3510,7 +3525,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     children: [
                                       ClipRRect(
                                         borderRadius:
-                                            BorderRadius.circular(8.0),
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3619,7 +3634,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     children: [
                                       ClipRRect(
                                         borderRadius:
-                                            BorderRadius.circular(8.0),
+                                            BorderRadius.circular(0.0),
                                         child: Image.network(
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
@@ -3718,7 +3733,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/541/600',
                                 width: 300.0,
@@ -3727,7 +3742,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/850/600',
                                 width: 300.0,
@@ -3736,7 +3751,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
                                 'https://picsum.photos/seed/905/600',
                                 width: 300.0,
