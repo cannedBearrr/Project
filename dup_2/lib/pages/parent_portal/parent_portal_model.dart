@@ -1,4 +1,4 @@
-import '/assets/animation/animation_widget.dart';
+import '/assets/deskrdyhj/deskrdyhj_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
 import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -31,7 +31,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
   // Model for mobilefixinfd component.
   late MobilefixinfdModel mobilefixinfdModel;
   // Model for deskrdyhj component.
-  late AnimationModel animationModel;
+  late DeskrdyhjModel deskrdyhjModel;
   // State field(s) for PageView widget.
   PageController? pageViewController1;
 
@@ -64,7 +64,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
     mobilefixinfdCopyModel =
         createModel(context, () => MobilefixinfdCopyModel());
     mobilefixinfdModel = createModel(context, () => MobilefixinfdModel());
-    animationModel = createModel(context, () => AnimationModel());
+    deskrdyhjModel = createModel(context, () => DeskrdyhjModel());
   }
 
   @override
@@ -76,7 +76,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
     expandableController3.dispose();
     expandableController4.dispose();
     mobilefixinfdModel.dispose();
-    animationModel.dispose();
+    deskrdyhjModel.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 
