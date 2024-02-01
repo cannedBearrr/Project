@@ -210,7 +210,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                                 1.0, 1.0),
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 20.0, 15.0),
+                                                  .fromSTEB(0.0, 0.0, 15.0, 15.0),
                                               child: Text(
                                                 'REWARD',
                                                 style: FlutterFlowTheme.of(context)
@@ -352,7 +352,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                       child: Padding(
                                         padding:
                                             const EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 0.0, 0.0, 15.0),
+                                                15.0, 0.0, 0.0, 15.0),
                                         child: Text(
                                           'NETWORKING',
                                           style: FlutterFlowTheme.of(context)
@@ -476,7 +476,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                       child: Padding(
                                         padding:
                                             const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 15.0, 20.0, 0.0),
+                                                0.0, 15.0, 15.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -649,7 +649,7 @@ class _AnimationWidgetState extends State<AnimationWidget>
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(20.0, 15.0, 0.0, 0.0),
+                                                    .fromSTEB(15.0, 15.0, 0.0, 0.0),
                                                 child: Column(
                                                   mainAxisSize: MainAxisSize.max,
                                                   crossAxisAlignment:
