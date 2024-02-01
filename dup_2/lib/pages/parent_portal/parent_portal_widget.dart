@@ -2767,7 +2767,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   29.0, 0.0, 29.0, 0.0),
                               child: Text(
-                                'How to get started ?',
+                                'How to get started?',
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -2797,7 +2797,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        fontSize: 18.0,
+                                        fontSize: 15.0,
                                         fontWeight: FontWeight.w300,
                                       ),
                                 ),
@@ -2825,7 +2825,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 7.0),
                           child: Text(
-                            'How to get started ?',
+                            'How to get started?',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
