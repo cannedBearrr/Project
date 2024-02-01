@@ -383,7 +383,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             child: Image.network(
                               'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 1.0,
+                              height: min(MediaQuery.sizeOf(context).width * 3/4, MediaQuery.sizeOf(context).height) - 50,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -393,7 +393,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           children: [
                             Container(
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.5,
+                              height: MediaQuery.sizeOf(context).height * 0.4,
                               decoration: const BoxDecoration(
                                 color: Color(0x00FFFFFF),
                               ),
@@ -405,18 +405,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       50.0, 0.0, 0.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.asset(
-                                      'assets/images/Layer_2.png',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.41,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.23,
-                                      fit: BoxFit.contain,
-                                      alignment: const Alignment(0.0, -1.0),
-                                    ),
+                                  child: Image.asset(
+                                    'assets/images/Layer_2.png',
+                                    width: MediaQuery.sizeOf(context).width *
+                                        0.41,
+                                    height:
+                                        MediaQuery.sizeOf(context).height *
+                                            0.23,
+                                    fit: BoxFit.contain,
+                                    alignment: const Alignment(0.0, -1.0),
                                   ),
                                 ),
                               ),
@@ -427,7 +424,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           scaleX: 0.9,
                           scaleY: 0.9,
                           child: Container(
-                            height: MediaQuery.sizeOf(context).height * 1.0,
+                            height: min(MediaQuery.sizeOf(context).width * 3/4, MediaQuery.sizeOf(context).height) - 50,
                             decoration: const BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -581,7 +578,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                   desktop: false,
                 ))
                   SizedBox(
-                    height: 598.0,
+                    height: min(MediaQuery.sizeOf(context).width * 3/4, MediaQuery.sizeOf(context).height) - 50,
                     child: Stack(
                       children: [
                         Align(
@@ -605,19 +602,29 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       color: Colors.black,
                                     ),
                                   ),
-                                  child: Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.0, 0.0),
-                                    child: Text(
-                                      'BENEFITS',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 57.0,
-                                            letterSpacing: 5.0,
-                                            fontWeight: FontWeight.w900,
-                                          ),
+                                  child: OverflowBox(
+                                      minWidth: 0,
+                                    minHeight: 0,
+                                    maxWidth: double.infinity,
+                                    maxHeight: double.infinity,
+                                    child: SizedBox(
+    height: 80.0,
+                                      child: Align(
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
+                                        child: Text(
+                                          'BENEFITS',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 57.0,
+                                                letterSpacing: 5.0,
+                                                fontWeight: FontWeight.w900,
+                                              color: Colors.black,
+                                              ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -626,8 +633,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                         ),
                         Container(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 598.0,
                           decoration: const BoxDecoration(),
                           child: wrapWithModel(
                             model: _model.mobilefixinfdCopyModel,
@@ -2455,10 +2460,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     alignment:
                                         const AlignmentDirectional(0.0, 0.0),
                                     child: Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.18,
+                                      width: MediaQuery.of(context).size.width * 0.28,
+                                      height: MediaQuery.of(context).size.height * 0.18,
                                       decoration: BoxDecoration(
                                         color: const Color(0x00FFFFFF),
                                         border: Border.all(
