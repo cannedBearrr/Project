@@ -17,34 +17,16 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
     with TickerProviderStateMixin {
   late DeskrdyhjModel _model;
 
-  final animationsMap = {
-    'stackOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.linear,
-          delay: 0.ms,
-          duration: 800.ms,
-          begin: const Offset(1.0, 1.0),
-          end: const Offset(3.0, 1.5),
-        ),
-      ],
-    ),
-    'textOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.linear,
-          delay: 0.ms,
-          duration: 800.ms,
-          begin: const Offset(1.0, 1.0),
-          end: const Offset(0.3333, 0.6666),
-        ),
-      ],
-    ),
-  };
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.fastOutSlowIn,
+  );
+
+
 
   @override
   void setState(VoidCallback callback) {
@@ -56,13 +38,6 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => DeskrdyhjModel());
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
   }
 
   @override
@@ -86,53 +61,52 @@ class _DeskrdyhjWidgetState extends State<DeskrdyhjWidget>
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
-                    child: Container(
-                      width: MediaQuery.sizeOf(context).width * 0.2,
-                      height: MediaQuery.sizeOf(context).height * 0.5,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(0.0),
-                              child: Image.network(
-                                'https://picsum.photos/seed/658/600',
-                                width: double.infinity,
-                                height: double.infinity,
-                                fit: BoxFit.cover,
+                  ScaleTransition(
+                    scale: _animation,
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width * 0.2,
+                        height: MediaQuery.sizeOf(context).height * 0.5,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(0.0),
+                                child: Image.network(
+                                  'https://picsum.photos/seed/658/600',
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: const AlignmentDirectional(1.0, 1.0),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 15.0, 15.0),
-                              child: Text(
-                                'REWARD',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: Colors.white,
-                                      fontSize: 38.0,
-                                      letterSpacing: 6.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ).animateOnActionTrigger(
-                                animationsMap['textOnActionTriggerAnimation']!,
+                            Align(
+                              alignment: const AlignmentDirectional(1.0, 1.0),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 15.0, 15.0),
+                                child: Text(
+                                  'REWARD',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: Colors.white,
+                                        fontSize: 38.0,
+                                        letterSpacing: 6.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ).animateOnActionTrigger(
-                        animationsMap['stackOnActionTriggerAnimation']!,
+                          ],
+                        ),
                       ),
                     ),
                   ),
