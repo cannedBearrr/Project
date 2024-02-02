@@ -182,15 +182,23 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(
-                          'BUSINESS',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                fontFamily: 'Outfit',
-                                color: Colors.black,
-                                fontSize: 20.0,
-                              ),
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                                              onTap: () async {
+                                                context.pushNamed('businessPortal');
+                                              },
+                            child: Text(
+                              'BUSINESS',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                  ),
+                            ),
+                          ),
                         ),
                         const SizedBox(
                           height: 40.0,
@@ -200,15 +208,23 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             color: Color(0xCC000000),
                           ),
                         ),
-                        Text(
-                          'ABOUT US',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                fontFamily: 'Outfit',
-                                color: Colors.black,
-                                fontSize: 20.0,
-                              ),
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                              onTap: () async {
+                              context.pushNamed('aboutUs');
+                            },
+                            child: Text(
+                              'ABOUT US',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                  ),
+                            ),
+                          ),
                         ),
                         const SizedBox(
                           height: 40.0,
@@ -218,15 +234,23 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             color: Color(0xCC000000),
                           ),
                         ),
-                        Text(
-                          'PAST PROJECTS',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                fontFamily: 'Outfit',
-                                color: Colors.black,
-                                fontSize: 20.0,
-                              ),
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                              onTap: () async {
+                              context.pushNamed('pastProjects');
+                            },
+                            child: Text(
+                              'PAST PROJECTS',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                  ),
+                            ),
+                          ),
                         ),
                         // FlutterFlowDropDown<String>(
                         //   controller: _model.dropDownValueController ??=
