@@ -81,28 +81,28 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: const ScrollbarThemeData(),
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: <TargetPlatform, PageTransitionsBuilder>{
-            TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-            TargetPlatform.linux: NoTransitionsBuilder(),
-            TargetPlatform.macOS: NoTransitionsBuilder(),
-            TargetPlatform.windows: NoTransitionsBuilder(),
-          },
-        ),
+        // pageTransitionsTheme: const PageTransitionsTheme(
+        //   builders: <TargetPlatform, PageTransitionsBuilder>{
+        //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        //     TargetPlatform.linux: NoTransitionsBuilder(),
+        //     TargetPlatform.macOS: NoTransitionsBuilder(),
+        //     TargetPlatform.windows: NoTransitionsBuilder(),
+        //   },
+        // ),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scrollbarTheme: const ScrollbarThemeData(),
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: <TargetPlatform, PageTransitionsBuilder>{
-            TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-            TargetPlatform.linux: NoTransitionsBuilder(),
-            TargetPlatform.macOS: NoTransitionsBuilder(),
-            TargetPlatform.windows: NoTransitionsBuilder(),
-          },
-        ),
+        // pageTransitionsTheme: const PageTransitionsTheme(
+        //   builders: <TargetPlatform, PageTransitionsBuilder>{
+        //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        //     TargetPlatform.linux: NoTransitionsBuilder(),
+        //     TargetPlatform.macOS: NoTransitionsBuilder(),
+        //     TargetPlatform.windows: NoTransitionsBuilder(),
+        //   },
+        // ),
       ),
       themeMode: _themeMode,
       routerConfig: _router,
