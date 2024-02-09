@@ -28,7 +28,7 @@ class YesScrollBehavior extends ScrollBehavior {
 
 class YesScrollPhysics extends ScrollPhysics {
   @override
-  SpringDescription get spring => const SpringDescription(mass: 1, damping: 80, stiffness: 1);
+  SpringDescription get spring => const SpringDescription(mass: 1, damping: 10, stiffness: 30);
 }
 
 class ParentPortalWidget extends StatefulWidget {
@@ -2516,6 +2516,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
+                                              Expanded(child: SizedBox()),
                                               Container(
                                                 width: 200.0,
                                                 height: 200.0,
@@ -2528,59 +2529,62 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  Column(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    children: [
-                                                      Text(
-                                                        'ANSON ZHAO',
+                                              Expanded(
+    flex: 10,
+                                                child: Column(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Column(
+                                                      mainAxisSize: MainAxisSize.max,
+                                                      children: [
+                                                        Text(
+                                                          'ANSON ZHAO',
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: Colors.white,
+                                                                fontSize: 60.0,
+                                                                fontWeight: FontWeight.bold,
+                                                              ),
+                                                        ),
+                                                        Transform.translate(
+                                                          offset: const Offset(0.0, -5.0),
+                                                          child: const SizedBox(
+                                                            width: 380.0,
+                                                            child: Divider(
+                                                              thickness: 1.0,
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          'Director of Northern Horizon',
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: const Color(0xAAFFFFFF),
+                                                                fontSize: 22.0,
+                                                                fontWeight: FontWeight.bold,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Container(
+                                                      width: 600.0,
+                                                      decoration: const BoxDecoration(),
+                                                      child: Text(
+                                                        '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               color: Colors.white,
-                                                              fontSize: 60.0,
-                                                              fontWeight: FontWeight.bold,
+                                                              fontSize: 26.0,
+                                                              fontWeight: FontWeight.w200,
                                                             ),
                                                       ),
-                                                      Transform.translate(
-                                                        offset: const Offset(0.0, -5.0),
-                                                        child: const SizedBox(
-                                                          width: 380.0,
-                                                          child: Divider(
-                                                            thickness: 1.0,
-                                                            color: Colors.white,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Director of Northern Horizon',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xAAFFFFFF),
-                                                              fontSize: 22.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Container(
-                                                    width: 400.0,
-                                                    decoration: const BoxDecoration(),
-                                                    child: Text(
-                                                      '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 26.0,
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
                                                     ),
-                                                  ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                  ].divide(const SizedBox(height: 20.0)),
+                                                ),
                                               ),
-                                            ].divide(const SizedBox(width: 65.0)),
+                                            ],
                                           ),
                                         ],
                                       ),
@@ -2793,7 +2797,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                               ),
                                               Expanded(
-                                                flex: 20,
+                                                flex: 15,
                                                 child: Column(
                                                   mainAxisSize: MainAxisSize.max,
                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -2902,7 +2906,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         ConstrainedBox(
                                                             constraints:
-                                                            const BoxConstraints(maxWidth: 35, minWidth: 8),
+                                                            const BoxConstraints(maxWidth: 35, minWidth: 14),
                                                             child: SizedBox(
                                                                 width: max(
                                                                     MediaQuery.sizeOf(context).width / 2 - 690, 0))),
@@ -3185,6 +3189,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
+                                          Expanded(child: SizedBox()),
                                               Container(
                                                 width: 200.0,
                                                 height: 200.0,
@@ -3197,56 +3202,58 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  Column(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    children: [
-                                                      Text(
-                                                        'ANSON ZHAO',
+                                              Expanded(
+                                                flex: 10,
+                                                child: Column(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Column(
+                                                      mainAxisSize: MainAxisSize.max,
+                                                      children: [
+                                                        Text(
+                                                          'ANSON ZHAO',
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: Colors.white,
+                                                                fontSize: 60.0,
+                                                                fontWeight: FontWeight.bold,
+                                                              ),
+                                                        ),
+                                                        const SizedBox(
+                                                          width: 380.0,
+                                                          child: Divider(
+                                                            thickness: 1.0,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          'Director of Northern Horizon',
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: const Color(0xAAFFFFFF),
+                                                                fontSize: 22.0,
+                                                                fontWeight: FontWeight.bold,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    SizedBox(
+                                                      width: 600,
+                                                      child: Text(
+                                                        '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               color: Colors.white,
-                                                              fontSize: 60.0,
-                                                              fontWeight: FontWeight.bold,
+                                                              fontSize: 26.0,
+                                                              fontWeight: FontWeight.w200,
                                                             ),
                                                       ),
-                                                      const SizedBox(
-                                                        width: 380.0,
-                                                        child: Divider(
-                                                          thickness: 1.0,
-                                                          color: Colors.white,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'Director of Northern Horizon',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xAAFFFFFF),
-                                                              fontSize: 22.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Container(
-                                                    width: 400.0,
-                                                    decoration: const BoxDecoration(),
-                                                    child: Text(
-                                                      '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 26.0,
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
                                                     ),
-                                                  ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                  ].divide(const SizedBox(height: 20.0)),
+                                                ),
                                               ),
-                                            ].divide(const SizedBox(width: 65.0)),
+                                            ]
                                           ),
                                         ],
                                       ),
