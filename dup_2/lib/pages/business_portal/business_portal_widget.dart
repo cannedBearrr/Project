@@ -73,7 +73,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               22.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'BUSINESS',
+                            'PARENT',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
@@ -205,14 +205,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                 ))
                   Stack(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/unsplash_gG-YEEDSppM_(1).png',
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 1.0,
-                          fit: BoxFit.cover,
-                        ),
+                      Image.asset(
+                        'images/unsplash_gG-YEEDSppM_(1).png',
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 1.0,
+                        fit: BoxFit.cover,
                       ),
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
@@ -286,14 +283,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                 ))
                   Stack(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/unsplash_gG-YEEDSppM_(1).png',
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 1.0,
-                          fit: BoxFit.cover,
-                        ),
+                      Image.asset(
+                        'assets/images/unsplash_gG-YEEDSppM_(1).png',
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 1.0,
+                        fit: BoxFit.cover,
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -508,16 +502,13 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             children: [
                               Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/500/600',
-                                    width:
-                                    MediaQuery.sizeOf(context).width * 0.2,
-                                    height: MediaQuery.sizeOf(context).height *
-                                        0.25,
-                                    fit: BoxFit.cover,
-                                  ),
+                                child: Image.network(
+                                  'https://picsum.photos/seed/500/600',
+                                  width:
+                                  MediaQuery.sizeOf(context).width * 0.2,
+                                  height: MediaQuery.sizeOf(context).height *
+                                      0.25,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                               Align(
@@ -525,17 +516,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 100.0, 200.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/435/600',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.3,
-                                      height:
-                                      MediaQuery.sizeOf(context).height *
-                                          0.35,
-                                      fit: BoxFit.cover,
-                                    ),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/435/600',
+                                    width: MediaQuery.sizeOf(context).width *
+                                        0.3,
+                                    height:
+                                    MediaQuery.sizeOf(context).height *
+                                        0.35,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
@@ -544,17 +532,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       200.0, 0.0, 0.0, 100.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/290/600',
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.25,
-                                      height:
-                                      MediaQuery.sizeOf(context).height *
-                                          0.35,
-                                      fit: BoxFit.cover,
-                                    ),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/290/600',
+                                    width: MediaQuery.sizeOf(context).width *
+                                        0.25,
+                                    height:
+                                    MediaQuery.sizeOf(context).height *
+                                        0.35,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
@@ -592,16 +577,13 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               ),
                               child: Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/215/600',
-                                    width:
-                                    MediaQuery.sizeOf(context).width * 0.5,
-                                    height:
-                                    MediaQuery.sizeOf(context).height * 0.4,
-                                    fit: BoxFit.cover,
-                                  ),
+                                child: Image.network(
+                                  'https://picsum.photos/seed/215/600',
+                                  width:
+                                  MediaQuery.sizeOf(context).width * 0.5,
+                                  height:
+                                  MediaQuery.sizeOf(context).height * 0.4,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -700,14 +682,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                         ),
                         Align(
                           alignment: AlignmentDirectional(1.0, 1.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(0.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/364/600',
-                              width: 300.0,
-                              height: 200.0,
-                              fit: BoxFit.cover,
-                            ),
+                          child: Image.network(
+                            'https://picsum.photos/seed/364/600',
+                            width: 300.0,
+                            height: 200.0,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ].divide(SizedBox(height: 25.0)),
@@ -726,14 +705,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                     ),
                     child: Stack(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(0.0),
-                          child: Image.network(
-                            'https://images.unsplash.com/photo-1507502707541-f369a3b18502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxuaWdodCUyMHNreXxlbnwwfHx8fDE3MDcyNjkzOTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.network(
+                          'https://images.unsplash.com/photo-1507502707541-f369a3b18502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxuaWdodCUyMHNreXxlbnwwfHx8fDE3MDcyNjkzOTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
                         ),
                         Align(
                           alignment: AlignmentDirectional(-1.0, -1.0),
@@ -861,14 +837,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                     ),
                     child: Stack(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/593/600',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.network(
+                          'https://picsum.photos/seed/593/600',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
                         ),
                       ],
                     ),
@@ -888,14 +861,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           color:
                           FlutterFlowTheme.of(context).secondaryBackground,
                         ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(0.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/549/600',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
+                        child: Image.network(
+                          'https://picsum.photos/seed/549/600',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
                         ),
                       ),
                       Container(
@@ -969,14 +939,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                   ),
                   child: Stack(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/564/600',
-                          width: double.infinity,
-                          height: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
+                      Image.network(
+                        'https://picsum.photos/seed/564/600',
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.cover,
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -1041,14 +1008,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                 ))
                   Stack(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.75,
-                          fit: BoxFit.cover,
-                        ),
+                      Image.network(
+                        'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 0.75,
+                        fit: BoxFit.cover,
                       ),
                       Align(
                         alignment: AlignmentDirectional(-1.0, -1.0),
@@ -1119,14 +1083,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                 ))
                   Stack(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.75,
-                          fit: BoxFit.cover,
-                        ),
+                      Image.network(
+                        'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 0.75,
+                        fit: BoxFit.cover,
                       ),
                       Align(
                         alignment: AlignmentDirectional(-1.0, -1.0),
