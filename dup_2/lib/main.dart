@@ -104,7 +104,7 @@ class _MyAppState extends State<MyApp> {
         //   },
         // ),
       ),
-      themeMode: _themeMode,
+      themeMode: ThemeMode.light,
       routerConfig: _router,
     );
   }
