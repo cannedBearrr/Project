@@ -1984,8 +1984,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1510251197878-a2e6d2cb590c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxzdGlua3l8ZW58MHx8fHwxNzAwNTI0NTQ3fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                  child: Image.asset(
+                                    'assets/images/2023NA_034.jpg',
                                     width: double.infinity,
                                     height: 180.0,
                                     fit: BoxFit.cover,
@@ -2047,8 +2047,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1608224873587-81ee37394b4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxsaXRoaXVtfGVufDB8fHx8MTcwMTkxMjc2M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                                  child: Image.asset(
+                                    'assets/images/2023NA_039.jpg',
                                     width: double.infinity,
                                     height: 180.0,
                                     fit: BoxFit.cover,
@@ -2112,7 +2112,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.network(
                                     'https://images.unsplash.com/photo-1625370187248-700d63dbc0ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxqYW1lc3xlbnwwfHx8fDE3MDE5MTI3Nzl8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                    width: double.infinity,
                                     height: 180.0,
                                     fit: BoxFit.cover,
                                   ),
