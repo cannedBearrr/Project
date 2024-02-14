@@ -42,6 +42,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ParentPortalWidget(),
         ),
         FFRoute(
+          name: 'businessPortal',
+          path: '/businessPortal',
+          builder: (context, params) => const BusinessPortalWidget(),
+        ),
+        FFRoute(
+          name: 'aboutUs',
+          path: '/aboutUs',
+          builder: (context, params) => const AboutUsWidget(),
+        ),
+        FFRoute(
+          name: 'pastProjects',
+          path: '/pastProjects',
+          builder: (context, params) => const PastProjectsWidget(),
+        ),
+        FFRoute(
           name: 'projectBasedLearning',
           path: '/projectBasedLearning',
           builder: (context, params) => const ProjectBasedLearningWidget(),
