@@ -1,20 +1,15 @@
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
-import '/assets/menu/menu_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
 import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart' as smooth_page_indicator;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
 
@@ -2516,7 +2511,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
-                                              Expanded(child: SizedBox()),
+                                              const Expanded(child: SizedBox()),
                                               Container(
                                                 width: 200.0,
                                                 height: 200.0,
@@ -3091,14 +3086,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ))
                                       Stack(
                                         children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(0.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                              fit: BoxFit.cover,
-                                            ),
+                                          Image.network(
+                                            'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            fit: BoxFit.cover,
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
@@ -3189,7 +3181,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
-                                          Expanded(child: SizedBox()),
+                                          const Expanded(child: SizedBox()),
                                               Container(
                                                 width: 200.0,
                                                 height: 200.0,
