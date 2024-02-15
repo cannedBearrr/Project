@@ -36,13 +36,22 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
   double iV_1 = 0.25;
   double iW = 0.47;
   double iW_1 = 0.47;
+  double lerpT = 0;
+  double lerpY = 0;
+  double lerpU = 0;
+  double lerpI = 0;
+  double lerpT_1 = 0;
+  double lerpY_1 = 0;
+  double lerpU_1 = 0;
+  double lerpI_1 = 0;
+
 
   Color d1 = const Color(0xff1f4477);
   Color d1_1 = const Color(0xff1f4477);
   Color d2 = const Color(0xffeeb609);
   Color d2_1 = const Color(0xffeeb609);
 
-  Curve easeOutOrEaseInForColor = const FlippedCurve(Curves.easeOutQuart);
+  Curve easeOutOrIn = const FlippedCurve(Curves.easeOutQuart);
 
   int tlPri = 0;
   int trPri = 0;
@@ -54,7 +63,11 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
   bool _05to1br = false;
 
   void resetAll() {
-    easeOutOrEaseInForColor = const FlippedCurve(Curves.easeOutQuart);
+    lerpT_1 = lerpT = 0;
+    lerpY_1 = lerpY = 0;
+    lerpU_1 = lerpU = 0;
+    lerpI_1 = lerpI = 0;
+    easeOutOrIn = const FlippedCurve(Curves.easeOutQuart);
     tV_1 = tV = 0.2;
     tW_1 = tW = 0.4;
     d1_1 = d1 = const Color(0xff1f4477);
@@ -115,7 +128,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                 child: ColoredBox(
                   color: Colors.transparent,
                   child: TweenAnimationBuilder<Color?>(
-                    curve: easeOutOrEaseInForColor,
+                    curve: easeOutOrIn,
                     tween: ColorTween(begin: d1_1, end: d1),
                     duration: const Duration(milliseconds: 300),
                     builder: (BuildContext context, Color? c, Widget? child) {
@@ -134,17 +147,18 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                               duration: const Duration(milliseconds: 600),
                               onEnd: () {
                                 if (tV == 0.2) {
-                                  setState(() {
                                     tV_1 = tV = 0.2;
                                     tW_1 = tW = 0.4;
                                     d1_1 = d1 = const Color(0xff1f4477);
+                                    lerpT_1 = lerpT = 0;
                                     _05to1tl = false;
-                                  });
                                 } else if (tV == 0.6) {
                                   tV_1 = tV = 0.6;
                                   tW_1 = tW = 0.75;
                                   d1_1 = d1 = const Color(0x001f4477);
+                                  lerpT_1 = lerpT = 1;
                                 }
+                                setState(() {});
                               },
                               builder: (BuildContext context, double value2, Widget? child) {
                                 return TweenAnimationBuilder<double>(
@@ -175,8 +189,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           tV_1 = value;
                                           tW_1 = value2;
                                           d1_1 = c!;
-                                          easeOutOrEaseInForColor =
-                                              easeOutOrEaseInForColor == const FlippedCurve(Curves.easeOutQuart)
+                                          easeOutOrIn =
+                                              easeOutOrIn == const FlippedCurve(Curves.easeOutQuart)
                                                   ? Curves.easeOutQuart
                                                   : const FlippedCurve(Curves.easeOutQuart);
                                           tV = tV == 0.2 ? 0.6 : 0.2;
@@ -184,6 +198,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           d1 = d1 == const Color(0xff1f4477)
                                               ? const Color(0x001f4477)
                                               : const Color(0xff1f4477);
+                                          lerpT = lerpT == 0 ? 1 : 0;
                                           if (tV == 0.6) {
                                             tlPri = 2;
                                             print("hi");
@@ -227,6 +242,62 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       ),
                                                 ),
                                               ),
+                                            ),
+                                            TweenAnimationBuilder<double>(
+                                              tween: Tween<double>(begin: lerpT_1, end: lerpT,),
+                                              curve: FlippedCurve(easeOutOrIn),
+                                              duration: const Duration(milliseconds: 600),
+                                              builder: (BuildContext context, double t, Widget? child) {
+                                                lerpT_1 = t;
+                                                return Opacity(
+                                                  opacity: lerpDouble(0, 1, t)!,
+                                                  child: Column(
+                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                                    children: [
+                                                      UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: Container(
+                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                            width: 470,
+                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                            child: Text(
+                                                              textAlign: TextAlign.center,
+                                                              "Scholarship Credit",
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: Colors.white,
+                                                                fontSize: 36.0,
+                                                                letterSpacing: 6.0,
+                                                                fontWeight: FontWeight.w500,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      const SizedBox(height: 30),
+                                                      UnconstrainedBox(
+                                                        clipBehavior: Clip.hardEdge,
+                                                        child: Container(
+                                                          padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                          width: 470,
+                                                          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                          child: Text(
+                                                            textAlign: TextAlign.center,
+                                                            "Cash Award",
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: 36.0,
+                                                              letterSpacing: 6.0,
+                                                              fontWeight: FontWeight.w500,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                );
+                                              },
                                             ),
                                           ],
                                         ),
@@ -284,15 +355,16 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                       duration: const Duration(milliseconds: 600),
                       onEnd: () {
                         if (yV == 0.44) {
-                          setState(() {
                             yV_1 = yV = 0.44;
                             yW_1 = yW = 0.22;
+                            lerpY_1 = lerpY = 0;
                             _05to1tr = false;
-                          });
                         } else if (yV == 0.75) {
                           yV_1 = yV = 0.75;
-                          yW_1 = yW = 0.6;
+                          yW_1 = yW = 0.69;
+                          lerpY_1 = lerpY = 1;
                         }
+                        setState(() {});
                       },
                       builder: (BuildContext context, double value3, Widget? child) {
                         return TweenAnimationBuilder<double>(
@@ -323,8 +395,13 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                   _05to1br = false;
                                   yV_1 = value1;
                                   yW_1 = value3;
+                                  easeOutOrIn =
+                                  easeOutOrIn == const FlippedCurve(Curves.easeOutQuart)
+                                      ? Curves.easeOutQuart
+                                      : const FlippedCurve(Curves.easeOutQuart);
                                   yV = yV == 0.44 ? 0.75 : 0.44;
-                                  yW = yW == 0.22 ? 0.6 : 0.22;
+                                  yW = yW == 0.22 ? 0.69 : 0.22;
+                                  lerpY = lerpY == 0 ? 1 : 0;
                                   if (yV == 0.75) {
                                     trPri = 2;
                                     print("hi1");
@@ -371,6 +448,93 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           ),
                                         ),
                                       ),
+                                      TweenAnimationBuilder<double>(
+                                        tween: Tween<double>(begin: lerpY_1, end: lerpY,),
+                                        curve: FlippedCurve(easeOutOrIn),
+                                        duration: const Duration(milliseconds: 600),
+                                        builder: (BuildContext context, double t, Widget? child) {
+                                          lerpY_1 = t;
+                                          return Opacity(
+                                            opacity: lerpDouble(0, 1, t)!,
+                                            child: Align(
+                                              alignment: Alignment.center,
+                                              child: UnconstrainedBox(
+                                                clipBehavior: Clip.hardEdge,
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                      width: 540,
+                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                      child: Text(
+                                                        textAlign: TextAlign.center,
+                                                        "Investor Connections",
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 36.0,
+                                                          letterSpacing: 6.0,
+                                                          fontWeight: FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                      width: 540,
+                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                      child: Text(
+                                                        textAlign: TextAlign.center,
+                                                        "Career Connections",
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 36.0,
+                                                          letterSpacing: 6.0,
+                                                          fontWeight: FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                      width: 540,
+                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                      child: Text(
+                                                        textAlign: TextAlign.center,
+                                                        "Business Opportunity",
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 36.0,
+                                                          letterSpacing: 6.0,
+                                                          fontWeight: FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                      width: 540,
+                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                      child: Text(
+                                                        textAlign: TextAlign.center,
+                                                        "Career Opportunity",
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 36.0,
+                                                          letterSpacing: 6.0,
+                                                          fontWeight: FontWeight.w500,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ].divide(const SizedBox(height: 30)),
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -414,15 +578,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                       duration: const Duration(milliseconds: 600),
                       onEnd: () {
                         if (uV == 0.5) {
-                          setState(() {
                             uV_1 = uV = 0.5;
                             uW_1 = uW = 0.4;
                             _05to1bl = false;
-                          });
                         } else if (uV == 0.75) {
                           uV_1 = uV = 0.75;
                           uW_1 = uW = 0.66;
                         }
+                        setState(() {});
                       },
                       builder: (BuildContext context, double value6, Widget? child) {
                         return TweenAnimationBuilder<double>(
@@ -454,8 +617,13 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                     _05to1br = false;
                                     uV_1 = value4;
                                     uW_1 = value6;
+                                    easeOutOrIn =
+                                    easeOutOrIn == const FlippedCurve(Curves.easeOutQuart)
+                                        ? Curves.easeOutQuart
+                                        : const FlippedCurve(Curves.easeOutQuart);
                                     uV = uV == 0.5 ? 0.75 : 0.5;
                                     uW = uW == 0.4 ? 0.66 : 0.4;
+                                    lerpU = lerpU == 0 ? 1 : 0;
                                     if (uV == 0.75) {
                                       blPri = 2;
                                       _05to1bl = true;
@@ -473,14 +641,11 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                   ),
                                   child: Stack(
                                     children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(0.0),
-                                        child: Image.network(
-                                          'https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMHx8c3Vuc2V0fGVufDB8fHx8MTcwMTk2NzEzOXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                          width: double.infinity,
-                                          height: double.infinity,
-                                          fit: BoxFit.cover,
-                                        ),
+                                      Image.network(
+                                        'https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMHx8c3Vuc2V0fGVufDB8fHx8MTcwMTk2NzEzOXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        fit: BoxFit.cover,
                                       ),
                                       Align(
                                         alignment: const AlignmentDirectional(0.0, 0.0),
@@ -515,6 +680,51 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             ],
                                           ),
                                         ),
+                                      ),
+                                      TweenAnimationBuilder<double>(
+                                        tween: Tween<double>(begin: lerpU_1, end: lerpU,),
+                                        curve: FlippedCurve(easeOutOrIn),
+                                        duration: const Duration(milliseconds: 600),
+                                        builder: (BuildContext context, double t, Widget? child) {
+                                          lerpU_1 = t;
+                                          return Opacity(
+                                            opacity: lerpDouble(0, 1, t)!,
+                                            child: Align(
+                                              alignment: Alignment.center,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  UnconstrainedBox(
+                                                    clipBehavior: Clip.hardEdge,
+                                                    child: Text(
+                                                      textAlign: TextAlign.center,
+                                                      "COMPUTER PROGRAMMING",
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 28.0,
+                                                        letterSpacing: 3.5,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  UnconstrainedBox(
+                                                    clipBehavior: Clip.hardEdge,
+                                                    child: Text(
+                                                      textAlign: TextAlign.center,
+                                                      "RESEARCHING",
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 28.0,
+                                                        letterSpacing: 3.5,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ].divide(const SizedBox(height: 20)),
+                                              ),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ],
                                   ),
@@ -551,7 +761,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<Color?>(
-                        curve: easeOutOrEaseInForColor,
+                        curve: easeOutOrIn,
                         tween: ColorTween(begin: d2_1, end: d2),
                         duration: const Duration(milliseconds: 300),
                         builder: (BuildContext context, Color? c1, Widget? child) {
@@ -576,18 +786,18 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                   duration: const Duration(milliseconds: 600),
                                   onEnd: () {
                                     if (iV == 0.25) {
-                                      setState(() {
                                         iV_1 = iV = 0.25;
                                         iW_1 = iW = 0.47;
                                         d2_1 = d2 = const Color(0xffeeb609);
+                                        lerpI_1 = lerpI = 0;
                                         _05to1br = false;
-                                      });
-                                    }
-                                    else if (iV == 0.69) {
+                                    } else if (iV == 0.69) {
                                       iV_1 = iV = 0.69;
                                       iW_1 = iW = 0.75;
                                       d2_1 = d2 = const Color(0x00eeb609);
+                                      lerpI_1 = lerpI = 1;
                                     }
+                                    setState(() {});
                                   },
                                   builder: (BuildContext context, double value7, Widget? child) {
                                     return TweenAnimationBuilder<double>(
@@ -618,8 +828,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               iV_1 = value5;
                                               iW_1 = value7;
                                               d2_1 = c1!;
-                                              easeOutOrEaseInForColor =
-                                                  easeOutOrEaseInForColor == const FlippedCurve(Curves.easeOutQuart)
+                                              easeOutOrIn =
+                                                  easeOutOrIn == const FlippedCurve(Curves.easeOutQuart)
                                                       ? Curves.easeOutQuart
                                                       : const FlippedCurve(Curves.easeOutQuart);
                                               iV = iV == 0.25 ? 0.69 : 0.25;
@@ -627,6 +837,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               d2 = d2 == const Color(0xffeeb609)
                                                   ? const Color(0x00eeb609)
                                                   : const Color(0xffeeb609);
+                                              lerpI = lerpI == 0 ? 1 : 0;
                                               if (iV == 0.69) {
                                                 brPri = 2;
                                                 print("hi");
@@ -643,14 +854,11 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             ),
                                             child: Stack(
                                               children: [
-                                                ClipRRect(
-                                                  borderRadius: BorderRadius.circular(0.0),
-                                                  child: Image.network(
-                                                    'https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxzdGFycnklMjBuaWdodHxlbnwwfHx8fDE3MDIwMzMyNDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                                    width: double.infinity,
-                                                    height: double.infinity,
-                                                    fit: BoxFit.cover,
-                                                  ),
+                                                Image.network(
+                                                  'https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxzdGFycnklMjBuaWdodHxlbnwwfHx8fDE3MDIwMzMyNDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                  width: double.infinity,
+                                                  height: double.infinity,
+                                                  fit: BoxFit.cover,
                                                 ),
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 0.0, 0.0),
@@ -680,6 +888,63 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       ),
                                                     ],
                                                   ),
+                                                ),
+                                                TweenAnimationBuilder<double>(
+                                                  tween: Tween<double>(begin: lerpI_1, end: lerpI,),
+                                                  curve: FlippedCurve(easeOutOrIn),
+                                                  duration: const Duration(milliseconds: 600),
+                                                  builder: (BuildContext context, double t, Widget? child) {
+                                                    lerpI_1 = t;
+                                                    return Opacity(
+                                                      opacity: lerpDouble(0, 1, t)!,
+                                                      child: Align(
+                                                        alignment: Alignment.center,
+                                                        child: Column(
+                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                          children: [
+                                                            UnconstrainedBox(
+                                                              clipBehavior: Clip.hardEdge,
+                                                              child: Container(
+                                                                padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                width: 575,
+                                                                decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                child: Text(
+                                                                  textAlign: TextAlign.center,
+                                                                  "Internship Certificates",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            UnconstrainedBox(
+                                                              clipBehavior: Clip.hardEdge,
+                                                              child: Container(
+                                                                padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                width: 575,
+                                                                decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                child: Text(
+                                                                  textAlign: TextAlign.center,
+                                                                  "Achievements",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ].divide(const SizedBox(height: 30)),
+                                                        ),
+                                                      ),
+                                                    );
+                                                  },
                                                 ),
                                               ],
                                             ),
