@@ -74,8 +74,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       );
     }
 
-    return WillPopScope(
-        onWillPop: () async => false,
+    return PopScope(
+        canPop: false,
         child: GestureDetector(
           onTap: () => _model.unfocusNode.canRequestFocus
               ? FocusScope.of(context).requestFocus(_model.unfocusNode)
