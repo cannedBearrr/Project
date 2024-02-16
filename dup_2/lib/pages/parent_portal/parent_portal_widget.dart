@@ -18,11 +18,7 @@ export 'parent_portal_model.dart';
 Future<http.Response> sendEmail(String email) {
   return http.post(
     Uri.parse('http://129.213.117.186/email.php'),
-    headers: <String, String>{
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json',
-      'Accept': '*/*'
-    },
+    headers: <String, String>{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', 'Accept': '*/*'},
     body: jsonEncode(<String, String>{
       'email': email,
     }),
@@ -53,14 +49,28 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   late ParentPortalModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _formKey = GlobalKey<FormState>();
 
   bool contentExpanded = false;
   bool isEmailSent = false;
 
+  String? _validateEmail(String value) {
+    if (value.isEmpty && !isEmailSent) {
+      return 'Enter an email';
+    } else if (!isEmailValid(value) && !isEmailSent) {
+      return 'Enter a valid email address';
+    } else {
+      return null;
+    }
+  }
+
+  bool isEmailValid(String email) {
+    return RegExp(r'.+@.+').hasMatch(email);
+  }
+
   Future<bool>? resetForm() {
     Future.delayed(const Duration(seconds: 2), () {
-      _model.textController1.text = "";
-      _model.textController2.text = "";
+      _formKey.currentState?.reset();
       setState(() {
         isEmailSent = false;
       });
@@ -3489,66 +3499,74 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
                                                       child: SizedBox(
                                                         width: MediaQuery.sizeOf(context).width * 0.3,
-                                                        child: TextFormField(
-                                                             onFieldSubmitted: (value) async {
-                                                            print(value);
-                                                            setState(() {
-                                                              sendEmail(value);
-                                                              isEmailSent = true;
-                                                            });
-                                                            _model.textController1.text = "Sent";
-                                                            await resetForm();
-                                                          },
-                                                          controller: _model.textController1,
-                                                          focusNode: _model.textFieldFocusNode1,
-                                                          autofocus: false,
-                                                          obscureText: false,
-                                                          decoration: InputDecoration(
-                                                            labelText: 'Submit mail for enrollment form',
-                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                            hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                            enabledBorder: OutlineInputBorder(
-                                                              borderSide: const BorderSide(
-                                                                color: Colors.black,
-                                                                width: 1.0,
+                                                        child: Form(
+                                                          key: _formKey,
+                                                          child: TextFormField(
+                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                            onFieldSubmitted: (value) async {
+                                                              if (_formKey.currentState!.validate()) {
+                                                                print(value);
+                                                                setState(() {
+                                                                  sendEmail(value);
+                                                                  isEmailSent = true;
+                                                                });
+                                                                _model.textController1?.clear();
+                                                                await resetForm();
+                                                              }
+                                                            },
+                                                            controller: _model.textController1,
+                                                            focusNode: _model.textFieldFocusNode1,
+                                                            autofocus: false,
+                                                            obscureText: false,
+                                                            decoration: InputDecoration(
+                                                              labelText: isEmailSent ? 'Sent' : 'Submit mail for enrollment form',
+                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              enabledBorder: OutlineInputBorder(
+                                                                borderSide: const BorderSide(
+                                                                  color: Colors.black,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            focusedBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).primary,
-                                                                width: 1.0,
+                                                              focusedBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            errorBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).error,
-                                                                width: 1.0,
+                                                              errorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            focusedErrorBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).error,
-                                                                width: 1.0,
+                                                              focusedErrorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
+                                                              filled: true,
+                                                              fillColor: Colors.white,
+                                                              suffixIcon: const Icon(
+                                                                Icons.arrow_forward,
+                                                              ),
                                                             ),
-                                                            filled: true,
-                                                            fillColor: Colors.white,
-                                                            suffixIcon: const Icon(
-                                                              Icons.arrow_forward,
-                                                            ),
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                  fontFamily: 'Readex Pro',
+                                                                  letterSpacing: 1.0,
+                                                                  lineHeight: 1.0,
+                                                                  color: Colors.black,
+                                                                ),
+                                                            textAlign: TextAlign.start,
+                                                            validator: (value) {
+                                                              return _validateEmail(value!);
+                                                            },
                                                           ),
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                letterSpacing: 1.0,
-                                                                lineHeight: 1.0,
-                                                                color: isEmailSent ? Colors.green : Colors.black,
-                                                              ),
-                                                          textAlign: TextAlign.start,
-                                                          validator: _model.textController1Validator.asValidator(context),
                                                         ),
                                                       ),
                                                     ),
@@ -3597,69 +3615,77 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
                                                       child: SizedBox(
                                                         width: MediaQuery.sizeOf(context).width * 0.55,
-                                                        child: TextFormField(
-                                                             onFieldSubmitted: (value) async {
-                                                            print(value);
-                                                            setState(() {
-                                                              sendEmail(value);
-                                                              isEmailSent = true;
-                                                            });
-                                                            _model.textController2.text = "Sent";
-                                                            await resetForm();
-                                                          },
-                                                          controller: _model.textController2,
-                                                          focusNode: _model.textFieldFocusNode2,
-                                                          autofocus: false,
-                                                          obscureText: false,
-                                                          decoration: InputDecoration(
-                                                            labelText: 'Submit mail for enrollment form',
-                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                  fontFamily: 'Readex Pro',
-                                                                  fontSize: 9.0,
+                                                        child: Form(
+                                                          key: _formKey,
+                                                          child: TextFormField(
+                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                            onFieldSubmitted: (value) async {
+                                                              if (_formKey.currentState!.validate()) {
+                                                                print(value);
+                                                                setState(() {
+                                                                  sendEmail(value);
+                                                                  isEmailSent = true;
+                                                                });
+                                                                _model.textController2?.clear();
+                                                                await resetForm();
+                                                              }
+                                                            },
+                                                            controller: _model.textController2,
+                                                            focusNode: _model.textFieldFocusNode2,
+                                                            autofocus: false,
+                                                            obscureText: false,
+                                                            decoration: InputDecoration(
+                                                              labelText: isEmailSent ? 'Sent' : 'Submit mail for enrollment form',
+                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    fontSize: 9.0,
+                                                                  ),
+                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              enabledBorder: OutlineInputBorder(
+                                                                borderSide: const BorderSide(
+                                                                  color: Colors.black,
+                                                                  width: 1.0,
                                                                 ),
-                                                            hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                            enabledBorder: OutlineInputBorder(
-                                                              borderSide: const BorderSide(
-                                                                color: Colors.black,
-                                                                width: 1.0,
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            focusedBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).primary,
-                                                                width: 1.0,
+                                                              focusedBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            errorBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).error,
-                                                                width: 1.0,
+                                                              errorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
-                                                            ),
-                                                            focusedErrorBorder: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: FlutterFlowTheme.of(context).error,
-                                                                width: 1.0,
+                                                              focusedErrorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
                                                               ),
-                                                              borderRadius: BorderRadius.circular(0.0),
+                                                              filled: true,
+                                                              fillColor: Colors.white,
+                                                              suffixIcon: const Icon(
+                                                                Icons.arrow_forward,
+                                                              ),
                                                             ),
-                                                            filled: true,
-                                                            fillColor: Colors.white,
-                                                            suffixIcon: const Icon(
-                                                              Icons.arrow_forward,
-                                                            ),
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                  fontFamily: 'Readex Pro',
+                                                                  letterSpacing: 1.0,
+                                                                  lineHeight: 1.0,
+                                                                  color: Colors.black,
+                                                                ),
+                                                            textAlign: TextAlign.start,
+                                                            validator: (value) {
+                                                              return _validateEmail(value!);
+                                                            },
                                                           ),
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                letterSpacing: 1.0,
-                                                                lineHeight: 1.0,
-                                                                color: isEmailSent ? Colors.green : Colors.black,
-                                                              ),
-                                                          textAlign: TextAlign.start,
-                                                          validator: _model.textController2Validator.asValidator(context),
                                                         ),
                                                       ),
                                                     ),
