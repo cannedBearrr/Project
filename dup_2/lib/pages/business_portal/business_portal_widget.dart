@@ -16,14 +16,14 @@ class CustomShape extends CustomClipper<Path> {
 
     var path = Path();
     path.moveTo(width, 0);
-    path.lineTo(222, 0); //x
-    path.lineTo(222, 160);
+    path.lineTo(203, 0); //x
+    path.lineTo(203, 160);
     path.lineTo(0, 160); //y
     path.lineTo(0, height);
-    path.lineTo(width - 380, height);
-    path.lineTo(width - 380, height - 26);
-    path.lineTo(width - 330, height - 26);
-    path.lineTo(width, height - 119);
+    path.lineTo(width - 319, height);
+    path.lineTo(width - 319, height - 14);
+    path.lineTo(width - 300, height - 14);
+    path.lineTo(width, height - 95);
     path.close();
     return path;
   }
@@ -868,7 +868,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               child: Padding(
                                 padding: const EdgeInsets.fromLTRB(45, 55, 0, 0),
                                 child: SizedBox(
-                                    width: 252,
+                                    width: 233,
                                     height: 195,
                                     child: Text(
                                       "WHAT\nWE\nDO",
@@ -876,7 +876,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontFamily: 'Readex Pro',
                                             fontSize: 60,
                                             fontWeight: FontWeight.w900,
-                                            letterSpacing: 15,
+                                            letterSpacing: 10,
                                             lineHeight: 1.03,
                                           ),
                                     )),
@@ -885,10 +885,10 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               bottom: 0,
                               right: 0,
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 52, 68),
+                                padding: const EdgeInsets.fromLTRB(0, 0, 50, 62),
                                 child: SizedBox(
-                                    width: 403,
-                                    height: 141,
+                                    width: 344,
+                                    height: 123,
                                     child: Align(
                                       alignment: const AlignmentDirectional(1.0, 1.0),
                                       child: Text(
@@ -896,9 +896,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         textAlign: TextAlign.right,
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 44,
-                                              fontWeight: FontWeight.w700,
-                                              letterSpacing: 3,
+                                              fontSize: 38,
+                                              fontWeight: FontWeight.w600,
+                                              letterSpacing: 2.5,
                                               lineHeight: 1.05,
                                             ),
                                       ),
