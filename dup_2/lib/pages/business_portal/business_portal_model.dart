@@ -2,8 +2,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'business_portal_widget.dart' show BusinessPortalWidget;
 import 'package:flutter/material.dart';
 
-class BusinessPortalModel
-    extends FlutterFlowModel<BusinessPortalWidget> {
+class BusinessPortalModel extends FlutterFlowModel<BusinessPortalWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

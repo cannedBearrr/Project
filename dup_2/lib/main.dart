@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -12,6 +13,10 @@ void main() async {
   usePathUrlStrategy();
 
   await FlutterFlowTheme.initialize();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
 
   runApp(const MyApp());
 }
@@ -104,7 +109,7 @@ class _MyAppState extends State<MyApp> {
         //   },
         // ),
       ),
-      themeMode: _themeMode,
+      themeMode: ThemeMode.light,
       routerConfig: _router,
     );
   }
