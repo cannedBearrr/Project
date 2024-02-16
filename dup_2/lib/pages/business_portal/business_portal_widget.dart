@@ -83,7 +83,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
       return PopScope(
           canPop: false,
           child: GestureDetector(
-            onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+            onTap: () => _model.unfocusNode.canRequestFocus
+                ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+                : FocusScope.of(context).unfocus(),
             child: Scaffold(
               key: scaffoldKey,
               backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
