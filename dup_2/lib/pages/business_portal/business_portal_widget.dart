@@ -1105,6 +1105,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
+                                        context.pushNamed('parentPortal');
                                       },
                                       text: 'Take a look',
                                       options: FFButtonOptions(
@@ -1175,6 +1176,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
+                                        context.pushNamed('parentPortal');
                                       },
                                       text: 'Take a look',
                                       options: FFButtonOptions(

@@ -187,6 +187,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 10.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -3443,7 +3453,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  'PARTNERSHIP',
+                                                  'CURRENT OPENINGS',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                     fontFamily: 'Readex Pro',
@@ -3456,7 +3466,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eros sed ullamcorper accumsan. Aenean condimentum, massa in dapibus tempor, leo velit feugiat dui, nec tristique tortor erat ut nisl.',
+                                                    'Software Developer \n Graphic Designer \n Sales Manager \n Marketing Director',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
@@ -3476,7 +3486,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         autofocus: false,
                                                         obscureText: false,
                                                         decoration: InputDecoration(
-                                                          labelText: 'Mail',
+                                                          labelText: 'Submit mail for enrollment form',
                                                           labelStyle: FlutterFlowTheme.of(context).labelMedium,
                                                           hintStyle: FlutterFlowTheme.of(context).labelMedium,
                                                           enabledBorder: OutlineInputBorder(
@@ -3510,7 +3520,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           filled: true,
                                                           fillColor: Colors.white,
                                                           suffixIcon: const Icon(
-                                                            Icons.mail,
+                                                            Icons.arrow_forward,
                                                           ),
                                                         ),
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3544,7 +3554,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  'PARTNERSHIP',
+                                                  'CURRENT OPENINGS',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                     fontFamily: 'Readex Pro',
@@ -3557,7 +3567,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eros sed ullamcorper accumsan. Aenean condimentum, massa in dapibus tempor, leo velit feugiat dui, nec tristique tortor erat ut nisl.',
+                                                    'Software Developer \n Graphic Designer \n Sales Manager \n Marketing Director',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       color: Colors.black,
@@ -3575,8 +3585,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         autofocus: false,
                                                         obscureText: false,
                                                         decoration: InputDecoration(
-                                                          labelText: 'Mail',
-                                                          labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                          labelText: 'Submit mail for enrollment form',
+                                                          labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                                            fontFamily: 'Readex Pro',
+                                                            fontSize: 9.0, 
+                                                          ),
                                                           hintStyle: FlutterFlowTheme.of(context).labelMedium,
                                                           enabledBorder: OutlineInputBorder(
                                                             borderSide: const BorderSide(
@@ -3609,7 +3622,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           filled: true,
                                                           fillColor: Colors.white,
                                                           suffixIcon: const Icon(
-                                                            Icons.mail,
+                                                            Icons.arrow_forward,
                                                           ),
                                                         ),
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
