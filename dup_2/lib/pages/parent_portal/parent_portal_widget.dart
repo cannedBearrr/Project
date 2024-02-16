@@ -10,8 +10,24 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
+
+Future<http.Response> sendEmail(String email) {
+  return http.post(
+    Uri.parse('http://129.213.117.186/email.php'),
+    headers: <String, String>{
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+      'Accept': '*/*'
+    },
+    body: jsonEncode(<String, String>{
+      'email': email,
+    }),
+  );
+}
 
 class YesScrollBehavior extends ScrollBehavior {
   @override
@@ -39,6 +55,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   bool contentExpanded = false;
+  bool isEmailSent = false;
+
+  Future<bool>? resetForm() {
+    Future.delayed(const Duration(seconds: 2), () {
+      _model.textController1.text = "";
+      _model.textController2.text = "";
+      setState(() {
+        isEmailSent = false;
+      });
+    });
+  }
 
   @override
   void initState() {
@@ -3463,6 +3490,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       child: SizedBox(
                                                         width: MediaQuery.sizeOf(context).width * 0.3,
                                                         child: TextFormField(
+                                                             onFieldSubmitted: (value) async {
+                                                            print(value);
+                                                            setState(() {
+                                                              sendEmail(value);
+                                                              isEmailSent = true;
+                                                            });
+                                                            _model.textController1.text = "Sent";
+                                                            await resetForm();
+                                                          },
                                                           controller: _model.textController1,
                                                           focusNode: _model.textFieldFocusNode1,
                                                           autofocus: false,
@@ -3509,7 +3545,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                                 fontFamily: 'Readex Pro',
                                                                 letterSpacing: 1.0,
                                                                 lineHeight: 1.0,
-                                                                color: Colors.black,
+                                                                color: isEmailSent ? Colors.green : Colors.black,
                                                               ),
                                                           textAlign: TextAlign.start,
                                                           validator: _model.textController1Validator.asValidator(context),
@@ -3562,6 +3598,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       child: SizedBox(
                                                         width: MediaQuery.sizeOf(context).width * 0.55,
                                                         child: TextFormField(
+                                                             onFieldSubmitted: (value) async {
+                                                            print(value);
+                                                            setState(() {
+                                                              sendEmail(value);
+                                                              isEmailSent = true;
+                                                            });
+                                                            _model.textController2.text = "Sent";
+                                                            await resetForm();
+                                                          },
                                                           controller: _model.textController2,
                                                           focusNode: _model.textFieldFocusNode2,
                                                           autofocus: false,
@@ -3611,7 +3656,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                                 fontFamily: 'Readex Pro',
                                                                 letterSpacing: 1.0,
                                                                 lineHeight: 1.0,
-                                                                color: Colors.black,
+                                                                color: isEmailSent ? Colors.green : Colors.black,
                                                               ),
                                                           textAlign: TextAlign.start,
                                                           validator: _model.textController2Validator.asValidator(context),
