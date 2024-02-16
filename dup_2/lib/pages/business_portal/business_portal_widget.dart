@@ -11,7 +11,7 @@ export 'business_portal_model.dart';
 class CustomShape extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    double height = size.height;
+    double height = size.height; //i
     double width = size.width;
 
     var path = Path();
