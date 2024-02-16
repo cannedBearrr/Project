@@ -75,6 +75,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
         isEmailSent = false;
       });
     });
+    return null;
   }
 
   @override
@@ -3673,6 +3674,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fillColor: Colors.white,
                                                               suffixIcon: const Icon(
                                                                 Icons.arrow_forward,
+                                                              //   onPressed(){
+                                                              //
+                                                              // }f
                                                               ),
                                                             ),
                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
