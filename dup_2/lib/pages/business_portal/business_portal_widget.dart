@@ -875,55 +875,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     child: Text(
                                       "WHAT\nWE\nDO",
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      if (responsiveVisibility(
-                        context: context,
-                        tabletLandscape: false,
-                        desktop: false,
-                      ))
-                        Container(
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.8,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).secondaryBackground,
-                          ),
-                          child: Stack(
-                            children: [
-                              Image.network(
-                                'https://picsum.photos/seed/593/600',
-                                width: double.infinity,
-                                height: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 75),
-                                child: ClipPath(
-                                  clipper: CustomShape(),
-                                  clipBehavior: Clip.hardEdge,
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.black),
-                                      )),
-                                ),
-                              ),
-                              Positioned(
-                                  top: 0,
-                                  left: 0,
-                                  child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(45, 55, 0, 0),
-                                    child: SizedBox(
-                                        width: 252,
-                                        height: 195,
-                                        child: Text(
-                                          "WHAT\nWE\nDO",
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             fontSize: 60,
                                             fontWeight: FontWeight.w900,
@@ -946,29 +897,10 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         "DESIGN\nMARKETING\nPROFESSIONAL",
                                         textAlign: TextAlign.right,
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        )),
-                                  )),
-                              Positioned(
-                                  bottom: 0,
-                                  right: 0,
-                                  child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 52, 68),
-                                    child: SizedBox(
-                                        width: 403,
-                                        height: 141,
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(1.0, 1.0),
-                                          child: Text(
-                                            "DESIGN\nMARKETING\nPROFESSIONAL",
-                                            textAlign: TextAlign.right,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               fontSize: 38,
                                               fontWeight: FontWeight.w600,
                                               letterSpacing: 2.5,
-                                              fontSize: 40,
-                                              fontWeight: FontWeight.w700,
-                                              letterSpacing: 1,
                                               lineHeight: 1.05,
                                             ),
                                           ),
