@@ -257,6 +257,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(0.0),
                         child: Image.network(
+                          //darkbluecloudsthunder
                           'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 470.0,
@@ -270,10 +271,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               0.0, 50.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/560/600',
+                            child: Image.asset(
+                              //concert
+                              'assets/images/Layer_2.png',
                               width: 300.0,
-                              height: 200.0,
+                              height: 100.0,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -381,6 +383,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0.0),
                             child: Image.network(
+                              //darkbluecloudsthunder
                               'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
                               width: double.infinity,
                               height: min(MediaQuery.sizeOf(context).width * 3/4, MediaQuery.sizeOf(context).height) - 50,
@@ -406,6 +409,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       50.0, 0.0, 0.0, 0.0),
                                   child: Image.asset(
+                                    //NorthernHorizonLogo
                                     'assets/images/Layer_2.png',
                                     width: MediaQuery.sizeOf(context).width *
                                         0.41,
@@ -1152,6 +1156,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.network(
+                                  //grapes
                                   'https://images.unsplash.com/photo-1562845029-d1b530d4cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw4fHxibGFja2JlcnJ5fGVufDB8fHx8MTcwNDkzNTc2OHww&ixlib=rb-4.0.3&q=80&w=1080',
                                   width: double.infinity,
                                   height: 135.0,
@@ -2048,7 +2053,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
-                                    'assets/images/2023NA_039.jpg',
+                                    'assets/images/2023NA_031.jpg',
                                     width: double.infinity,
                                     height: 180.0,
                                     fit: BoxFit.cover,
@@ -2243,7 +2248,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
-                                  'assets/images//DSC_1650.jpg',
+                                  'assets/images/FT_245_M.jpg',
                                   width: double.infinity,
                                   height: 180.0,
                                   fit: BoxFit.cover,
@@ -2305,8 +2310,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1625370187248-700d63dbc0ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxqYW1lc3xlbnwwfHx8fDE3MDE5MTI3Nzl8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                child: Image.asset(
+                                  'assets/images/DSC_1614.jpg',
                                   width: double.infinity,
                                   height: 180.0,
                                   fit: BoxFit.cover,
@@ -2380,8 +2385,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       const AlignmentDirectional(-1.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxzcGFjZXxlbnwwfHx8fDE3MDE0NDAyMjJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                    child: Image.asset(
+                                      //starsnight
+                                      'assets/images/DSC_1630.jpg',
                                       width: MediaQuery.sizeOf(context).width *
                                           1/3,
                                       height:
@@ -2439,8 +2445,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       const AlignmentDirectional(0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzAxMzkxNTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                    child: Image.asset(
+                                      //coffeebeans
+                                      'assets/images/2023NA_031.jpg',
                                       width: MediaQuery.sizeOf(context).width *
                                           1/3,
                                       height:
@@ -2495,8 +2502,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       const AlignmentDirectional(0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
-                                    child: Image.network(
-                                      'https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHx0ZWF8ZW58MHx8fHwxNzAxNDAwNDUyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                    child: Image.asset(
+                                      //grass+soup
+                                      'assets/images/DSC_1614.jpg',
                                       width: MediaQuery.sizeOf(context).width *
                                           1/3,
                                       height:
@@ -2572,8 +2580,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxzcGFjZXxlbnwwfHx8fDE3MDE0NDAyMjJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                child: Image.asset(
+                                  //starsnight
+                                  'assets/images/DSC_1630.jpg',
                                   width:
                                       MediaQuery.sizeOf(context).width * 1 / 3,
                                   height:
@@ -2632,8 +2641,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzAxMzkxNTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                child: Image.asset(
+                                  //coffeebeans
+                                  'assets/images/2023NA_031.jpg',
                                   width:
                                       MediaQuery.sizeOf(context).width * 1 / 3,
                                   height:
@@ -2692,8 +2702,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               alignment: const AlignmentDirectional(1.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHx0ZWF8ZW58MHx8fHwxNzAxNDAwNDUyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                child: Image.asset(
+                                  //grass+soup
+                                  'assets/images/DSC_1614.jpg',
                                   width:
                                       MediaQuery.sizeOf(context).width * 1 / 3,
                                   height:
@@ -3007,6 +3018,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                          //darkhallway
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3128,6 +3140,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                          //darkhallway
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3237,6 +3250,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                          //darkhallwayimage
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3348,6 +3362,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                             ClipRRect(
                               child: Image.network(
+                                //grass+morningsun
                                 'https://picsum.photos/seed/226/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3356,6 +3371,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                             ClipRRect(
                               child: Image.network(
+                                //boardwalk
                                 'https://picsum.photos/seed/541/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3364,6 +3380,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                             ClipRRect(
                               child: Image.network(
+                                //vanindessert
                                 'https://picsum.photos/seed/850/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3372,6 +3389,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                             ClipRRect(
                               child: Image.network(
+                              //personwalkinginforrest
                                 'https://picsum.photos/seed/905/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3441,6 +3459,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                          //darkhallwayimage
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3562,6 +3581,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                        //darkhallwayimage
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3671,6 +3691,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.network(
+                                          //darkhallwayimage
                                           'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                           width: double.infinity,
                                           height: double.infinity,
@@ -3761,6 +3782,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
+                                //grass+morningsun
                                 'https://picsum.photos/seed/226/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3770,6 +3792,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
+                              //lakeboardwalk
                                 'https://picsum.photos/seed/541/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3779,6 +3802,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
+                              //vanindessert
                                 'https://picsum.photos/seed/850/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3788,6 +3812,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
                               child: Image.network(
+                                //personwalkinginforrest
                                 'https://picsum.photos/seed/905/600',
                                 width: 300.0,
                                 height: 200.0,
@@ -3868,6 +3893,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.network(
+                                      //onion
                                       'https://picsum.photos/seed/844/600',
                                       width: MediaQuery.sizeOf(context).width *
                                           0.8,
@@ -4391,39 +4417,36 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    const Align(
+                                    Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 25.0),
-                                        child: Icon(
-                                          Icons.settings_outlined,
-                                          color: Colors.white,
-                                          size: 30.0,
+                                        child: Image.asset(
+                                          'lib/icons/linkedin.png',
+                                            color: Colors.white,
                                         ),
                                       ),
                                     ),
-                                    const Align(
+                                    Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 25.0),
-                                        child: Icon(
-                                          Icons.settings_outlined,
+                                        child: Image.asset(
+                                          'lib/icons/facebook.png',
                                           color: Colors.white,
-                                          size: 30.0,
                                         ),
                                       ),
                                     ),
-                                    const Align(
+                                    Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 25.0),
-                                        child: Icon(
-                                          Icons.settings_outlined,
+                                        child: Image.asset(
+                                          'lib/icons/twitter.png',
                                           color: Colors.white,
-                                          size: 30.0,
                                         ),
                                       ),
                                     ),
@@ -4623,39 +4646,39 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ],
                           ),
                         ),
-                        const Align(
+                        Align(
                           alignment: AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 80.0, 0.0, 0.0, 25.0),
-                            child: Icon(
-                              Icons.settings_outlined,
+                            child: Image.asset(
+                              'lib/icons/linkedin.png',
                               color: Colors.white,
-                              size: 24.0,
+                              height:30,
                             ),
                           ),
                         ),
-                        const Align(
+                        Align(
                           alignment: AlignmentDirectional(0.0, 1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 25.0),
-                            child: Icon(
-                              Icons.settings_outlined,
+                            child: Image.asset(
+                              'lib/icons/facebook.png',
                               color: Colors.white,
-                              size: 24.0,
+                              height:30,
                             ),
                           ),
                         ),
-                        const Align(
+                        Align(
                           alignment: AlignmentDirectional(1.0, 1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 80.0, 25.0),
-                            child: Icon(
-                              Icons.settings_outlined,
+                            child: Image.asset(
+                              'lib/icons/twitter.png',
                               color: Colors.white,
-                              size: 24.0,
+                              height:30,
                             ),
                           ),
                         ),
