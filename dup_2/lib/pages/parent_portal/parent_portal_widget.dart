@@ -1746,7 +1746,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                           if (responsiveVisibility(
                             context: context,
-                            phone: false,
                             tabletLandscape: false,
                             desktop: false,
                           ))
