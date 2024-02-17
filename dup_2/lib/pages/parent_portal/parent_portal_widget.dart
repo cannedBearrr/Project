@@ -50,6 +50,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _formKey = GlobalKey<FormState>();
+  final scrollController = ScrollController();
 
   bool contentExpanded = false;
   bool isEmailSent = false;
@@ -134,6 +135,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
               body: SafeArea(
                 top: true,
                 child: SingleChildScrollView(
+                  controller: scrollController,
                   child: StickyHeader(
                     header: Stack(
                       children: [
@@ -398,6 +400,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           setState(() {
                                             contentExpanded = true;
                                           });
+                                          scrollController.animateTo(
+                                            scrollController.offset + 800,
+                                            duration: Duration(seconds: 2),
+                                            curve: Curves.easeInOut,
+                                          );
                                         },
                                         text: 'Read More',
                                         options: FFButtonOptions(
@@ -581,6 +588,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             setState(() {
                                                               contentExpanded = true;
                                                             });
+                                                            scrollController.animateTo(
+                                                              scrollController.offset + 1200,
+                                                              duration: Duration(seconds: 2),
+                                                              curve: Curves.easeInOut,
+                                                            );
                                                           },
                                                           child: const Align(
                                                             alignment: AlignmentDirectional(0.0, -0.1),
