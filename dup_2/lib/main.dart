@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -14,8 +15,27 @@ void main() async {
   usePathUrlStrategy();
 
   await FlutterFlowTheme.initialize();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
 
   runApp(const MyApp());
+}
+
+class NoTransitionsBuilder extends PageTransitionsBuilder {
+  const NoTransitionsBuilder();
+
+  @override
+  Widget buildTransitions<T>(
+      PageRoute<T>? route,
+      BuildContext? context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget? child,
+      ) {
+    return child!;
+  }
 }
 
 class MyApp extends StatefulWidget {
@@ -68,12 +88,30 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: const ScrollbarThemeData(),
+        // pageTransitionsTheme: const PageTransitionsTheme(
+        //   builders: <TargetPlatform, PageTransitionsBuilder>{
+        //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        //     TargetPlatform.linux: NoTransitionsBuilder(),
+        //     TargetPlatform.macOS: NoTransitionsBuilder(),
+        //     TargetPlatform.windows: NoTransitionsBuilder(),
+        //   },
+        // ),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scrollbarTheme: const ScrollbarThemeData(),
+        // pageTransitionsTheme: const PageTransitionsTheme(
+        //   builders: <TargetPlatform, PageTransitionsBuilder>{
+        //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        //     TargetPlatform.linux: NoTransitionsBuilder(),
+        //     TargetPlatform.macOS: NoTransitionsBuilder(),
+        //     TargetPlatform.windows: NoTransitionsBuilder(),
+        //   },
+        // ),
       ),
-      themeMode: _themeMode,
+      themeMode: ThemeMode.light,
       routerConfig: _router,
     );
   }
