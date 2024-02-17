@@ -6,6 +6,8 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
