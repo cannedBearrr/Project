@@ -589,7 +589,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               contentExpanded = true;
                                                             });
                                                             scrollController.animateTo(
-                                                              scrollController.offset + 1200,
+                                                              scrollController.offset + 1000,
                                                               duration: Duration(seconds: 2),
                                                               curve: Curves.easeInOut,
                                                             );
@@ -985,7 +985,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Investor Connections',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1006,7 +1006,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Career Connections',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1027,7 +1027,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Business Oppotunity',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1048,7 +1048,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Cash Award',
+                                                              'Career Oppotunity',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1186,7 +1186,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Internship Cerificates',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1207,7 +1207,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Cash Award',
+                                                              'Achievements',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1336,7 +1336,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         children: [
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1345,7 +1345,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Computer\nProgramming',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1357,7 +1357,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1366,7 +1366,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Researching',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1378,7 +1378,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1387,7 +1387,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Communication',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1399,7 +1399,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1408,7 +1408,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Strategic Planning',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1420,7 +1420,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1429,7 +1429,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Financial\nManagement',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1441,7 +1441,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1450,7 +1450,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Leadership',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1462,7 +1462,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1471,7 +1471,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Creativity',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1483,7 +1483,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                           ),
                                                           Container(
                                                             width: 240.0,
-                                                            height: 48.0,
+                                                            height: 60.0,
                                                             decoration: BoxDecoration(
                                                               color: Colors.transparent,
                                                               border: Border.all(
@@ -1492,7 +1492,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                                             child: Text(
-                                                              'Scholarship Credit',
+                                                              'Problem Solving',
                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                     fontFamily: 'Readex Pro',
                                                                     color: const Color(0xDDFFFFFF),
@@ -1500,6 +1500,27 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                                     letterSpacing: 2.0,
                                                                     fontWeight: FontWeight.w300,
                                                                   ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            width: 240.0,
+                                                            height: 60.0,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.transparent,
+                                                              border: Border.all(
+                                                                color: const Color(0xDDFFFFFF),
+                                                              ),
+                                                            ),
+                                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                                            child: Text(
+                                                              'Business\nDevelopment',
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                fontFamily: 'Readex Pro',
+                                                                color: const Color(0xDDFFFFFF),
+                                                                fontSize: 19.0,
+                                                                letterSpacing: 2.0,
+                                                                fontWeight: FontWeight.w300,
+                                                              ),
                                                             ),
                                                           ),
                                                         ],
