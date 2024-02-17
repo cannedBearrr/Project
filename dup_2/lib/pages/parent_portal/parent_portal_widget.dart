@@ -2443,6 +2443,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           if (responsiveVisibility(
                             context: context,
                             phone: false,
+                            tablet: false,
                           ))
                             SizedBox(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -2456,188 +2457,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     physics: YesScrollPhysics(),
                                     padEnds: false,
                                     children: [
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            tabletLandscape: false,
-                                            desktop: false,
-                                          ))
-                                            Stack(
-                                              children: [
-                                                Image.network(
-                                                  'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                                  width: double.infinity,
-                                                  height: double.infinity,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                                Align(
-                                                  alignment: const AlignmentDirectional(0.0, 0.0),
-                                                  child: Column(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    children: [
-                                                      Padding(
-                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
-                                                        child: Container(
-                                                          width: 100.0,
-                                                          height: 100.0,
-                                                          clipBehavior: Clip.antiAlias,
-                                                          decoration: const BoxDecoration(
-                                                            shape: BoxShape.circle,
-                                                          ),
-                                                          child: Image.asset(
-                                                            'assets/images/henryli.jpeg',
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Column(
-                                                        mainAxisSize: MainAxisSize.max,
-                                                        mainAxisAlignment: MainAxisAlignment.center,
-                                                        children: [
-                                                          Padding(
-                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-                                                            child: Column(
-                                                              mainAxisSize: MainAxisSize.max,
-                                                              children: [
-                                                                Text(
-                                                                  'ANSON ZHAO',
-                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                        fontFamily: 'Readex Pro',
-                                                                        color: Colors.white,
-                                                                        fontSize: 30.0,
-                                                                        fontWeight: FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Text(
-                                                                  'Director of Northern Horizon',
-                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                        fontFamily: 'Readex Pro',
-                                                                        color: const Color(0xaaffffff),
-                                                                        fontSize: 17.0,
-                                                                        fontWeight: FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            width: MediaQuery.sizeOf(context).width * 0.9,
-                                                            decoration: const BoxDecoration(),
-                                                            child: Text(
-                                                              '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 17.0,
-                                                                    fontWeight: FontWeight.w200,
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ].divide(const SizedBox(height: 20.0)),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            desktop: false,
-                                          ))
-                                            Stack(
-                                              children: [
-                                                Image.network(
-                                                  'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                                  width: double.infinity,
-                                                  height: double.infinity,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                                  children: [
-                                                    const Expanded(child: SizedBox()),
-                                                    Container(
-                                                      width: 200.0,
-                                                      height: 200.0,
-                                                      clipBehavior: Clip.antiAlias,
-                                                      decoration: const BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Image.asset(
-                                                        'assets/images/henryli.jpeg',
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                    Expanded(
-                                                      flex: 10,
-                                                      child: Column(
-                                                        mainAxisSize: MainAxisSize.max,
-                                                        mainAxisAlignment: MainAxisAlignment.center,
-                                                        children: [
-                                                          Column(
-                                                            mainAxisSize: MainAxisSize.max,
-                                                            children: [
-                                                              Text(
-                                                                'ANSON ZHAO',
-                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                      fontFamily: 'Readex Pro',
-                                                                      color: Colors.white,
-                                                                      fontSize: 60.0,
-                                                                      fontWeight: FontWeight.bold,
-                                                                    ),
-                                                              ),
-                                                              Transform.translate(
-                                                                offset: const Offset(0.0, -5.0),
-                                                                child: const SizedBox(
-                                                                  width: 380.0,
-                                                                  child: Divider(
-                                                                    thickness: 1.0,
-                                                                    color: Colors.white,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Text(
-                                                                'Director of Northern Horizon',
-                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                      fontFamily: 'Readex Pro',
-                                                                      color: const Color(0xAAFFFFFF),
-                                                                      fontSize: 22.0,
-                                                                      fontWeight: FontWeight.bold,
-                                                                    ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Container(
-                                                            width: 600.0,
-                                                            decoration: const BoxDecoration(),
-                                                            child: Text(
-                                                              '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 26.0,
-                                                                    fontWeight: FontWeight.w200,
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ].divide(const SizedBox(height: 20.0)),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
                                             Stack(
                                               children: [
                                                 Image.network(
@@ -2711,18 +2530,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                     ]),
-                                              ],
-                                            ),
                                         ],
                                       ),
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
                                             Stack(
                                               children: [
                                                 Image.network(
@@ -2800,18 +2609,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                     ]),
                                               ],
-                                            ),
-                                        ],
                                       ),
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Stack(children: [
+                                            Stack(
+                                                children: [
                                               Image.network(
                                                 'https://images.unsplash.com/photo-1502239608882-93b729c6af43?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                                                 width: double.infinity,
@@ -2886,18 +2686,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                     ),
                                                   ]),
-                                            ]),
                                         ],
                                       ),
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Stack(children: [
+                                            Stack(
+                                                children: [
                                               Image.network(
                                                 'https://images.unsplash.com/photo-1581362716668-90cdec6b4882?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                                                 width: double.infinity,
@@ -2972,18 +2764,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                     ),
                                                   ]),
-                                            ]),
                                         ],
                                       ),
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Stack(children: [
+                                            Stack(
+                                                children: [
                                               Image.network(
                                                 'https://images.unsplash.com/photo-1585241645927-c7a8e5840c42?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                                                 width: double.infinity,
@@ -3059,8 +2843,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                     ),
                                                   ]),
-                                            ]),
-                                        ],
+                                            ]
                                       ),
                                     ],
                                   ),
@@ -3112,13 +2895,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     physics: YesScrollPhysics(),
                                     padEnds: false,
                                     children: [
-                                      Stack(
-                                        children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            tabletLandscape: false,
-                                            desktop: false,
-                                          ))
                                             Stack(
                                               children: [
                                                 Image.network(
@@ -3196,190 +2972,318 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   ),
                                                 ),
                                               ],
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            desktop: false,
-                                          ))
-                                            Stack(
+                                      ),
+                                      Stack(
+                                        children: [
+                                          Image.network(
+                                            'https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?q=80&w=3376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Image.network(
-                                                  'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                                  width: double.infinity,
-                                                  height: double.infinity,
-                                                  fit: BoxFit.cover,
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 100.0,
+                                                    clipBehavior: Clip.antiAlias,
+                                                    decoration: const BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.asset(
+                                                      'assets/images/richard-image.jpeg',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
                                                 ),
-                                                Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: [
-                                                      const Expanded(child: SizedBox()),
-                                                      Container(
-                                                        width: 200.0,
-                                                        height: 200.0,
-                                                        clipBehavior: Clip.antiAlias,
-                                                        decoration: const BoxDecoration(
-                                                          shape: BoxShape.circle,
-                                                        ),
-                                                        child: Image.asset(
-                                                          'assets/images/henryli.jpeg',
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Expanded(
-                                                        flex: 10,
-                                                        child: Column(
-                                                          mainAxisSize: MainAxisSize.max,
-                                                          mainAxisAlignment: MainAxisAlignment.center,
-                                                          children: [
-                                                            Column(
-                                                              mainAxisSize: MainAxisSize.max,
-                                                              children: [
-                                                                Text(
-                                                                  'ANSON ZHAO',
-                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                        fontFamily: 'Readex Pro',
-                                                                        color: Colors.white,
-                                                                        fontSize: 60.0,
-                                                                        fontWeight: FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                const SizedBox(
-                                                                  width: 380.0,
-                                                                  child: Divider(
-                                                                    thickness: 1.0,
-                                                                    color: Colors.white,
-                                                                  ),
-                                                                ),
-                                                                Text(
-                                                                  'Director of Northern Horizon',
-                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                        fontFamily: 'Readex Pro',
-                                                                        color: const Color(0xAAFFFFFF),
-                                                                        fontSize: 22.0,
-                                                                        fontWeight: FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            SizedBox(
-                                                              width: 600,
-                                                              child: Text(
-                                                                '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                      fontFamily: 'Readex Pro',
-                                                                      color: Colors.white,
-                                                                      fontSize: 26.0,
-                                                                      fontWeight: FontWeight.w200,
-                                                                    ),
-                                                              ),
-                                                            ),
-                                                          ].divide(const SizedBox(height: 20.0)),
-                                                        ),
-                                                      ),
-                                                    ]),
-                                              ],
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Stack(
-                                              children: [
-                                                Image.network(
-                                                  'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                                  width: double.infinity,
-                                                  height: double.infinity,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                                Row(
+                                                Column(
                                                   mainAxisSize: MainAxisSize.max,
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
                                                   children: [
+                                                    Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'RICHARD CUI',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: 30.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'Undergraduate, Computer Science',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: const Color(0xaaffffff),
+                                                              fontSize: 17.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
                                                     Container(
-                                                      width: 200.0,
-                                                      height: 200.0,
-                                                      clipBehavior: Clip.antiAlias,
-                                                      decoration: const BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                      ),
-                                                      child: Image.asset(
-                                                        'assets/images/henryli.jpeg',
-                                                        fit: BoxFit.cover,
+                                                      width: MediaQuery.sizeOf(context).width * 0.9,
+                                                      decoration: const BoxDecoration(),
+                                                      child: Text(
+                                                        '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 14.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
                                                       ),
                                                     ),
-                                                    Column(
-                                                      mainAxisSize: MainAxisSize.max,
-                                                      mainAxisAlignment: MainAxisAlignment.center,
-                                                      children: [
-                                                        Row(
-                                                          mainAxisSize: MainAxisSize.max,
-                                                          children: [
-                                                            Text(
-                                                              'ANSON ZHAO',
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 60.0,
-                                                                    fontWeight: FontWeight.bold,
-                                                                  ),
-                                                            ),
-                                                            Text(
-                                                              'Director of Northern Horizon',
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 30.0,
-                                                                    fontWeight: FontWeight.bold,
-                                                                  ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        Text(
-                                                          '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                color: Colors.white,
-                                                                fontSize: 30.0,
-                                                                fontWeight: FontWeight.w200,
-                                                              ),
-                                                        ),
-                                                      ].divide(const SizedBox(height: 20.0)),
-                                                    ),
-                                                  ].divide(const SizedBox(width: 25.0)).addToStart(const SizedBox(width: 100.0)),
+                                                  ].divide(const SizedBox(height: 20.0)),
                                                 ),
                                               ],
                                             ),
+                                          ),
                                         ],
                                       ),
-                                      Image.network(
-                                        'https://picsum.photos/seed/226/600',
-                                        width: 300.0,
-                                        height: 200.0,
-                                        fit: BoxFit.cover,
+                                      Stack(
+                                        children: [
+                                          Image.network(
+                                            'https://images.unsplash.com/photo-1502239608882-93b729c6af43?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 100.0,
+                                                    clipBehavior: Clip.antiAlias,
+                                                    decoration: const BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.asset(
+                                                      'assets/images/giang-picture.jpeg',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'GIANG NGUYEN',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: 30.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'Undergraduate, Biomedical Sciences',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: const Color(0xaaffffff),
+                                                              fontSize: 17.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: MediaQuery.sizeOf(context).width * 0.9,
+                                                      decoration: const BoxDecoration(),
+                                                      child: Text(
+                                                        '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 17.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ].divide(const SizedBox(height: 20.0)),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                      Image.network(
-                                        'https://picsum.photos/seed/541/600',
-                                        width: 300.0,
-                                        height: 200.0,
-                                        fit: BoxFit.cover,
+                                      Stack(
+                                        children: [
+                                          Image.network(
+                                            'https://images.unsplash.com/photo-1581362716668-90cdec6b4882?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 100.0,
+                                                    clipBehavior: Clip.antiAlias,
+                                                    decoration: const BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.asset(
+                                                      'assets/images/minh-picture.jpg',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'MINH PHAM',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: 30.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'Undergraduate, Data Science',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: const Color(0xaaffffff),
+                                                              fontSize: 17.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: MediaQuery.sizeOf(context).width * 0.9,
+                                                      decoration: const BoxDecoration(),
+                                                      child: Text(
+                                                        '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 14.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ].divide(const SizedBox(height: 20.0)),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                      Image.network(
-                                        'https://picsum.photos/seed/850/600',
-                                        width: 300.0,
-                                        height: 200.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                      Image.network(
-                                        'https://picsum.photos/seed/905/600',
-                                        width: 300.0,
-                                        height: 200.0,
-                                        fit: BoxFit.cover,
+                                      Stack(
+                                        children: [
+                                          Image.network(
+                                            'https://images.unsplash.com/photo-1581362716668-90cdec6b4882?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 100.0,
+                                                    clipBehavior: Clip.antiAlias,
+                                                    decoration: const BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.asset(
+                                                      'assets/images/minh-picture.jpg',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Column(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'MINH PHAM',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: 30.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'Undergraduate, Data Science',
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: const Color(0xaaffffff),
+                                                              fontSize: 17.0,
+                                                              fontWeight: FontWeight.bold,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: MediaQuery.sizeOf(context).width * 0.9,
+                                                      decoration: const BoxDecoration(),
+                                                      child: Text(
+                                                        '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 14.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ].divide(const SizedBox(height: 20.0)),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
