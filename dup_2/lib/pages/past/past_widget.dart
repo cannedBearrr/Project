@@ -7,25 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'past_projects_model.dart';
-export 'past_projects_model.dart';
+import 'past_model.dart';
+export 'past_model.dart';
 
-class PastProjectsWidget extends StatefulWidget {
-  const PastProjectsWidget({super.key});
+class PastWidget extends StatefulWidget {
+  const PastWidget({super.key});
 
   @override
-  State<PastProjectsWidget> createState() => _PastProjectsWidgetState();
+  State<PastWidget> createState() => _PastWidgetState();
 }
 
-class _PastProjectsWidgetState extends State<PastProjectsWidget> {
-  late PastProjectsModel _model;
+class _PastWidgetState extends State<PastWidget> {
+  late PastModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PastProjectsModel());
+    _model = createModel(context, () => PastModel());
   }
 
   @override

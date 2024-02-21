@@ -3,13 +3,13 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
-import 'past_projects_widget.dart' show PastProjectsWidget;
+import 'past_widget.dart' show PastWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class PastProjectsModel extends FlutterFlowModel<PastProjectsWidget> {
+class PastModel extends FlutterFlowModel<PastWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

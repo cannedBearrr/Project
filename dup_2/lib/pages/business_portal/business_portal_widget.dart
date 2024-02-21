@@ -141,36 +141,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ),
                                   ),
                                   Expanded(
-                                    flex: 114,
-                                    child: MouseRegion(
-                                      cursor: SystemMouseCursors.click,
-                                      child: GestureDetector(
-                                        onTap: () async {
-                                          context.pushNamed('aboutUs');
-                                        },
-                                        child: Text(
-                                          'ABOUT US',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                                fontFamily: 'Outfit',
-                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                fontSize: 16.0,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 40.0,
-                                    child: VerticalDivider(
-                                      width: 10.0,
-                                      thickness: 1.0,
-                                      indent: 4.0,
-                                      endIndent: 4.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  Expanded(
                                     flex: 192,
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
@@ -218,30 +188,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       },
                                       child: Text(
                                         'PARENT',
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: FlutterFlowTheme.of(context).primaryText,
-                                              fontSize: 20.0,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 40.0,
-                                    child: VerticalDivider(
-                                      width: 0.0,
-                                      thickness: 1.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('aboutUs');
-                                      },
-                                      child: Text(
-                                        'ABOUT US',
                                         style: FlutterFlowTheme.of(context).headlineMedium.override(
                                               fontFamily: 'Outfit',
                                               color: FlutterFlowTheme.of(context).primaryText,

@@ -10,5 +10,5 @@ export '/pages/business_portal/business_portal_widget.dart'
     show BusinessPortalWidget;
 export '/pages/about_us/about_us_widget.dart'
     show AboutUsWidget;
-export '/pages/past_projects/past_projects_widget.dart'
+export 'pages/past_projects/past_projects_widget.dart'
     show PastProjectsWidget;
