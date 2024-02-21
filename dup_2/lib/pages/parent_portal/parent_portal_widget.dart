@@ -3737,7 +3737,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Align(
-                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                              alignment: AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                               child: Image.asset(
@@ -3935,7 +3935,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'bossemail@gmail.com',
+                                              'bossemai1l@gmail.com',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                     fontFamily: 'Readex Pro',
                                                     color: Colors.white,
@@ -3951,7 +3951,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 15.0),
                                       child: Image.asset(
                                         'assets/images/linkedin.png',
                                         height:30,
@@ -3962,7 +3962,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                                       child: Image.asset(
                                         'assets/images/facebook.png',
                                         height:30,
@@ -3973,7 +3973,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 15.0),
                                       child: Image.asset(
                                         'assets/images/twitter.png',
                                         height:30,

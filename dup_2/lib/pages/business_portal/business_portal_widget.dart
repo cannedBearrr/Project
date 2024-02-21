@@ -45,6 +45,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
   late BusinessPortalModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final scrollController = ScrollController();
 
   @override
   void initState() {
@@ -92,6 +93,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
               body: SafeArea(
                 top: true,
                 child: SingleChildScrollView(
+                  controller: scrollController,
                   child: StickyHeader(
                     header: Stack(
                       children: [
@@ -237,7 +239,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           Stack(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
                                   'images/unsplash_gG-YEEDSppM_(1).png',
                                   width: double.infinity,
@@ -274,6 +275,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       FFButtonWidget(
                                         onPressed: () {
                                           print('Button pressed ...');
+                                          scrollController.animateTo(
+                                            scrollController.offset + 800,
+                                            duration: Duration(seconds: 2),
+                                            curve: Curves.easeInOut,
+                                          );
                                         },
                                         text: 'READ MORE',
                                         options: FFButtonOptions(
@@ -307,7 +313,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           Stack(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
                                   isiOS ? 'assets/images/unsplash_gG-YEEDSppM_(1).png' : 'images/unsplash_gG-YEEDSppM_(1).png',
                                   width: double.infinity,
@@ -348,7 +353,16 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                                      child: Container(
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          print('Button pressed ...');
+                                          scrollController.animateTo(
+                                            scrollController.offset + 800,
+                                            duration: Duration(seconds: 2),
+                                            curve: Curves.easeInOut,
+                                          );
+                                        },
+                                        child: Container(
                                         width: MediaQuery.sizeOf(context).width * 0.25,
                                         height: MediaQuery.sizeOf(context).height * 0.11,
                                         decoration: BoxDecoration(
@@ -362,7 +376,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           color: Colors.white,
                                           size: 48.0,
                                         ),
-                                      ),
+                                      ),)
                                     ),
                                   ].divide(const SizedBox(height: 30.0)),
                                 ),
@@ -717,6 +731,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         FFButtonWidget(
                                           onPressed: () {
                                             print('Button pressed ...');
+                                            context.pushNamed('pastProjects');
                                           },
                                           text: 'PAST PROJECTS',
                                           options: FFButtonOptions(
@@ -958,7 +973,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             child: Stack(
                               children: [
                                 ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
                                   child: Image.network(
                                     'https://picsum.photos/seed/564/600',
                                     width: double.infinity,
@@ -1026,7 +1040,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           Stack(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
                                 child: Image.network(
                                   'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
                                   width: double.infinity,
@@ -1097,7 +1110,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           Stack(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
                                 child: Image.network(
                                   'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
                                   width: double.infinity,
