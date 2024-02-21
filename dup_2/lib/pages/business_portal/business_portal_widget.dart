@@ -80,9 +80,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
       }
       double screenWidth = MediaQuery.sizeOf(context).width;
 
-      return PopScope(
-          canPop: false,
-          child: GestureDetector(
+      return GestureDetector(
             onTap: () => _model.unfocusNode.canRequestFocus
                 ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                 : FocusScope.of(context).unfocus(),
@@ -1620,7 +1618,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                 ),
               ),
             ),
-          ));
+);
     } catch (e) {
       print('Error occurred while building this page: $e');
       return Container(); // Return an empty container in case of error

@@ -121,9 +121,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
         );
       }
 
-      return PopScope(
-          canPop: false,
-          child: GestureDetector(
+      return GestureDetector(
             onTap: () => _model.unfocusNode.canRequestFocus
                 ? FocusScope.of(context).requestFocus(_model.unfocusNode)
                 : FocusScope.of(context).unfocus(),
@@ -4102,7 +4100,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                 ),
               ),
             ),
-          ));
+      );
     } catch (e) {
       print('Error occurred while building this page: $e');
       return Container(); // Return an empty container in case of error
