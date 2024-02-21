@@ -190,7 +190,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         cursor: SystemMouseCursors.click,
                                         child: GestureDetector(
                                           onTap: () async {
-                                            context.pushNamed('past');
+                                            context.pushNamed('pastProjects');
                                           },
                                           child: Text(
                                             'PAST PROJECTS',
