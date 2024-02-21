@@ -130,14 +130,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                     tween: ColorTween(begin: d1_1, end: d1),
                     duration: const Duration(milliseconds: 300),
                     builder: (BuildContext context, Color? c, Widget? child) {
-                      return MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                            child: MouseRegion(
+                              cursor: SystemMouseCursors.click,
                               child: TweenAnimationBuilder<double>(
                                 curve: Curves.easeOutQuart,
                                 tween: Tween<double>(
@@ -216,8 +216,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: ClipRRect(
                                                   borderRadius: BorderRadius.circular(0.0),
-                                                  child: Image.network(
-                                                    'https://picsum.photos/seed/658/600',
+                                                  child: Image.asset(
+                                                    'images/Trophie.jpg',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
@@ -308,18 +308,18 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 },
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                              child: ColoredBox(
-                                color: c ?? Colors.transparent,
-                                child: SizedBox(
-                                  width: MediaQuery.sizeOf(context).width * 0.05,
-                                  height: MediaQuery.sizeOf(context).height * 0.35,
-                                ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                            child: ColoredBox(
+                              color: c ?? Colors.transparent,
+                              child: SizedBox(
+                                width: MediaQuery.sizeOf(context).width * 0.05,
+                                height: MediaQuery.sizeOf(context).height * 0.35,
                               ),
                             ),
-                          ].divide(const SizedBox(width: 20.0)),
-                        ),
+                          ),
+                        ].divide(const SizedBox(width: 20.0)),
                       );
                     },
                   ),
@@ -426,8 +426,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           alignment: const AlignmentDirectional(-1.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(0.0),
-                                            child: Image.network(
-                                              'https://picsum.photos/seed/567/600',
+                                            child: Image.asset(
+                                              'assets/images/2023NA_036.jpg',
                                               width: double.infinity,
                                               height: double.infinity,
                                               fit: BoxFit.cover,
@@ -648,8 +648,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                     ),
                                     child: Stack(
                                       children: [
-                                        Image.network(
-                                          'https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMHx8c3Vuc2V0fGVufDB8fHx8MTcwMTk2NzEzOXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                        Image.asset(
+                                          'assets/images/2023NA_034.jpg',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.cover,
@@ -902,21 +902,21 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                         tween: ColorTween(begin: d2_1, end: d2),
                         duration: const Duration(milliseconds: 300),
                         builder: (BuildContext context, Color? c1, Widget? child) {
-                          return MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                ColoredBox(
-                                  color: c1 ?? Colors.transparent,
-                                  child: SizedBox(
-                                    width: MediaQuery.sizeOf(context).width * 0.05,
-                                    height: MediaQuery.sizeOf(context).height * 0.35,
-                                  ),
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              ColoredBox(
+                                color: c1 ?? Colors.transparent,
+                                child: SizedBox(
+                                  width: MediaQuery.sizeOf(context).width * 0.05,
+                                  height: MediaQuery.sizeOf(context).height * 0.35,
                                 ),
-                                TweenAnimationBuilder<double>(
+                              ),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: TweenAnimationBuilder<double>(
                                     curve: Curves.easeOutQuart,
                                     tween: Tween<double>(
                                       begin: iW_1,
@@ -990,8 +990,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  Image.network(
-                                                    'https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxzdGFycnklMjBuaWdodHxlbnwwfHx8fDE3MDIwMzMyNDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                  Image.asset(
+                                                    'assets/images/2023NA_040.jpg',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
@@ -1092,8 +1092,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                         },
                                       );
                                     }),
-                              ].divide(const SizedBox(width: 20.0)),
-                            ),
+                              ),
+                            ].divide(const SizedBox(width: 20.0)),
                           );
                         }),
                   ),
