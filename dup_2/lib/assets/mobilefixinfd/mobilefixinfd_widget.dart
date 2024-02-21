@@ -297,7 +297,7 @@ class _MobilefixinfdWidgetState extends State<MobilefixinfdWidget> {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          Transform.scale,
+                          Transform.scale(
                             scaleX: 2.0,
                             scaleY: 2.0,
                             alignment: const Alignment(-1.0, -1.0),

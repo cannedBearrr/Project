@@ -130,14 +130,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                     tween: ColorTween(begin: d1_1, end: d1),
                     duration: const Duration(milliseconds: 300),
                     builder: (BuildContext context, Color? c, Widget? child) {
-                      return MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                            child: MouseRegion(
+                              cursor: SystemMouseCursors.click,
                               child: TweenAnimationBuilder<double>(
                                 curve: Curves.easeOutQuart,
                                 tween: Tween<double>(
@@ -308,18 +308,18 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 },
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                              child: ColoredBox(
-                                color: c ?? Colors.transparent,
-                                child: SizedBox(
-                                  width: MediaQuery.sizeOf(context).width * 0.05,
-                                  height: MediaQuery.sizeOf(context).height * 0.35,
-                                ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                            child: ColoredBox(
+                              color: c ?? Colors.transparent,
+                              child: SizedBox(
+                                width: MediaQuery.sizeOf(context).width * 0.05,
+                                height: MediaQuery.sizeOf(context).height * 0.35,
                               ),
                             ),
-                          ].divide(const SizedBox(width: 20.0)),
-                        ),
+                          ),
+                        ].divide(const SizedBox(width: 20.0)),
                       );
                     },
                   ),
@@ -902,21 +902,21 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                         tween: ColorTween(begin: d2_1, end: d2),
                         duration: const Duration(milliseconds: 300),
                         builder: (BuildContext context, Color? c1, Widget? child) {
-                          return MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                ColoredBox(
-                                  color: c1 ?? Colors.transparent,
-                                  child: SizedBox(
-                                    width: MediaQuery.sizeOf(context).width * 0.05,
-                                    height: MediaQuery.sizeOf(context).height * 0.35,
-                                  ),
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              ColoredBox(
+                                color: c1 ?? Colors.transparent,
+                                child: SizedBox(
+                                  width: MediaQuery.sizeOf(context).width * 0.05,
+                                  height: MediaQuery.sizeOf(context).height * 0.35,
                                 ),
-                                TweenAnimationBuilder<double>(
+                              ),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: TweenAnimationBuilder<double>(
                                     curve: Curves.easeOutQuart,
                                     tween: Tween<double>(
                                       begin: iW_1,
@@ -1092,8 +1092,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                         },
                                       );
                                     }),
-                              ].divide(const SizedBox(width: 20.0)),
-                            ),
+                              ),
+                            ].divide(const SizedBox(width: 20.0)),
                           );
                         }),
                   ),
