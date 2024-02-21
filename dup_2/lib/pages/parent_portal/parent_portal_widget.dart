@@ -3781,6 +3781,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                           ),
+                                          Text(
+                                            '',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                          ),
                                         ].divide(const SizedBox(height: 5.0)),
                                       ),
                                       Column(
@@ -3816,6 +3825,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   fontSize: 13.0,
                                                   fontWeight: FontWeight.w200,
                                                 ),
+                                          ),
+                                          Text(
+                                            '1 Ashley Ave Middletown, NY',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                           ),
                                         ].divide(const SizedBox(height: 5.0)),
                                       ),
@@ -3996,6 +4014,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     fontWeight: FontWeight.w200,
                                                   ),
                                             ),
+                                            Text(
+                                              '',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),
                                         Column(
@@ -4028,6 +4055,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
                                                   ),
+                                            ),
+                                            Text(
+                                              '1 Ashley Ave Middletown, NY',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),

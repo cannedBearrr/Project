@@ -1244,7 +1244,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                'LEARN MORE',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
@@ -1255,7 +1255,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  'Home',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: Colors.white,
@@ -1265,13 +1265,22 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                'About Us',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 13.0,
                                                       fontWeight: FontWeight.w200,
                                                     ),
+                                              ),
+                                              Text(
+                                                'Our Projects',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ].divide(const SizedBox(height: 5.0)),
                                           ),
@@ -1280,7 +1289,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                'WHAT WE DO',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
@@ -1291,7 +1300,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  'Maketing Solutions',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: Colors.white,
@@ -1301,13 +1310,22 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                'Website Building',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 13.0,
                                                       fontWeight: FontWeight.w200,
                                                     ),
+                                              ),
+                                              Text(
+                                                'Taiolored Solutions',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ].divide(const SizedBox(height: 5.0)),
                                           ),
@@ -1316,7 +1334,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                'LEGAL',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
@@ -1327,7 +1345,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  'Terms of Service',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: Colors.white,
@@ -1337,13 +1355,22 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                'Privacy Policy',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 13.0,
                                                       fontWeight: FontWeight.w200,
                                                     ),
+                                              ),
+                                              Text(
+                                                '',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ].divide(const SizedBox(height: 5.0)),
                                           ),
@@ -1352,7 +1379,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                'CONTACT US',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
@@ -1363,7 +1390,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  '+1 (845)-281-9257',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: Colors.white,
@@ -1373,49 +1400,58 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                'bossemail@gmail.com',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 13.0,
                                                       fontWeight: FontWeight.w200,
                                                     ),
+                                              ),
+                                              Text(
+                                                '1 Ashley Ave Middletown, NY',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ].divide(const SizedBox(height: 5.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Align(
+                                              Align(
                                                 alignment: AlignmentDirectional(0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                                  child: Icon(
-                                                    Icons.settings_outlined,
+                                                  child: Image.asset(
+                                                    'images/linkedin.png',
+                                                    height: 50,
                                                     color: Colors.white,
-                                                    size: 30.0,
                                                   ),
                                                 ),
                                               ),
-                                              const Align(
+                                              Align(
                                                 alignment: AlignmentDirectional(0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                                  child: Icon(
-                                                    Icons.settings_outlined,
+                                                  child: Image.asset(
+                                                    'images/facebook.png',
+                                                    height: 50,
                                                     color: Colors.white,
-                                                    size: 30.0,
                                                   ),
                                                 ),
                                               ),
-                                              const Align(
+                                              Align(
                                                 alignment: AlignmentDirectional(0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                                  child: Icon(
-                                                    Icons.settings_outlined,
+                                                  child: Image.asset(
+                                                    'images/twitter.png',
+                                                    height: 50,
                                                     color: Colors.white,
-                                                    size: 30.0,
                                                   ),
                                                 ),
                                               ),
@@ -1449,169 +1485,217 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Hello World',
+                                              'LEARN MORE',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Home',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'About Us',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
-                                          ].divide(const SizedBox(height: 2.0)),
+                                            Text(
+                                              'Our Projects',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 5.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Hello World',
+                                              'WHAT WE DO',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Maketing Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'Website Building',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
-                                          ].divide(const SizedBox(height: 2.0)),
+                                            Text(
+                                              'Taiolored Solutions',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 5.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Hello World',
+                                              'LEGAL',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Terms of Service',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'Privacy Policy',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
-                                          ].divide(const SizedBox(height: 2.0)),
+                                            Text(
+                                              '',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 5.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Hello World',
+                                              'CONTACT US',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                '+1 (845)-281-9257',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'bossemail@gmail.com',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
-                                          ].divide(const SizedBox(height: 2.0)),
+                                            Text(
+                                              '1 Ashley Ave Middletown, NY',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 5.0)),
                                         ),
                                       ],
                                     ),
                                   ),
-                                  const Align(
-                                    alignment: AlignmentDirectional(-1.0, 1.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 25.0),
-                                      child: Icon(
-                                        Icons.settings_outlined,
-                                        color: Colors.white,
-                                        size: 24.0,
-                                      ),
-                                    ),
-                                  ),
-                                  const Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                      child: Icon(
-                                        Icons.settings_outlined,
+                                      child: Image.asset(
+                                        'images/linkedin.png',
+                                        height: 50,
                                         color: Colors.white,
-                                        size: 24.0,
                                       ),
                                     ),
                                   ),
-                                  const Align(
-                                    alignment: AlignmentDirectional(1.0, 1.0),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 25.0),
-                                      child: Icon(
-                                        Icons.settings_outlined,
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      child: Image.asset(
+                                        'images/facebook.png',
+                                        height: 50,
                                         color: Colors.white,
-                                        size: 24.0,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      child: Image.asset(
+                                        'images/twitter.png',
+                                        height: 50,
+                                        color: Colors.white,
                                       ),
                                     ),
                                   ),
