@@ -183,36 +183,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   Expanded(
-                                    flex: 115,
-                                    child: MouseRegion(
-                                      cursor: SystemMouseCursors.click,
-                                      child: GestureDetector(
-                                        onTap: () async {
-                                          context.pushNamed('aboutUs');
-                                        },
-                                        child: Text(
-                                          'ABOUT US',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                                fontFamily: 'Outfit',
-                                                color: Colors.black,
-                                                fontSize: 16.0,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 40.0,
-                                    child: VerticalDivider(
-                                      width: 10.0,
-                                      thickness: 1.0,
-                                      indent: 4.0,
-                                      endIndent: 4.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  Expanded(
                                     flex: 191,
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
@@ -260,30 +230,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       },
                                       child: Text(
                                         'BUSINESS',
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: Colors.black,
-                                              fontSize: 20.0,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 40.0,
-                                    child: VerticalDivider(
-                                      width: 0.0,
-                                      thickness: 1.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('aboutUs');
-                                      },
-                                      child: Text(
-                                        'ABOUT US',
                                         style: FlutterFlowTheme.of(context).headlineMedium.override(
                                               fontFamily: 'Outfit',
                                               color: Colors.black,

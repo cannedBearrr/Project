@@ -1212,15 +1212,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 13.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
-                                              ),
-                                              Text(
                                                 'Our Projects',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
@@ -1229,6 +1220,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
+                                            )
                                             ].divide(const SizedBox(height: 5.0)),
                                           ),
                                           Column(
@@ -1432,25 +1424,22 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'LEARN MORE',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 'Home',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
-                                                  fontSize: 13.0,
+                                                  fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
@@ -1460,7 +1449,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
@@ -1469,33 +1458,30 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 5.0)),
+                                          ].divide(const SizedBox(height: 2.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'WHAT WE DO',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
-                                                'Maketing Solutions',
+                                                'Marketing Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
-                                                  fontSize: 13.0,
+                                                  fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
@@ -1505,42 +1491,39 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
                                             Text(
-                                              'Taiolored Solutions',
+                                              'Tailored Solutions',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 5.0)),
+                                          ].divide(const SizedBox(height: 2.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'LEGAL',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 'Terms of Service',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
-                                                  fontSize: 13.0,
+                                                  fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
@@ -1550,7 +1533,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
@@ -1559,33 +1542,30 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 5.0)),
+                                          ].divide(const SizedBox(height: 2.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'CONTACT US',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 '+1 (845)-281-9257',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
-                                                  fontSize: 13.0,
+                                                  fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
@@ -1595,7 +1575,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
@@ -1604,44 +1584,44 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 13.0,
+                                                fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 5.0)),
+                                          ].divide(const SizedBox(height: 2.0)),
                                         ),
                                       ],
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 15.0),
                                       child: Image.asset(
-                                        'images/linkedin.png',
-                                        height: 50,
+                                        'assets/images/linkedin.png',
+                                        height: 30,
                                         color: Colors.white,
                                       ),
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                                       child: Image.asset(
-                                        'images/facebook.png',
-                                        height: 50,
+                                        'assets/images/facebook.png',
+                                        height: 30,
                                         color: Colors.white,
                                       ),
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 15.0),
                                       child: Image.asset(
-                                        'images/twitter.png',
-                                        height: 50,
+                                        'assets/images/twitter.png',
+                                        height: 30,
                                         color: Colors.white,
                                       ),
                                     ),
@@ -1649,8 +1629,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 ],
                               ),
                             ),
-                        ]
-                      ],
+                        ],
                     ),
                   ),
                 ),
