@@ -108,13 +108,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             children: [
                                               Container(
                                                 child: Image.asset(
-                                                  'assets/images/Project_based_learning.png',
-                                                  width: MediaQuery.sizeOf(context).width * 0.85,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  fit: BoxFit.cover,
+                                                  'assets/images/ESP web.gif',
+                                                  fit: BoxFit.fill,
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.85,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
+                                                width: MediaQuery.sizeOf(context).width * 0.83,
+                                                height: MediaQuery.sizeOf(context).height * 0.21,
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                 ),
@@ -134,8 +132,34 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
-                                                width: MediaQuery.sizeOf(context).width * 0.85,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
+                                                width: MediaQuery.sizeOf(context).width * 0.5,
+                                                height: MediaQuery.sizeOf(context).height * 0.3,
+                                                child: Image.asset(
+                                                  'assets/images/Friendly bear@4x 2.png',
+                                                  fit: BoxFit.fill,
+                                                ),
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Hello World',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        SingleChildScrollView(
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Container(
+                                                width: MediaQuery.sizeOf(context).width * 0.70,
+                                                height: MediaQuery.sizeOf(context).height * 0.22,
+                                                child: Image.asset(
+                                                  'assets/images/CitySmart.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                 ),
@@ -154,6 +178,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 width: MediaQuery.sizeOf(context).width * 0.85,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
+                                                child: Image.asset(
+                                                  'assets/images/Covid TK.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                 ),
@@ -172,6 +200,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 width: MediaQuery.sizeOf(context).width * 0.85,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
+                                                child: Image.asset(
+                                                  'assets/images/ISH 2.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                 ),
@@ -190,24 +222,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 width: MediaQuery.sizeOf(context).width * 0.85,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                child: Image.asset(
+                                                  'assets/images/Worldheritage.gif',
+                                                  fit: BoxFit.fill,
                                                 ),
-                                              ),
-                                              Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                width: MediaQuery.sizeOf(context).width * 0.85,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                 ),
