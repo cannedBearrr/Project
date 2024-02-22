@@ -440,7 +440,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Programming',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
@@ -456,7 +456,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Design',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
@@ -472,7 +472,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'Marketing',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
@@ -487,7 +487,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         color: Color(0xCC000000),
                                       ),
                                       Text(
-                                        'SAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE SAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE TEST\nSAMPLE TESTSAMPLE TESTSAMPLE ',
+                                        'NH offers a comprehensive suite of services designed to meet the needs of todays businesses and organizations, focusing on programming, design, and marketing. Our programming services cover everything from web and desktop applications to mobile app development, utilizing the latest technologies and methodologies. In design, we offer cutting-edge UI/UX solutions, as well as the creation of impactful marketing materials like brochures and posters. Our marketing services extend to strategy development, planning, and the execution of promotion activities, tailored to elevate your brands presence and reach. By choosing NH, you benefit from the fresh perspectives and innovative approaches of our talented students, guided by experienced mentors, ensuring quality deliverables that align with your goals.',
                                         style: FlutterFlowTheme.of(context).bodyMedium,
                                       ),
                                     ].divide(const SizedBox(height: 15.0)),
@@ -663,7 +663,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               ],
                             ),
                             Text(
-                              'SAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE',
+                              '11112SAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
                                     fontSize: 14.0,
@@ -945,7 +945,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   lineStyle: DividerLineStyle.dashed,
                                 ),
                                 Text(
-                                  'SAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT',
+                                  'Joining NH offers a unique opportunity to leap ahead in defining and pursuing your career goals through hands-on, real-world experience in fields like programming, design, and marketing. By participating in project-based learning from as early as high school, mentored by professionals, you not only gain invaluable skills but also contribute to meaningful projects that can shape your future. NH stands out as a pioneering educational program that bridges the gap between academic learning and practical application, ensuring you make informed decisions about your career path early on, saving valuable time and setting you apart in college applications and job markets. With NH, you are not just preparing for the future, you are actively shaping it with every project you undertake.',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                                 const StyledDivider(
@@ -1018,7 +1018,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   lineStyle: DividerLineStyle.dashed,
                                 ),
                                 Text(
-                                  'SAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT',
+                                  '3333SAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                                 const StyledDivider(
