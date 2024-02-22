@@ -575,7 +575,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                         ////////////////
                         SizedBox(
-                          height: min(MediaQuery.sizeOf(context).width * 3 / 4, MediaQuery.sizeOf(context).height) - 50,
+                          height: min(MediaQuery.sizeOf(context).width * 5 / 6, MediaQuery.sizeOf(context).height) - 50,
                           child: Stack(
                             children: [
                               Align(
@@ -1699,7 +1699,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: RichText(
                                   text: TextSpan(
-                                    text: '⸻ ',
+                                    text: (MediaQuery.sizeOf(context).width > 950) ? '⸻ ' : '',
                                     children: const <TextSpan>[
                                       TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
 
