@@ -289,8 +289,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/560/600',
+                                  child: Image.asset(
+                                    'assets/images/Layer_2.png',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
