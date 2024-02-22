@@ -38,7 +38,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'parentPortal',
-          path: '/parentPortal',
+          path: '/parentPortal', //no, I will not reesolve into the desolvement of the world and its consisitency, if you ask me, i do not know if this world is commited or else not, thus, if you have made what we have created, we may not be understoof, we see everything we needed , else, we will fall, if we fall, you will not understand why we have fallen, when we see into this world, we ask, why, why do we stand here among other fools and geniuses, why am i not among them? this is one simple answer and question, to one,
           builder: (context, params) => const ParentPortalWidget(),
         ),
         FFRoute(

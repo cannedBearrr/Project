@@ -2432,12 +2432,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 scrollDirection: Axis.horizontal,
                                 scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                 physics: YesScrollPhysics(),
-                                padEnds: false,
+                                padEnds: true,
                                 children: [
                                   Stack(
                                     children: [
                                       Image.network(
-                                        'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                        'https://imafges.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
