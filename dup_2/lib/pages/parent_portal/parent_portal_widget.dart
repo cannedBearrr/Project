@@ -167,36 +167,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 115,
-                                child: MouseRegion(
-                                  cursor: SystemMouseCursors.click,
-                                  child: GestureDetector(
-                                    onTap: () async {
-                                      context.pushNamed('aboutUs');
-                                    },
-                                    child: Text(
-                                      'ABOUT US',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                            fontFamily: 'Outfit',
-                                            color: Colors.black,
-                                            fontSize: 16.0,
+
                                           ),
                                     ),
                                   ),
@@ -280,30 +251,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
                                   onTap: () async {
-                                    context.pushNamed('aboutUs');
-                                  },
-                                  child: Text(
-                                    'ABOUT US',
-                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: Colors.black,
-                                          fontSize: 20.0,
-                                        ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 0.0,
-                                  thickness: 1.0,
-                                  color: Color(0xCC000000),
-                                ),
-                              ),
-                              MouseRegion(
-                                cursor: SystemMouseCursors.click,
-                                child: GestureDetector(
-                                  onTap: () async {
+
                                     context.pushNamed('pastProjects');
                                   },
                                   child: Text(
@@ -1315,12 +1263,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Image.asset(
                                                 'assets/images/photocrprsp2.png',
                                                 width: double.infinity,
-                                                height: 600.0,
+                                                height: 700.0,
                                                 fit: BoxFit.fitHeight,
                                               ),
                                               Container(
                                                 width: double.infinity,
-                                                height: 600.0,
+                                                height: 700.0,
                                                 decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
                                                     colors: [Color(0xE05C0014), Color(0x80000000)],
@@ -1753,8 +1701,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   text: TextSpan(
                                     text: '⸻ ',
                                     children: const <TextSpan>[
-                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))
-                                    ],
+                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           fontSize: 45.0,
@@ -2004,7 +1952,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                     ],
                                   ),
-                                  Stack(
+                                  GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('careerOrientedSkills');
+                                    },
+                                    child:Stack(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     children: [
                                       Align(
@@ -2035,19 +1987,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
                                               child: Text(
-                                                'Career - Oriented\nSkills',
+                                                'Career-Oriented\nSkills',
                                                 textAlign: TextAlign.center,
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       color: Colors.white,
                                                       fontSize: 33.0,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight: FontWeight.bold,),
                                                     ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                    ],
+                                        ],
+                                    ),
                                   ),
                                   Stack(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
@@ -3785,6 +3737,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                       ),
+                                      Text(
+                                        '',style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                      ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
                                   Column(
@@ -3821,7 +3781,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                       ),
-                                    ].divide(const SizedBox(height: 5.0)),
+                                    Text(
+                                        '1 Ashley Ave Middletown, NY',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                      ),].divide(const SizedBox(height: 5.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -3992,7 +3960,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         Text(
-                                          'Privacy Policy',
+                                          'Privacy Policy',style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
+                                        Text(
+                                          '',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -4033,6 +4009,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 fontWeight: FontWeight.w200,
                                               ),
                                         ),
+                                        Text(
+                                          '1 Ashley Ave Middletown, NY',style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
                                       ].divide(const SizedBox(height: 2.0)),
                                     ),
                                   ],
@@ -4041,9 +4025,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               Align(
                                 alignment: AlignmentDirectional(-1.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 25.0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 15.0),
                                   child: Image.asset(
-                                    'images/linkedin.png',
+                                    'assets/images/linkedin.png',
                                     height: 30,
                                     color: Colors.white,
                                   ),
@@ -4052,9 +4036,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               Align(
                                 alignment: AlignmentDirectional(0.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                                   child: Image.asset(
-                                    'images/facebook.png',
+                                    'assets/images/facebook.png',
                                     height: 30,
                                     color: Colors.white,
                                   ),
@@ -4063,9 +4047,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               Align(
                                 alignment: AlignmentDirectional(1.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 25.0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 15.0),
                                   child: Image.asset(
-                                    'images/twitter.png',
+                                    'assets/images/twitter.png',
                                     height: 30,
                                     color: Colors.white,
                                   ),
