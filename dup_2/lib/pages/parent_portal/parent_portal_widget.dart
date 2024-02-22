@@ -289,8 +289,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                               child: Image.asset(
                                 'assets/images/Layer_2.png',
-                                width: 300.0,
-                                height: 200.0,
+                                width: MediaQuery.sizeOf(context).width * 0.8,
+                                height: MediaQuery.sizeOf(context).height * 0.13,
                                 fit: BoxFit.cover,
                               ),
                             ),
