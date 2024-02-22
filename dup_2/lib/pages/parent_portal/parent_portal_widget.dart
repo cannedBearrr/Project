@@ -588,7 +588,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             setState(() {
                                                               contentExpanded = true;
                                                             });
-                                                            int x = responsiveVisibility(context: context, desktop: false) ? -25 : 40;
+                                                            int x = responsiveVisibility(context: context, desktop: false) ? responsiveVisibility(context: context, tabletLandscape: false) ? -25 : 0 : 40;
                                                             scrollController.animateTo(
                                                               scrollController.offset + (MediaQuery.sizeOf(context).height +
                                                                   min(MediaQuery.sizeOf(context).width * 3 / 4,
@@ -2912,7 +2912,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                           if (responsiveVisibility(
                             context: context,
-                            tablet: false,
                             tabletLandscape: false,
                             desktop: false,
                           ))
@@ -2997,6 +2996,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.w200,
                                                             ),
+                                                        textAlign: TextAlign.center,
                                                       ),
                                                     ),
                                                   ].divide(const SizedBox(height: 20.0)),
@@ -3075,6 +3075,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fontSize: 14.0,
                                                               fontWeight: FontWeight.w200,
                                                             ),
+                                                        textAlign: TextAlign.center,
                                                       ),
                                                     ),
                                                   ].divide(const SizedBox(height: 20.0)),
@@ -3153,6 +3154,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.w200,
                                                             ),
+                                                        textAlign: TextAlign.center,
                                                       ),
                                                     ),
                                                   ].divide(const SizedBox(height: 20.0)),
@@ -3231,6 +3233,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fontSize: 14.0,
                                                               fontWeight: FontWeight.w200,
                                                             ),
+                                                        textAlign: TextAlign.center,
                                                       ),
                                                     ),
                                                   ].divide(const SizedBox(height: 20.0)),
@@ -3309,6 +3312,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               fontSize: 14.0,
                                                               fontWeight: FontWeight.w200,
                                                             ),
+                                                        textAlign: TextAlign.center,
                                                       ),
                                                     ),
                                                   ].divide(const SizedBox(height: 20.0)),
