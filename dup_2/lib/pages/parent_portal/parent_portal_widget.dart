@@ -1947,7 +1947,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     onTap: () async {
                                       context.pushNamed('careerOrientedSkills');
                                     },
-                                    child:Stack(
+                                    child: Stack(
                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                       children: [
                                         Align(
@@ -1978,14 +1978,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               child: Align(
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Text(
-                                                  'Career - Oriented\nSkills',
+                                                  'Career - Oriented\nSkills',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    fontSize: 33.0,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 33.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
                                               ),
                                             ),
@@ -2125,30 +2125,30 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     tablet: false,
                                   ))
                                     Align(
-                                        alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context).width * 0.28,
-                                            height: MediaQuery.sizeOf(context).height * 0.18,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0x00FFFFFF),
-                                              border: Border.all(
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                            child: Align(
-                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Text(
-                                                'Career - Oriented\nSkills',
-                                                textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 39.0,
-                                                      fontWeight: FontWeight.bold,
-                                                    ),
-                                              ),
-                                            ),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Container(
+                                        width: MediaQuery.sizeOf(context).width * 0.28,
+                                        height: MediaQuery.sizeOf(context).height * 0.18,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0x00FFFFFF),
+                                          border: Border.all(
+                                            color: Colors.white,
                                           ),
+                                        ),
+                                        child: Align(
+                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                          child: Text(
+                                            'Career - Oriented\nSkills',
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 39.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                 ],
                               ),
