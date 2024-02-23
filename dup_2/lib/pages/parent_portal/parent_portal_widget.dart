@@ -96,8 +96,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
 
       _model.textController2 ??= TextEditingController();
       _model.textFieldFocusNode2 ??= FocusNode();
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   //yu
@@ -105,8 +104,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   void dispose() {
     try {
       _model.dispose();
-    } catch (e) {
-    }
+    } catch (e) {}
 
     super.dispose();
   }
@@ -124,9 +122,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       }
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus
-            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-            : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
@@ -167,8 +163,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
-
-                                          ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -251,7 +246,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
                                   onTap: () async {
-
                                     context.pushNamed('pastProjects');
                                   },
                                   child: Text(
@@ -489,8 +483,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       const TextSpan(
-                                                        text:
-                                                            ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT-\nBASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
+                                                        text: ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT-\nBASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
                                                         style: TextStyle(
                                                           color: Colors.white,
                                                         ),
@@ -534,11 +527,13 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         setState(() {
                                                           contentExpanded = true;
                                                         });
-                                                        int x = responsiveVisibility(context: context, desktop: false) ? responsiveVisibility(context: context, tabletLandscape: false) ? -25 : 0 : 40;
+                                                        int x = responsiveVisibility(context: context, desktop: false)
+                                                            ? responsiveVisibility(context: context, tabletLandscape: false)
+                                                                ? -25
+                                                                : 0
+                                                            : 40;
                                                         scrollController.animateTo(
-                                                          (MediaQuery.sizeOf(context).height +
-                                                              min(MediaQuery.sizeOf(context).width * 3 / 4,
-                                                                  MediaQuery.sizeOf(context).height)) / 2 + x,
+                                                          (MediaQuery.sizeOf(context).height + min(MediaQuery.sizeOf(context).width * 3 / 4, MediaQuery.sizeOf(context).height)) / 2 + x,
                                                           duration: const Duration(seconds: 2),
                                                           curve: Curves.easeInOut,
                                                         );
@@ -571,6 +566,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         context: context,
                         phone: false,
                         tablet: false,
+                        tabletLandscape: false,
                         desktop: false,
                       ))
                         ////////////////
@@ -626,22 +622,26 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                decoration: const BoxDecoration(),
-                                child: wrapWithModel(
-                                  model: _model.mobilefixinfdModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: const MobilefixinfdWidget(),
+                              if (responsiveVisibility(
+                                context: context,
+                                phone: false,
+                                tablet: false,
+                                tabletLandscape: false,
+                              ))
+                                Container(
+                                  decoration: const BoxDecoration(),
+                                  // child: wrapWithModel(
+                                  //   // model: _model.mobilefixinfdModel,
+                                  //   updateCallback: () => setState(() {}),
+                                  //   child: const MobilefixinfdWidget(),
+                                  // ),
                                 ),
-                              ),
                             ],
                           ),
                         ),
                       if (responsiveVisibility(
                         context: context,
-                        tablet: false,
-                        tabletLandscape: false,
-                        desktop: false,
+                        phone: false,
                       ))
                         Column(
                           mainAxisSize: MainAxisSize.max,
@@ -679,7 +679,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       'assets/images/photocrpfei.webp',
                                       width: double.infinity,
                                       height: 135.0,
-                                      fit: BoxFit.fitHeight,
+                                      fit: BoxFit.cover,
                                     ),
                                     Container(
                                       width: double.infinity,
@@ -745,7 +745,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 'assets/images/photocrpfei2.webp',
                                                 width: double.infinity,
                                                 height: 225.0,
-                                                fit: BoxFit.fitHeight,
+                                                fit: BoxFit.cover,
                                               ),
                                               Container(
                                                 width: double.infinity,
@@ -838,7 +838,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       'assets/images/photocrprsp.webp',
                                       width: double.infinity,
                                       height: 135.0,
-                                      fit: BoxFit.fitHeight,
+                                      fit: BoxFit.cover,
                                     ),
                                     Container(
                                       width: double.infinity,
@@ -904,7 +904,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 'assets/images/photocrprsp2.webp',
                                                 width: double.infinity,
                                                 height: 330.0,
-                                                fit: BoxFit.fitHeight,
+                                                fit: BoxFit.cover,
                                               ),
                                               Container(
                                                 width: double.infinity,
@@ -1105,7 +1105,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 'assets/images/photocrpfei2.webp',
                                                 width: double.infinity,
                                                 height: 225.0,
-                                                fit: BoxFit.fitHeight,
+                                                fit: BoxFit.cover,
                                               ),
                                               Container(
                                                 width: double.infinity,
@@ -1238,7 +1238,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Align(
                                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                                     child: Text(
-                                                      'Professional Skills',
+                                                      'Professional Skills1',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: Colors.white,
@@ -1700,9 +1700,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: RichText(
                                   text: TextSpan(
                                     text: (MediaQuery.sizeOf(context).width > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[
-                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
-
+                                    children: const <TextSpan>[TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           fontSize: 45.0,
@@ -1872,35 +1870,34 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     desktop: false,
                                   ))
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: GestureDetector(
-                                        onTap: () async {
-                                          context.pushNamed('partnershipWithCompanies');
-                                        },
-                                        child:Container(
-                                          width: 389.0,
-                                          height: 77.0,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0x00FFFFFF),
-                                            border: Border.all(
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                          child: Align(
-                                            alignment: const AlignmentDirectional(0.0, 0.0),
-                                            child: Text(
-                                              'Partnerships with Companies',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontFamily: 'Readex Pro',
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: GestureDetector(
+                                          onTap: () async {
+                                            context.pushNamed('partnershipWithCompanies');
+                                          },
+                                          child: Container(
+                                            width: 389.0,
+                                            height: 77.0,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0x00FFFFFF),
+                                              border: Border.all(
                                                 color: Colors.white,
-                                                fontSize: 22.0,
-                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Text(
+                                                'Partnerships with Companies',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 22.0,
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      )
-                                    ),
+                                        )),
                                 ],
                               ),
                             ),
@@ -1970,49 +1967,50 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     onTap: () async {
                                       context.pushNamed('careerOrientedSkills');
                                     },
-                                    child:Stack(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    children: [
-                                      Align(
-                                        alignment: const AlignmentDirectional(0.0, 0.0),
-                                        child: Image.asset(
-                                          'assets/images/2023NA_039.jpg',
-                                          width: MediaQuery.sizeOf(context).width * 1 / 3,
-                                          height: MediaQuery.of(context).size.height * 1.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
+                                    child: Stack(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      children: [
                                         Align(
                                           alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Container(
-                                            width: MediaQuery.of(context).size.width * 0.28,
-                                            height: MediaQuery.of(context).size.height * 0.18,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0x00FFFFFF),
-                                              border: Border.all(
-                                                color: Colors.white,
+                                          child: Image.asset(
+                                            'assets/images/2023NA_039.jpg',
+                                            width: MediaQuery.sizeOf(context).width * 1 / 3,
+                                            height: MediaQuery.of(context).size.height * 1.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          phone: false,
+                                          tablet: false,
+                                        ))
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Container(
+                                              width: MediaQuery.of(context).size.width * 0.28,
+                                              height: MediaQuery.of(context).size.height * 0.18,
+                                              decoration: BoxDecoration(
+                                                color: const Color(0x00FFFFFF),
+                                                border: Border.all(
+                                                  color: Colors.white,
+                                                ),
                                               ),
-                                            ),
-                                            child: Align(
-                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Text(
-                                                'Career-Oriented\nSkills',
-                                                textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 33.0,
-                                                      fontWeight: FontWeight.bold,),
-                                                    ),
+                                              child: Align(
+                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                child: Text(
+                                                  'Career-Oriented\nSkills',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 33.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ],
+                                      ],
                                     ),
                                   ),
                                   Stack(
@@ -2464,71 +2462,64 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: 200.0,
-                                              height: 200.0,
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/Anson_Bio.jpg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 9,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: 200.0,
+                                          height: 200.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Anson_Bio.jpg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 9,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'ANSON ZHAO',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: Colors.white,
-                                                              fontSize: 60.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child:
-                                                              SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                      Text(
-                                                        'Director of Northern Horizon',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 30.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
-                                                  ),
                                                   Text(
-                                                    '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
+                                                    'ANSON ZHAO',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: 30.0,
-                                                          fontWeight: FontWeight.w200,
+                                                          fontSize: 60.0,
+                                                          fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                  Text(
+                                                    'Director of Northern Horizon',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 30.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              Text(
+                                                '“Opting for Northern Horizon is the ideal decision for your\nchildren if you seek a direct and shortest path to their\nsuccessful careers.”',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 30.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2539,74 +2530,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: 200.0,
-                                              height: 200.0,
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/richard-image.jpeg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 14,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: 200.0,
+                                          height: 200.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/richard-image.jpeg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 14,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'RICHARD CUI',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: Colors.white,
-                                                              fontSize: 60.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child:
-                                                              SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Computer Science',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 30.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'RICHARD CUI',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 60.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 900,
-                                                    child: Text(
-                                                      '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 25.0,
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Computer Science',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 30.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 900,
+                                                child: Text(
+                                                  '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 25.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2617,74 +2601,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: 200,
-                                              height: 200,
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/giang-picture.jpeg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 15,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: 200,
+                                          height: 200,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/giang-picture.jpeg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 15,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'GIANG NGUYEN',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: Colors.white,
-                                                              fontSize: min(-171.0 + MediaQuery.sizeOf(context).width / 6, 60),
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child:
-                                                              SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Biomedical Sciences',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 30.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'GIANG NGUYEN',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: min(-171.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 950,
-                                                    child: Text(
-                                                      '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 30.0,
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Biomedical Sciences',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 30.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 950,
+                                                child: Text(
+                                                  '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 30.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2695,74 +2672,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: 200.0,
-                                              height: 200.0,
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/minh-picture.jpg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 13,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: 200.0,
+                                          height: 200.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/minh-picture.jpg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 13,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'MINH PHAM',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: Colors.white,
-                                                              fontSize: 60.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
-                                                          child:
-                                                              SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Data Science',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              fontFamily: 'Readex Pro',
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 30.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'MINH PHAM',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 60.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 1000,
-                                                    child: Text(
-                                                      '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 25.0,
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Data Science',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 30.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 1000,
+                                                child: Text(
+                                                  '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 25.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(children: [
@@ -2772,75 +2742,68 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       height: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
-                                    Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          const Expanded(child: SizedBox()),
-                                          Container(
-                                            width: 200.0,
-                                            height: 200.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.asset(
-                                              'assets/images/james-picture.jpg',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 9,
-                                            child: Column(
+                                    Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                      const Expanded(child: SizedBox()),
+                                      Container(
+                                        width: 200.0,
+                                        height: 200.0,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/james-picture.jpg',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 9,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
-                                                    Text(
-                                                      'JAMES ZHANG',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 60.0,
-                                                            fontWeight: FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                    ConstrainedBox(
-                                                        constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
-                                                        child:
-                                                            SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                    Text(
-                                                      '??????',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: const Color(0xaaffffff),
-                                                            fontSize: 30.0,
-                                                            fontWeight: FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                Text(
+                                                  'JAMES ZHANG',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 60.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
-                                                SizedBox(
-                                                  width: 1000,
-                                                  child: Text(
-                                                    '“I like bricks”\n',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          fontFamily: 'Readex Pro',
-                                                          color: Colors.white,
-                                                          fontSize: 25.0,
-                                                          fontWeight: FontWeight.w200,
-                                                        ),
-                                                    textAlign: TextAlign.center,
-                                                  ),
+                                                ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                Text(
+                                                  '??????',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: const Color(0xaaffffff),
+                                                        fontSize: 30.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
-                                              ].divide(const SizedBox(height: 20.0)),
+                                              ],
                                             ),
-                                          ),
-                                        ]),
+                                            SizedBox(
+                                              width: 1000,
+                                              child: Text(
+                                                '“I like bricks”\n',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 20.0)),
+                                        ),
+                                      ),
+                                    ]),
                                   ]),
                                 ],
                               ),
@@ -3642,18 +3605,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                            child: InkWell(
-                                              onTap: () async {
-                                                context.pushNamed('parentPortal');
-                                              },
-                                        child: Text(
-                                          'Home',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontFamily: 'Readex Pro',
-                                                color: Colors.white,
-                                                fontSize: 13.0,
-                                                fontWeight: FontWeight.w200,),
-                                              ),
+                                        child: InkWell(
+                                          onTap: () async {
+                                            context.pushNamed('parentPortal');
+                                          },
+                                          child: Text(
+                                            'Home',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
+                                          ),
                                         ),
                                       ),
                                       Text(
@@ -3756,7 +3720,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                       ),
                                       Text(
-                                        '',style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        '',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
                                               fontSize: 13.0,
@@ -3799,7 +3764,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                       ),
-                                    Text(
+                                      Text(
                                         '1 Ashley Ave Middletown, NY',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
@@ -3807,7 +3772,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               fontSize: 13.0,
                                               fontWeight: FontWeight.w200,
                                             ),
-                                      ),].divide(const SizedBox(height: 5.0)),
+                                      ),
+                                    ].divide(const SizedBox(height: 5.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
