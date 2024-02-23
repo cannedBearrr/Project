@@ -217,7 +217,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                 child: ClipRRect(
                                                   borderRadius: BorderRadius.circular(0.0),
                                                   child: Image.asset(
-                                                    'images/Trophie.jpg',
+                                                    'assets/images/Trophie.jpg',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
