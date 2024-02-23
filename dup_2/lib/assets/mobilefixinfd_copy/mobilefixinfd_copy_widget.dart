@@ -133,8 +133,8 @@ class _MobilefixinfdCopyWidgetState extends State<MobilefixinfdCopyWidget> {
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 50.0, 0.0),
                     child: Container(
-                      width: MediaQuery.sizeOf(context).width * 0.5,
-                      height: MediaQuery.sizeOf(context).width * 0.1,
+                      width: max(MediaQuery.sizeOf(context).width * 0.5, 440),
+                      height: max(MediaQuery.sizeOf(context).width * 0.1, 90),
                       decoration: const BoxDecoration(
                         color: Color(0x00FFFFFF),
                       ),
@@ -191,7 +191,7 @@ class _MobilefixinfdCopyWidgetState extends State<MobilefixinfdCopyWidget> {
                       padding: const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 50.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.55,
-                        height: MediaQuery.sizeOf(context).width * 0.3,
+                        height: max(MediaQuery.sizeOf(context).width * 0.3, 225),
                         decoration: const BoxDecoration(
                           color: Color(0x00FFFFFF),
                         ),

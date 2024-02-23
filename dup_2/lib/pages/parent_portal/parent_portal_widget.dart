@@ -95,7 +95,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       _model.textController2 ??= TextEditingController();
       _model.textFieldFocusNode2 ??= FocusNode();
     } catch (e) {
-      print('Error occurred while initializing this page: $e');
     }
   }
 
@@ -105,7 +104,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
     try {
       _model.dispose();
     } catch (e) {
-      print('Error occurred while disposing this apge: $e');
     }
 
     super.dispose();
@@ -282,7 +280,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       Stack(
                         children: [
                           Image.network(
-                            'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
+                            'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80',
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: max(600.0, MediaQuery.sizeOf(context).height * 1.0 - 40),
                             fit: BoxFit.cover,
@@ -347,8 +345,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         contentExpanded = true;
                                       });
                                       scrollController.animateTo(
-                                        scrollController.offset + 800,
-                                        duration: Duration(seconds: 2),
+                                        MediaQuery.sizeOf(context).height * 0.95 - 50,
+                                        duration: const Duration(seconds: 1, milliseconds: 500),
                                         curve: Curves.easeInOut,
                                       );
                                     },
@@ -390,7 +388,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Image.network(
-                                'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
+                                'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80',
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height - 50,
                                 fit: BoxFit.cover,
@@ -536,7 +534,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         });
                                                         int x = responsiveVisibility(context: context, desktop: false) ? responsiveVisibility(context: context, tabletLandscape: false) ? -25 : 0 : 40;
                                                         scrollController.animateTo(
-                                                          scrollController.offset + (MediaQuery.sizeOf(context).height +
+                                                          (MediaQuery.sizeOf(context).height +
                                                               min(MediaQuery.sizeOf(context).width * 3 / 4,
                                                                   MediaQuery.sizeOf(context).height)) / 2 + x,
                                                           duration: const Duration(seconds: 2),
@@ -575,7 +573,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                         ////////////////
                         SizedBox(
-                          height: min(MediaQuery.sizeOf(context).width * 5 / 6, MediaQuery.sizeOf(context).height) - 50,
+                          height: max(min(MediaQuery.sizeOf(context).width * 5 / 6, MediaQuery.sizeOf(context).height) - 50, 700),
                           child: Stack(
                             children: [
                               Align(
@@ -676,7 +674,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrpfei.png',
+                                      'assets/images/photocrpfei.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.fitHeight,
@@ -742,7 +740,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrpfei2.png',
+                                                'assets/images/photocrpfei2.webp',
                                                 width: double.infinity,
                                                 height: 225.0,
                                                 fit: BoxFit.fitHeight,
@@ -835,7 +833,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrprsp.png',
+                                      'assets/images/photocrprsp.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.fitHeight,
@@ -901,7 +899,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrprsp2.png',
+                                                'assets/images/photocrprsp2.webp',
                                                 width: double.infinity,
                                                 height: 330.0,
                                                 fit: BoxFit.fitHeight,
@@ -1036,7 +1034,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.network(
-                                      'https://images.unsplash.com/photo-1562845029-d1b530d4cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw4fHxibGFja2JlcnJ5fGVufDB8fHx8MTcwNDkzNTc2OHww&ixlib=rb-4.0.3&q=80&w=1080',
+                                      'https://images.unsplash.com/photo-1562845029-d1b530d4cfd3?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw4fHxibGFja2JlcnJ5fGVufDB8fHx8MTcwNDkzNTc2OHww&ixlib=rb-4.0.3&q=80',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -1102,7 +1100,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrpfei2.png',
+                                                'assets/images/photocrpfei2.webp',
                                                 width: double.infinity,
                                                 height: 225.0,
                                                 fit: BoxFit.fitHeight,
@@ -1195,7 +1193,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrpblu.png',
+                                      'assets/images/photocrpblu.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -1261,7 +1259,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrprsp2.png',
+                                                'assets/images/photocrprsp2.webp',
                                                 width: double.infinity,
                                                 height: 700.0,
                                                 fit: BoxFit.fitHeight,
@@ -1706,7 +1704,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           fontSize: 45.0,
-                                          color: Colors.redAccent[400],
+                                          color: Colors.red[700],
                                         ),
                                   ),
                                 ),
@@ -1733,7 +1731,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/DSC_1630.jpg',
+                                      'assets/images/DSC_1630.webp',
                                       width: double.infinity,
                                       height: 180.0,
                                       fit: BoxFit.cover,
@@ -1845,7 +1843,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/DSC_1614.jpg',
+                                      'assets/images/DSC_1614.webp',
                                       width: double.infinity,
                                       height: 180.0,
                                       fit: BoxFit.cover,
@@ -1913,7 +1911,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       Align(
                                         alignment: const AlignmentDirectional(-1.0, 0.0),
                                         child: Image.asset(
-                                          'assets/images/DSC_1630.jpg',
+                                          'assets/images/DSC_1630.webp',
                                           width: MediaQuery.sizeOf(context).width * 1 / 3,
                                           height: MediaQuery.sizeOf(context).height * 1.0,
                                           fit: BoxFit.cover,
@@ -2007,7 +2005,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       Align(
                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Image.asset(
-                                          'assets/images/DSC_1614.jpg',
+                                          'assets/images/DSC_1614.webp',
                                           width: MediaQuery.sizeOf(context).width * 1 / 3,
                                           height: MediaQuery.of(context).size.height * 1.0,
                                           fit: BoxFit.cover,
@@ -2071,7 +2069,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/DSC_1630.jpg',
+                                      'assets/images/DSC_1630.webp',
                                       width: MediaQuery.sizeOf(context).width * 1 / 3,
                                       height: MediaQuery.sizeOf(context).height * 1.0,
                                       fit: BoxFit.cover,
@@ -2171,7 +2169,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(1.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/DSC_1614.jpg',
+                                      'assets/images/DSC_1614.webp',
                                       width: MediaQuery.sizeOf(context).width * 1 / 3,
                                       height: MediaQuery.sizeOf(context).height * 1.0,
                                       fit: BoxFit.cover,
@@ -2445,7 +2443,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       Image.network(
-                                        'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                        'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -2539,7 +2537,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                'images/richard-image.jpeg',
+                                                'assets/images/richard-image.jpeg',
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -2617,7 +2615,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                'images/giang-picture.jpeg',
+                                                'assets/images/giang-picture.jpeg',
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -2695,7 +2693,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                'images/minh-picture.jpg',
+                                                'assets/images/minh-picture.jpg',
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -2772,7 +2770,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.asset(
-                                              'images/james-picture.jpg',
+                                              'assets/images/james-picture.jpg',
                                               fit: BoxFit.cover,
                                             ),
                                           ),
@@ -2880,7 +2878,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Stack(
                                     children: [
                                       Image.network(
-                                        'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                        'https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce&auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8ZGFya3xlbnwwfHx8fDE3MDE0NDA3MTJ8MA&ixlib=rb-4.0.3&q=80',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -3334,17 +3332,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
-                                      InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/844/600',
-                                          width: MediaQuery.sizeOf(context).width * 0.8,
-                                          height: MediaQuery.sizeOf(context).height * 0.3,
-                                          fit: BoxFit.cover,
-                                        ),
+                                      Image.network(
+                                        'https://images.unsplash.com/photo-1467019972079-a273e1bc9173?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                        width: MediaQuery.sizeOf(context).width * 0.8,
+                                        height: MediaQuery.sizeOf(context).height * 0.3,
+                                        fit: BoxFit.cover,
                                       ),
                                       if (responsiveVisibility(
                                         context: context,
@@ -3397,7 +3389,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         autovalidateMode: AutovalidateMode.onUserInteraction,
                                                         onFieldSubmitted: (value) async {
                                                           if (_formKey.currentState!.validate()) {
-                                                            print(value);
                                                             setState(() {
                                                               sendEmail(value);
                                                               isEmailSent = true;
@@ -3513,7 +3504,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         autovalidateMode: AutovalidateMode.onUserInteraction,
                                                         onFieldSubmitted: (value) async {
                                                           if (_formKey.currentState!.validate()) {
-                                                            print(value);
                                                             setState(() {
                                                               sendEmail(value);
                                                               isEmailSent = true;
@@ -3795,9 +3785,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
                                             'images/linkedin.png',
                                             height: 50,
@@ -3806,9 +3796,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
                                             'images/facebook.png',
                                             height: 50,
@@ -3817,9 +3807,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
                                             'images/twitter.png',
                                             height: 50,
@@ -4023,9 +4013,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 1.0),
+                                alignment: const AlignmentDirectional(-1.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 15.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 15.0),
                                   child: Image.asset(
                                     'assets/images/linkedin.png',
                                     height: 30,
@@ -4034,9 +4024,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                                   child: Image.asset(
                                     'assets/images/facebook.png',
                                     height: 30,
@@ -4045,9 +4035,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 1.0),
+                                alignment: const AlignmentDirectional(1.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 15.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 15.0),
                                   child: Image.asset(
                                     'assets/images/twitter.png',
                                     height: 30,
@@ -4067,7 +4057,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
         ),
       );
     } catch (e) {
-      print('Error occurred while building this page: $e');
       return Container(); // Return an empty container in case of error
     }
   }
