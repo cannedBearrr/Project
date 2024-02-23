@@ -487,7 +487,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         color: Color(0xCC000000),
                                       ),
                                       Text(
-                                        'NH offers a comprehensive suite of services designed to meet the needs of todays businesses and organizations, focusing on programming, design, and marketing. Our programming services cover everything from web and desktop applications to mobile app development, utilizing the latest technologies and methodologies. In design, we offer cutting-edge UI/UX solutions, as well as the creation of impactful marketing materials like brochures and posters. Our marketing services extend to strategy development, planning, and the execution of promotion activities, tailored to elevate your brands presence and reach. By choosing NH, you benefit from the fresh perspectives and innovative approaches of our talented students, guided by experienced mentors, ensuring quality deliverables that align with your goals.',
+                                        'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
                                         style: FlutterFlowTheme.of(context).bodyMedium,
                                       ),
                                     ].divide(const SizedBox(height: 15.0)),
@@ -503,26 +503,15 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               ),
                               child: Stack(
                                 children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(0.0),
-                                      child: Image.network(
-                                        'https://picsum.photos/seed/500/600',
-                                        width: MediaQuery.sizeOf(context).width * 0.2,
-                                        height: MediaQuery.sizeOf(context).height * 0.25,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
+
                                   Align(
                                     alignment: const AlignmentDirectional(1.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 200.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(0.0),
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/435/600',
+                                        child: Image.asset(
+                                          'images/FT_245_M.jpg',
                                           width: MediaQuery.sizeOf(context).width * 0.3,
                                           height: MediaQuery.sizeOf(context).height * 0.35,
                                           fit: BoxFit.cover,
@@ -536,8 +525,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(200.0, 0.0, 0.0, 100.0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(0.0),
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/290/600',
+                                        child: Image.asset(
+                                          'images/NAM_007_M.jpg',
                                           width: MediaQuery.sizeOf(context).width * 0.25,
                                           height: MediaQuery.sizeOf(context).height * 0.35,
                                           fit: BoxFit.cover,
@@ -699,8 +688,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(0.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1507502707541-f369a3b18502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxuaWdodCUyMHNreXxlbnwwfHx8fDE3MDcyNjkzOTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                              child: Image.asset(
+                                //moon
+                                    'images/2023NA_037.jpg',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -895,8 +885,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).secondaryBackground,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/549/600',
+                            child: Image.asset(
+                              'images/FT_239_M.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
@@ -945,7 +935,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   lineStyle: DividerLineStyle.dashed,
                                 ),
                                 Text(
-                                  'Joining NH offers a unique opportunity to leap ahead in defining and pursuing your career goals through hands-on, real-world experience in fields like programming, design, and marketing. By participating in project-based learning from as early as high school, mentored by professionals, you not only gain invaluable skills but also contribute to meaningful projects that can shape your future. NH stands out as a pioneering educational program that bridges the gap between academic learning and practical application, ensuring you make informed decisions about your career path early on, saving valuable time and setting you apart in college applications and job markets. With NH, you are not just preparing for the future, you are actively shaping it with every project you undertake.',
+                                  'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                                 const StyledDivider(
@@ -1041,8 +1031,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       Stack(
                         children: [
                           ClipRRect(
-                            child: Image.network(
-                              'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                            child: Image.asset(
+                              'images/2023NA_032.jpg',
                               width: double.infinity,
                               height: MediaQuery.sizeOf(context).height * 0.75,
                               fit: BoxFit.cover,
@@ -1111,7 +1101,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       Stack(
                         children: [
                           ClipRRect(
-                            child: Image.network(
+                            child: Image.network(//moons+stars
                               'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
                               width: double.infinity,
                               height: MediaQuery.sizeOf(context).height * 0.75,

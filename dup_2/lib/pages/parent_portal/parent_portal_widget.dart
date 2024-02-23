@@ -13,6 +13,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'parent_portal_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 export 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -3307,8 +3308,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         focusColor: Colors.transparent,
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/844/600',
+                                        child: Image.asset(
+                                          'images/2023NA_031.jpg',
                                           width: MediaQuery.sizeOf(context).width * 0.8,
                                           height: MediaQuery.sizeOf(context).height * 0.3,
                                           fit: BoxFit.cover,
@@ -3597,14 +3598,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                            child: InkWell(
+                                              onTap: () async {
+                                                context.pushNamed('parentPortal');
+                                              },
                                         child: Text(
                                           'Home',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
                                                 fontSize: 13.0,
-                                                fontWeight: FontWeight.w200,
+                                                fontWeight: FontWeight.w200,),
                                               ),
                                         ),
                                       ),
