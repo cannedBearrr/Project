@@ -13,6 +13,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'parent_portal_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 export 'parent_portal_model.dart';
 
 Future<http.Response> sendEmail(String email) {
@@ -3820,14 +3821,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Home',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              context.pushNamed('parentPortal');
+                                            },
+                                            child: Text(
+                                              'Home',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                         Text(
