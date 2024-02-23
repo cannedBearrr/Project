@@ -203,7 +203,6 @@ class _CareerOrientedSkillsWidgetState
                     tablet: false,
                   ))
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
                       child: Image.network(
                         'https://images.unsplash.com/photo-1432604470246-f4f905367043?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxwZXJvc258ZW58MHx8fHwxNzAxNDQxNzUyfDA&ixlib=rb-4.0.3&q=80&w=1080',
                         width: double.infinity,

@@ -15,6 +15,7 @@ import 'dart:convert';
 import 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 export 'parent_portal_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Future<http.Response> sendEmail(String email) {
   return http.post(
@@ -623,9 +624,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               Container(
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
-                                  model: _model.mobilefixinfdCopyModel,
+                                  model: _model.mobilefixinfdModel,
                                   updateCallback: () => setState(() {}),
-                                  child: const MobilefixinfdCopyWidget(),
+                                  child: const MobilefixinfdWidget(),
                                 ),
                               ),
                             ],
@@ -1743,30 +1744,34 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     desktop: false,
                                   ))
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 389.0,
-                                        height: 77.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00FFFFFF),
-                                          border: Border.all(
-                                            color: Colors.white,
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: GestureDetector(
+                                          onTap: () async {
+                                            context.pushNamed('projectBasedLearning');
+                                          },
+                                          child: Container(
+                                            width: 389.0,
+                                            height: 77.0,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0x00FFFFFF),
+                                              border: Border.all(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Text(
+                                                'Project - Based Learning',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 22.0,
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                              ),
+                                            ),
                                           ),
-                                        ),
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'Project - Based Learning',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 22.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
+                                        )),
                                 ],
                               ),
                             ),
@@ -1800,25 +1805,30 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   ))
                                     Align(
                                       alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 389.0,
-                                        height: 77.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00FFFFFF),
-                                          border: Border.all(
-                                            color: Colors.white,
+                                      child: GestureDetector(
+                                        onTap: () async {
+                                          context.pushNamed('careerOrientedSkills');
+                                        },
+                                        child: Container(
+                                          width: 389.0,
+                                          height: 77.0,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x00FFFFFF),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
                                           ),
-                                        ),
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'Career - Oriented Skills',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 22.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                          child: Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Text(
+                                              'Career - Oriented Skills',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: Colors.white,
+                                                    fontSize: 22.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -1856,28 +1866,33 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   ))
                                     Align(
                                       alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 389.0,
-                                        height: 77.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00FFFFFF),
-                                          border: Border.all(
-                                            color: Colors.white,
+                                      child: GestureDetector(
+                                        onTap: () async {
+                                          context.pushNamed('partnershipWithCompanies');
+                                        },
+                                        child:Container(
+                                          width: 389.0,
+                                          height: 77.0,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x00FFFFFF),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          child: Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Text(
+                                              'Partnerships with Companies',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 22.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'Partnerships with Companies',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 22.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
+                                      )
                                     ),
                                 ],
                               ),
@@ -3293,8 +3308,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         focusColor: Colors.transparent,
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/844/600',
+                                        child: Image.asset(
+                                          'assets/images/2023NA_031.jpg',
                                           width: MediaQuery.sizeOf(context).width * 0.8,
                                           height: MediaQuery.sizeOf(context).height * 0.3,
                                           fit: BoxFit.cover,
@@ -3571,24 +3586,30 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        'LEARN MORE',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                      InkWell(
+                                        child: Text(
+                                          'LEARN MORE',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                            child: InkWell(
+                                              onTap: () async {
+                                                context.pushNamed('parentPortal');
+                                              },
                                         child: Text(
                                           'Home',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
                                                 fontSize: 13.0,
-                                                fontWeight: FontWeight.w200,
+                                                fontWeight: FontWeight.w200,),
                                               ),
                                         ),
                                       ),
