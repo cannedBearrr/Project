@@ -68,7 +68,7 @@ class _MobilefixinfdWidgetState extends State<MobilefixinfdWidget> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
-                                  'images/Trophie.jpg',
+                                  'assets/images/Trophie.jpg',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -147,7 +147,7 @@ class _MobilefixinfdWidgetState extends State<MobilefixinfdWidget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
-                                  'images/2023NA_036.jpg',
+                                  'assets/images/2023NA_036.jpg',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -291,7 +291,7 @@ class _MobilefixinfdWidgetState extends State<MobilefixinfdWidget> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(0.0),
                             child: Image.asset(
-                              'images/2023NA_040.jpg',
+                              'assets/images/2023NA_040.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
