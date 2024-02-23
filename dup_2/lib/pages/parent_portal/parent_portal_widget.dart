@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Future<http.Response> sendEmail(String email) {
   return http.post(
@@ -3570,14 +3571,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        'LEARN MORE',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                      InkWell(
+                                        child: Text(
+                                          'LEARN MORE',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),

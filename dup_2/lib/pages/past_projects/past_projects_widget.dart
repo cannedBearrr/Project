@@ -314,6 +314,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/ESP web.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -332,6 +336,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/Friendly bear@4x 2.png',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -350,6 +358,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/CitySmart.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -368,6 +380,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/Covid TK.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -386,6 +402,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/ISH 2.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -404,6 +424,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
+                                                child: Image.asset(
+                                                  'assets/images/Worldheritage.gif',
+                                                  fit: BoxFit.fill,
+                                                ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -490,7 +514,6 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   phone: false,
                                   tablet: false,
                                   tabletLandscape: false,
-                                  desktop: false,
                                 ),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
@@ -506,6 +529,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/ESP web.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -524,6 +551,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/Friendly bear@4x 2.png',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -542,6 +573,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/CitySmart.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -560,6 +595,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/Covid TK.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -578,6 +617,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/ISH 2.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -596,6 +639,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
+                                                  child: Image.asset(
+                                                    'assets/images/Worldheritage.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -722,41 +769,41 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Text(
                                         'LEARN MORE',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           'Home',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'About Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         'Our Projects',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -767,41 +814,41 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Text(
                                         'WHAT WE DO',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           'Marketing Solutions',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'Website Building',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         'Tailored Solutions',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -812,41 +859,41 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Text(
                                         'LEGAL',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           'Terms of Service',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'Privacy Policy',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         '',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -857,41 +904,41 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Text(
                                         'Contact Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           '+1 (845)-281-9257',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'bossemail@gmail.com',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         '1 Ashley Ave Middletown, NY',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
