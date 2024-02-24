@@ -86,10 +86,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         'BUSINESS',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                                              fontFamily: 'Outfit',
+                                              color: FlutterFlowTheme.of(context).primaryText,
+                                              fontSize: 16.0,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -119,10 +119,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         'PARENT',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                                              fontFamily: 'Outfit',
+                                              color: FlutterFlowTheme.of(context).primaryText,
+                                              fontSize: 16.0,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -154,10 +154,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'BUISNESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -178,10 +178,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'PARENT',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -196,11 +196,18 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0), // Center alignment
                       child: Text(
                         'Student Projects',
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                          fontSize: 40.0,
+                          color: Color(0xFF008dff),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',// Set the font size to 40
+                        ),
+                      ),
                     ),
+
                     if (responsiveVisibility(
                       context: context,
                       tablet: false,
@@ -450,17 +457,17 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               children: [
                                                 Container(
                                                   child: Image.asset(
-                                                  'assets/images/ESP web.gif',
-                                                  fit: BoxFit.fill,
+                                                    'assets/images/ESP web.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
+                                                  width: MediaQuery.sizeOf(context).width * 0.8,
+                                                  height: MediaQuery.sizeOf(context).height * 0.4,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ),
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                '10',
+                                                Text(
+                                                  '10',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -472,17 +479,17 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               children: [
                                                 Container(
                                                   child: Image.asset(
-                                                  'assets/images/Friendly bear@4x 2.png',
-                                                  fit: BoxFit.fill,
+                                                    'assets/images/Friendly bear@4x 2.png',
+                                                    fit: BoxFit.fill,
+                                                  ),
+                                                  width: MediaQuery.sizeOf(context).width * 0.8,
+                                                  height: MediaQuery.sizeOf(context).height * 0.4,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ),
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                '11',
+                                                Text(
+                                                  '11',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -494,31 +501,31 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               children: [
                                                 Container(
                                                   child: Image.asset(
-                                                  'assets/images/CitySmart.gif',
-                                                  fit: BoxFit.fill,
+                                                    'assets/images/CitySmart.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
+                                                  width: MediaQuery.sizeOf(context).width * 0.8,
+                                                  height: MediaQuery.sizeOf(context).height * 0.4,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ),
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                Text(
+                                                  '12',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
-                                              ),
-                                              Text(
-                                                '12',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                  'assets/images/Covid TK.gif',
-                                                  fit: BoxFit.fill,
-                                                ),
+                                          SingleChildScrollView(
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Container(
+                                                  child: Image.asset(
+                                                    'assets/images/Covid TK.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.8,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   decoration: BoxDecoration(
@@ -538,17 +545,17 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               children: [
                                                 Container(
                                                   child: Image.asset(
-                                                  'assets/images/ISH 2.gif',
-                                                  fit: BoxFit.fill,
+                                                    'assets/images/ISH 2.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
+                                                  width: MediaQuery.sizeOf(context).width * 0.8,
+                                                  height: MediaQuery.sizeOf(context).height * 0.4,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ),
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                '14',
+                                                Text(
+                                                  '14',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -560,19 +567,19 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               children: [
                                                 Container(
                                                   child: Image.asset(
-                                                  'assets/images/Worldheritage.gif',
-                                                  fit: BoxFit.fill,
+                                                    'assets/images/Worldheritage.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
+                                                  width: MediaQuery.sizeOf(context).width * 0.8,
+                                                  height: MediaQuery.sizeOf(context).height * 0.4,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ),
                                                 ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                                child: Text(
-                                                  '15',
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                  child: Text(
+                                                    '15',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ),
@@ -649,33 +656,33 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     phone: false,
                                     tablet: false,
                                     tabletLandscape: false,
-                                ),
-                                child: Container(
-                                  width: MediaQuery.sizeOf(context).width * 1.0,
-                                  height: MediaQuery.sizeOf(context).height * 0.5,
-                                  child: Stack(
-                                    children: [
-                                      PageView(
-                                        controller: _model.pageViewController3 ??= PageController(initialPage: 1),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/ESP web.gif',
-                                                    fit: BoxFit.fill,
+                                  ),
+                                  child: Container(
+                                    width: MediaQuery.sizeOf(context).width * 1.0,
+                                    height: MediaQuery.sizeOf(context).height * 0.5,
+                                    child: Stack(
+                                      children: [
+                                        PageView(
+                                          controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                          scrollDirection: Axis.horizontal,
+                                          children: [
+                                            SingleChildScrollView(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Container(
+                                                    child: Image.asset(
+                                                      'assets/images/ESP web.gif',
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                    width: MediaQuery.sizeOf(context).width * 0.4,
+                                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                    ),
                                                   ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                                  Text(
+                                                    'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ],
@@ -687,17 +694,17 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 children: [
                                                   Container(
                                                     child: Image.asset(
-                                                    'assets/images/Friendly bear@4x 2.png',
-                                                    fit: BoxFit.fill,
+                                                      'assets/images/Friendly bear@4x 2.png',
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                    width: MediaQuery.sizeOf(context).width * 0.4,
+                                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                    ),
                                                   ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
+                                                  Text(
+                                                    'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ],
@@ -709,31 +716,31 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 children: [
                                                   Container(
                                                     child: Image.asset(
-                                                    'assets/images/CitySmart.gif',
-                                                    fit: BoxFit.fill,
+                                                      'assets/images/CitySmart.gif',
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                    width: MediaQuery.sizeOf(context).width * 0.4,
+                                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                    ),
                                                   ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  Text(
+                                                    'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
-                                                ),
-                                                Text(
-                                                  'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/Covid TK.gif',
-                                                    fit: BoxFit.fill,
-                                                  ),
+                                            SingleChildScrollView(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Container(
+                                                    child: Image.asset(
+                                                      'assets/images/Covid TK.gif',
+                                                      fit: BoxFit.fill,
+                                                    ),
                                                     width: MediaQuery.sizeOf(context).width * 0.4,
                                                     height: MediaQuery.sizeOf(context).height * 0.4,
                                                     decoration: BoxDecoration(
@@ -753,31 +760,31 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 children: [
                                                   Container(
                                                     child: Image.asset(
-                                                    'assets/images/ISH 2.gif',
-                                                    fit: BoxFit.fill,
+                                                      'assets/images/ISH 2.gif',
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                    width: MediaQuery.sizeOf(context).width * 0.4,
+                                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                    ),
                                                   ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  Text(
+                                                    'Invasive Species Heatmap: Africas data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
-                                                ),
-                                                Text(
-                                                  'Invasive Species Heatmap: Africas data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/Worldheritage.gif',
-                                                    fit: BoxFit.fill,
-                                                  ),
+                                            SingleChildScrollView(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Container(
+                                                    child: Image.asset(
+                                                      'assets/images/Worldheritage.gif',
+                                                      fit: BoxFit.fill,
+                                                    ),
                                                     width: MediaQuery.sizeOf(context).width * 0.4,
                                                     height: MediaQuery.sizeOf(context).height * 0.4,
                                                     decoration: BoxDecoration(
@@ -843,11 +850,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             children: [
                               Text(
                                 'Building Tomorrows Innovators, One Student at a Time.',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                                  fontSize: 30.0,
+                                  fontWeight: FontWeight.bold,// Set the font size to 40 for the first text
+                                ),
                               ),
                               Text(
                                 'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                                  fontSize: 20.0, // Set the font size to 20 for the second text
+                                ),
                               ),
                             ],
                           ),
@@ -912,8 +924,8 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Home',
+                                          child: Text(
+                                            'Home',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
@@ -924,15 +936,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Text(
                                           'About Us',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
-                                      ),
-                                      Text(
-                                        'Our Projects',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
+                                        Text(
+                                          'Our Projects',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -941,13 +953,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                         ),
                                       ].divide(const SizedBox(height: 5.0)),
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'WHAT WE DO',
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'WHAT WE DO',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -957,8 +969,8 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Marketing Solutions',
+                                          child: Text(
+                                            'Marketing Solutions',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
@@ -969,15 +981,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Text(
                                           'Website Building',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
-                                      ),
-                                      Text(
-                                        'Tailored Solutions',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
+                                        Text(
+                                          'Tailored Solutions',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -986,13 +998,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                         ),
                                       ].divide(const SizedBox(height: 5.0)),
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'LEGAL',
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'LEGAL',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -1002,8 +1014,8 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Terms of Service',
+                                          child: Text(
+                                            'Terms of Service',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
@@ -1014,15 +1026,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Text(
                                           'Privacy Policy',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
-                                      ),
-                                      Text(
-                                        '',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
+                                        Text(
+                                          '',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -1031,13 +1043,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                         ),
                                       ].divide(const SizedBox(height: 5.0)),
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Contact Us',
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Contact Us',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -1047,8 +1059,8 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          '+1 (845)-281-9257',
+                                          child: Text(
+                                            '+1 (845)-281-9257',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
@@ -1059,15 +1071,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                         Text(
                                           'bossemail@gmail.com',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
-                                      ),
-                                      Text(
-                                        '1 Ashley Ave Middletown, NY',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                        ),
+                                        Text(
+                                          '1 Ashley Ave Middletown, NY',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -1076,18 +1088,18 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                         ),
                                       ].divide(const SizedBox(height: 5.0)),
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                          child: Image.asset(
+                                    ),
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Align(
+                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                            child: Image.asset(
                                               'images/linkedin.png',
-                                            height: 50,
-                                            color: Colors.white,
+                                              height: 50,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
@@ -1097,55 +1109,55 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                             child: Image.asset(
                                               'images/facebook.png',
-                                            height: 50,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                                          child: Image.asset(
-                                            'images/twitter.png',
                                               height: 50,
-                                            color: Colors.white,
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ].divide(SizedBox(width: 20.0)),
-                                  ),
-                                ].divide(SizedBox(width: 80.0)),
+                                        Align(
+                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
+                                            child: Image.asset(
+                                              'images/twitter.png',
+                                              height: 50,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ].divide(SizedBox(width: 20.0)),
+                                    ),
+                                  ].divide(SizedBox(width: 80.0)),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  if (responsiveVisibility(
-                    context: context,
-                    tabletLandscape: false,
-                    desktop: false,
-                  ))
-                    Container(
-                      width: double.infinity,
-                      height: MediaQuery.sizeOf(context).height * 0.15,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF4C6A7D),
-                      ),
-                      child: Stack(
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      '25',
+                    if (responsiveVisibility(
+                      context: context,
+                      tabletLandscape: false,
+                      desktop: false,
+                    ))
+                      Container(
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 0.15,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF4C6A7D),
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Text(
+                                        '25',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,

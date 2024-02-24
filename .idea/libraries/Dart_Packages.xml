@@ -131,7 +131,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/Downloads/development/flutter/packages/flutter/lib" />
+              <option value="$USER_HOME$/Downloads/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -166,21 +166,21 @@
         <entry key="flutter_localizations">
           <value>
             <list>
-              <option value="$USER_HOME$/Downloads/development/flutter/packages/flutter_localizations/lib" />
+              <option value="$USER_HOME$/Downloads/flutter/packages/flutter_localizations/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$USER_HOME$/Downloads/development/flutter/packages/flutter_test/lib" />
+              <option value="$USER_HOME$/Downloads/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
-              <option value="$USER_HOME$/Downloads/development/flutter/packages/flutter_web_plugins/lib" />
+              <option value="$USER_HOME$/Downloads/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -208,14 +208,14 @@
         <entry key="google_fonts">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/google_fonts-4.0.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/google_fonts-6.1.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="http">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http-0.13.6/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http-1.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -254,6 +254,27 @@
             </list>
           </value>
         </entry>
+        <entry key="leak_tracker">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="leak_tracker_flutter_testing">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-2.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="leak_tracker_testing">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker_testing-2.0.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="lints">
           <value>
             <list>
@@ -271,14 +292,14 @@
         <entry key="matcher">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
             </list>
           </value>
         </entry>
         <entry key="material_color_utilities">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -292,7 +313,7 @@
         <entry key="meta">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.10.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -320,7 +341,7 @@
         <entry key="path">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.0/lib" />
             </list>
           </value>
         </entry>
@@ -467,7 +488,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$USER_HOME$/Downloads/development/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$USER_HOME$/Downloads/flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -653,10 +674,17 @@
             </list>
           </value>
         </entry>
+        <entry key="vm_service">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-13.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="web">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.3.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.5.0/lib" />
             </list>
           </value>
         </entry>
@@ -702,23 +730,26 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.6.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/from_css_color-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/go_router-7.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/google_fonts-4.0.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http-0.13.6/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/google_fonts-6.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/indexed-0.0.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/intl-0.18.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/iregexp-0.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_path-0.6.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-2.0.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/leak_tracker_testing-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/maybe_just_nothing-0.5.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.10.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.11.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/octo_image-1.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/page_transition-2.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider-2.0.14/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_android-2.0.25/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.2/lib" />
@@ -765,14 +796,15 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_windows-3.0.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-4.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.3.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-13.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4/lib" />
-      <root url="file://$USER_HOME$/Downloads/development/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$USER_HOME$/Downloads/development/flutter/packages/flutter/lib" />
-      <root url="file://$USER_HOME$/Downloads/development/flutter/packages/flutter_localizations/lib" />
-      <root url="file://$USER_HOME$/Downloads/development/flutter/packages/flutter_test/lib" />
-      <root url="file://$USER_HOME$/Downloads/development/flutter/packages/flutter_web_plugins/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter/packages/flutter_localizations/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter/packages/flutter_test/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
