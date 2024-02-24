@@ -641,7 +641,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         ),
                       if (responsiveVisibility(
                         context: context,
-                        phone: false,
+                        desktop: false,
                       ))
                         Column(
                           mainAxisSize: MainAxisSize.max,
@@ -1918,50 +1918,55 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Stack(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    children: [
-                                      Align(
-                                        alignment: const AlignmentDirectional(-1.0, 0.0),
-                                        child: Image.asset(
-                                          'assets/images/DSC_1630.webp',
-                                          width: MediaQuery.sizeOf(context).width * 1 / 3,
-                                          height: MediaQuery.sizeOf(context).height * 1.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
+                                  GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('projectBasedLearning');
+                                    },
+                                    child: Stack(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      children: [
                                         Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context).width * 0.28,
-                                            height: MediaQuery.sizeOf(context).height * 0.18,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0x00FFFFFF),
-                                              border: Border.all(
-                                                color: Colors.white,
+                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                          child: Image.asset(
+                                            'assets/images/DSC_1630.webp',
+                                            width: MediaQuery.sizeOf(context).width * 1 / 3,
+                                            height: MediaQuery.sizeOf(context).height * 1.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          phone: false,
+                                          tablet: false,
+                                        ))
+                                          Align(
+                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                            child: Container(
+                                              width: MediaQuery.sizeOf(context).width * 0.28,
+                                              height: MediaQuery.sizeOf(context).height * 0.18,
+                                              decoration: BoxDecoration(
+                                                color: const Color(0x00FFFFFF),
+                                                border: Border.all(
+                                                  color: Colors.white,
+                                                ),
                                               ),
-                                            ),
-                                            child: Align(
-                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Text(
-                                                'Project - Based\nLearning',
-                                                textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 33.0,
-                                                      fontWeight: FontWeight.bold,
-                                                    ),
+                                              child: Align(
+                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                child: Text(
+                                                  'Project - Based\nLearning',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 33.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                   GestureDetector(
                                     onTap: () async {
@@ -2013,50 +2018,52 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ],
                                     ),
                                   ),
-                                  Stack(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    children: [
-                                      Align(
-                                        alignment: const AlignmentDirectional(0.0, 0.0),
-                                        child: Image.asset(
-                                          'assets/images/DSC_1614.webp',
-                                          width: MediaQuery.sizeOf(context).width * 1 / 3,
-                                          height: MediaQuery.of(context).size.height * 1.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
+                                  GestureDetector(
+                                    child: Stack(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      children: [
                                         Align(
-                                          alignment: const AlignmentDirectional(1.0, 0.0),
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context).width * 0.28,
-                                            height: MediaQuery.sizeOf(context).height * 0.18,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0x00FFFFFF),
-                                              border: Border.all(
-                                                color: Colors.white,
+                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                          child: Image.asset(
+                                            'assets/images/DSC_1614.webp',
+                                            width: MediaQuery.sizeOf(context).width * 1 / 3,
+                                            height: MediaQuery.of(context).size.height * 1.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          phone: false,
+                                          tablet: false,
+                                        ))
+                                          Align(
+                                            alignment: const AlignmentDirectional(1.0, 0.0),
+                                            child: Container(
+                                              width: MediaQuery.sizeOf(context).width * 0.28,
+                                              height: MediaQuery.sizeOf(context).height * 0.18,
+                                              decoration: BoxDecoration(
+                                                color: const Color(0x00FFFFFF),
+                                                border: Border.all(
+                                                  color: Colors.white,
+                                                ),
                                               ),
-                                            ),
-                                            child: Align(
-                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Text(
-                                                'Partnerships with\nCompanies',
-                                                textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 33.0,
-                                                      fontWeight: FontWeight.bold,
-                                                    ),
+                                              child: Align(
+                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                child: Text(
+                                                  'Partnerships with\nCompanies',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 33.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -2176,6 +2183,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             GestureDetector(
                               onTap: () async {
                                 context.pushNamed('partnershipWithCompanies');
+                                print("Ore");
                               },
                               child: Stack(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
@@ -2491,7 +2499,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: 60.0,
+                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2501,7 +2509,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: const Color(0xaaffffff),
-                                                          fontSize: 30.0,
+                                                          fontSize: 20.0,
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2559,7 +2567,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: 60.0,
+                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2569,7 +2577,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: const Color(0xaaffffff),
-                                                          fontSize: 30.0,
+                                                          fontSize: 20.0,
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2630,7 +2638,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: min(-171.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2640,7 +2648,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: const Color(0xaaffffff),
-                                                          fontSize: 30.0,
+                                                          fontSize: 20.0,
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2681,9 +2689,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           decoration: const BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Image.asset(
-                                            'assets/images/minh-picture.jpg',
-                                            fit: BoxFit.cover,
+                                          child: Padding(
+                                            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 10.0),
+                                            child: Image.asset(
+                                              'assets/images/minh-picture.jpg',
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
                                         Expanded(
@@ -2701,7 +2712,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: 60.0,
+                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2711,7 +2722,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: const Color(0xaaffffff),
-                                                          fontSize: 30.0,
+                                                          fontSize: 20.0,
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2771,7 +2782,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: Colors.white,
-                                                        fontSize: 60.0,
+                                                        fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                         fontWeight: FontWeight.bold,
                                                       ),
                                                 ),
@@ -2781,7 +2792,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         color: const Color(0xaaffffff),
-                                                        fontSize: 30.0,
+                                                        fontSize: 20.0,
                                                         fontWeight: FontWeight.bold,
                                                       ),
                                                 ),
@@ -3783,7 +3794,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
-                                            'images/linkedin.png',
+                                            'assets/images/linkedin.png',
                                             height: 50,
                                             color: Colors.white,
                                           ),
@@ -3794,7 +3805,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
-                                            'images/facebook.png',
+                                            'assets/images/facebook.png',
                                             height: 50,
                                             color: Colors.white,
                                           ),
@@ -3805,7 +3816,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
                                           child: Image.asset(
-                                            'images/twitter.png',
+                                            'assets/images/twitter.png',
                                             height: 50,
                                             color: Colors.white,
                                           ),
