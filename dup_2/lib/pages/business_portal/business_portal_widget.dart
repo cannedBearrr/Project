@@ -1115,7 +1115,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Stack(
                           children: [
-                            ClipRRect(
+                            ClipRRect( // whos the one that added moons+stars here????????
                               child: Image.network(//moons+stars
                                 'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
                                 width: double.infinity,
