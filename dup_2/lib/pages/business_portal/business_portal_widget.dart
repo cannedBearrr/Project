@@ -426,7 +426,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             'OUR \nSERVICES',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
-                                                  fontSize: 68.0,
+                                                  fontSize: 48.0,
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
@@ -436,8 +436,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.06,
-                                              height: MediaQuery.sizeOf(context).height * 0.03,
+                                              width: MediaQuery.sizeOf(context).width * 0.073,
+                                              height: MediaQuery.sizeOf(context).height * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -447,13 +447,15 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Text(
                                                   'Programming',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontSize: 10.0,
+                                                  )
                                                 ),
                                               ),
                                             ),
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.06,
-                                              height: MediaQuery.sizeOf(context).height * 0.03,
+                                              width: MediaQuery.sizeOf(context).width * 0.073,
+                                              height: MediaQuery.sizeOf(context).height * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -463,13 +465,15 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Text(
                                                   'Design',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontSize: 10.0,
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.06,
-                                              height: MediaQuery.sizeOf(context).height * 0.03,
+                                              width: MediaQuery.sizeOf(context).width * 0.073,
+                                              height: MediaQuery.sizeOf(context).height * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -479,7 +483,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Text(
                                                   'Marketing',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontSize: 10.0,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -493,9 +499,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           color: Color(0xCC000000),
                                         ),
                                         Text(
-                                          'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
-                                        style: FlutterFlowTheme.of(context).bodyMedium,
-                                      ),
+                                            'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium,
+                                          ),
                                     ].divide(const SizedBox(height: 15.0)),
                                   ),
                                 ),
@@ -935,19 +941,22 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   ),
                                   const StyledDivider(
                                     thickness: 1.0,
-                                    indent: 150.0,
-                                    endIndent: 150.0,
+                                    indent: 120.0,
+                                    endIndent: 120.0,
                                     color: Color(0xCC000000),
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
-                                  Text(
-                                    'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
-                                    style: FlutterFlowTheme.of(context).bodyMedium,
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 60.0, 0.0),
+                                    child: Text(
+                                      'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
+                                      style: FlutterFlowTheme.of(context).bodyMedium,
+                                    ),
                                   ),
                                   const StyledDivider(
                                     thickness: 1.0,
-                                    indent: 150.0,
-                                    endIndent: 150.0,
+                                    indent: 120.0,
+                                    endIndent: 120.0,
                                     color: Color(0xCC000000),
                                     lineStyle: DividerLineStyle.dashed,
                                   ),

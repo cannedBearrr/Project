@@ -1238,7 +1238,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Align(
                                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                                     child: Text(
-                                                      'Professional Skills1',
+                                                      'Professional Skills',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: Colors.white,
