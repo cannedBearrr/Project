@@ -1,6 +1,5 @@
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
-import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -12,7 +11,6 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'parent_portal_model.dart';
-import 'package:url_launcher/url_launcher.dart';
 export 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -34,11 +32,6 @@ class YesScrollBehavior extends ScrollBehavior {
         PointerDeviceKind.touch,
         PointerDeviceKind.mouse,
       };
-}
-
-class YesScrollPhysics extends ScrollPhysics {
-  @override
-  SpringDescription get spring => const SpringDescription(mass: 1, damping: 10, stiffness: 30);
 }
 
 class ParentPortalWidget extends StatefulWidget {
@@ -2470,8 +2463,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 controller: _model.pageViewController1 ??= PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
                                 scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                physics: YesScrollPhysics(),
-                                padEnds: true,
                                 children: [
                                   Stack(
                                     children: [
@@ -2879,9 +2870,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               PageView(
                                 controller: _model.pageViewController2 ??= PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
-                                scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                physics: YesScrollPhysics(),
-                                padEnds: false,
                                 children: [
                                   Stack(
                                     children: [

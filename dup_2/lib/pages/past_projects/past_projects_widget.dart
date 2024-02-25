@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -10,6 +12,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'past_projects_model.dart';
 export 'past_projects_model.dart';
+
+// make the pageview able to be dragged
+class YesScrollBehavior extends ScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
+}
 
 class PastProjectsWidget extends StatefulWidget {
   const PastProjectsWidget({super.key});
@@ -293,6 +304,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     children: [
                                       PageView(
                                         controller: _model.pageViewController1 ??= PageController(initialPage: 1),
+                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                         scrollDirection: Axis.horizontal,
                                         children: [
                                           SingleChildScrollView(
@@ -302,7 +314,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/ESP web.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   width: MediaQuery.sizeOf(context).width * 0.83,
                                                   height: MediaQuery.sizeOf(context).height * 0.21,
@@ -329,7 +341,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   height: MediaQuery.sizeOf(context).height * 0.3,
                                                   child: Image.asset(
                                                     'assets/images/Friendly bear@4x 2.png',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -351,7 +363,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   height: MediaQuery.sizeOf(context).height * 0.22,
                                                   child: Image.asset(
                                                     'assets/images/CitySmart.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -373,7 +385,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   child: Image.asset(
                                                     'assets/images/Covid TK.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -395,7 +407,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   child: Image.asset(
                                                     'assets/images/ISH 2.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -417,7 +429,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
                                                   child: Image.asset(
                                                     'assets/images/Worldheritage.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -500,6 +512,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     children: [
                                       PageView(
                                         controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                         scrollDirection: Axis.horizontal,
                                         children: [
                                           SingleChildScrollView(
@@ -509,7 +522,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                   'assets/images/ESP web.gif',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
@@ -531,7 +544,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 child: Image.asset(
                                                   'assets/images/Friendly bear@4x 2.png',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                   width: MediaQuery.sizeOf(context).width * 0.8,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
@@ -553,7 +566,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                   'assets/images/CitySmart.gif',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
@@ -575,7 +588,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 child: Image.asset(
                                                   'assets/images/Covid TK.gif',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
@@ -597,7 +610,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 child: Image.asset(
                                                   'assets/images/ISH 2.gif',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
@@ -619,7 +632,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               Container(
                                                 child: Image.asset(
                                                   'assets/images/Worldheritage.gif',
-                                                  fit: BoxFit.fill,
+                                                  fit: BoxFit.contain,
                                                 ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
@@ -715,6 +728,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     children: [
                                       PageView(
                                         controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                         scrollDirection: Axis.horizontal,
                                         children: [
                                           SingleChildScrollView(
@@ -724,7 +738,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/ESP web.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                     width: MediaQuery.sizeOf(context).width * 0.4,
                                                     height: MediaQuery.sizeOf(context).height * 0.4,
@@ -746,7 +760,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   Container(
                                                     child: Image.asset(
                                                     'assets/images/Friendly bear@4x 2.png',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
@@ -768,7 +782,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/CitySmart.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
@@ -790,7 +804,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/Covid TK.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
@@ -812,7 +826,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/ISH 2.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                   width: MediaQuery.sizeOf(context).width * 0.4,
                                                   height: MediaQuery.sizeOf(context).height * 0.4,
@@ -834,7 +848,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Container(
                                                   child: Image.asset(
                                                     'assets/images/Worldheritage.gif',
-                                                    fit: BoxFit.fill,
+                                                    fit: BoxFit.contain,
                                                   ),
                                                     width: MediaQuery.sizeOf(context).width * 0.4,
                                                     height: MediaQuery.sizeOf(context).height * 0.4,
