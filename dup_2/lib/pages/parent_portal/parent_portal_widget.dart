@@ -181,7 +181,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               Expanded(
                                 flex: 191,
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                   child: MouseRegion(
                                     cursor: SystemMouseCursors.click,
                                     child: GestureDetector(
@@ -196,6 +196,39 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 40.0,
+                                child: VerticalDivider(
+                                  width: 10.0,
+                                  thickness: 1.0,
+                                  indent: 4.0,
+                                  endIndent: 4.0,
+                                  color: Color(0xCC000000),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 191,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
+                                  child: MouseRegion(
+                                    cursor: SystemMouseCursors.click,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        context.pushNamed('pastProjects');
+                                      },
+                                      child: Text(
+                                        'CAREER',
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                          fontFamily: 'Outfit',
+                                          color: Colors.black,
+                                          fontSize: 16.0,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -255,6 +288,30 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           color: Colors.black,
                                           fontSize: 20.0,
                                         ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 40.0,
+                                child: VerticalDivider(
+                                  width: 0.0,
+                                  thickness: 1.0,
+                                  color: Color(0xCC000000),
+                                ),
+                              ),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    context.pushNamed('pastProjects');
+                                  },
+                                  child: Text(
+                                    'CAREER',
+                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                      fontFamily: 'Outfit',
+                                      color: Colors.black,
+                                      fontSize: 20.0,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -3860,14 +3917,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Home',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              context.pushNamed('parentPortal');
+                                            },
+                                            child: Text(
+                                              'Home',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                         Text(

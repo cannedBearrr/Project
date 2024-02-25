@@ -116,11 +116,44 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         context.pushNamed('parentPortal');
                                       },
                                       child: Text(
-                                        'PARENT',
+                                        'PARENTS',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
                                           color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 40.0,
+                                child: VerticalDivider(
+                                  width: 10.0,
+                                  thickness: 1.0,
+                                  indent: 4.0,
+                                  endIndent: 4.0,
+                                  color: Color(0xCC000000),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 191,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
+                                  child: MouseRegion(
+                                    cursor: SystemMouseCursors.click,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        context.pushNamed('pastProjects');
+                                      },
+                                      child: Text(
+                                        'CAREER',
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                          fontFamily: 'Outfit',
+                                          color: Colors.black,
                                           fontSize: 16.0,
                                         ),
                                       ),
@@ -176,10 +209,34 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     context.pushNamed('parentPortal');
                                   },
                                   child: Text(
-                                    'PARENT',
+                                    'PARENTS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                       fontFamily: 'Outfit',
                                       color: FlutterFlowTheme.of(context).primaryText,
+                                      fontSize: 20.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 40.0,
+                                child: VerticalDivider(
+                                  width: 0.0,
+                                  thickness: 1.0,
+                                  color: Color(0xCC000000),
+                                ),
+                              ),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    context.pushNamed('pastProjects');
+                                  },
+                                  child: Text(
+                                    'CAREER',
+                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                      fontFamily: 'Outfit',
+                                      color: Colors.black,
                                       fontSize: 20.0,
                                     ),
                                   ),
