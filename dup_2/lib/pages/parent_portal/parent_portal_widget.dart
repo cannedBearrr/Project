@@ -15,16 +15,18 @@ import 'dart:convert';
 import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
 
+// we send a post request to my website
 Future<http.Response> sendEmail(String email) {
   return http.post(
     Uri.parse('http://129.213.117.186/email.php'),
-    headers: <String, String>{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', 'Accept': '*/*'},
+    headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String>{
       'email': email,
     }),
   );
 }
 
+// make the pageview able to be dragged
 class YesScrollBehavior extends ScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
@@ -249,7 +251,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
                                   onTap: () async {
-
                                     context.pushNamed('pastProjects');
                                   },
                                   child: Text(
@@ -342,6 +343,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   FFButtonWidget(
                                     onPressed: () {
                                       setState(() {
+                                        // expand rest of content
                                         contentExpanded = true;
                                       });
                                       scrollController.animateTo(
@@ -530,6 +532,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                       onPressed: () {
                                                         setState(() {
+                                                          // expand rest of content
                                                           contentExpanded = true;
                                                         });
                                                         int x = responsiveVisibility(context: context, desktop: false) ? responsiveVisibility(context: context, tabletLandscape: false) ? -25 : 0 : 40;
@@ -571,7 +574,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         tablet: false,
                         desktop: false,
                       ))
-                        ////////////////
                         SizedBox(
                           height: max(min(MediaQuery.sizeOf(context).width * 5 / 6, MediaQuery.sizeOf(context).height) - 50, 700),
                           child: Stack(
@@ -628,7 +630,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.mobilefixinfdCopyModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => () {},
                                   child: const MobilefixinfdCopyWidget(),
                                 ),
                               ),
@@ -974,7 +976,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Business Oppotunity',
+                                                          'Business Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -995,7 +997,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Career Oppotunity',
+                                                          'Career Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1545,7 +1547,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.mobilefixinfdModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => () {},
                                   child: const MobilefixinfdWidget(),
                                 ),
                               ),
@@ -1617,7 +1619,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.animationModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => () {},
                                   child: const AnimationWidget(),
                                 ),
                               ),
