@@ -1,7 +1,6 @@
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
-import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -1557,63 +1556,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
+                        tablet: false,
                         tabletLandscape: false,
-                        desktop: false,
                       ))
-                        SizedBox(
-                          height: 405.0,
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(40.0),
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFE3E3E3),
-                                    ),
-                                    child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 251.0,
-                                        height: 57.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00272727),
-                                          border: Border.all(
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'BENEFITS',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 35.0,
-                                                  letterSpacing: 5.0,
-                                                  fontWeight: FontWeight.w900,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(),
-                                child: wrapWithModel(
-                                  model: _model.mobilefixinfdModel,
-                                  updateCallback: () => () {},
-                                  child: const MobilefixinfdWidget(),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
@@ -3705,7 +3650,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
@@ -3949,7 +3894,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         Text(
-                                          'About Us',
+                                          'Career',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,

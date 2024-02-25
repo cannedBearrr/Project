@@ -46,7 +46,6 @@ class _ProjectBasedLearningWidgetState
         body: Stack(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
                 'https://picsum.photos/seed/542/600',
                 width: double.infinity,

@@ -97,8 +97,8 @@ class _CareerOrientedSkillsWidgetState
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                width: 400,
-                                height: 150,
+                                width: MediaQuery.sizeOf(context).width * 0.9,
+                                height: MediaQuery.sizeOf(context).height * 0.16,
                                 decoration: BoxDecoration(
                                   color: Color(0x00FFFFFF),
                                   border: Border.all(
@@ -120,7 +120,7 @@ class _CareerOrientedSkillsWidgetState
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                fontSize: 30,
+                                                fontSize: min(-40.0 + MediaQuery.sizeOf(context).width / 7, 50),
                                                 color: Colors.white,
                                                 letterSpacing: 4.0,
                                                 fontWeight: FontWeight.w600,
