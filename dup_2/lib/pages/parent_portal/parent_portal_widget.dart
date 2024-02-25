@@ -90,8 +90,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
 
       _model.textController2 ??= TextEditingController();
       _model.textFieldFocusNode2 ??= FocusNode();
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   //yu
@@ -99,8 +98,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   void dispose() {
     try {
       _model.dispose();
-    } catch (e) {
-    }
+    } catch (e) {}
 
     super.dispose();
   }
@@ -118,9 +116,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       }
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus
-            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-            : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
@@ -161,8 +157,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
-
-                                          ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -2188,6 +2183,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             GestureDetector(
                               onTap: () async {
                                 context.pushNamed('partnershipWithCompanies');
+                                print("Ore");
                               },
                               child: Stack(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
