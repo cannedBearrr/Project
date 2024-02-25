@@ -1,7 +1,6 @@
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
 import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
-import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -98,7 +97,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
 
       _model.textController2 ??= TextEditingController();
       _model.textFieldFocusNode2 ??= FocusNode();
-    } catch (e) {}
+    } catch (e) {
+    }
   }
 
   //yu
@@ -106,7 +106,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   void dispose() {
     try {
       _model.dispose();
-    } catch (e) {}
+    } catch (e) {
+    }
 
     super.dispose();
   }
@@ -124,7 +125,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       }
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus
+            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+            : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
@@ -165,7 +168,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
-                                      ),
+
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -690,11 +694,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ))
                                 Container(
                                   decoration: const BoxDecoration(),
-                                  // child: wrapWithModel(
-                                  //   // model: _model.mobilefixinfdModel,
-                                  //   updateCallback: () => setState(() {}),
-                                  //   child: const MobilefixinfdWidget(),
-                                  // ),
                                 ),
                             ],
                           ),
@@ -1557,63 +1556,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
+                        tablet: false,
                         tabletLandscape: false,
-                        desktop: false,
                       ))
-                        SizedBox(
-                          height: 405.0,
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(40.0),
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFE3E3E3),
-                                    ),
-                                    child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 251.0,
-                                        height: 57.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00272727),
-                                          border: Border.all(
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        child: Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'BENEFITS',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 35.0,
-                                                  letterSpacing: 5.0,
-                                                  fontWeight: FontWeight.w900,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(),
-                                child: wrapWithModel(
-                                  model: _model.mobilefixinfdModel,
-                                  updateCallback: () => () {},
-                                  child: const MobilefixinfdWidget(),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
@@ -1760,7 +1705,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: RichText(
                                   text: TextSpan(
                                     text: (MediaQuery.sizeOf(context).width > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           fontSize: 45.0,
@@ -2096,28 +2043,33 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           phone: false,
                                           tablet: false,
                                         ))
-                                          Align(
-                                            alignment: const AlignmentDirectional(1.0, 0.0),
-                                            child: Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.28,
-                                              height: MediaQuery.sizeOf(context).height * 0.18,
-                                              decoration: BoxDecoration(
-                                                color: const Color(0x00FFFFFF),
-                                                border: Border.all(
-                                                  color: Colors.white,
+                                          GestureDetector(
+                                            onTap: () async {
+                                              context.pushNamed('partnershipWithCompanies');
+                                            },
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Container(
+                                                width: MediaQuery.sizeOf(context).width * 0.28,
+                                                height: MediaQuery.sizeOf(context).height * 0.18,
+                                                decoration: BoxDecoration(
+                                                  color: const Color(0x00FFFFFF),
+                                                  border: Border.all(
+                                                    color: Colors.white,
+                                                  ),
                                                 ),
-                                              ),
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: Text(
-                                                  'Partnerships with\nCompanies',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: Colors.white,
-                                                        fontSize: 33.0,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
+                                                child: Align(
+                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                  child: Text(
+                                                    'Partnerships with\nCompanies',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 33.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -2243,7 +2195,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             GestureDetector(
                               onTap: () async {
                                 context.pushNamed('partnershipWithCompanies');
-                                print("Ore");
                               },
                               child: Stack(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
@@ -2813,68 +2764,75 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       height: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
-                                    Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-                                      const Expanded(child: SizedBox()),
-                                      Container(
-                                        width: 200.0,
-                                        height: 200.0,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/james-picture.jpg',
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 9,
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Row(
+                                    Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          const Expanded(child: SizedBox()),
+                                          Container(
+                                            width: 200.0,
+                                            height: 200.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/james-picture.jpg',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 9,
+                                            child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'JAMES ZHANG',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: Colors.white,
-                                                        fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
-                                                ),
-                                                ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                Text(
-                                                  '??????',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: const Color(0xaaffffff),
-                                                        fontSize: 20.0,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                            SizedBox(
-                                              width: 1000,
-                                              child: Text(
-                                                '“I like bricks”\n',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 25.0,
-                                                      fontWeight: FontWeight.w200,
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'JAMES ZHANG',
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            fontFamily: 'Readex Pro',
+                                                            color: Colors.white,
+                                                            fontSize: 60.0,
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
                                                     ),
-                                                textAlign: TextAlign.center,
-                                              ),
+                                                    ConstrainedBox(
+                                                        constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
+                                                        child:
+                                                            SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                    Text(
+                                                      '??????',
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            fontFamily: 'Readex Pro',
+                                                            color: const Color(0xaaffffff),
+                                                            fontSize: 30.0,
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 1000,
+                                                  child: Text(
+                                                    '“I like bricks”\n',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 25.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
-                                          ].divide(const SizedBox(height: 20.0)),
-                                        ),
-                                      ),
-                                    ]),
+                                          ),
+                                        ]),
                                   ]),
                                 ],
                               ),
@@ -3692,7 +3650,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
@@ -3936,7 +3894,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                         Text(
-                                          'About Us',
+                                          'Career',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,

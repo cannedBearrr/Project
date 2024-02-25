@@ -97,8 +97,8 @@ class _CareerOrientedSkillsWidgetState
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.7,
-                                height: MediaQuery.sizeOf(context).height * 0.1,
+                                width: MediaQuery.sizeOf(context).width * 0.9,
+                                height: MediaQuery.sizeOf(context).height * 0.16,
                                 decoration: BoxDecoration(
                                   color: Color(0x00FFFFFF),
                                   border: Border.all(
@@ -109,6 +109,7 @@ class _CareerOrientedSkillsWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
                                         alignment:
@@ -119,6 +120,7 @@ class _CareerOrientedSkillsWidgetState
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
+                                                fontSize: min(-40.0 + MediaQuery.sizeOf(context).width / 7, 50),
                                                 color: Colors.white,
                                                 letterSpacing: 4.0,
                                                 fontWeight: FontWeight.w600,
@@ -132,7 +134,7 @@ class _CareerOrientedSkillsWidgetState
                                             .override(
                                               fontFamily: 'Readex Pro',
                                               color: Color(0xFFFFD34C),
-                                              fontSize: 28.0,
+                                              fontSize: 24,
                                               letterSpacing: 20.0,
                                               fontWeight: FontWeight.w900,
                                             ),
@@ -243,7 +245,7 @@ class _CareerOrientedSkillsWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
                                         alignment:
@@ -255,7 +257,7 @@ class _CareerOrientedSkillsWidgetState
                                               .override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 60.0,
+                                                fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
                                               ),
                                         ),
                                       ),
@@ -266,8 +268,8 @@ class _CareerOrientedSkillsWidgetState
                                             .override(
                                               fontFamily: 'Readex Pro',
                                               color: Color(0xFF1F4477),
-                                              fontSize: 70.0,
-                                              letterSpacing: 70.0,
+                                              fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 4, 65),
+                                              letterSpacing: 30.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                       ),
