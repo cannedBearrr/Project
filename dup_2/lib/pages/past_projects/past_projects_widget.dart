@@ -185,7 +185,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     context.pushNamed('businessPortal');
                                   },
                                   child: Text(
-                                    'BUISNESS',
+                                    'BUSINESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                       fontFamily: 'Outfit',
                                       color: FlutterFlowTheme.of(context).primaryText,

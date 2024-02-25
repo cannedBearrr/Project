@@ -17,16 +17,18 @@ import 'package:url_launcher/url_launcher.dart';
 export 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// we send a post request to my website
 Future<http.Response> sendEmail(String email) {
   return http.post(
     Uri.parse('http://129.213.117.186/email.php'),
-    headers: <String, String>{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json', 'Accept': '*/*'},
+    headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String>{
       'email': email,
     }),
   );
 }
 
+// make the pageview able to be dragged
 class YesScrollBehavior extends ScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
@@ -96,7 +98,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
 
       _model.textController2 ??= TextEditingController();
       _model.textFieldFocusNode2 ??= FocusNode();
-    } catch (e) {}
+    } catch (e) {
+    }
   }
 
   //yu
@@ -104,7 +107,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   void dispose() {
     try {
       _model.dispose();
-    } catch (e) {}
+    } catch (e) {
+    }
 
     super.dispose();
   }
@@ -122,7 +126,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       }
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus
+            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+            : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
@@ -163,7 +169,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               color: Colors.black,
                                               fontSize: 16.0,
                                             ),
-                                      ),
+
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -395,6 +402,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   FFButtonWidget(
                                     onPressed: () {
                                       setState(() {
+                                        // expand rest of content
                                         contentExpanded = true;
                                       });
                                       scrollController.animateTo(
@@ -582,6 +590,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                       onPressed: () {
                                                         setState(() {
+                                                          // expand rest of content
                                                           contentExpanded = true;
                                                         });
                                                         int x = responsiveVisibility(context: context, desktop: false)
@@ -626,7 +635,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         tabletLandscape: false,
                         desktop: false,
                       ))
-                        ////////////////
                         SizedBox(
                           height: max(min(MediaQuery.sizeOf(context).width * 5 / 6, MediaQuery.sizeOf(context).height) - 50, 700),
                           child: Stack(
@@ -687,11 +695,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ))
                                 Container(
                                   decoration: const BoxDecoration(),
-                                  // child: wrapWithModel(
-                                  //   // model: _model.mobilefixinfdModel,
-                                  //   updateCallback: () => setState(() {}),
-                                  //   child: const MobilefixinfdWidget(),
-                                  // ),
                                 ),
                             ],
                           ),
@@ -1033,7 +1036,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Business Oppotunity',
+                                                          'Business Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1054,7 +1057,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Career Oppotunity',
+                                                          'Career Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1604,7 +1607,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.mobilefixinfdModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => () {},
                                   child: const MobilefixinfdWidget(),
                                 ),
                               ),
@@ -1676,7 +1679,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.animationModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => () {},
                                   child: const AnimationWidget(),
                                 ),
                               ),
@@ -1757,7 +1760,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: RichText(
                                   text: TextSpan(
                                     text: (MediaQuery.sizeOf(context).width > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           fontSize: 45.0,
@@ -2240,7 +2245,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             GestureDetector(
                               onTap: () async {
                                 context.pushNamed('partnershipWithCompanies');
-                                print("Ore");
                               },
                               child: Stack(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
@@ -2810,68 +2814,75 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       height: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
-                                    Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-                                      const Expanded(child: SizedBox()),
-                                      Container(
-                                        width: 200.0,
-                                        height: 200.0,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/james-picture.jpg',
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 9,
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Row(
+                                    Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          const Expanded(child: SizedBox()),
+                                          Container(
+                                            width: 200.0,
+                                            height: 200.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/james-picture.jpg',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 9,
+                                            child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'JAMES ZHANG',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: Colors.white,
-                                                        fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
-                                                ),
-                                                ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
-                                                Text(
-                                                  '??????',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: const Color(0xaaffffff),
-                                                        fontSize: 20.0,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                            SizedBox(
-                                              width: 1000,
-                                              child: Text(
-                                                '“I like bricks”\n',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      fontSize: 25.0,
-                                                      fontWeight: FontWeight.w200,
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'JAMES ZHANG',
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            fontFamily: 'Readex Pro',
+                                                            color: Colors.white,
+                                                            fontSize: 60.0,
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
                                                     ),
-                                                textAlign: TextAlign.center,
-                                              ),
+                                                    ConstrainedBox(
+                                                        constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
+                                                        child:
+                                                            SizedBox(width: max(MediaQuery.sizeOf(context).width / 2 - 690, 0))),
+                                                    Text(
+                                                      '??????',
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            fontFamily: 'Readex Pro',
+                                                            color: const Color(0xaaffffff),
+                                                            fontSize: 30.0,
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 1000,
+                                                  child: Text(
+                                                    '“I like bricks”\n',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 25.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
-                                          ].divide(const SizedBox(height: 20.0)),
-                                        ),
-                                      ),
-                                    ]),
+                                          ),
+                                        ]),
                                   ]),
                                 ],
                               ),

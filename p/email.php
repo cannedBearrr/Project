@@ -2,7 +2,7 @@
 $data = json_decode(file_get_contents("php://input"));
 if (isset($data->{"email"})) {
 $email = $data->{"email"};
-$mysqli = new mysqli("127.0.0.1", "root", "cG9wcGFwb3BwQTE=", "job", 3306);
+$mysqli = new mysqli("127.0.0.1", "root", "", "job", 3306);
 $c = $mysqli->query("SELECT COUNT(*) FROM form");
 $len = $c->fetch_array()[0] ?? 0;
 try {
