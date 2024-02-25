@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($email) && isset($_POST["name"]) && isset($_POST["stink"])) {
-	$mysqli = new mysqli("127.0.0.1", "root", "cG9wcGFwb3BwQTE=", "job", 3306);
+	$mysqli = new mysqli("127.0.0.1", "root", "", "job", 3306);
 $name = $_POST["name"];
 $stink = $_POST["stink"];
 
