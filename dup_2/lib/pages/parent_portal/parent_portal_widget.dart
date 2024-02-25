@@ -2098,28 +2098,33 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           phone: false,
                                           tablet: false,
                                         ))
-                                          Align(
-                                            alignment: const AlignmentDirectional(1.0, 0.0),
-                                            child: Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.28,
-                                              height: MediaQuery.sizeOf(context).height * 0.18,
-                                              decoration: BoxDecoration(
-                                                color: const Color(0x00FFFFFF),
-                                                border: Border.all(
-                                                  color: Colors.white,
+                                          GestureDetector(
+                                            onTap: () async {
+                                              context.pushNamed('partnershipWithCompanies');
+                                            },
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Container(
+                                                width: MediaQuery.sizeOf(context).width * 0.28,
+                                                height: MediaQuery.sizeOf(context).height * 0.18,
+                                                decoration: BoxDecoration(
+                                                  color: const Color(0x00FFFFFF),
+                                                  border: Border.all(
+                                                    color: Colors.white,
+                                                  ),
                                                 ),
-                                              ),
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: Text(
-                                                  'Partnerships with\nCompanies',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        color: Colors.white,
-                                                        fontSize: 33.0,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
+                                                child: Align(
+                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                  child: Text(
+                                                    'Partnerships with\nCompanies',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontFamily: 'Readex Pro',
+                                                          color: Colors.white,
+                                                          fontSize: 33.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
