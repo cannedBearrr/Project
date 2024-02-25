@@ -12,3 +12,4 @@ export '/pages/about_us/about_us_widget.dart'
     show AboutUsWidget;
 export 'pages/past_projects/past_projects_widget.dart'
     show PastProjectsWidget;
+export 'pages/career_page/career_page_widget.dart' show CareerPageWidget;
