@@ -221,7 +221,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     cursor: SystemMouseCursors.click,
                                     child: GestureDetector(
                                       onTap: () async {
-                                        context.pushNamed('pastProjects');
+                                        context.pushNamed('careerPage');
                                       },
                                       child: Text(
                                         'CAREER',
@@ -305,7 +305,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
                                   onTap: () async {
-                                    context.pushNamed('pastProjects');
+                                    context.pushNamed('careerPage');
                                   },
                                   child: Text(
                                     'CAREER',
