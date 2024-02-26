@@ -290,12 +290,16 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Text(
-                              'Hello World',
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).primaryBackground,
-                                  ),
+                            child: SizedBox(
+                              width: MediaQuery.sizeOf(context).width * 0.8,
+                              child: Text(
+                                '"At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world."',
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                      fontSize: 35,
+                                    ),
+                              ),
                             ),
                           ),
                         ],
