@@ -66,7 +66,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             child: SingleChildScrollView(
               child: StickyHeader(
                 header: Stack(
@@ -264,7 +264,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Hello World',
                         style: FlutterFlowTheme.of(context).bodyMedium,
@@ -287,7 +287,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
                                   'Hello World',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -296,7 +296,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: MediaQuery.sizeOf(context).height * 0.6,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height: MediaQuery.sizeOf(context).height * 0.5,
@@ -311,19 +311,19 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/ESP web.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
+                                                Container( //Add documentation Reward: Various rewards
                                                   width: MediaQuery.sizeOf(context).width * 0.83,
                                                   height: MediaQuery.sizeOf(context).height * 0.21,
                                                   decoration: BoxDecoration(
                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                  ), //Add documentation Reward: Various rewards
+                                                  child: Image.asset(
+                                                    'assets/images/ESP web.gif',
+                                                    fit: BoxFit.contain,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
                                                     'Hello World',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
@@ -445,9 +445,9 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ],
                                       ),
                                       Align(
-                                        alignment: AlignmentDirectional(0.0, 1.0),
+                                        alignment: const AlignmentDirectional(0.0, 1.0),
                                         child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                           child: smooth_page_indicator.SmoothPageIndicator(
                                             controller: _model.pageViewController1 ??= PageController(initialPage: 1),
                                             count: 6,
@@ -455,7 +455,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             onDotClicked: (i) async {
                                               await _model.pageViewController1!.animateToPage(
                                                 i,
-                                                duration: Duration(milliseconds: 500),
+                                                duration: const Duration(milliseconds: 500),
                                                 curve: Curves.ease,
                                               );
                                             },
@@ -495,7 +495,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
                                   'Hello World',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -504,7 +504,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: MediaQuery.sizeOf(context).height * 0.6,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height: MediaQuery.sizeOf(context).height * 0.5,
@@ -641,7 +641,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
                                                   'Hello World',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
@@ -653,9 +653,9 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       ],
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 1.0),
+                                      alignment: const AlignmentDirectional(0.0, 1.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                         child: smooth_page_indicator.SmoothPageIndicator(
                                           controller: _model.pageViewController2 ??= PageController(initialPage: 1),
                                           count: 6,
@@ -663,7 +663,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           onDotClicked: (i) async {
                                             await _model.pageViewController2!.animateToPage(
                                               i,
-                                              duration: Duration(milliseconds: 500),
+                                              duration: const Duration(milliseconds: 500),
                                               curve: Curves.ease,
                                             );
                                           },
@@ -704,7 +704,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                               child: Text(
                                 'Hello World',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
@@ -713,7 +713,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             Container(
                               width: MediaQuery.sizeOf(context).width * 0.4,
                               height: MediaQuery.sizeOf(context).height * 0.6,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Visibility(
                                 visible: responsiveVisibility(
                                   context: context,
@@ -857,7 +857,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                     ),
                                                   ),
                                                   Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                     child: Text(
                                                       'Hello World',
                                                       style: FlutterFlowTheme.of(context).bodyMedium,
@@ -869,9 +869,9 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ],
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(0.0, 1.0),
+                                          alignment: const AlignmentDirectional(0.0, 1.0),
                                           child: Padding(
-                                            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                             child: smooth_page_indicator.SmoothPageIndicator(
                                               controller: _model.pageViewController3 ??= PageController(initialPage: 1),
                                               count: 6,
@@ -879,7 +879,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               onDotClicked: (i) async {
                                                 await _model.pageViewController3!.animateToPage(
                                                   i,
-                                                  duration: Duration(milliseconds: 500),
+                                                  duration: const Duration(milliseconds: 500),
                                                   curve: Curves.ease,
                                                 );
                                               },
@@ -905,7 +905,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                         ),
                       ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 50.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -930,15 +930,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             text: 'Button',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -1426,7 +1426,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           ],
                         ),
                       ),
-                  ].divide(SizedBox(height: 30.0)).addToStart(SizedBox(height: 100.0)),
+                  ].divide(const SizedBox(height: 30.0)).addToStart(const SizedBox(height: 100.0)),
                 ),
               ),
             ),
