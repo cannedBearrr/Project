@@ -89,12 +89,9 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             tabletLandscape: false,
                             desktop: false,
                           ))
-                            // Align(
-                            Column(
-                                // mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
+                            Align(
+                                alignment: AlignmentDirectional(0.0, -0.25),
+                                child: Container(
                                   width: MediaQuery.sizeOf(context).width * 0.7,
                                   height: MediaQuery.sizeOf(context).height * 0.1,
                                   decoration: BoxDecoration(
@@ -116,10 +113,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                           ),
                                     ),
                                   ),
-                                ),
-                            ])
-                          // alignment: AlignmentDirectional(0.0, -0.6),
-                          // ),
+                                )),
                         ],
                       ),
                     ),
@@ -158,7 +152,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                                 child: Text(
-                                  'WE PREPARE',
+                                  'PLACE HERE LOGOS OF OUR PREVIOUS PARTNERS',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: Colors.white,
@@ -222,7 +216,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                       Align(
                                         alignment: AlignmentDirectional(0.0, 0.0),
                                         child: Text(
-                                          'CAREER - ORIENTED2',
+                                          'PAST',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -231,12 +225,11 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                         ),
                                       ),
                                       Text(
-                                        'SKILLS',
+                                        'we may use this line',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Color(0xFF1F4477),
                                               fontSize: 70.0,
-                                              letterSpacing: 70.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                       ),
@@ -281,7 +274,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                '\n\"WE PREPARE STUDENTS FOR FUTURE SUCCESS BY EQUIPPING THEM WITH THE SKILLS AND KNOWLEDGE NEEDED TO EXCEL IN THEIR CHOSEN CAREER PATHS.”',
+                                'LOGOS OF OUR PREVIOUS PARTNERS',
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
