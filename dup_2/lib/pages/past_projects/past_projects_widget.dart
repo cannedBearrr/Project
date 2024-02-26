@@ -79,100 +79,87 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                       SizedBox(
                         child: ColoredBox(
                           color: Colors.white,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 122,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('businessPortal');
-                                      },
-                                      child: Text(
-                                        'BUSINESS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox.shrink(),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('parentPortal');
+                                    },
+                                    child: Text(
+                                      'PARENTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 192,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('parentPortal');
-                                      },
-                                      child: Text(
-                                        'PARENTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('businessPortal');
+                                    },
+                                    child: Text(
+                                      'BUSINESS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 191,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('careerPage');
-                                      },
-                                      child: Text(
-                                        'CAREER',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: Colors.black,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('careerPage');
+                                    },
+                                    child: Text(
+                                      'CAREER',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: Colors.black,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox.shrink(),
+                              ].divide(const Spacer()),
+                            ),
                           ),
                         ),
                       ),
@@ -198,10 +185,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'BUSINESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -222,10 +209,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'PARENTS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -266,10 +253,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     Align(
                       alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        'Hello World',
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        'Student Projects',
+                        style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                          fontSize: 40.0,
+                          color: Color(0xFF008dff),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',// Set the font size to 40
+                        ),
                       ),
                     ),
+
                     if (responsiveVisibility(
                       context: context,
                       tablet: false,
@@ -289,7 +282,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
-                                  'Hello World',
+                                  '2',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
@@ -311,7 +304,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Container( //Add documentation Reward: Various rewards
+                                                Container(
                                                   width: MediaQuery.sizeOf(context).width * 0.83,
                                                   height: MediaQuery.sizeOf(context).height * 0.21,
                                                   decoration: BoxDecoration(
@@ -325,7 +318,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Hello World',
+                                                    '3',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ),
@@ -348,7 +341,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '4',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -370,7 +363,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '5',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -392,7 +385,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '6',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -414,7 +407,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '7',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -436,7 +429,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '8',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -497,7 +490,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
-                                  'Hello World',
+                                  '9',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
@@ -505,69 +498,44 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: MediaQuery.sizeOf(context).height * 0.6,
                                 decoration: const BoxDecoration(),
-                                child: Container(
-                                  width: MediaQuery.sizeOf(context).width * 1.0,
-                                  height: MediaQuery.sizeOf(context).height * 0.5,
-                                  child: Stack(
-                                    children: [
-                                      PageView(
-                                        controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                  'assets/images/ESP web.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
+                                child: Stack(
+                                  children: [
+                                    PageView(
+                                      controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                      scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                      scrollDirection: Axis.horizontal,
+                                      children: [
                                         SingleChildScrollView(
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
                                                 child: Image.asset(
-                                                  'assets/images/Friendly bear@4x 2.png',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.8,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Hello World',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
+                                                'assets/images/ESP web.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                             ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                  'assets/images/CitySmart.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Friendly bear@4x 2.png',
+                                                fit: BoxFit.contain,
+                                              ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -587,101 +555,122 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             children: [
                                               Container(
                                                 child: Image.asset(
-                                                  'assets/images/Covid TK.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
+                                                'assets/images/CitySmart.gif',
+                                                fit: BoxFit.contain,
                                               ),
-                                              Text(
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Covid TK.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/ISH 2.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Worldheritage.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              child: Text(
                                                 'Hello World',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                  'assets/images/ISH 2.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                  'assets/images/Worldheritage.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                                child: Text(
-                                                  'Hello World',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
-                                        child: smooth_page_indicator.SmoothPageIndicator(
-                                          controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                          count: 6,
-                                          axisDirection: Axis.horizontal,
-                                          onDotClicked: (i) async {
-                                            await _model.pageViewController2!.animateToPage(
-                                              i,
-                                              duration: const Duration(milliseconds: 500),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                          effect: smooth_page_indicator.SlideEffect(
-                                            spacing: 8.0,
-                                            radius: 16.0,
-                                            dotWidth: 8.0,
-                                            dotHeight: 8.0,
-                                            dotColor: FlutterFlowTheme.of(context).secondaryText,
-                                            activeDotColor: FlutterFlowTheme.of(context).primaryText,
-                                            paintStyle: PaintingStyle.stroke,
-                                          ),
+                                      ),
+                                    ],
+                                  ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                      child: smooth_page_indicator.SmoothPageIndicator(
+                                        controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                        count: 6,
+                                        axisDirection: Axis.horizontal,
+                                        onDotClicked: (i) async {
+                                          await _model.pageViewController2!.animateToPage(
+                                            i,
+                                            duration: const Duration(milliseconds: 500),
+                                            curve: Curves.ease,
+                                          );
+                                        },
+                                        effect: smooth_page_indicator.SlideEffect(
+                                          spacing: 8.0,
+                                          radius: 16.0,
+                                          dotWidth: 8.0,
+                                          dotHeight: 8.0,
+                                          dotColor: FlutterFlowTheme.of(context).secondaryText,
+                                          activeDotColor: FlutterFlowTheme.of(context).primaryText,
+                                          paintStyle: PaintingStyle.stroke,
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ),
+                                  ),
+                                ],
+                                                                ),
                             ),
                           ],
                         ),
@@ -747,7 +736,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    'Hello World',
+                                                    'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ],
@@ -769,7 +758,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -791,7 +780,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -813,7 +802,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -835,7 +824,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -859,7 +848,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   Padding(
                                                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      'Hello World',
+                                                      'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                       style: FlutterFlowTheme.of(context).bodyMedium,
                                                     ),
                                                   ),
@@ -904,40 +893,107 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           ),
                         ),
                       ),
+                    if (responsiveVisibility(
+                      context: context,
+                      tabletLandscape: false,
+                      desktop: false,
+                    ))
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(MediaQuery.sizeOf(context).width * 0.05, 50.0, MediaQuery.sizeOf(context).width * 0.05, 45.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Building Tomorrow\'s Innovators, One Student at a Time.',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontSize: 10 + 2 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    fontWeight: FontWeight.w600,
+                                    lineHeight: 1.13,
+                                  ),
+                                ),
+                                Text(
+                                  'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontSize: 7 + 1.5 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    lineHeight: 1.13,
+                                  ),
+                                ),
+                              ].divide(SizedBox(height: 7)),
+                            ),
+                            FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'Donate',
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                color: const Color(0xffec003b),
+                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                ),
+                                elevation: 2.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ),
+                          ].divide(SizedBox(height: 60)),
+                        ),
+                      ),
+                    if (responsiveVisibility(
+                      context: context,
+                      phone: false,
+                      tablet: false,
+                    ))
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 50.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(MediaQuery.sizeOf(context).width * 0.05, 50.0, MediaQuery.sizeOf(context).width * 0.05, 50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Hello World',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                'Building Tomorrow\'s Innovators, One Student at a Time.',
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  fontSize: 15 + min(5, MediaQuery.sizeOf(context).width / 150),
+                                  fontWeight: FontWeight.w600,
+                                  lineHeight: 1.15,
+                                ),
                               ),
                               Text(
-                                'Hello World',
+                                'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
-                            ],
+                            ].divide(SizedBox(height: 5)),
                           ),
                           FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: 'Button',
+                            text: 'Donate',
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: const Color(0xffec003b),
                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
-                              elevation: 3.0,
+                              elevation: 2.0,
                               borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
@@ -1218,7 +1274,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'LEARN MORE',
+                                        '25',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1242,7 +1298,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        '27',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1265,7 +1321,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'WHAT WE DO',
+                                        '28',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1274,7 +1330,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          'Marketing Solutions',
+                                          '29',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1284,7 +1340,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Website Building',
+                                        '30',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1307,7 +1363,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'LEGAL',
+                                        '31',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1316,7 +1372,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          'Terms of Service',
+                                          '32',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1326,7 +1382,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Privacy Policy',
+                                        '33',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1358,7 +1414,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          '+1 (845)-281-9257',
+                                          '35',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1368,7 +1424,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'bossemail@gmail.com',
+                                        '36',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
