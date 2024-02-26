@@ -105,100 +105,87 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       SizedBox(
                         child: ColoredBox(
                           color: Colors.white,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 122,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('parentPortal');
-                                      },
-                                      child: Text(
-                                        'PARENTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: FlutterFlowTheme.of(context).primaryText,
-                                              fontSize: 16.0,
-                                            ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox.shrink(),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('parentPortal');
+                                    },
+                                    child: Text(
+                                      'PARENTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 192,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('pastProjects');
-                                      },
-                                      child: Text(
-                                        'PAST PROJECTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: FlutterFlowTheme.of(context).primaryText,
-                                              fontSize: 16.0,
-                                            ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('pastProjects');
+                                    },
+                                    child: Text(
+                                      'PAST PROJECTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 191,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('careerPage');
-                                      },
-                                      child: Text(
-                                        'CAREER',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: Colors.black,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('careerPage');
+                                    },
+                                    child: Text(
+                                      'CAREER',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: Colors.black,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox.shrink(),
+                              ].divide(const Spacer()),
+                            ),
                           ),
                         ),
                       ),

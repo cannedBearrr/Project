@@ -70,5 +70,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>FLTEnableWideGamut</key>
+    <true/>
 </dict>
 </plist>

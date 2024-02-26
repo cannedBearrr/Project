@@ -79,100 +79,87 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                       SizedBox(
                         child: ColoredBox(
                           color: Colors.white,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 122,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('businessPortal');
-                                      },
-                                      child: Text(
-                                        'BUSINESS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox.shrink(),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('parentPortal');
+                                    },
+                                    child: Text(
+                                      'PARENTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 192,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('parentPortal');
-                                      },
-                                      child: Text(
-                                        'PARENTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('businessPortal');
+                                    },
+                                    child: Text(
+                                      'BUSINESS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 191,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('careerPage');
-                                      },
-                                      child: Text(
-                                        'CAREER',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: Colors.black,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('careerPage');
+                                    },
+                                    child: Text(
+                                      'CAREER',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: Colors.black,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox.shrink(),
+                              ].divide(const Spacer()),
+                            ),
                           ),
                         ),
                       ),
@@ -505,69 +492,44 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: MediaQuery.sizeOf(context).height * 0.6,
                                 decoration: const BoxDecoration(),
-                                child: Container(
-                                  width: MediaQuery.sizeOf(context).width * 1.0,
-                                  height: MediaQuery.sizeOf(context).height * 0.5,
-                                  child: Stack(
-                                    children: [
-                                      PageView(
-                                        controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                  'assets/images/ESP web.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
+                                child: Stack(
+                                  children: [
+                                    PageView(
+                                      controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                      scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                      scrollDirection: Axis.horizontal,
+                                      children: [
                                         SingleChildScrollView(
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Container(
                                                 child: Image.asset(
-                                                  'assets/images/Friendly bear@4x 2.png',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.8,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Hello World',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
+                                                'assets/images/ESP web.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                             ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                  'assets/images/CitySmart.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Friendly bear@4x 2.png',
+                                                fit: BoxFit.contain,
+                                              ),
                                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                                 height: MediaQuery.sizeOf(context).height * 0.4,
                                                 decoration: BoxDecoration(
@@ -587,101 +549,122 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             children: [
                                               Container(
                                                 child: Image.asset(
-                                                  'assets/images/Covid TK.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
+                                                'assets/images/CitySmart.gif',
+                                                fit: BoxFit.contain,
                                               ),
-                                              Text(
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Covid TK.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/ISH 2.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Hello World',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Worldheritage.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: MediaQuery.sizeOf(context).height * 0.4,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                              child: Text(
                                                 'Hello World',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                  'assets/images/ISH 2.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Hello World',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                  'assets/images/Worldheritage.gif',
-                                                  fit: BoxFit.contain,
-                                                ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                                child: Text(
-                                                  'Hello World',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
-                                        child: smooth_page_indicator.SmoothPageIndicator(
-                                          controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                          count: 6,
-                                          axisDirection: Axis.horizontal,
-                                          onDotClicked: (i) async {
-                                            await _model.pageViewController2!.animateToPage(
-                                              i,
-                                              duration: const Duration(milliseconds: 500),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                          effect: smooth_page_indicator.SlideEffect(
-                                            spacing: 8.0,
-                                            radius: 16.0,
-                                            dotWidth: 8.0,
-                                            dotHeight: 8.0,
-                                            dotColor: FlutterFlowTheme.of(context).secondaryText,
-                                            activeDotColor: FlutterFlowTheme.of(context).primaryText,
-                                            paintStyle: PaintingStyle.stroke,
-                                          ),
+                                      ),
+                                    ],
+                                  ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                      child: smooth_page_indicator.SmoothPageIndicator(
+                                        controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                        count: 6,
+                                        axisDirection: Axis.horizontal,
+                                        onDotClicked: (i) async {
+                                          await _model.pageViewController2!.animateToPage(
+                                            i,
+                                            duration: const Duration(milliseconds: 500),
+                                            curve: Curves.ease,
+                                          );
+                                        },
+                                        effect: smooth_page_indicator.SlideEffect(
+                                          spacing: 8.0,
+                                          radius: 16.0,
+                                          dotWidth: 8.0,
+                                          dotHeight: 8.0,
+                                          dotColor: FlutterFlowTheme.of(context).secondaryText,
+                                          activeDotColor: FlutterFlowTheme.of(context).primaryText,
+                                          paintStyle: PaintingStyle.stroke,
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ),
+                                  ),
+                                ],
+                                                                ),
                             ),
                           ],
                         ),
@@ -904,40 +887,107 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           ),
                         ),
                       ),
+                    if (responsiveVisibility(
+                      context: context,
+                      tabletLandscape: false,
+                      desktop: false,
+                    ))
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(MediaQuery.sizeOf(context).width * 0.05, 50.0, MediaQuery.sizeOf(context).width * 0.05, 45.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Building Tomorrow\'s Innovators, One Student at a Time.',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontSize: 10 + 2 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    fontWeight: FontWeight.w600,
+                                    lineHeight: 1.13,
+                                  ),
+                                ),
+                                Text(
+                                  'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontSize: 7 + 1.5 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    lineHeight: 1.13,
+                                  ),
+                                ),
+                              ].divide(SizedBox(height: 7)),
+                            ),
+                            FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'Donate',
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                color: const Color(0xffec003b),
+                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                ),
+                                elevation: 2.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ),
+                          ].divide(SizedBox(height: 60)),
+                        ),
+                      ),
+                    if (responsiveVisibility(
+                      context: context,
+                      phone: false,
+                      tablet: false,
+                    ))
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 50.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(MediaQuery.sizeOf(context).width * 0.05, 50.0, MediaQuery.sizeOf(context).width * 0.05, 50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Hello World',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                'Building Tomorrow\'s Innovators, One Student at a Time.',
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  fontSize: 15 + min(5, MediaQuery.sizeOf(context).width / 150),
+                                  fontWeight: FontWeight.w600,
+                                  lineHeight: 1.15,
+                                ),
                               ),
                               Text(
-                                'Hello World',
+                                'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
-                            ],
+                            ].divide(SizedBox(height: 5)),
                           ),
                           FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: 'Button',
+                            text: 'Donate',
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: const Color(0xffec003b),
                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
-                              elevation: 3.0,
+                              elevation: 2.0,
                               borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
