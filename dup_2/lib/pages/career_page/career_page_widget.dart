@@ -560,7 +560,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                 ].divide(const SizedBox(width: 5)),
                                               ),
                                             ),
-                                            if (exp1[0]) ... [
+                                            if (exp1[0]) ...[
                                               SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
@@ -568,30 +568,31 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                       fontSize: 20,
                                                       fontWeight: FontWeight.w600,
                                                     ),
-                                              ),],
-                                              if (exp1[1]) ...[
-                                                const SizedBox(height: 4),
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
-                                                  child: Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                    children: [
-                                                      const Padding(
-                                                          padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
-                                                      Flexible(
-                                                        child: Text(
-                                                          'Master\'s degree or PhD in Computer Science or related technical field',
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontSize: 16,
-                                                                lineHeight: 1.17,
-                                                              ),
-                                                        ),
+                                              ),
+                                            ],
+                                            if (exp1[1]) ...[
+                                              const SizedBox(height: 4),
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                child: Row(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    const Padding(
+                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                    Flexible(
+                                                      child: Text(
+                                                        'Master\'s degree or PhD in Computer Science or related technical field',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontSize: 16,
+                                                              lineHeight: 1.17,
+                                                            ),
                                                       ),
-                                                    ].divide(const SizedBox(width: 5)),
-                                                  ),
+                                                    ),
+                                                  ].divide(const SizedBox(width: 5)),
                                                 ),
-                                              ],
-                                              if (exp1[2])
+                                              ),
+                                            ],
+                                            if (exp1[2])
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
                                                 child: Row(
@@ -611,7 +612,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                              if (exp1[3])
+                                            if (exp1[3])
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
                                                 child: Row(
@@ -631,7 +632,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-
                                           ].divide(const SizedBox(height: 5.0))),
                                     ),
                                   ),
@@ -646,14 +646,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp1 = !_exp1;
                                               for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*100), () {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
                                                   if (_exp1) {
                                                     print(i);
                                                     exp1[i] = !exp1[i];
-                                                  }
-                                                  else {
-                                                    print(exp1.length-i-1);
-                                                    exp1[exp1.length-i-1] = !exp1[exp1.length-i-1];
+                                                  } else {
+                                                    print(exp1.length - i - 1);
+                                                    exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
                                                   }
                                                   setState(() {});
                                                 });
@@ -852,6 +851,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                       fontWeight: FontWeight.w600,
                                                     ),
                                               ),
+                                            ],
+                                            if (exp2[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
@@ -872,6 +873,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
+                                            ],
+                                            if (exp2[2])
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
                                                 child: Row(
@@ -891,7 +894,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                            ]
                                           ].divide(const SizedBox(height: 5.0))),
                                     ),
                                   ),
@@ -904,9 +906,19 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
-
-                                                _exp2 = !_exp2;
-
+                                              _exp2 = !_exp2;
+                                              for (int i = 0; i < exp2.length; i++) {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
+                                                  if (_exp2) {
+                                                    print(i);
+                                                    exp2[i] = !exp2[i];
+                                                  } else {
+                                                    print(exp2.length - i - 1);
+                                                    exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
+                                                  }
+                                                  setState(() {});
+                                                });
+                                              }
                                             },
                                             text: _exp2 ? 'Read Less' : 'Read More',
                                             options: FFButtonOptions(
@@ -1153,7 +1165,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
-                                                _exp3 = !_exp3;
+                                              _exp3 = !_exp3;
                                             },
                                             text: _exp3 ? 'Read Less' : 'Read More',
                                             options: FFButtonOptions(
@@ -1625,67 +1637,67 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           if (exp1[0])
-                                          Text(
-                                            'Preferred qualifications',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500,
+                                            Text(
+                                              'Preferred qualifications',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
-                                          ),
                                           if (exp1[1])
-                                          Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
-                                              Flexible(
-                                                child: Text(
-                                                  'Master\'s degree or PhD in Computer Science or related technical field',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 14,
-                                                    lineHeight: 1.15,
+                                            Row(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                const Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
+                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                Flexible(
+                                                  child: Text(
+                                                    'Master\'s degree or PhD in Computer Science or related technical field',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
+                                              ],
+                                            ),
                                           if (exp1[2])
-                                          Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
-                                              Flexible(
-                                                child: Text(
-                                                  '2 years of experience with front-end frameworks, full-stack development, and/or API development',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 14,
-                                                    lineHeight: 1.15,
+                                            Row(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                const Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
+                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                Flexible(
+                                                  child: Text(
+                                                    '2 years of experience with front-end frameworks, full-stack development, and/or API development',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
+                                              ],
+                                            ),
                                           if (exp1[3])
-                                          Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
-                                              Flexible(
-                                                child: Text(
-                                                  'Experience developing accessible technologies',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 14,
-                                                    lineHeight: 1.15,
+                                            Row(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                const Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
+                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                Flexible(
+                                                  child: Text(
+                                                    'Experience developing accessible technologies',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
+                                              ],
+                                            ),
                                         ].divide(const SizedBox(height: 6)),
                                       ),
                                     ),
@@ -1701,14 +1713,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp1 = !_exp1;
                                               for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*100), () {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
                                                   if (_exp1) {
                                                     print(i);
                                                     exp1[i] = !exp1[i];
-                                                  }
-                                                  else {
-                                                    print(exp1.length-i-1);
-                                                    exp1[exp1.length-i-1] = !exp1[exp1.length-i-1];
+                                                  } else {
+                                                    print(exp1.length - i - 1);
+                                                    exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
                                                   }
                                                   setState(() {});
                                                 });
@@ -1901,14 +1912,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp2 = !_exp2;
                                               for (int i = 0; i < exp2.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*100), () {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
                                                   if (_exp2) {
                                                     print(i);
                                                     exp2[i] = !exp2[i];
-                                                  }
-                                                  else {
-                                                    print(exp2.length-i-1);
-                                                    exp2[exp2.length-i-1] = !exp2[exp2.length-i-1];
+                                                  } else {
+                                                    print(exp2.length - i - 1);
+                                                    exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
                                                   }
                                                   setState(() {});
                                                 });
@@ -2084,14 +2094,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp3 = !_exp3;
                                               for (int i = 0; i < exp3.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*100), () {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
                                                   if (_exp3) {
                                                     print(i);
                                                     exp3[i] = !exp3[i];
-                                                  }
-                                                  else {
-                                                    print(exp3.length-i-1);
-                                                    exp3[exp3.length-i-1] = !exp3[exp3.length-i-1];
+                                                  } else {
+                                                    print(exp3.length - i - 1);
+                                                    exp3[exp3.length - i - 1] = !exp3[exp3.length - i - 1];
                                                   }
                                                   setState(() {});
                                                 });
@@ -2267,14 +2276,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp4 = !_exp4;
                                               for (int i = 0; i < exp4.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*100), () {
+                                                Future.delayed(Duration(milliseconds: i * 100), () {
                                                   if (_exp4) {
                                                     print(i);
                                                     exp4[i] = !exp4[i];
-                                                  }
-                                                  else {
-                                                    print(exp4.length-i-1);
-                                                    exp4[exp4.length-i-1] = !exp4[exp4.length-i-1];
+                                                  } else {
+                                                    print(exp4.length - i - 1);
+                                                    exp4[exp4.length - i - 1] = !exp4[exp4.length - i - 1];
                                                   }
                                                   setState(() {});
                                                 });

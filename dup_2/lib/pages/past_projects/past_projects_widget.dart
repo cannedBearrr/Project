@@ -305,10 +305,6 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Container(
-                                                  child: Image.asset(
-                                                    'assets/images/ESP web.gif',
-                                                    fit: BoxFit.fill,
-                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.83,
                                                   height: MediaQuery.sizeOf(context).height * 0.21,
                                                   decoration: BoxDecoration(
