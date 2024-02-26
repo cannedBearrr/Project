@@ -453,7 +453,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 20.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
@@ -905,7 +905,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 40.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
@@ -1061,81 +1061,86 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       children: [
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                          child: Container(
-                            width: MediaQuery.sizeOf(context).width * 0.7,
-                            height: MediaQuery.sizeOf(context).height * 0.4,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).secondaryBackground,
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.network(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(14.0),
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 0.7,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Image.network(
                                     'https://picsum.photos/seed/328/600',
-                                    width: MediaQuery.sizeOf(context).width * 0.68,
-                                    height: MediaQuery.sizeOf(context).height * 0.2,
+                                    width: MediaQuery.sizeOf(context).width,
+                                    height: 250,
                                     fit: BoxFit.cover,
                                   ),
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Hello World',
-                                      style: FlutterFlowTheme.of(context).bodyMedium,
-                                    ),
-                                  ),
-                                ),
-                                Divider(
-                                  thickness: 1.0,
-                                  indent: 25.0,
-                                  endIndent: 25.0,
-                                  color: FlutterFlowTheme.of(context).primaryText,
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 60.0),
-                                    child: Text(
-                                      'Hello World',
-                                      style: FlutterFlowTheme.of(context).bodyMedium,
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: 'Button',
-                                      options: FFButtonOptions(
-                                        height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context).primary,
-                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                            ),
-                                        elevation: 3.0,
-                                        borderSide: const BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                  Align(
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 13.0, 0.0, 0.0),
+                                      child: Text(
+                                        'Software Developer',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.w600,
                                         ),
-                                        borderRadius: BorderRadius.circular(8.0),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                  Divider(
+                                    thickness: 1.0,
+                                    height: 0,
+                                    indent: 25.0,
+                                    endIndent: 25.0,
+                                    color: FlutterFlowTheme.of(context).primaryText,
+                                  ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 0.0, 60.0),
+                                      child: Text(
+                                        'Minimum qualifications',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          fontWeight: FontWeight.w500,
+                                        ),
+
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                      child: FFButtonWidget(
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
+                                        text: 'Button',
+                                        options: FFButtonOptions(
+                                          height: 40.0,
+                                          padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                          color: FlutterFlowTheme.of(context).primary,
+                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                              ),
+                                          elevation: 3.0,
+                                          borderSide: const BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius: BorderRadius.circular(8.0),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
