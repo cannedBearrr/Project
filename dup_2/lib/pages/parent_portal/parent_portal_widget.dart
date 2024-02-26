@@ -2497,7 +2497,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontSize: min(-150.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2565,7 +2565,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontSize: min(-150.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2636,7 +2636,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontSize: min(-150.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2710,7 +2710,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
-                                                          fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 6, 60),
+                                                          fontSize: min(-150.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                   ),
@@ -2784,7 +2784,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: Colors.white,
-                                                            fontSize: 60.0,
+                                                            fontSize: min(-150.0 + MediaQuery.sizeOf(context).width / 6, 60),
                                                             fontWeight: FontWeight.bold,
                                                           ),
                                                     ),
