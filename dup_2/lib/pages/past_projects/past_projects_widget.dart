@@ -185,10 +185,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'BUSINESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -209,10 +209,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   child: Text(
                                     'PARENTS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context).primaryText,
-                                      fontSize: 20.0,
-                                    ),
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          fontSize: 20.0,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -253,10 +253,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     Align(
                       alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        'Hello World',
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        'Student Projects',
+                        style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                          fontSize: 40.0,
+                          color: Color(0xFF008dff),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',// Set the font size to 40
+                        ),
                       ),
                     ),
+
                     if (responsiveVisibility(
                       context: context,
                       tablet: false,
@@ -276,7 +282,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
-                                  'Hello World',
+                                  '2',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
@@ -298,7 +304,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Container( //Add documentation Reward: Various rewards
+                                                Container(
+                                                  child: Image.asset(
+                                                    'assets/images/ESP web.gif',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                   width: MediaQuery.sizeOf(context).width * 0.83,
                                                   height: MediaQuery.sizeOf(context).height * 0.21,
                                                   decoration: BoxDecoration(
@@ -312,7 +322,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Hello World',
+                                                    '3',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ),
@@ -335,7 +345,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '4',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -357,7 +367,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '5',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -379,7 +389,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '6',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -401,7 +411,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '7',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -423,7 +433,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  '8',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -484,7 +494,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                                 child: Text(
-                                  'Hello World',
+                                  '9',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
@@ -730,7 +740,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    'Hello World',
+                                                    'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
                                                 ],
@@ -752,7 +762,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -774,7 +784,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -796,7 +806,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -818,7 +828,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Hello World',
+                                                  'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
                                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                                 ),
                                               ],
@@ -842,7 +852,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                   Padding(
                                                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      'Hello World',
+                                                      'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                       style: FlutterFlowTheme.of(context).bodyMedium,
                                                     ),
                                                   ),
@@ -1268,7 +1278,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'LEARN MORE',
+                                        '25',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1292,7 +1302,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        '27',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1315,7 +1325,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'WHAT WE DO',
+                                        '28',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1324,7 +1334,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          'Marketing Solutions',
+                                          '29',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1334,7 +1344,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Website Building',
+                                        '30',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1357,7 +1367,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'LEGAL',
+                                        '31',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1366,7 +1376,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          'Terms of Service',
+                                          '32',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1376,7 +1386,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Privacy Policy',
+                                        '33',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1408,7 +1418,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: Text(
-                                          '+1 (845)-281-9257',
+                                          '35',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
@@ -1418,7 +1428,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'bossemail@gmail.com',
+                                        '36',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
