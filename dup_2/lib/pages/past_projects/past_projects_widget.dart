@@ -521,7 +521,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ],
@@ -543,7 +543,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ],
@@ -565,7 +565,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ],
@@ -587,7 +587,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ],
@@ -609,7 +609,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'Hello World',
+                                              'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ],
@@ -633,7 +633,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                               child: Text(
-                                                'Hello World',
+                                                'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
@@ -695,7 +695,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                               child: Text(
-                                'Hello World',
+                                'H8',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),

@@ -369,14 +369,48 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                           ),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Sample text here for data data data data\ndata data data data data data data data\n',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        RichText(
+                                          text: TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: 'WE HELP STUDENTS DEFINE THEIR',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,
+                                                  fontSize: 20.0,
+                                                  fontWeight: FontWeight.normal,
                                                 ),
+                                              ),
+                                              const TextSpan(
+                                                text: ' CAREER',
+                                                style: TextStyle(
+                                                  color: Color(0xFFEEB609),
+                                                ),
+                                              ),
+                                              const TextSpan(
+                                                text:
+                                                ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT-\nBASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              const TextSpan(
+                                                text: ' PORTFOLIOS',
+                                                style: TextStyle(
+                                                  color: Color(0xFFEEB609),
+                                                ),
+                                              ),
+                                              const TextSpan(
+                                                text: '.',
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            ],
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              fontSize: 20.0,
+                                            ),
                                           ),
                                         ),
                                         FFButtonWidget(

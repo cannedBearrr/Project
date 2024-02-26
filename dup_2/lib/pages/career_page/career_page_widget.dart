@@ -326,7 +326,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
-                              'Hello World',
+                              'At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world.',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
                                     color: FlutterFlowTheme.of(context).primaryBackground,
@@ -362,24 +362,27 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  'Hello World',
+                                  'Life at Northern Horizon',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
+                                        fontSize: 50,
                                       ),
                                 ),
                                 Text(
-                                  'Hello World',
+                                  'Join our community and help define it.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
+                                        fontSize: 80,
                                       ),
                                 ),
                                 Text(
-                                  'Hello World',
+                                  'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
+                                        fontSize: 30,
                                       ),
                                 ),
                               ],
@@ -414,21 +417,21 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  'Hello World',
+                                  'Hello Wor5ld',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
                                       ),
                                 ),
                                 Text(
-                                  'Hello World',
+                                  'Hello W56orld',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
                                       ),
                                 ),
                                 Text(
-                                  'Hello World',
+                                  'Hello Wo87rld',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context).primaryBackground,
