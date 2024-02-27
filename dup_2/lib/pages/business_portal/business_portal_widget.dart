@@ -9,10 +9,14 @@ import 'business_portal_model.dart';
 export 'business_portal_model.dart';
 
 class CustomShape extends CustomClipper<Path> {
+
   @override
   Path getClip(Size size) {
     double height = size.height; //i
     double width = size.width;
+
+    double screenWidth = width + 150;
+    double respond = (screenWidth < 600) ? 300 - screenWidth/2 : 0;
 
     var path = Path();
     path.moveTo(width, 0);
@@ -20,10 +24,10 @@ class CustomShape extends CustomClipper<Path> {
     path.lineTo(203, 160);
     path.lineTo(0, 160); //y
     path.lineTo(0, height);
-    path.lineTo(width - 319, height);
-    path.lineTo(width - 319, height - 14);
+    path.lineTo(width - 322 + respond, height);
+    path.lineTo(width - 322 + respond, height - 14);
     path.lineTo(width - 300, height - 14);
-    path.lineTo(width, height - 95);
+    path.lineTo(width, height - 88 + respond * 0.23);
     path.close();
     return path;
   }
@@ -816,7 +820,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -828,7 +832,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -840,7 +844,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -906,20 +910,24 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   child: Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 50, 62),
                                     child: SizedBox(
-                                        width: 344,
+                                        width: 344 - ((screenWidth < 600) ? 300 - screenWidth/2 : 0),
                                         height: 123,
                                         child: Align(
-                                          alignment: const AlignmentDirectional(1.0, 1.0),
-                                          child: Text(
-                                            "DESIGN\nMARKETING\nPROFESSIONAL",
-                                            textAlign: TextAlign.right,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: screenWidth < 600 ? 34 : (screenWidth < 900 ? 20 : 42),
-                                                  fontWeight: FontWeight.w600,
-                                                  letterSpacing: 2.5,
-                                                  lineHeight: 1.05,
-                                                ),
+                                          alignment: AlignmentDirectional(0.0, 0.5),
+                                          child: SizedBox(
+                                            width: double.infinity,
+                                            child: FittedBox(
+                                              child: Text(
+                                                "DESIGN\nMARKETING\nPROFESSIONAL",
+                                                textAlign: TextAlign.right,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      fontWeight: FontWeight.w600,
+                                                      letterSpacing: 2.5,
+                                                      lineHeight: 1.05,
+                                                    ),
+                                              ),
+                                            ),
                                           ),
                                         )),
                                   )),

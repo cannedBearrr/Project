@@ -9,16 +9,12 @@ import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
 
   await FlutterFlowTheme.initialize();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
-  ]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   runApp(const MyApp());
 }
@@ -28,12 +24,12 @@ class NoTransitionsBuilder extends PageTransitionsBuilder {
 
   @override
   Widget buildTransitions<T>(
-      PageRoute<T>? route,
-      BuildContext? context,
-      Animation<double> animation,
-      Animation<double> secondaryAnimation,
-      Widget? child,
-      ) {
+    PageRoute<T>? route,
+    BuildContext? context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget? child,
+  ) {
     return child!;
   }
 }
@@ -45,8 +41,7 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 
-  static _MyAppState of(BuildContext context) =>
-      context.findAncestorStateOfType<_MyAppState>()!;
+  static _MyAppState of(BuildContext context) => context.findAncestorStateOfType<_MyAppState>()!;
 }
 
 class _MyAppState extends State<MyApp> {
@@ -88,6 +83,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: const ScrollbarThemeData(),
+          textSelectionTheme: TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
         // pageTransitionsTheme: const PageTransitionsTheme(
         //   builders: <TargetPlatform, PageTransitionsBuilder>{
         //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
@@ -99,18 +95,19 @@ class _MyAppState extends State<MyApp> {
         // ),
       ),
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        scrollbarTheme: const ScrollbarThemeData(),
-        // pageTransitionsTheme: const PageTransitionsTheme(
-        //   builders: <TargetPlatform, PageTransitionsBuilder>{
-        //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-        //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-        //     TargetPlatform.linux: NoTransitionsBuilder(),
-        //     TargetPlatform.macOS: NoTransitionsBuilder(),
-        //     TargetPlatform.windows: NoTransitionsBuilder(),
-        //   },
-        // ),
-      ),
+          brightness: Brightness.dark,
+          scrollbarTheme: const ScrollbarThemeData(),
+          textSelectionTheme: TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
+          // pageTransitionsTheme: const PageTransitionsTheme(
+          //   builders: <TargetPlatform, PageTransitionsBuilder>{
+          //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+          //     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+          //     TargetPlatform.linux: NoTransitionsBuilder(),
+          //     TargetPlatform.macOS: NoTransitionsBuilder(),
+          //     TargetPlatform.windows: NoTransitionsBuilder(),
+          //   },
+          // ),
+          ),
       themeMode: ThemeMode.light,
       routerConfig: _router,
     );
