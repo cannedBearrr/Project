@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import 'career_page_model.dart';
 export 'career_page_model.dart';
 
-String? job;
+String? job = '';
 
 Future<http.Response> sendEmail(String email, String? job) {
   return http.post(
@@ -50,16 +50,13 @@ class CustomShape extends CustomClipper<Path> {
 }
 
 class EmailDialog extends StatefulWidget {
-  const EmailDialog({super.key, this.job});
-
-  final String? job;
+  const EmailDialog({super.key});
 
   @override
   State<StatefulWidget> createState() => _EmailWidgetState();
 }
 
 class _EmailWidgetState extends State<EmailDialog> {
-
   late FocusNode _focusNode;
 
   @override
@@ -93,6 +90,7 @@ class _EmailWidgetState extends State<EmailDialog> {
       setState(() {
         isEmailSent = false;
       });
+      job = '';
       Navigator.pop(context);
     });
     return null;
@@ -108,7 +106,10 @@ class _EmailWidgetState extends State<EmailDialog> {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(height: 25),
-            Text('In order to apply, please verify your email', style: FlutterFlowTheme.of(context).bodyLarge,),
+            Text(
+              'In order to apply, please verify your email',
+              style: FlutterFlowTheme.of(context).bodyLarge,
+            ),
             SizedBox(height: 7),
             SizedBox(
               width: MediaQuery.sizeOf(context).width * 0.8,
@@ -135,8 +136,8 @@ class _EmailWidgetState extends State<EmailDialog> {
                     labelStyle: FlutterFlowTheme.of(context).labelMedium,
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
                     errorStyle: FlutterFlowTheme.of(context).labelSmall.override(
-                      color: Color(0xffbd434a),
-                    ),
+                          color: Color(0xffbd434a),
+                        ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
                         color: Colors.black,
@@ -172,11 +173,11 @@ class _EmailWidgetState extends State<EmailDialog> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Readex Pro',
-                    letterSpacing: 1.0,
-                    lineHeight: 1.0,
-                    color: Colors.black,
-                  ),
+                        fontFamily: 'Readex Pro',
+                        letterSpacing: 1.0,
+                        lineHeight: 1.0,
+                        color: Colors.black,
+                      ),
                   textAlign: TextAlign.start,
                   validator: (value) {
                     return _validateEmail(value!);
@@ -185,9 +186,12 @@ class _EmailWidgetState extends State<EmailDialog> {
               ),
             ),
             SizedBox(height: 2),
-            Text(isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '', style: FlutterFlowTheme.of(context).bodySmall.override(
-              color: Colors.green,
-            ),),
+            Text(
+              isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '',
+              style: FlutterFlowTheme.of(context).bodySmall.override(
+                    color: Colors.green,
+                  ),
+            ),
           ],
         ),
       ),
@@ -813,7 +817,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp1 = !_exp1;
                                               for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp1) {
                                                     print(i);
                                                     exp1[i] = !exp1[i];
@@ -844,14 +848,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
+                                            onPressed: () {
+                                              job = 'Software Developer';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Software Developer'),
-                                              ),
-                                            ),
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
@@ -1080,7 +1087,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp2 = !_exp2;
                                               for (int i = 0; i < exp2.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp2) {
                                                     print(i);
                                                     exp2[i] = !exp2[i];
@@ -1111,14 +1118,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Graphic Designer'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+    job = 'Graphic Designer';
+    showDialog<String>(
+    context: context,
+    builder: (BuildContext context) => const Dialog(
+    shape: ContinuousRectangleBorder(),
+    surfaceTintColor: Colors.grey,
+    child: EmailDialog(),
+    ),
+    );
+    },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
@@ -1272,7 +1282,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                     ),
                                               ),
                                             ],
-    if (exp3[1]) ...[
+                                            if (exp3[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
@@ -1292,7 +1302,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                     ),
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
-                                              ),],
+                                              ),
+                                            ],
                                             if (exp3[2])
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
@@ -1333,7 +1344,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-
                                           ].divide(const SizedBox(height: 5.0))),
                                     ),
                                   ),
@@ -1348,7 +1358,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp3 = !_exp3;
                                               for (int i = 0; i < exp3.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp3) {
                                                     print(i);
                                                     exp3[i] = !exp3[i];
@@ -1379,14 +1389,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Sales Manager'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Sales Manager';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
@@ -1540,7 +1553,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                     ),
                                               ),
                                             ],
-                                              if (exp4[1]) ...[
+                                            if (exp4[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
@@ -1561,7 +1574,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                              ],
+                                            ],
                                             if (exp4[2])
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
@@ -1662,7 +1675,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   ].divide(const SizedBox(width: 5)),
                                                 ),
                                               ),
-
                                           ].divide(const SizedBox(height: 5.0))),
                                     ),
                                   ),
@@ -1677,7 +1689,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp4 = !_exp4;
                                               for (int i = 0; i < exp4.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp4) {
                                                     print(i);
                                                     exp4[i] = !exp4[i];
@@ -1708,14 +1720,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Marketing Director'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Marketing Director';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
@@ -1934,7 +1949,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp1 = !_exp1;
                                               for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp1) {
                                                     print(i);
                                                     exp1[i] = !exp1[i];
@@ -1966,14 +1981,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Software Developer'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Software Developer';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
@@ -2127,9 +2145,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             Text(
                                               'Preferred qualifications',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
                                           if (exp2[1])
                                             Row(
@@ -2142,9 +2160,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Master\'s degree or PhD in Computer Science or related technical field',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2160,9 +2178,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Expert knowledge of Adobe Creative Suite (InDesign, Illustrator, Photoshop), and/or Microsoft Office',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2182,7 +2200,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp2 = !_exp2;
                                               for (int i = 0; i < exp2.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp2) {
                                                     print(i);
                                                     exp2[i] = !exp2[i];
@@ -2214,14 +2232,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Graphic Designer'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Graphic Designer';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
@@ -2358,9 +2379,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             Text(
                                               'Preferred qualifications',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
                                           if (exp3[1])
                                             Row(
@@ -2373,9 +2394,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience leading a team of sellers working with customers that span multiple industries and aligning technology solutions to drive high value business outcomes',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2391,9 +2412,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience leveraging cross-functional leaders including engineering, marketing, partner sales managers, external partners, and solution specialists to build and implement business strategies that yield positive outcomes and results',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2409,9 +2430,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Knowledge of startup customers and the differentiated value that Northern Horizon can provide in this industry',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2431,7 +2452,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp3 = !_exp3;
                                               for (int i = 0; i < exp3.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp3) {
                                                     print(i);
                                                     exp3[i] = !exp3[i];
@@ -2463,14 +2484,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Sales Manager'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Sales Manager';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
@@ -2607,9 +2631,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             Text(
                                               'Preferred qualifications',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                             ),
                                           if (exp4[1])
                                             Row(
@@ -2622,9 +2646,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience translating complex ideas and making them human and relatable',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2640,9 +2664,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience working with product/product marketing disciplines',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2658,9 +2682,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience working with creative agencies',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2676,9 +2700,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience in program management',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2694,9 +2718,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience managing cross-functional teams and stakeholders',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2712,9 +2736,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   child: Text(
                                                     'Experience landing marketing programs across global, regional, and local audiences',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 14,
-                                                      lineHeight: 1.15,
-                                                    ),
+                                                          fontSize: 14,
+                                                          lineHeight: 1.15,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -2734,7 +2758,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             onPressed: () {
                                               _exp4 = !_exp4;
                                               for (int i = 0; i < exp4.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i*10), () {
+                                                Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp4) {
                                                     print(i);
                                                     exp4[i] = !exp4[i];
@@ -2766,14 +2790,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           FFButtonWidget(
-                                            onPressed: () => showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) => const Dialog(
-                                                shape: ContinuousRectangleBorder(),
-                                                surfaceTintColor: Colors.grey,
-                                                child: EmailDialog(job: 'Marketing Director'),
-                                              ),
-                                            ),
+                                            onPressed: () {
+                                              job = 'Marketing Director';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder: (BuildContext context) => const Dialog(
+                                                  shape: ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,

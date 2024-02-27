@@ -570,7 +570,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/FT_245_M.jpg',
+                                            'assets/images/FT_245_M.webp',
                                             width: MediaQuery.sizeOf(context).width * 0.3,
                                             height: MediaQuery.sizeOf(context).height * 0.35,
                                             fit: BoxFit.cover,
@@ -585,7 +585,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/NAM_007_M.jpg',
+                                            'assets/images/NAM_007_M.webp',
                                             width: MediaQuery.sizeOf(context).width * 0.25,
                                             height: MediaQuery.sizeOf(context).height * 0.35,
                                             fit: BoxFit.cover,
@@ -629,7 +629,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(0.0),
                                         child: Image.asset(
-                                          'images/FT_245_M.jpg',
+                                          'images/FT_245_M.webp',
                                           width: MediaQuery.sizeOf(context).width * 0.5,
                                           height: MediaQuery.sizeOf(context).height * 0.4,
                                           fit: BoxFit.cover,
@@ -722,7 +722,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
-                                    'images/NAM_007_M.jpg',
+                                    'images/NAM_007_M.webp',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
@@ -749,7 +749,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
                                 //moon
-                                    'assets/images/2023NA_037.jpg',
+                                    'assets/images/2023NA_037.webp',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -869,7 +869,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           child: Stack(
                             children: [
                               Image.asset(
-                                'images/2023NA_037.jpg',
+                                'images/2023NA_037.webp',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -949,7 +949,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
                               child: Image.asset(
-                                'assets/images/FT_239_M.jpg',
+                                'assets/images/FT_239_M.webp',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -1031,7 +1031,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             children: [
                               ClipRRect(
                                 child: Image.asset(
-                                  'images/FT_239_M.jpg',
+                                  'images/FT_239_M.webp',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -1101,7 +1101,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           children: [
                             ClipRRect(
                               child: Image.asset(
-                                'assets/images/2023NA_032.jpg',
+                                'assets/images/2023NA_032.webp',
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 0.75,
                                 fit: BoxFit.cover,
@@ -1171,7 +1171,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           children: [
                             ClipRRect( // whos the one that added moons+stars here????????
                               child: Image.asset(//moons+stars
-                                'images/2023NA_032.jpg',
+                                'images/2023NA_032.webp',
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 0.75,
                                 fit: BoxFit.cover,
