@@ -1821,7 +1821,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/2023NA_039.jpg',
+                                      'assets/images/2023NA_039.webp',
                                       width: double.infinity,
                                       height: 180.0,
                                       fit: BoxFit.cover,
@@ -2008,7 +2008,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         Align(
                                           alignment: const AlignmentDirectional(0.0, 0.0),
                                           child: Image.asset(
-                                            'assets/images/2023NA_039.jpg',
+                                            'assets/images/2023NA_039.webp',
                                             width: MediaQuery.sizeOf(context).width * 1 / 3,
                                             height: MediaQuery.of(context).size.height * 1.0,
                                             fit: BoxFit.cover,
@@ -2175,7 +2175,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Image.asset(
-                                      'assets/images/2023NA_039.jpg',
+                                      'assets/images/2023NA_039.webp',
                                       width: MediaQuery.sizeOf(context).width * 1 / 3,
                                       height: MediaQuery.sizeOf(context).height * 1.0,
                                       fit: BoxFit.cover,
@@ -3385,7 +3385,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         child: Image.asset(
-                                          'assets/images/2023NA_031.jpg',
+                                          'assets/images/2023NA_031.webp',
                                           width: MediaQuery.sizeOf(context).width * 0.8,
                                           height: MediaQuery.sizeOf(context).height * 0.3,
                                           fit: BoxFit.cover,
