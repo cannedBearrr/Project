@@ -585,7 +585,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/NAM_007_M.webp',
+                                            'images/NAM_007_M.jpg',
                                             width: MediaQuery.sizeOf(context).width * 0.25,
                                             height: MediaQuery.sizeOf(context).height * 0.35,
                                             fit: BoxFit.cover,
