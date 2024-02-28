@@ -5,6 +5,7 @@ import 'package:sticky_headers/sticky_headers/widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/assets/donate_popup.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart' as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -928,6 +929,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             FFButtonWidget(
                               onPressed: () {
                                 print('Button pressed ...');
+                                showDialog<String>(
+                                  context: context,
+                                  builder: (BuildContext context) => const Dialog(
+                                    shape: ContinuousRectangleBorder(),
+                                    surfaceTintColor: Colors.grey,
+                                    child: DonateDialog(),
+                                  ),
+                                );
                               },
                               text: 'Donate',
                               options: FFButtonOptions(
@@ -982,6 +991,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
+                              showDialog<String>(
+                                context: context,
+                                builder: (BuildContext context) => const Dialog(
+                                  shape: ContinuousRectangleBorder(),
+                                  surfaceTintColor: Colors.grey,
+                                  child: DonateDialog(),
+                                ),
+                              );
                             },
                             text: 'Donate',
                             options: FFButtonOptions(

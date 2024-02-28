@@ -136,8 +136,8 @@ class _EmailWidgetState extends State<EmailDialog> {
                     labelStyle: FlutterFlowTheme.of(context).labelMedium,
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
                     errorStyle: FlutterFlowTheme.of(context).labelSmall.override(
-                          color: Color(0xffbd434a),
-                        ),
+                      color: Color(0xffbd434a),
+                    ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
                         color: Colors.black,
@@ -173,11 +173,11 @@ class _EmailWidgetState extends State<EmailDialog> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
-                        letterSpacing: 1.0,
-                        lineHeight: 1.0,
-                        color: Colors.black,
-                      ),
+                    fontFamily: 'Readex Pro',
+                    letterSpacing: 1.0,
+                    lineHeight: 1.0,
+                    color: Colors.black,
+                  ),
                   textAlign: TextAlign.start,
                   validator: (value) {
                     return _validateEmail(value!);
@@ -189,8 +189,8 @@ class _EmailWidgetState extends State<EmailDialog> {
             Text(
               isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    color: Colors.green,
-                  ),
+                color: Colors.green,
+              ),
             ),
           ],
         ),
