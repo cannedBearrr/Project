@@ -568,8 +568,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       ),
                       child: Stack(
                         children: [
-                          Image.network(
-                            'https://picsum.photos/seed/55/600',
+                          Image.asset(
+                            'images/CopyofWCAwardCerts.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -581,25 +581,28 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  'Hello Wor5ld',
+                                  'Life at Northern Horizon',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 40,
+                                  ),
                                 ),
                                 Text(
-                                  'Hello W56orld',
+                                  'Join our community and help define it.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 70,
+                                  ),
                                 ),
                                 Text(
-                                  'Hello Wo87rld',
+                                  'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ],
                             ),
@@ -3016,7 +3019,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Text(
-                                    'bossemail@gmail.com',
+                                    'azhao@northernacademy.org',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -3251,7 +3254,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'bossemail@gmail.com',
+                                      'azhao@northernacademy.org',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,

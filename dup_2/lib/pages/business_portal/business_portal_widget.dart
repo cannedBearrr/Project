@@ -722,7 +722,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
-                                    'images/NAM_007_M.webp',
+                                    'images/NAM_007_M.jpg',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
@@ -1417,7 +1417,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'bossemail@gmail.com',
+                                        'azhao@northernacademy.org',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -1652,7 +1652,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           ),
                                         ),
                                         Text(
-                                          'bossemail@gmail.com',
+                                          'azhao@northernacademy.org',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
