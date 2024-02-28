@@ -9,10 +9,14 @@ import 'business_portal_model.dart';
 export 'business_portal_model.dart';
 
 class CustomShape extends CustomClipper<Path> {
+
   @override
   Path getClip(Size size) {
     double height = size.height; //i
     double width = size.width;
+
+    double screenWidth = width + 150;
+    double respond = (screenWidth < 600) ? 300 - screenWidth/2 : 0;
 
     var path = Path();
     path.moveTo(width, 0);
@@ -20,10 +24,10 @@ class CustomShape extends CustomClipper<Path> {
     path.lineTo(203, 160);
     path.lineTo(0, 160); //y
     path.lineTo(0, height);
-    path.lineTo(width - 319, height);
-    path.lineTo(width - 319, height - 14);
+    path.lineTo(width - 322 + respond, height);
+    path.lineTo(width - 322 + respond, height - 14);
     path.lineTo(width - 300, height - 14);
-    path.lineTo(width, height - 95);
+    path.lineTo(width, height - 88 + respond * 0.23);
     path.close();
     return path;
   }
@@ -105,100 +109,87 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       SizedBox(
                         child: ColoredBox(
                           color: Colors.white,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 122,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('parentPortal');
-                                      },
-                                      child: Text(
-                                        'PARENTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: FlutterFlowTheme.of(context).primaryText,
-                                              fontSize: 16.0,
-                                            ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox.shrink(),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('parentPortal');
+                                    },
+                                    child: Text(
+                                      'PARENTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 192,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('pastProjects');
-                                      },
-                                      child: Text(
-                                        'PAST PROJECTS',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                              fontFamily: 'Outfit',
-                                              color: FlutterFlowTheme.of(context).primaryText,
-                                              fontSize: 16.0,
-                                            ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('pastProjects');
+                                    },
+                                    child: Text(
+                                      'PAST PROJECTS',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 40.0,
-                                child: VerticalDivider(
-                                  width: 10.0,
-                                  thickness: 1.0,
-                                  indent: 4.0,
-                                  endIndent: 4.0,
-                                  color: Color(0xCC000000),
+                                const SizedBox(
+                                  height: 40.0,
+                                  child: VerticalDivider(
+                                    width: 0.0,
+                                    thickness: 1.0,
+                                    indent: 4.0,
+                                    endIndent: 4.0,
+                                    color: Color(0xCC000000),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 191,
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 22.0, 0.0),
-                                  child: MouseRegion(
-                                    cursor: SystemMouseCursors.click,
-                                    child: GestureDetector(
-                                      onTap: () async {
-                                        context.pushNamed('careerPage');
-                                      },
-                                      child: Text(
-                                        'CAREER',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).headlineMedium.override(
-                                          fontFamily: 'Outfit',
-                                          color: Colors.black,
-                                          fontSize: 16.0,
-                                        ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: GestureDetector(
+                                    onTap: () async {
+                                      context.pushNamed('careerPage');
+                                    },
+                                    child: Text(
+                                      'CAREER',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                        fontFamily: 'Outfit',
+                                        color: Colors.black,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox.shrink(),
+                              ].divide(const Spacer()),
+                            ),
                           ),
                         ),
                       ),
@@ -503,7 +494,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               child: Align(
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Text(
-                                                  'Develop',
+                                                  'Programming',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                     fontSize: 11,
                                                   )
@@ -579,7 +570,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/FT_245_M.jpg',
+                                            'assets/images/FT_245_M.webp',
                                             width: MediaQuery.sizeOf(context).width * 0.3,
                                             height: MediaQuery.sizeOf(context).height * 0.35,
                                             fit: BoxFit.cover,
@@ -594,7 +585,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/NAM_007_M.jpg',
+                                            'assets/images/NAM_007_M.webp',
                                             width: MediaQuery.sizeOf(context).width * 0.25,
                                             height: MediaQuery.sizeOf(context).height * 0.35,
                                             fit: BoxFit.cover,
@@ -637,8 +628,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(0.0),
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/215/600',
+                                        child: Image.asset(
+                                          'images/FT_245_M.webp',
                                           width: MediaQuery.sizeOf(context).width * 0.5,
                                           height: MediaQuery.sizeOf(context).height * 0.4,
                                           fit: BoxFit.cover,
@@ -677,7 +668,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Hello World',
+                                              'Programming',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ),
@@ -693,7 +684,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Hello World',
+                                              'Design',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ),
@@ -709,7 +700,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Hello World',
+                                              'Marketing',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                           ),
@@ -720,7 +711,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 ],
                               ),
                               Text(
-                                '11112SAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE\nSAMPLESAMPLESAMPLESAMPLESAMPLE',
+                                'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
                                       fontSize: 14.0,
@@ -730,8 +721,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 alignment: const AlignmentDirectional(1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/364/600',
+                                  child: Image.asset(
+                                    'images/NAM_007_M.webp',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
@@ -758,7 +749,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
                                 //moon
-                                    'assets/images/2023NA_037.jpg',
+                                    'assets/images/2023NA_037.webp',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -783,7 +774,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         'WHAT WE DO',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
-                                              color: Colors.white,
+                                              color: Colors.black,
                                               fontSize: 70.0,
                                             ),
                                       ),
@@ -801,11 +792,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           color: const Color(0x00FFFFFF),
                                           textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Colors.white,
+                                                color: Colors.black,
                                               ),
                                           elevation: 0.0,
                                           borderSide: const BorderSide(
-                                            color: Colors.white,
+                                            color: Colors.black,
                                             width: 1.0,
                                           ),
                                           borderRadius: BorderRadius.circular(24.0),
@@ -829,7 +820,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -841,7 +832,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -853,7 +844,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 100.0,
+                                              fontSize: 96.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -877,8 +868,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           ),
                           child: Stack(
                             children: [
-                              Image.network(
-                                'https://picsum.photos/seed/593/600',
+                              Image.asset(
+                                'images/2023NA_037.webp',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -919,20 +910,24 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   child: Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 50, 62),
                                     child: SizedBox(
-                                        width: 344,
+                                        width: 344 - ((screenWidth < 600) ? 300 - screenWidth/2 : 0),
                                         height: 123,
                                         child: Align(
-                                          alignment: const AlignmentDirectional(1.0, 1.0),
-                                          child: Text(
-                                            "DESIGN\nMARKETING\nPROFESSIONAL",
-                                            textAlign: TextAlign.right,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: screenWidth < 600 ? 34 : (screenWidth < 900 ? 20 : 42),
-                                                  fontWeight: FontWeight.w600,
-                                                  letterSpacing: 2.5,
-                                                  lineHeight: 1.05,
-                                                ),
+                                          alignment: AlignmentDirectional(0.0, 0.5),
+                                          child: SizedBox(
+                                            width: double.infinity,
+                                            child: FittedBox(
+                                              child: Text(
+                                                "DESIGN\nMARKETING\nPROFESSIONAL",
+                                                textAlign: TextAlign.right,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      fontWeight: FontWeight.w600,
+                                                      letterSpacing: 2.5,
+                                                      lineHeight: 1.05,
+                                                    ),
+                                              ),
+                                            ),
                                           ),
                                         )),
                                   )),
@@ -954,7 +949,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
                               child: Image.asset(
-                                'assets/images/FT_239_M.jpg',
+                                'assets/images/FT_239_M.webp',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -1035,8 +1030,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           child: Stack(
                             children: [
                               ClipRRect(
-                                child: Image.network(
-                                  'https://picsum.photos/seed/564/600',
+                                child: Image.asset(
+                                  'images/FT_239_M.webp',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
@@ -1054,7 +1049,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     children: [
                                       Icon(
                                         Icons.settings_outlined,
-                                        color: FlutterFlowTheme.of(context).secondaryText,
+                                        color: Colors.white,
                                         size: 24.0,
                                       ),
                                       Text(
@@ -1062,11 +1057,12 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               fontSize: 50.0,
+                                              color: Colors.white,
                                             ),
                                       ),
                                       Icon(
                                         Icons.settings_outlined,
-                                        color: FlutterFlowTheme.of(context).secondaryText,
+                                        color: Colors.white,
                                         size: 24.0,
                                       ),
                                     ].divide(const SizedBox(width: 8.0)),
@@ -1079,8 +1075,10 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                   Text(
-                                    '3333SAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT\nSAMPLE TEXTSAMPLE TEXTSAMPLE TEXT',
-                                    style: FlutterFlowTheme.of(context).bodyMedium,
+                                    'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                   const StyledDivider(
                                     thickness: 1.0,
@@ -1103,7 +1101,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           children: [
                             ClipRRect(
                               child: Image.asset(
-                                'assets/images/2023NA_032.jpg',
+                                'assets/images/2023NA_032.webp',
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 0.75,
                                 fit: BoxFit.cover,
@@ -1172,8 +1170,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                         Stack(
                           children: [
                             ClipRRect( // whos the one that added moons+stars here????????
-                              child: Image.network(//moons+stars
-                                'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8c3Vuc2V0fGVufDB8fHx8MTcwNzMyOTQ0M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                              child: Image.asset(//moons+stars
+                                'images/2023NA_032.webp',
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 0.75,
                                 fit: BoxFit.cover,

@@ -427,7 +427,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(0.0),
                                             child: Image.asset(
-                                              'assets/images/2023NA_036.jpg',
+                                              'assets/images/2023NA_036.webp',
                                               width: double.infinity,
                                               height: double.infinity,
                                               fit: BoxFit.cover,
@@ -649,7 +649,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                     child: Stack(
                                       children: [
                                         Image.asset(
-                                          'assets/images/2023NA_034.jpg',
+                                          'assets/images/2023NA_034.webp',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.cover,
@@ -991,7 +991,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               child: Stack(
                                                 children: [
                                                   Image.asset(
-                                                    'assets/images/2023NA_040.jpg',
+                                                    'assets/images/2023NA_040.webp',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
