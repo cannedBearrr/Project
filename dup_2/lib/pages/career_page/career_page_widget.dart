@@ -14,7 +14,7 @@ String? job = '';
 
 Future<http.Response> sendEmail(String email, String? job) {
   return http.post(
-    Uri.parse('http://129.213.117.186/email.php'),
+    Uri.parse('https://129.213.117.186/email.php'),
     headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String?>{
       'email': email,
@@ -3085,7 +3085,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                   ))
                     Container(
                       width: double.infinity,
-                      height: MediaQuery.sizeOf(context).height * 0.15,
+                      height: 160,
                       decoration: const BoxDecoration(
                         color: Color(0xFF4C6A7D),
                       ),
