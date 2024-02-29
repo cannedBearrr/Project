@@ -116,7 +116,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       }
 
       double screenWidth = MediaQuery.sizeOf(context).width;
-      double screenHeight = MediaQuery.sizeOf(context).height;
+      double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
 
       return GestureDetector(
         onTap: () => _model.unfocusNode.canRequestFocus
@@ -342,110 +342,112 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
-                                        child: Text(
-                                          'WHERE LEARNING MEETS',
-                                          style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                color: Colors.white,
-                                              ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'OPPORTUNITY',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              color: const Color(0xFFEEB609),
-                                              fontSize: 45.0,
-                                              letterSpacing: 1.5,
-                                              lineHeight: 1.05,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
-                                        child: RichText(
-                                          text: TextSpan(
-                                            children: const [
-                                              TextSpan(
-                                                text: 'WE HELP STUDENTS DEFINE THEIR',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text: ' CAREER',
-                                                style: TextStyle(
-                                                  color: Color(0xFFEEB609),
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text: ' PORTFOLIOS',
-                                                style: TextStyle(
-                                                  color: Color(0xFFEEB609),
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text: '.',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              )
-                                            ],
+                                FittedBox(
+                                  child: SizedBox(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
+                                          child: Text(
+                                            'WHERE LEARNING MEETS',
                                             style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                fontSize: 19,
+                                                  color: Colors.white,
+                                                ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'OPPORTUNITY',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                color: const Color(0xFFEEB609),
+                                                fontSize: 45.0,
+                                                letterSpacing: 1.5,
+                                                lineHeight: 1.05,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
+                                          child: RichText(
+                                            text: TextSpan(
+                                              children: const [
+                                                TextSpan(
+                                                  text: 'WE HELP STUDENTS DEFINE THEIR',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: ' CAREER',
+                                                  style: TextStyle(
+                                                    color: Color(0xFFEEB609),
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text:
+                                                  ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT\n-BASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: ' PORTFOLIOS',
+                                                  style: TextStyle(
+                                                    color: Color(0xFFEEB609),
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: '.',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                  ),
+                                                )
+                                              ],
+                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                  fontSize: 19,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      FFButtonWidget(
-                                        onPressed: () {
-                                          setState(() {
-                                            // expand rest of content
-                                            contentExpanded = true;
-                                          });
-                                          scrollController.animateTo(
-                                            screenHeight * 0.95 - 50,
-                                            duration: const Duration(seconds: 1, milliseconds: 500),
-                                            curve: Curves.easeInOut,
-                                          );
-                                        },
-                                        text: 'Read More',
-                                        options: FFButtonOptions(
-                                          width: screenWidth * 0.27,
-                                          height: screenHeight * 0.03,
-                                          padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                          color: const Color(0x004B39EF),
-                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                fontFamily: 'Readex Pro',
-                                                color: Colors.white,
-                                                fontSize: 1.0,
-                                              ),
-                                          elevation: 3.0,
-                                          borderSide: const BorderSide(
-                                            color: Colors.white,
-                                            width: 1.0,
+                                        FFButtonWidget(
+                                          onPressed: () {
+                                            setState(() {
+                                              // expand rest of content
+                                              contentExpanded = true;
+                                            });
+                                            scrollController.animateTo(
+                                              screenHeight * 0.95 - 50,
+                                              duration: const Duration(seconds: 1, milliseconds: 500),
+                                              curve: Curves.easeInOut,
+                                            );
+                                          },
+                                          text: 'Read More',
+                                          options: FFButtonOptions(
+                                            width: 115,
+                                            height: 25,
+                                            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                            color: const Color(0x004B39EF),
+                                            textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: 1.0,
+                                                ),
+                                            elevation: 3.0,
+                                            borderSide: const BorderSide(
+                                              color: Colors.white,
+                                              width: 1.0,
+                                            ),
+                                            borderRadius: BorderRadius.circular(22.0),
                                           ),
-                                          borderRadius: BorderRadius.circular(22.0),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
-                                      Spacer(flex: 4),
+                                      Spacer(flex: 7),
                               ],
                             ),
                           ),
@@ -1590,8 +1592,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             height: screenHeight * 1.08,
                             child: Stack(
                               children: [
-                                Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                Center(
                                   child: Padding(
                                     padding: const EdgeInsets.all(130.0),
                                     child: Container(
@@ -1644,7 +1645,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   decoration: const BoxDecoration(),
                                   child: wrapWithModel(
                                     model: _model.animationModel,
-                                    updateCallback: () => () {},
+                                    updateCallback: () => setState(() {}),
                                     child: const AnimationWidget(),
                                   ),
                                 ),
@@ -1690,21 +1691,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           decoration: const BoxDecoration(
                             color: Color(0xFFE7DCC6),
                           ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: SelectionArea(
-                                    child: Text(
-                                  'HOW TO ACHIEVE OUR GOALS?',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        fontSize: 25.0,
-                                        color: Colors.black,
-                                      ),
-                                )),
+                          child: Center(
+                            child: Text(
+                                                              'HOW TO ACHIEVE OUR GOALS?',
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Readex Pro',
+                                fontSize: 25.0,
+                                color: Colors.black,
                               ),
-                            ],
+                                                            ),
                           ),
                         ),
                       if (responsiveVisibility(
@@ -1937,173 +1932,168 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         desktop: false,
                       ))
                         SizedBox(
-                          height: 800.0,
-                          child: Stack(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                          height: MediaQuery.of(context).size.height,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () async {
-                                      context.pushNamed('projectBasedLearning');
-                                    },
-                                    child: Stack(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      children: [
-                                        Align(
-                                          alignment: const AlignmentDirectional(-1.0, 0.0),
-                                          child: Image.asset(
-                                            'assets/images/DSC_1630.webp',
-                                            width: screenWidth * 1 / 3,
-                                            height: screenHeight * 1.0,
-                                            fit: BoxFit.cover,
+                              GestureDetector(
+                                onTap: () async {
+                                  context.pushNamed('projectBasedLearning');
+                                },
+                                child: Stack(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  children: [
+                                    Align(
+                                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                                      child: Image.asset(
+                                        'assets/images/DSC_1630.webp',
+                                        width: screenWidth * 1 / 3,
+                                        height: screenHeight * 1.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    if (responsiveVisibility(
+                                      context: context,
+                                      phone: false,
+                                      tablet: false,
+                                    ))
+                                      Align(
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: Container(
+                                          width: screenWidth * 0.28,
+                                          height: screenHeight * 0.18,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x00FFFFFF),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
                                           ),
-                                        ),
-                                        if (responsiveVisibility(
-                                          context: context,
-                                          phone: false,
-                                          tablet: false,
-                                        ))
-                                          Align(
+                                          child: Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
-                                            child: Container(
-                                              width: screenWidth * 0.28,
-                                              height: screenHeight * 0.18,
-                                              decoration: BoxDecoration(
-                                                color: const Color(0x00FFFFFF),
-                                                border: Border.all(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: FittedBox(
-                                                  child: Text(
-                                                    'Project - Based\nLearning',
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          fontFamily: 'Readex Pro',
-                                                          color: Colors.white,
-                                                          fontSize: 33.0,
-                                                          fontWeight: FontWeight.bold,
-                                                        ),
-                                                  ),
-                                                ),
+                                            child: FittedBox(
+                                              child: Text(
+                                                'Project - Based\nLearning',
+                                                textAlign: TextAlign.center,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 33.0,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
                                               ),
                                             ),
                                           ),
-                                      ],
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () async {
-                                      context.pushNamed('careerOrientedSkills');
-                                    },
-                                    child: Stack(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      children: [
-                                        Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Image.asset(
-                                            'assets/images/2023NA_039.webp',
-                                            width: screenWidth * 1 / 3,
-                                            height: MediaQuery.of(context).size.height * 1.0,
-                                            fit: BoxFit.cover,
-                                          ),
                                         ),
-                                        if (responsiveVisibility(
-                                          context: context,
-                                          phone: false,
-                                          tablet: false,
-                                        ))
-                                          Align(
+                                      ),
+                                  ],
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () async {
+                                  context.pushNamed('careerOrientedSkills');
+                                },
+                                child: Stack(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  children: [
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Image.asset(
+                                        'assets/images/2023NA_039.webp',
+                                        width: screenWidth * 1 / 3,
+                                        height: MediaQuery.of(context).size.height * 1.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    if (responsiveVisibility(
+                                      context: context,
+                                      phone: false,
+                                      tablet: false,
+                                    ))
+                                      Align(
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: Container(
+                                          width: MediaQuery.of(context).size.width * 0.28,
+                                          height: MediaQuery.of(context).size.height * 0.18,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x00FFFFFF),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          child: Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
-                                            child: Container(
-                                              width: MediaQuery.of(context).size.width * 0.28,
-                                              height: MediaQuery.of(context).size.height * 0.18,
-                                              decoration: BoxDecoration(
-                                                color: const Color(0x00FFFFFF),
-                                                border: Border.all(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: FittedBox(
-                                                  child: Text(
-                                                    'Career - Oriented\nSkills',
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          fontFamily: 'Readex Pro',
-                                                          color: Colors.white,
-                                                          fontSize: 33.0,
-                                                          fontWeight: FontWeight.bold,
-                                                        ),
-                                                  ),
-                                                ),
+                                            child: FittedBox(
+                                              child: Text(
+                                                'Career - Oriented\nSkills',
+                                                textAlign: TextAlign.center,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      fontSize: 33.0,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
                                               ),
                                             ),
                                           ),
-                                      ],
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    child: Stack(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      children: [
-                                        Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Image.asset(
-                                            'assets/images/DSC_1614.webp',
-                                            width: screenWidth * 1 / 3,
-                                            height: MediaQuery.of(context).size.height * 1.0,
-                                            fit: BoxFit.cover,
-                                          ),
                                         ),
-                                        if (responsiveVisibility(
-                                          context: context,
-                                          phone: false,
-                                          tablet: false,
-                                        ))
-                                          GestureDetector(
-                                            onTap: () async {
-                                              context.pushNamed('partnershipWithCompanies');
-                                            },
+                                      ),
+                                  ],
+                                ),
+                              ),
+                              GestureDetector(
+                                child: Stack(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  children: [
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Image.asset(
+                                        'assets/images/DSC_1614.webp',
+                                        width: screenWidth * 1 / 3,
+                                        height: MediaQuery.of(context).size.height * 1.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    if (responsiveVisibility(
+                                      context: context,
+                                      phone: false,
+                                      tablet: false,
+                                    ))
+                                      GestureDetector(
+                                        onTap: () async {
+                                          context.pushNamed('partnershipWithCompanies');
+                                        },
+                                        child: Align(
+                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                          child: Container(
+                                            width: screenWidth * 0.28,
+                                            height: screenHeight * 0.18,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0x00FFFFFF),
+                                              border: Border.all(
+                                                color: Colors.white,
+                                              ),
+                                            ),
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Container(
-                                                width: screenWidth * 0.28,
-                                                height: screenHeight * 0.18,
-                                                decoration: BoxDecoration(
-                                                  color: const Color(0x00FFFFFF),
-                                                  border: Border.all(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                child: Align(
-                                                  alignment: const AlignmentDirectional(0.0, 0.0),
-                                                  child: FittedBox(
-                                                    child: Text(
-                                                      'Partnerships with\nCompanies',
-                                                      textAlign: TextAlign.center,
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: 33.0,
-                                                            fontWeight: FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                  ),
+                                              child: FittedBox(
+                                                child: Text(
+                                                  'Partnerships with\nCompanies',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontFamily: 'Readex Pro',
+                                                        color: Colors.white,
+                                                        fontSize: 33.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                                        ),
+                                      ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -2366,7 +2356,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 0.0),
                                   child: Text(
-                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a molestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
@@ -2514,14 +2504,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           children: [
                                             const Expanded(child: SizedBox()),
                                             Container(
-                                              width: 200.0,
-                                              height: 200.0,
+                                              width: min(35 + screenWidth / 10, 200),
+                                              height: min(35 + screenWidth / 10, 200),
                                               clipBehavior: Clip.antiAlias,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                'assets/images/Anson_Bio.jpg',
+                                                'assets/images/Anson.webp',
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -2591,8 +2581,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           children: [
                                             const Expanded(child: SizedBox()),
                                             Container(
-                                              width: 200.0,
-                                              height: 200.0,
+                                              width: min(35 + screenWidth / 10, 200),
+                                              height: min(35 + screenWidth / 10, 200),
                                               clipBehavior: Clip.antiAlias,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
@@ -2671,8 +2661,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           children: [
                                             const Expanded(child: SizedBox()),
                                             Container(
-                                              width: 200,
-                                              height: 200,
+                                              width: min(35 + screenWidth / 10, 200),
+                                              height: min(35 + screenWidth / 10, 200),
                                               clipBehavior: Clip.antiAlias,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
@@ -2751,8 +2741,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           children: [
                                             const Expanded(child: SizedBox()),
                                             Container(
-                                              width: 200.0,
-                                              height: 200.0,
+                                              width: min(35 + screenWidth / 10, 200),
+                                              height: min(35 + screenWidth / 10, 200),
                                               clipBehavior: Clip.antiAlias,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
@@ -2830,8 +2820,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         children: [
                                           const Expanded(child: SizedBox()),
                                           Container(
-                                            width: 200.0,
-                                            height: 200.0,
+                                            width: min(35 + screenWidth / 10, 200),
+                                            height: min(35 + screenWidth / 10, 200),
                                             clipBehavior: Clip.antiAlias,
                                             decoration: const BoxDecoration(
                                               shape: BoxShape.circle,
@@ -2964,7 +2954,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  'assets/images/Anson_Bio.jpg',
+                                                  'assets/images/Anson.webp',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),

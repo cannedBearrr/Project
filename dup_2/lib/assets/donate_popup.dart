@@ -15,7 +15,6 @@ class DonateDialog extends StatefulWidget {
 }
 
 class _DonateWidgetState extends State<DonateDialog> {
-
   final moneyController = MoneyMaskedTextController(decimalSeparator: '.', thousandSeparator: ',', leftSymbol: '\$');
 
   int selected = 0;
@@ -25,7 +24,7 @@ class _DonateWidgetState extends State<DonateDialog> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(horizontal: 40.0),
+      padding: EdgeInsetsDirectional.symmetric(horizontal: (responsiveVisibility(context: context, phone: false)) ? 40 : 32),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -34,7 +33,7 @@ class _DonateWidgetState extends State<DonateDialog> {
             child: Text(
               'Select donation amount',
               style: FlutterFlowTheme.of(context).bodyLarge.override(
-                    fontSize: 38,
+                    fontSize: (responsiveVisibility(context: context, phone: false)) ? 38 : 28,
                     lineHeight: 1.12,
                   ),
               textAlign: TextAlign.center,
@@ -183,17 +182,17 @@ class _DonateWidgetState extends State<DonateDialog> {
                                       IntrinsicWidth(
                                           child: TextField(
                                               inputFormatters: [
-                                                LengthLimitingTextInputFormatter(9),
-                                              ],
-                                            controller: moneyController,
-                                            decoration: const InputDecoration(
-                                              enabledBorder: UnderlineInputBorder(
-                                                borderSide: BorderSide(color: Colors.white70),
+                                            LengthLimitingTextInputFormatter(9),
+                                          ],
+                                              controller: moneyController,
+                                              decoration: const InputDecoration(
+                                                enabledBorder: UnderlineInputBorder(
+                                                  borderSide: BorderSide(color: Colors.white70),
+                                                ),
+                                                focusedBorder: UnderlineInputBorder(
+                                                  borderSide: BorderSide(color: Colors.white38),
+                                                ),
                                               ),
-                                              focusedBorder: UnderlineInputBorder(
-                                                borderSide: BorderSide(color: Colors.white38),
-                                              ),
-                                            ),
                                               style:
                                                   FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white))),
                                   ],
@@ -211,7 +210,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                       children: [
                         Expanded(
                             child: SizedBox(
-                                height: 100,
+                                height: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,
                                 child: OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: const Color(0xffa30034),
@@ -229,16 +228,19 @@ class _DonateWidgetState extends State<DonateDialog> {
                                         setState(() {});
                                       }
                                     },
-                                    child: Text(
-                                      "\$1",
-                                      style: FlutterFlowTheme.of(context).bodySmall.override(
-                                            fontSize: 20,
-                                            color: (selected == 1) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
-                                          ),
+                                    child: OverflowBox(
+                                      maxWidth: double.infinity,
+                                      child: Text(
+                                        "\$1",
+                                        style: FlutterFlowTheme.of(context).bodySmall.override(
+                                              fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                              color: (selected == 1) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
+                                            ),
+                                      ),
                                     )))),
                         Expanded(
                             child: SizedBox(
-                                height: 100,
+                                height: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,
                                 child: OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: const Color(0xffa30034),
@@ -256,20 +258,61 @@ class _DonateWidgetState extends State<DonateDialog> {
                                         setState(() {});
                                       }
                                     },
-                                    child: Text(
-                                      "\$5",
-                                      style: FlutterFlowTheme.of(context).bodySmall.override(
-                                            fontSize: 20,
-                                            color: (selected == 2) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
-                                          ),
+                                    child: OverflowBox(
+                                      maxWidth: double.infinity,
+                                      child: Text(
+                                        "\$5",
+                                        style: FlutterFlowTheme.of(context).bodySmall.override(
+                                              fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                              color: (selected == 2) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
+                                            ),
+                                      ),
                                     )))),
                         Expanded(
                             child: SizedBox(
-                                height: 100,
+                                height: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,
                                 child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: const Color(0xffa30034),
+                                    backgroundColor: (selected == 3)
+                                        ? Color.lerp(const Color(0x40a30034), const Color(0xffa30034), v)
+                                        : Colors.transparent,
+                                    side: const BorderSide(width: 1.0, color: Color(0xffa30034)),
+                                    shape:
+                                        const RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.all(Radius.circular(20.0))),
+                                  ),
+                                  onPressed: () {
+                                    if (selected != 3) {
+                                      selected = 3;
+                                      t = 1;
+                                      setState(() {});
+                                    }
+                                  },
+                                  child: OverflowBox(
+                                    maxWidth: double.infinity,
+                                    child: Text(
+                                      "\$10",
+                                      style: FlutterFlowTheme.of(context).bodySmall.override(
+                                            fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                            color: (selected == 3) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
+                                          ),
+                                    ),
+                                  ),
+                                ))),
+                      ].divide(SizedBox(width: (responsiveVisibility(context: context, phone: false)) ? 22 : 19)),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.only(top: (responsiveVisibility(context: context, phone: false)) ? 22 : 19),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Expanded(
+                              child: ConstrainedBox(
+                                  constraints: BoxConstraints(minHeight: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,),
+                                  child: OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: const Color(0xffa30034),
-                                      backgroundColor: (selected == 3)
+                                      backgroundColor: (selected == 4)
                                           ? Color.lerp(const Color(0x40a30034), const Color(0xffa30034), v)
                                           : Colors.transparent,
                                       side: const BorderSide(width: 1.0, color: Color(0xffa30034)),
@@ -277,79 +320,90 @@ class _DonateWidgetState extends State<DonateDialog> {
                                           borderRadius: BorderRadiusDirectional.all(Radius.circular(20.0))),
                                     ),
                                     onPressed: () {
-                                      if (selected != 3) {
-                                        selected = 3;
+                                      if (selected != 4) {
+                                        selected = 4;
                                         t = 1;
                                         setState(() {});
                                       }
                                     },
-                                    child: Text(
-                                      "\$10",
-                                      style: FlutterFlowTheme.of(context).bodySmall.override(
-                                            fontSize: 20,
-                                            color: (selected == 3) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
-                                          ),
-                                    )))),
-                      ].divide(const SizedBox(width: 22)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(top: 22.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Expanded(
-                              child: SizedBox(
-                                  height: 100,
-                                  child: OutlinedButton(
-                                      style: OutlinedButton.styleFrom(
-                                        foregroundColor: const Color(0xffa30034),
-                                        backgroundColor: (selected == 4)
-                                            ? Color.lerp(const Color(0x40a30034), const Color(0xffa30034), v)
-                                            : Colors.transparent,
-                                        side: const BorderSide(width: 1.0, color: Color(0xffa30034)),
-                                        shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadiusDirectional.all(Radius.circular(20.0))),
-                                      ),
-                                      onPressed: () {
-                                        if (selected != 4) {
-                                          selected = 4;
-                                          t = 1;
-                                          setState(() {});
-                                        }
-                                      },
-                                      child: UnconstrainedBox(
-                                        clipBehavior: Clip.hardEdge,
-                                        alignment: Alignment.centerLeft,
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              (selected == 4) ? "other amount: " : "other amount",
-                                              style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                    fontSize: 20,
-                                                    color: (selected == 4) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
-                                                  ),
-                                            ),
-                                            if (selected == 4)
-                                              IntrinsicWidth(
-                                                  child: TextField(
-                                                      inputFormatters: [
+                                    child: Stack(
+                                      children: [
+                                        if (responsiveVisibility(context: context, phone: false))
+                                          UnconstrainedBox(
+                                            clipBehavior: Clip.hardEdge,
+                                            alignment: Alignment.centerLeft,
+                                            child: Row(
+                                              children: [
+                                                Text(
+                                                  (selected == 4) ? "other amount: " : "other amount",
+                                                  style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                        fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                        color:
+                                                            (selected == 4) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
+                                                      ),
+                                                ),
+                                                if (selected == 4)
+                                                  IntrinsicWidth(
+                                                      child: TextField(
+                                                          inputFormatters: [
                                                         LengthLimitingTextInputFormatter(9),
                                                       ],
-                                                      controller: moneyController,
-                                                      decoration: const InputDecoration(
-                                                        enabledBorder: UnderlineInputBorder(
-                                                          borderSide: BorderSide(color: Colors.white70),
+                                                          controller: moneyController,
+                                                          decoration: const InputDecoration(
+                                                            enabledBorder: UnderlineInputBorder(
+                                                              borderSide: BorderSide(color: Colors.white70),
+                                                            ),
+                                                            focusedBorder: UnderlineInputBorder(
+                                                              borderSide: BorderSide(color: Colors.white38),
+                                                            ),
+                                                          ),
+                                                          style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                              fontSize:
+                                                                  (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                              color: Colors.white))),
+                                              ],
+                                            ),
+                                          ),
+                                        if (responsiveVisibility(context: context, tablet: false, tabletLandscape: false))
+                                          Column(
+                                            children: [
+                                              if (selected == 4)
+                                              SizedBox(height: 20),
+                                              Text(
+                                                (selected == 4) ? "other amount: " : "other amount",
+                                                style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                  lineHeight: 0.5,
+                                                      fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                      color:
+                                                          (selected == 4) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
+                                                    ),
+                                              ),
+                                              if (selected == 4)
+                                                IntrinsicWidth(
+                                                    child: TextField(
+                                                        inputFormatters: [
+                                                      LengthLimitingTextInputFormatter(9),
+                                                    ],
+                                                        controller: moneyController,
+                                                        decoration: const InputDecoration(
+              isDense: true,
+                                                          enabledBorder: UnderlineInputBorder(
+                                                            borderSide: BorderSide(color: Colors.white70),
+                                                          ),
+                                                          focusedBorder: UnderlineInputBorder(
+                                                            borderSide: BorderSide(color: Colors.white38),
+                                                          ),
                                                         ),
-                                                        focusedBorder: UnderlineInputBorder(
-                                                          borderSide: BorderSide(color: Colors.white38),
-                                                        ),
-                                                      ),
-                                                      style:
-                                                      FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white))),
-                                          ],
-                                        ),
-                                      ),))),
-
+                                                        style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                            fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                            color: Colors.white))),
+                                              if (selected == 4)
+                                              SizedBox(height: 15),
+                                            ],
+                                          ),
+                                      ],
+                                    ),
+                                  ))),
                         ],
                       ),
                     ),
