@@ -931,6 +931,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                       fontWeight: FontWeight.w600,
                                                       letterSpacing: 2.5,
                                                       lineHeight: 1.05,
+                                                      color: Colors.white,
                                                     ),
                                               ),
                                             ),
@@ -1137,7 +1138,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
                                             fontSize: 60.0,
-                                            fontWeight: FontWeight.w100,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                     ),
                                     FFButtonWidget(
@@ -1207,7 +1208,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
                                             fontSize: 30.0,
-                                            fontWeight: FontWeight.w100,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                     ),
                                     FFButtonWidget(

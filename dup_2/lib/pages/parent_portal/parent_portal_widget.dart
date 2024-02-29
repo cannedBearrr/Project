@@ -2854,7 +2854,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
                                                         child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
                                                     Text(
-                                                      '??????',
+                                                      'Senior Programmer at NH',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: const Color(0xaaffffff),
@@ -2869,7 +2869,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Padding(
                                                     padding: const EdgeInsets.symmetric(horizontal: 32.0),
                                                     child: Text(
-                                                      '“I like bricks”\n',
+                                                      '“Thank you, Northern Horizon,for providing me with an intuitive course introducing popular programming languages and giving me the opportunities to be involved in real-time projects which has prepared me for college and my future careers. Here is a big Thank-You!”\n',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: Colors.white,
@@ -3433,7 +3433,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                                                 child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too much email.',
+                                                  'Subscribe for news and updates. We promise we won\'t send too many emails.',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
@@ -3550,7 +3550,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                 child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too much email.',
+                                                  'Subscribe for news and updates. We promise we won\'t send too many emails.',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                     fontSize: 18.0,
