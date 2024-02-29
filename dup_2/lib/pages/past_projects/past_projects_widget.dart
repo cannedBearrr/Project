@@ -490,10 +490,6 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             children: [
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-                                child: Text(
-                                  '9',
-                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                ),
                               ),
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
@@ -510,6 +506,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
+                                              Text(
+                                                'Earthquake',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
                                               Container(
                                                 child: Image.asset(
                                                 'assets/images/ESP web.gif',
@@ -532,6 +532,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
+                                            Text(
+                                              'Earthquake1',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/Friendly bear@4x 2.png',
@@ -554,6 +558,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
+                                              Text(
+                                                'Earthquake2',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
                                               Container(
                                                 child: Image.asset(
                                                 'assets/images/CitySmart.gif',
@@ -576,6 +584,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
+                                            Text(
+                                              'Earthquake',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/Covid TK.gif',
@@ -598,6 +610,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
+                                            Text(
+                                              'Earthquake',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/ISH 2.gif',
@@ -620,6 +636,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
+                                            Text(
+                                              'Earthquake',
+                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/Worldheritage.gif',
