@@ -154,7 +154,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       context.pushNamed('businessPortal');
                                     },
                                     child: Text(
-                                      'BUSINESS',
+                                      'FOR BUSINESS',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context).headlineMedium.override(
                                             fontFamily: 'Outfit',
@@ -244,7 +244,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     context.pushNamed('businessPortal');
                                   },
                                   child: Text(
-                                    'BUSINESS',
+                                    'FOR BUSINESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
                                           color: Colors.black,
@@ -2304,14 +2304,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 7.0),
-                                      child: Text(
-                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 15.0,
-                                              fontWeight: FontWeight.w300,
-                                            ),
+                                      child: Flexible(
+                                          child: Text(
+                                          'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 15.0,
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                          ),
                                       ),
                                     ),
                                   ),
@@ -2355,14 +2357,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 0.0),
-                                  child: Text(
-                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a molestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.w300,
-                                        ),
+                                  child: Flexible(
+                                    child: Text(
+                                      'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 18.0,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -2410,13 +2414,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
                                       child: Container(
                                         decoration: const BoxDecoration(),
-                                        child: Text(
-                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a molestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 17.0,
-                                                fontWeight: FontWeight.w300,
-                                              ),
+                                        child: Flexible(
+                                          child: Text(
+                                            'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 17.0,
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -2438,39 +2444,46 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           color: Colors.white,
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'How to get\nstarted ?',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        fontSize: 90.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        lineHeight: 1.12,
-                                      ),
-                                ),
-                                const SizedBox(
-                                  height: 180.0,
-                                  child: VerticalDivider(
-                                    thickness: 1.0,
-                                    width: 0.0,
-                                    color: Color(0xCC000000),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'How to get\nstarted ?',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 90.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                          lineHeight: 1.12,
+                                        ),
                                   ),
-                                ),
-                                Text(
-                                  'Lorem ipsum dolor sit amet, consectetur adipiscing\nelit. Proin ornare finibus cursus. Vestibulum ante\nipsum primis in faucibus orci luctus et ultrices\nposuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis,\nporttitor rhoncus elit.',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.w300,
-                                        color: Colors.black,
+                                  const SizedBox(
+                                    height: 180.0,
+                                    child: VerticalDivider(
+                                      thickness: 1.0,
+                                      width: 0.0,
+                                      color: Color(0xCC000000),
+                                    ),
+                                  ),
+                                  Flexible(
+                                    child: Flexible(
+                                      child: Text(
+                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              fontSize: 20.0,
+                                              fontWeight: FontWeight.w300,
+                                              color: Colors.black,
+                                            ),
                                       ),
-                                ),
-                              ].divide(const SizedBox(width: 60.0)),
+                                    ),
+                                  ),
+                                ].divide(const SizedBox(width: 60.0)),
+                              ),
                             ),
                           ),
                         ),
@@ -3389,7 +3402,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       InkWell(
-                                        splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
