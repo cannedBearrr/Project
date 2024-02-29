@@ -14,7 +14,7 @@ String? job = '';
 
 Future<http.Response> sendEmail(String email, String? job) {
   return http.post(
-    Uri.parse('http://129.213.117.186/email.php'),
+    Uri.parse('https://129.213.117.186/email.php'),
     headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String?>{
       'email': email,
@@ -136,8 +136,8 @@ class _EmailWidgetState extends State<EmailDialog> {
                     labelStyle: FlutterFlowTheme.of(context).labelMedium,
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
                     errorStyle: FlutterFlowTheme.of(context).labelSmall.override(
-                          color: Color(0xffbd434a),
-                        ),
+                      color: Color(0xffbd434a),
+                    ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
                         color: Colors.black,
@@ -173,11 +173,11 @@ class _EmailWidgetState extends State<EmailDialog> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
-                        letterSpacing: 1.0,
-                        lineHeight: 1.0,
-                        color: Colors.black,
-                      ),
+                    fontFamily: 'Readex Pro',
+                    letterSpacing: 1.0,
+                    lineHeight: 1.0,
+                    color: Colors.black,
+                  ),
                   textAlign: TextAlign.start,
                   validator: (value) {
                     return _validateEmail(value!);
@@ -189,8 +189,8 @@ class _EmailWidgetState extends State<EmailDialog> {
             Text(
               isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    color: Colors.green,
-                  ),
+                color: Colors.green,
+              ),
             ),
           ],
         ),
@@ -3088,7 +3088,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                   ))
                     Container(
                       width: double.infinity,
-                      height: MediaQuery.sizeOf(context).height * 0.15,
+                      height: 160,
                       decoration: const BoxDecoration(
                         color: Color(0xFF4C6A7D),
                       ),

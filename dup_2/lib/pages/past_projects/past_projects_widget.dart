@@ -5,6 +5,7 @@ import 'package:sticky_headers/sticky_headers/widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/assets/donate_popup.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart' as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -250,15 +251,17 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Text(
-                        'Student Projects',
-                        style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
-                          fontSize: 40.0,
-                          color: Color(0xFF008dff),
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins',// Set the font size to 40
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                      child: FittedBox(
+                        child: Text(
+                          'Student Projects',
+                          style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                            fontSize: 40.0,
+                            color: Color(0xFF008dff),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Poppins',// Set the font size to 40
+                          ),
                         ),
                       ),
                     ),
@@ -271,7 +274,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 0.9,
-                        height: MediaQuery.sizeOf(context).height * 0.65,
+                        height: max(MediaQuery.sizeOf(context).height * 0.7, 600),
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).secondaryBackground,
                         ),
@@ -288,7 +291,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               ),
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: MediaQuery.sizeOf(context).height * 0.6,
+                                height: max(MediaQuery.sizeOf(context).height * 0.65, 550),
                                 decoration: const BoxDecoration(),
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
@@ -479,202 +482,225 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 0.9,
-                        height: MediaQuery.sizeOf(context).height * 0.65,
+                        height: max(MediaQuery.sizeOf(context).height * 0.7, 630),
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).secondaryBackground,
                         ),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-                                child: Text(
-                                  '9',
-                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                              child: Text(
+                                '9',
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
-                              Container(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: MediaQuery.sizeOf(context).height * 0.6,
-                                decoration: const BoxDecoration(),
-                                child: Stack(
-                                  children: [
-                                    PageView(
-                                      controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                      scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                      scrollDirection: Axis.horizontal,
-                                      children: [
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                'assets/images/ESP web.gif',
-                                                fit: BoxFit.contain,
-                                              ),
-                                              width: MediaQuery.sizeOf(context).width * 0.8,
-                                              height: MediaQuery.sizeOf(context).height * 0.4,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
-                                            ),
-                                            Text(
-                                              'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              child: Image.asset(
-                                                'assets/images/Friendly bear@4x 2.png',
-                                                fit: BoxFit.contain,
-                                              ),
-                                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                                height: MediaQuery.sizeOf(context).height * 0.4,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
-                                            ],
+                            ),
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              height: max(MediaQuery.sizeOf(context).height * 0.7 - 50, 580),
+                              decoration: const BoxDecoration(),
+                              child: Stack(
+                                children: [
+                                  PageView(
+                                    controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                    scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                    scrollDirection: Axis.horizontal,
+                                    children: [
+                                      Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Container(
+                                            child: Image.asset(
+                                            'assets/images/ESP web.gif',
+                                            fit: BoxFit.contain,
+                                          ),
+                                          width: MediaQuery.sizeOf(context).width * 0.8,
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context).secondaryBackground,
                                           ),
                                         ),
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Container(
-                                                child: Image.asset(
-                                                'assets/images/CitySmart.gif',
-                                                fit: BoxFit.contain,
-                                              ),
-                                              width: MediaQuery.sizeOf(context).width * 0.8,
-                                              height: MediaQuery.sizeOf(context).height * 0.4,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
+                                        Padding(
+                                          padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                          child: Text(
+                                            'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
                                             ),
-                                            Text(
-                                              'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
-                                            ),
-                                          ],
+                                          ),
                                         ),
-                                      ),
-                                      SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              child: Image.asset(
-                                                'assets/images/Covid TK.gif',
-                                                fit: BoxFit.contain,
-                                              ),
-                                              width: MediaQuery.sizeOf(context).width * 0.8,
-                                              height: MediaQuery.sizeOf(context).height * 0.4,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          SizedBox(height:30),
+                                      ],
+                                                                              ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          child: Image.asset(
+                                            'assets/images/Friendly bear@4x 2.png',
+                                            fit: BoxFit.contain,
+                                          ),
+                                            width: MediaQuery.sizeOf(context).width * 0.8,
+                                            height: 350,
+                                            decoration: BoxDecoration(
+                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                            child: Text(
+                                              'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
                                               ),
                                             ),
-                                            Text(
+                                          ),
+                                        SizedBox(height:30),
+                                        ],
+                                      ),
+                                      Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Container(
+                                            child: Image.asset(
+                                              'assets/images/Covid TK.gif',
+                                              fit: BoxFit.contain,
+                                            ),
+                                            width: MediaQuery.sizeOf(context).width * 0.8,
+                                            height: 350,
+                                            decoration: BoxDecoration(
+                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                            child: Text(
                                               'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                              ),
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                          SizedBox(height:30),
+                                        ],
                                       ),
-                                      SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              child: Image.asset(
-                                                'assets/images/ISH 2.gif',
-                                                fit: BoxFit.contain,
-                                              ),
-                                              width: MediaQuery.sizeOf(context).width * 0.8,
-                                              height: MediaQuery.sizeOf(context).height * 0.4,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
-                                            ),
-                                            Text(
-                                              'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
-                                            ),
-                                          ],
+                                    Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Container(
+                                            child: Image.asset(
+                                            'assets/images/CitySmart.gif',
+                                            fit: BoxFit.contain,
+                                          ),
+                                          width: MediaQuery.sizeOf(context).width * 0.8,
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          ),
                                         ),
-                                      ),
-                                      SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              child: Image.asset(
-                                                'assets/images/Worldheritage.gif',
-                                                fit: BoxFit.contain,
-                                              ),
-                                              width: MediaQuery.sizeOf(context).width * 0.8,
-                                              height: MediaQuery.sizeOf(context).height * 0.4,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
+                                        Padding(
+                                          padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                          child: Text(
+                                            'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
                                             ),
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                              child: Text(
-                                                'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                              ),
+                                          ),
+                                        ),
+                                          SizedBox(height:30),
+                                      ],
+                                                                              ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          child: Image.asset(
+                                            'assets/images/ISH 2.gif',
+                                            fit: BoxFit.contain,
+                                          ),
+                                          width: MediaQuery.sizeOf(context).width * 0.8,
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                          child: Text(
+                                            'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
                                             ),
-                                          ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
-                                      child: smooth_page_indicator.SmoothPageIndicator(
-                                        controller: _model.pageViewController2 ??= PageController(initialPage: 1),
-                                        count: 6,
-                                        axisDirection: Axis.horizontal,
-                                        onDotClicked: (i) async {
-                                          await _model.pageViewController2!.animateToPage(
-                                            i,
-                                            duration: const Duration(milliseconds: 500),
-                                            curve: Curves.ease,
-                                          );
-                                        },
-                                        effect: smooth_page_indicator.SlideEffect(
-                                          spacing: 8.0,
-                                          radius: 16.0,
-                                          dotWidth: 8.0,
-                                          dotHeight: 8.0,
-                                          dotColor: FlutterFlowTheme.of(context).secondaryText,
-                                          activeDotColor: FlutterFlowTheme.of(context).primaryText,
-                                          paintStyle: PaintingStyle.stroke,
+                                        SizedBox(height:30),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          child: Image.asset(
+                                            'assets/images/Worldheritage.gif',
+                                            fit: BoxFit.contain,
+                                          ),
+                                          width: MediaQuery.sizeOf(context).width * 0.8,
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          ),
                                         ),
+                                        Padding(
+                                          padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                          child: Text(
+                                            'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium,
+                                          ),
+                                        ),
+                                        SizedBox(height:30),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(0.0, 1.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                    child: smooth_page_indicator.SmoothPageIndicator(
+                                      controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                      count: 6,
+                                      axisDirection: Axis.horizontal,
+                                      onDotClicked: (i) async {
+                                        await _model.pageViewController2!.animateToPage(
+                                          i,
+                                          duration: const Duration(milliseconds: 500),
+                                          curve: Curves.ease,
+                                        );
+                                      },
+                                      effect: smooth_page_indicator.SlideEffect(
+                                        spacing: 8.0,
+                                        radius: 16.0,
+                                        dotWidth: 8.0,
+                                        dotHeight: 8.0,
+                                        dotColor: FlutterFlowTheme.of(context).secondaryText,
+                                        activeDotColor: FlutterFlowTheme.of(context).primaryText,
+                                        paintStyle: PaintingStyle.stroke,
                                       ),
                                     ),
                                   ),
-                                ],
-                                                                ),
-                            ),
-                          ],
-                        ),
-                      ),
+                                ),
+                              ],
+                                                              ),
+                          ),
+                        ],
+                                                ),
                     ),
                   if (responsiveVisibility(
                     context: context,
@@ -683,214 +709,227 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     tabletLandscape: false,
                   ))
                     Container(
-                      width: MediaQuery.sizeOf(context).width * 0.45,
-                      height: MediaQuery.sizeOf(context).height * 0.65,
+                      width: MediaQuery.sizeOf(context).width * 0.8 - 300,
+                      height: max(MediaQuery.sizeOf(context).height * 0.7, 630),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-                              child: Text(
-                                'H8',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                            child: Text(
+                              'H8',
+                              style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
-                            Container(
-                              width: MediaQuery.sizeOf(context).width * 0.4,
-                              height: MediaQuery.sizeOf(context).height * 0.6,
-                              decoration: const BoxDecoration(),
-                              child: Visibility(
-                                visible: responsiveVisibility(
-                                  context: context,
-                                  phone: false,
-                                  tablet: false,
-                                  tabletLandscape: false,
-                                ),
-                                child: Container(
-                                  width: MediaQuery.sizeOf(context).width * 1.0,
-                                  height: MediaQuery.sizeOf(context).height * 0.5,
-                                  child: Stack(
-                                    children: [
-                                      PageView(
-                                        controller: _model.pageViewController3 ??= PageController(initialPage: 1),
-                                        scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/ESP web.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                    width: MediaQuery.sizeOf(context).width * 0.4,
-                                                    height: MediaQuery.sizeOf(context).height * 0.4,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    'ESP is a collaborative project between Northern Horizon, Fei Tian College \n and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium,
-                                                  ),
-                                                ],
+                          ),
+                          Container(
+                            width: MediaQuery.sizeOf(context).width * 0.8 - 100,
+                            height: max(MediaQuery.sizeOf(context).height * 0.7 - 50, 580),
+                            decoration: const BoxDecoration(),
+                            child: Visibility(
+                              visible: responsiveVisibility(
+                                context: context,
+                                phone: false,
+                                tablet: false,
+                                tabletLandscape: false,
+                              ),
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width * 1.0,
+                                height: MediaQuery.sizeOf(context).height * 0.5,
+                                child: Stack(
+                                  children: [
+                                    PageView(
+                                      controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                      scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                      scrollDirection: Axis.horizontal,
+                                      children: [
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/ESP web.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                                width: MediaQuery.sizeOf(context).width * 0.8,
+                                                height: 350,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.all(20.0),
+                                                child: Text(
+                                                  'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                                  style: FlutterFlowTheme.of(context).bodyLarge,
+                                                ),
+                                              ),
+                                            SizedBox(height:30),
+                                            ],
+                                          ),
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              Container(
+                                                child: Image.asset(
+                                                'assets/images/Friendly bear@4x 2.png',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: 350,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
                                               ),
                                             ),
-                                            SingleChildScrollView(
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    child: Image.asset(
-                                                    'assets/images/Friendly bear@4x 2.png',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/CitySmart.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/Covid TK.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/ISH 2.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                  width: MediaQuery.sizeOf(context).width * 0.4,
-                                                  height: MediaQuery.sizeOf(context).height * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  child: Image.asset(
-                                                    'assets/images/Worldheritage.gif',
-                                                    fit: BoxFit.contain,
-                                                  ),
-                                                    width: MediaQuery.sizeOf(context).width * 0.4,
-                                                    height: MediaQuery.sizeOf(context).height * 0.4,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                                    child: Text(
-                                                      'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium,
-                                                    ),
-                                                  ),
-                                                ],
+                                            Padding(
+                                              padding: const EdgeInsets.all(20.0),
+                                              child: Text(
+                                                'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
                                               ),
                                             ),
+                                              SizedBox(height:30),
+                                          ],
+                                                                                      ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/CitySmart.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: 350,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(20.0),
+                                              child: Text(
+                                                'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                              ),
+                                            ),
+                                            SizedBox(height:30),
                                           ],
                                         ),
-                                        Align(
-                                          alignment: const AlignmentDirectional(0.0, 1.0),
-                                          child: Padding(
-                                            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
-                                            child: smooth_page_indicator.SmoothPageIndicator(
-                                              controller: _model.pageViewController3 ??= PageController(initialPage: 1),
-                                              count: 6,
-                                              axisDirection: Axis.horizontal,
-                                              onDotClicked: (i) async {
-                                                await _model.pageViewController3!.animateToPage(
-                                                  i,
-                                                  duration: const Duration(milliseconds: 500),
-                                                  curve: Curves.ease,
-                                                );
-                                              },
-                                              effect: smooth_page_indicator.SlideEffect(
-                                                spacing: 8.0,
-                                                radius: 16.0,
-                                                dotWidth: 8.0,
-                                                dotHeight: 8.0,
-                                                dotColor: FlutterFlowTheme.of(context).secondaryText,
-                                                activeDotColor: FlutterFlowTheme.of(context).primaryText,
-                                                paintStyle: PaintingStyle.stroke,
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Covid TK.gif',
+                                                fit: BoxFit.contain,
                                               ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: 350,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(20.0),
+                                              child: Text(
+                                                'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                              ),
+                                            ),
+                                            SizedBox(height:30),
+                                          ],
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/ISH 2.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                              width: MediaQuery.sizeOf(context).width * 0.8,
+                                              height: 350,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(20.0),
+                                              child: Text(
+                                                'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
+                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                              ),
+                                            ),
+                                            SizedBox(height:30),
+                                          ],
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              child: Image.asset(
+                                                'assets/images/Worldheritage.gif',
+                                                fit: BoxFit.contain,
+                                              ),
+                                                width: MediaQuery.sizeOf(context).width * 0.8,
+                                                height: 350,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.all(20.0),
+                                                child: Text(
+                                                  'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                                  style: FlutterFlowTheme.of(context).bodyLarge,
+                                                ),
+                                              ),
+                                            SizedBox(height:30),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Align(
+                                        alignment: const AlignmentDirectional(0.0, 1.0),
+                                        child: Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
+                                          child: smooth_page_indicator.SmoothPageIndicator(
+                                            controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                            count: 6,
+                                            axisDirection: Axis.horizontal,
+                                            onDotClicked: (i) async {
+                                              await _model.pageViewController3!.animateToPage(
+                                                i,
+                                                duration: const Duration(milliseconds: 500),
+                                                curve: Curves.ease,
+                                              );
+                                            },
+                                            effect: smooth_page_indicator.SlideEffect(
+                                              spacing: 8.0,
+                                              radius: 16.0,
+                                              dotWidth: 8.0,
+                                              dotHeight: 8.0,
+                                              dotColor: FlutterFlowTheme.of(context).secondaryText,
+                                              activeDotColor: FlutterFlowTheme.of(context).primaryText,
+                                              paintStyle: PaintingStyle.stroke,
                                             ),
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     if (responsiveVisibility(
@@ -911,7 +950,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 Text(
                                   'Building Tomorrow\'s Innovators, One Student at a Time.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontSize: 10 + 2 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    fontSize: 11 + 2 * min(5, MediaQuery.sizeOf(context).width / 150),
                                     fontWeight: FontWeight.w600,
                                     lineHeight: 1.13,
                                   ),
@@ -919,7 +958,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 Text(
                                   'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontSize: 7 + 1.5 * min(5, MediaQuery.sizeOf(context).width / 150),
+                                    fontSize: 8 + 1.5 * min(5, MediaQuery.sizeOf(context).width / 150),
                                     lineHeight: 1.13,
                                   ),
                                 ),
@@ -928,6 +967,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             FFButtonWidget(
                               onPressed: () {
                                 print('Button pressed ...');
+                                showDialog<String>(
+                                  context: context,
+                                  builder: (BuildContext context) => const Dialog(
+                                    shape: ContinuousRectangleBorder(),
+                                    surfaceTintColor: Colors.grey,
+                                    child: DonateDialog(),
+                                  ),
+                                );
                               },
                               text: 'Donate',
                               options: FFButtonOptions(
@@ -982,6 +1029,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                           FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
+                              showDialog<String>(
+                                context: context,
+                                builder: (BuildContext context) => const Dialog(
+                                  shape: ContinuousRectangleBorder(),
+                                  surfaceTintColor: Colors.grey,
+                                  child: DonateDialog(),
+                                ),
+                              );
                             },
                             text: 'Donate',
                             options: FFButtonOptions(
@@ -1258,7 +1313,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     ))
                       Container(
                         width: double.infinity,
-                        height: MediaQuery.sizeOf(context).height * 0.15,
+                        height: 150,
                         decoration: const BoxDecoration(
                           color: Color(0xFF4C6A7D),
                         ),

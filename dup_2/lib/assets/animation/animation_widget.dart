@@ -106,6 +106,10 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.sizeOf(context).width;
+    double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
+    
     return Stack(children: [
       Indexer(children: [
         Indexed(
@@ -121,8 +125,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                 setState(() {});
               },
               child: SizedBox(
-                width: MediaQuery.sizeOf(context).width * (_05to1tl ? 1 : 0.4),
-                height: MediaQuery.sizeOf(context).height * (_05to1tl ? 1 : 0.52),
+                width: screenWidth * (_05to1tl ? 1 : 0.4),
+                height: screenHeight * (_05to1tl ? 1 : 0.52),
                 child: ColoredBox(
                   color: Colors.transparent,
                   child: TweenAnimationBuilder<Color?>(
@@ -205,8 +209,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           });
                                         },
                                         child: Container(
-                                          width: MediaQuery.sizeOf(context).width * value,
-                                          height: MediaQuery.sizeOf(context).height * value2,
+                                          width: screenWidth * value,
+                                          height: screenHeight * value2 - 50,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context).secondaryBackground,
                                           ),
@@ -314,8 +318,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                             child: ColoredBox(
                               color: c ?? Colors.transparent,
                               child: SizedBox(
-                                width: MediaQuery.sizeOf(context).width * 0.05,
-                                height: MediaQuery.sizeOf(context).height * 0.35,
+                                width: screenWidth * 0.05,
+                                height: screenHeight * 0.35 - 50,
                               ),
                             ),
                           ),
@@ -343,8 +347,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1tr ? 1 : 0.53),
-                  height: MediaQuery.sizeOf(context).height * (_05to1tr ? 1 : 0.40),
+                  width: screenWidth * (_05to1tr ? 1 : 0.53),
+                  height: screenHeight * (_05to1tr ? 1 : 0.40),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<double>(
@@ -415,8 +419,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: Container(
-                                    width: MediaQuery.sizeOf(context).width * value1,
-                                    height: MediaQuery.sizeOf(context).height * value3,
+                                    width: screenWidth * value1,
+                                    height: screenHeight * value3,
                                     decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
@@ -571,8 +575,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(100.0, 0.0, 0.0, 100.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1bl ? 1 : 0.55),
-                  height: MediaQuery.sizeOf(context).height * (_05to1bl ? 1 : 0.41),
+                  width: screenWidth * (_05to1bl ? 1 : 0.55),
+                  height: screenHeight * (_05to1bl ? 1 : 0.41),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<double>(
@@ -641,8 +645,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: Container(
-                                    width: MediaQuery.sizeOf(context).width * value4,
-                                    height: MediaQuery.sizeOf(context).height * value6 - 50,
+                                    width: screenWidth * value4,
+                                    height: screenHeight * value6 - 50,
                                     decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
@@ -699,8 +703,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             lerpU_1 = t;
                                             return Opacity(
                                               opacity: lerpDouble(0, 1, t)!,
-                                              child: Align(
-                                                alignment: Alignment.center,
+                                              child: Center(
                                                 child: Column(
                                                   mainAxisAlignment: MainAxisAlignment.center,
                                                   children: [
@@ -708,9 +711,9 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       clipBehavior: Clip.hardEdge,
                                                       child: SizedBox(
                                                         width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
+                                                            1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                            screenWidth /
+                                                                (6 - 2 * (1551 - screenWidth).sign),
                                                         child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                                                           Text(
                                                             "COMPUTER PROGRAMMING",
@@ -737,9 +740,9 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       clipBehavior: Clip.hardEdge,
                                                       child: SizedBox(
                                                         width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
+                                                            1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                            screenWidth /
+                                                                (6 - 2 * (1551 - screenWidth).sign),
                                                         child: Row(
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
@@ -769,9 +772,9 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       clipBehavior: Clip.hardEdge,
                                                       child: SizedBox(
                                                         width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
+                                                            1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                            screenWidth /
+                                                                (6 - 2 * (1551 - screenWidth).sign),
                                                         child: Row(
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
@@ -801,9 +804,9 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       clipBehavior: Clip.hardEdge,
                                                       child: SizedBox(
                                                         width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
+                                                            1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                            screenWidth /
+                                                                (6 - 2 * (1551 - screenWidth).sign),
                                                         child: Row(
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
@@ -835,9 +838,9 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       clipBehavior: Clip.hardEdge,
                                                       child: SizedBox(
                                                         width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
+                                                            1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                            screenWidth /
+                                                                (6 - 2 * (1551 - screenWidth).sign),
                                                         child: Row(
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
@@ -893,8 +896,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 100.0, 100.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1br ? 1 : 0.34),
-                  height: MediaQuery.sizeOf(context).height * (_05to1br ? 1 : 0.53),
+                  width: screenWidth * (_05to1br ? 1 : 0.34),
+                  height: screenHeight * (_05to1br ? 1 : 0.53),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<Color?>(
@@ -910,8 +913,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                               ColoredBox(
                                 color: c1 ?? Colors.transparent,
                                 child: SizedBox(
-                                  width: MediaQuery.sizeOf(context).width * 0.05,
-                                  height: MediaQuery.sizeOf(context).height * 0.35,
+                                  width: screenWidth * 0.05,
+                                  height: screenHeight * 0.35,
                                 ),
                               ),
                               MouseRegion(
@@ -983,8 +986,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               });
                                             },
                                             child: Container(
-                                              width: MediaQuery.sizeOf(context).width * value5,
-                                              height: MediaQuery.sizeOf(context).height * value7 - 50,
+                                              width: screenWidth * value5,
+                                              height: screenHeight * value7 - 50,
                                               decoration: BoxDecoration(
                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                               ),
