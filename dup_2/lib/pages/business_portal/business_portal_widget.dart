@@ -86,6 +86,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
         );
       }
       double screenWidth = MediaQuery.sizeOf(context).width;
+      double screenHeight = MediaQuery.sizeOf(context).height;
 
       return GestureDetector(
         onTap: () => _model.unfocusNode.canRequestFocus
@@ -290,7 +291,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             child: Image.asset(
                               'assets/images/unsplash_gG-YEEDSppM_(1).webp',
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 1.0 - 50,
+                              height: screenHeight * 1.0 - 50,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -327,7 +328,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         contentExpanded = true;
                                       });
                                       scrollController.animateTo(
-                                        MediaQuery.sizeOf(context).height * 0.85,
+                                        screenHeight * 0.85,
                                         duration: const Duration(seconds: 1, milliseconds: 500),
                                         curve: Curves.easeInOut,
                                       );
@@ -367,7 +368,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             child: Image.asset(
                               'assets/images/unsplash_gG-YEEDSppM_(1).webp',
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 1.0 - 40,
+                              height: screenHeight * 1.0 - 40,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -385,11 +386,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           fontFamily: 'Readex Pro',
                                           fontSize: valueOrDefault<double>(
                                             () {
-                                              if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                                              if (screenWidth < kBreakpointSmall) {
                                                 return 34.0;
-                                              } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+                                              } else if (screenWidth < kBreakpointMedium) {
                                                 return 39.0;
-                                              } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+                                              } else if (screenWidth < kBreakpointLarge) {
                                                 return 40.0;
                                               } else {
                                                 return 37.0;
@@ -411,14 +412,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           contentExpanded = true;
                                         });
                                         scrollController.animateTo(
-                                          MediaQuery.sizeOf(context).height * 0.88,
+                                          screenHeight * 0.88,
                                           duration: Duration(seconds: 2),
                                           curve: Curves.easeInOut,
                                         );
                                       },
                                       child: Container(
-                                        width: MediaQuery.sizeOf(context).width * 0.25,
-                                        height: MediaQuery.sizeOf(context).height * 0.11,
+                                        width: screenWidth * 0.25,
+                                        height: screenHeight * 0.11,
                                         decoration: BoxDecoration(
                                           color: const Color(0x00FFFFFF),
                                           border: Border.all(
@@ -445,7 +446,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.75,
+                          height: screenHeight * 0.75,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -454,7 +455,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                width: screenWidth * 0.4,
                                 height: double.infinity,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -484,8 +485,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.072,
-                                              height: MediaQuery.sizeOf(context).height * 0.028,
+                                              width: screenWidth * 0.072,
+                                              height: screenHeight * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -502,8 +503,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               ),
                                             ),
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.072,
-                                              height: MediaQuery.sizeOf(context).height * 0.028,
+                                              width: screenWidth * 0.072,
+                                              height: screenHeight * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -520,8 +521,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               ),
                                             ),
                                             Container(
-                                              width: MediaQuery.sizeOf(context).width * 0.072,
-                                              height: MediaQuery.sizeOf(context).height * 0.028,
+                                              width: screenWidth * 0.072,
+                                              height: screenHeight * 0.028,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD9D9D9),
                                                 borderRadius: BorderRadius.circular(24.0),
@@ -556,7 +557,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               ),
                             ),
                             Container(
-                              width: MediaQuery.sizeOf(context).width * 0.6,
+                              width: screenWidth * 0.6,
                               height: double.infinity,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -571,8 +572,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
                                             'assets/images/FT_245_M.webp',
-                                            width: MediaQuery.sizeOf(context).width * 0.3,
-                                            height: MediaQuery.sizeOf(context).height * 0.35,
+                                            width: screenWidth * 0.3,
+                                            height: screenHeight * 0.35,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -586,8 +587,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
                                             'assets/images/NAM_007_M.webp',
-                                            width: MediaQuery.sizeOf(context).width * 0.25,
-                                            height: MediaQuery.sizeOf(context).height * 0.35,
+                                            width: screenWidth * 0.25,
+                                            height: screenHeight * 0.35,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -606,7 +607,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.8,
+                          height: screenHeight * 0.8,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -619,8 +620,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    width: MediaQuery.sizeOf(context).width * 0.5,
-                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                    width: screenWidth * 0.5,
+                                    height: screenHeight * 0.4,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context).secondaryBackground,
                                     ),
@@ -630,16 +631,16 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         borderRadius: BorderRadius.circular(0.0),
                                         child: Image.asset(
                                           'images/FT_245_M.webp',
-                                          width: MediaQuery.sizeOf(context).width * 0.5,
-                                          height: MediaQuery.sizeOf(context).height * 0.4,
+                                          width: screenWidth * 0.5,
+                                          height: screenHeight * 0.4,
                                           fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),
                                   ),
                                   Container(
-                                    width: MediaQuery.sizeOf(context).width * 0.5,
-                                    height: MediaQuery.sizeOf(context).height * 0.4,
+                                    width: screenWidth * 0.5,
+                                    height: screenHeight * 0.4,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context).secondaryBackground,
                                     ),
@@ -658,8 +659,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           ),
                                         ),
                                         Container(
-                                          width: MediaQuery.sizeOf(context).width * 0.25,
-                                          height: MediaQuery.sizeOf(context).height * 0.035,
+                                          width: screenWidth * 0.25,
+                                          height: screenHeight * 0.035,
                                           decoration: BoxDecoration(
                                             color: const Color(0xFFD9D9D9),
                                             borderRadius: BorderRadius.circular(24.0),
@@ -674,8 +675,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           ),
                                         ),
                                         Container(
-                                          width: MediaQuery.sizeOf(context).width * 0.25,
-                                          height: MediaQuery.sizeOf(context).height * 0.035,
+                                          width: screenWidth * 0.25,
+                                          height: screenHeight * 0.035,
                                           decoration: BoxDecoration(
                                             color: const Color(0xFFD9D9D9),
                                             borderRadius: BorderRadius.circular(24.0),
@@ -690,8 +691,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           ),
                                         ),
                                         Container(
-                                          width: MediaQuery.sizeOf(context).width * 0.25,
-                                          height: MediaQuery.sizeOf(context).height * 0.035,
+                                          width: screenWidth * 0.25,
+                                          height: screenHeight * 0.035,
                                           decoration: BoxDecoration(
                                             color: const Color(0xFFD9D9D9),
                                             borderRadius: BorderRadius.circular(24.0),
@@ -739,7 +740,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.75,
+                          height: screenHeight * 0.75,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -785,7 +786,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         },
                                         text: 'PAST PROJECTS',
                                         options: FFButtonOptions(
-                                          width: MediaQuery.sizeOf(context).width * 0.1,
+                                          width: screenWidth * 0.1,
                                           height: 42.0,
                                           padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -862,7 +863,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.8,
+                          height: screenHeight * 0.8,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -943,8 +944,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Container(
-                              width: MediaQuery.sizeOf(context).width * 0.6,
-                              height: MediaQuery.sizeOf(context).height * 0.75,
+                              width: screenWidth * 0.6,
+                              height: screenHeight * 0.75,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
@@ -956,8 +957,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               ),
                             ),
                             Container(
-                              width: MediaQuery.sizeOf(context).width * 0.4,
-                              height: MediaQuery.sizeOf(context).height * 0.75,
+                              width: screenWidth * 0.4,
+                              height: screenHeight * 0.75,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
@@ -1023,7 +1024,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.8,
+                          height: screenHeight * 0.8,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -1103,7 +1104,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               child: Image.asset(
                                 'assets/images/2023NA_032.webp',
                                 width: double.infinity,
-                                height: MediaQuery.sizeOf(context).height * 0.75,
+                                height: screenHeight * 0.75,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -1139,7 +1140,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       text: 'Take a look',
                                       options: FFButtonOptions(
                                         width: 150,
-                                        height: MediaQuery.sizeOf(context).height * 0.09,
+                                        height: screenHeight * 0.09,
                                         padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                         color: Colors.white,
@@ -1173,7 +1174,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               child: Image.asset(//moons+stars
                                 'images/2023NA_032.webp',
                                 width: double.infinity,
-                                height: MediaQuery.sizeOf(context).height * 0.75,
+                                height: screenHeight * 0.75,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -1208,8 +1209,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       },
                                       text: 'Take a look',
                                       options: FFButtonOptions(
-                                        width: MediaQuery.sizeOf(context).width * 0.3,
-                                        height: MediaQuery.sizeOf(context).height * 0.08,
+                                        width: screenWidth * 0.3,
+                                        height: screenHeight * 0.08,
                                         padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                         color: Colors.white,
@@ -1486,7 +1487,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.15,
+                          height: screenHeight * 0.15,
                           decoration: const BoxDecoration(
                             color: Color(0xFF4C6A7D),
                           ),
