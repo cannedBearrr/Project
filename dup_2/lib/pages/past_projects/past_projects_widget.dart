@@ -507,7 +507,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Earthquake',
+                                                'Earthquake Signal Precursor',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                               Container(
@@ -533,7 +533,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              'Earthquake1',
+                                              'Northern Health App',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                             Container(
@@ -559,7 +559,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Earthquake2',
+                                                'CitySmart',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                               Container(
@@ -585,7 +585,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              'Earthquake',
+                                              'Covid Tool Kit',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                             Container(
@@ -611,7 +611,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              'Earthquake',
+                                              'Invasive Species Heatmap',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                             Container(
@@ -637,7 +637,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              'Earthquake',
+                                              'World Heritage Site',
                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                             ),
                                             Container(
