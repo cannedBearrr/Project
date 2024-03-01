@@ -1,7 +1,11 @@
 import 'dart:ui';
 
+import 'package:dup_2/index.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
+import '../pages/donate_page/donate_page_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +24,7 @@ class _DonateWidgetState extends State<DonateDialog> {
   int selected = 0;
   double t = 0;
   bool otherexp = false;
+  double m = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +71,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                 ),
                                 onPressed: () {
                                   if (selected != 1) {
+                                    m = 1;
                                     otherexp = selected == 4;
                                     selected = 1;
                                     t = 1;
@@ -95,6 +101,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                 ),
                                 onPressed: () {
                                   if (selected != 2) {
+                                    m = 5;
                                     otherexp = selected == 4;
                                     selected = 2;
                                     t = 1;
@@ -124,6 +131,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                 ),
                                 onPressed: () {
                                   if (selected != 3) {
+                                    m = 10;
                                     otherexp = selected == 4;
                                     selected = 3;
                                     t = 1;
@@ -181,6 +189,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     if (selected == 4)
                                       IntrinsicWidth(
                                           child: TextField(
+                                            autofocus: true,
                                               inputFormatters: [
                                             LengthLimitingTextInputFormatter(9),
                                           ],
@@ -194,7 +203,12 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                 ),
                                               ),
                                               style:
-                                                  FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white))),
+                                                  FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white),
+                                          onChanged: (value) {
+                                                m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                print(m);
+                                          },
+                                          )),
                                   ],
                                 ),
                               )),
@@ -223,6 +237,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     ),
                                     onPressed: () {
                                       if (selected != 1) {
+                                        m = 1;
                                         selected = 1;
                                         t = 1;
                                         setState(() {});
@@ -253,6 +268,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     ),
                                     onPressed: () {
                                       if (selected != 2) {
+                                        m = 5;
                                         selected = 2;
                                         t = 1;
                                         setState(() {});
@@ -283,6 +299,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                   ),
                                   onPressed: () {
                                     if (selected != 3) {
+                                      m = 10;
                                       selected = 3;
                                       t = 1;
                                       setState(() {});
@@ -308,7 +325,9 @@ class _DonateWidgetState extends State<DonateDialog> {
                         children: [
                           Expanded(
                               child: ConstrainedBox(
-                                  constraints: BoxConstraints(minHeight: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,),
+                                  constraints: BoxConstraints(
+                                    minHeight: (responsiveVisibility(context: context, phone: false)) ? 100 : 70,
+                                  ),
                                   child: OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: const Color(0xffa30034),
@@ -345,6 +364,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                 if (selected == 4)
                                                   IntrinsicWidth(
                                                       child: TextField(
+                                                        autofocus: true,
                                                           inputFormatters: [
                                                         LengthLimitingTextInputFormatter(9),
                                                       ],
@@ -360,19 +380,23 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                           style: FlutterFlowTheme.of(context).bodySmall.override(
                                                               fontSize:
                                                                   (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                              color: Colors.white))),
+                                                              color: Colors.white),
+                                                        onChanged: (value) {
+                                                          m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                          print(m);
+                                                        },
+                                                      )),
                                               ],
                                             ),
                                           ),
                                         if (responsiveVisibility(context: context, tablet: false, tabletLandscape: false))
                                           Column(
                                             children: [
-                                              if (selected == 4)
-                                              SizedBox(height: 20),
+                                              if (selected == 4) SizedBox(height: 20),
                                               Text(
                                                 (selected == 4) ? "other amount: " : "other amount",
                                                 style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                  lineHeight: 0.5,
+                                                      lineHeight: 0.5,
                                                       fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
                                                       color:
                                                           (selected == 4) ? Color.lerp(Colors.black, Colors.white, v) : Colors.black,
@@ -386,7 +410,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                     ],
                                                         controller: moneyController,
                                                         decoration: const InputDecoration(
-              isDense: true,
+                                                          isDense: true,
                                                           enabledBorder: UnderlineInputBorder(
                                                             borderSide: BorderSide(color: Colors.white70),
                                                           ),
@@ -396,9 +420,13 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                         ),
                                                         style: FlutterFlowTheme.of(context).bodySmall.override(
                                                             fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                            color: Colors.white))),
-                                              if (selected == 4)
-                                              SizedBox(height: 15),
+                                                            color: Colors.white),
+                                                      onChanged: (value) {
+                                                        m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                        print(m);
+                                                      },
+                                                    )),
+                                              if (selected == 4) SizedBox(height: 15),
                                             ],
                                           ),
                                       ],
@@ -413,6 +441,44 @@ class _DonateWidgetState extends State<DonateDialog> {
               throw UnimplementedError('This is mathematically impossible');
             },
           ),
+          if (selected != 0) ...[
+            TweenAnimationBuilder<double>(
+              curve: Curves.easeOutSine,
+              tween: Tween<double>(begin: 0, end: t),
+              duration: const Duration(milliseconds: 200),
+              builder: (BuildContext context, double v, Widget? child) {
+                return SizedBox(
+                  child: Opacity(
+                    opacity: v,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ConstrainedBox(constraints: BoxConstraints(maxHeight: v*22), child: const SizedBox(height: 22)),
+                        ConstrainedBox(
+                          constraints: BoxConstraints(maxHeight: v*35),
+                          child: FilledButton(
+                              onPressed: () async {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => DonatePageWidget(m: m),
+                                    ));
+                                },
+                              style: OutlinedButton.styleFrom(backgroundColor: const Color(0xFF1F4477),),
+                              child: Text(
+                                'Continue',
+                                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                      color: Colors.white,
+                                    ),
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ],
           const SizedBox(height: 24)
         ],
       ),
