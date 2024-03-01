@@ -321,11 +321,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           Image.network(
                             'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80',
                             width: screenWidth * 1.0,
-                            height: max(600.0, screenHeight * 1.0 - 40),
+                            height: MediaQuery.sizeOf(context).height - 40,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(
-                            height: screenHeight - 40,
+                            height: MediaQuery.sizeOf(context).height - 40,
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -342,112 +342,106 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                FittedBox(
-                                  child: SizedBox(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
-                                          child: Text(
-                                            'WHERE LEARNING MEETS',
-                                            style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                  color: Colors.white,
-                                                ),
-                                          ),
-                                        ),
-                                        Text(
-                                          'OPPORTUNITY',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                color: const Color(0xFFEEB609),
-                                                fontSize: 45.0,
-                                                letterSpacing: 1.5,
-                                                lineHeight: 1.05,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
-                                          child: RichText(
-                                            text: TextSpan(
-                                              children: const [
-                                                TextSpan(
-                                                  text: 'WE HELP STUDENTS DEFINE THEIR',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' CAREER',
-                                                  style: TextStyle(
-                                                    color: Color(0xFFEEB609),
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                  ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT\n-BASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' PORTFOLIOS',
-                                                  style: TextStyle(
-                                                    color: Color(0xFFEEB609),
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: '.',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                )
-                                              ],
-                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                  fontSize: 19,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        FFButtonWidget(
-                                          onPressed: () {
-                                            setState(() {
-                                              // expand rest of content
-                                              contentExpanded = true;
-                                            });
-                                            scrollController.animateTo(
-                                              screenHeight * 0.95 - 50,
-                                              duration: const Duration(seconds: 1, milliseconds: 500),
-                                              curve: Curves.easeInOut,
-                                            );
-                                          },
-                                          text: 'Read More',
-                                          options: FFButtonOptions(
-                                            width: 115,
-                                            height: 25,
-                                            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0x004B39EF),
-                                            textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 1.0,
-                                                ),
-                                            elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                Spacer(flex: 2),
+                                Text(
+                                  'WHERE LEARNING MEETS',
+                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                        color: Colors.white,
+                                      fontSize: (min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0))/ 2.6,
+                                      ),
+                                ),
+                                Text(
+                                  'OPPORTUNITY',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        color: const Color(0xFFEEB609),
+                                        fontSize: min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0),
+                                        letterSpacing: 1.5,
+                                        lineHeight: 1.05,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                                Spacer(flex: 2),
+                                ConstrainedBox(
+                                  constraints: BoxConstraints(maxWidth: 580),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05, vertical: 8.0),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: const [
+                                          TextSpan(
+                                            text: 'WE HELP STUDENTS DEFINE THEIR',
+                                            style: TextStyle(
                                               color: Colors.white,
-                                              width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.circular(22.0),
                                           ),
+                                          TextSpan(
+                                            text: ' CAREER',
+                                            style: TextStyle(
+                                              color: Color(0xFFEEB609),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text:
+                                            ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ' PORTFOLIOS',
+                                            style: TextStyle(
+                                              color: Color(0xFFEEB609),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '.',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                        style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 2.2,
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                                      Spacer(flex: 7),
+                                Spacer(flex: 2),
+                                FFButtonWidget(
+                                  onPressed: () {
+                                    setState(() {
+                                      // expand rest of content
+                                      contentExpanded = true;
+                                    });
+                                    scrollController.animateTo(
+                                      screenHeight * 0.95 - 50,
+                                      duration: const Duration(seconds: 1, milliseconds: 500),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  },
+                                  text: 'Read More',
+                                  options: FFButtonOptions(
+                                    width: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) * 2.5,
+                                    height: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 1.8,
+                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                    color: const Color(0x004B39EF),
+                                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 4,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: const BorderSide(
+                                      color: Colors.white,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(22.0),
+                                  ),
+                                ),
+                                      Spacer(flex: 4),
+                                SizedBox(height: 20),
                               ],
                             ),
                           ),
@@ -3546,17 +3540,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       color: Colors.black,
                                                       fontWeight: FontWeight.w900,
                                                     ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too much email.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 18.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                ),
                                               ),
                                               Flexible(
                                                 child: Padding(
