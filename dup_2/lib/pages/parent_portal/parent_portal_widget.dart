@@ -1005,7 +1005,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1026,7 +1026,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1047,7 +1047,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1068,7 +1068,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1206,7 +1206,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 265.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1365,7 +1365,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1375,7 +1375,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Computer\nProgramming',
+                                                          'Computer Programming',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1449,7 +1449,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 275.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1459,7 +1459,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Financial\nManagement',
+                                                          'Financial Management',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1533,7 +1533,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 275.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1543,7 +1543,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Business\nDevelopment',
+                                                          'Business Development',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
