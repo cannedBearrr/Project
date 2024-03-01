@@ -222,14 +222,16 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'PREVIOUS PROJECTS',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontFamily: 'Readex Pro',
-                                                color: Colors.white,
-                                                fontSize: MediaQuery.sizeOf(context).width * 0.1 - MediaQuery.sizeOf(context).width * 0.05,
-                                              ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            'PREVIOUS PROJECTS',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
+                                                  fontSize: MediaQuery.sizeOf(context).width * 0.1 - MediaQuery.sizeOf(context).width * 0.05 - 2,
+                                                ),
+                                          ),
                                         ),
                                       ),
                                       // Text(
@@ -279,16 +281,22 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Text(
-                                'LOGOS OF OUR PREVIOUS PARTNERS',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 25.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                            Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: SizedBox(
+                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Spacer(flex: 2),
+                                    Expanded(flex: 3, child: Image.asset('assets/images/NASA.png')),
+                                    Spacer(),
+                                    Expanded(flex: 3, child: Image.asset('assets/images/USGS.png')),
+                                    Spacer(),
+                                    Expanded(flex: 3, child: Image.asset('assets/images/UN.png')),
+                                    Spacer(flex: 2),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
