@@ -1383,7 +1383,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1404,7 +1404,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1425,7 +1425,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1446,7 +1446,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 275.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1467,7 +1467,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1488,7 +1488,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1509,7 +1509,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1530,7 +1530,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 275.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1600,33 +1600,36 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                       child: Align(
                                         alignment: const AlignmentDirectional(0.0, 0.0),
-                                        child: Container(
-                                          width: 374.0,
-                                          height: 77.0,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0x00272727),
-                                            border: Border.all(
-                                              color: Colors.black,
+                                        child: Transform.scale(
+                                          scale: (1/450)/(2/screenWidth + 1/screenHeight),
+                                          child: Container(
+                                            width: 374.0,
+                                            height: 77.0,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0x00272727),
+                                              border: Border.all(
+                                                color: Colors.black,
+                                              ),
                                             ),
-                                          ),
-                                          child: OverflowBox(
-                                            minWidth: 0,
-                                            minHeight: 0,
-                                            maxWidth: double.infinity,
-                                            maxHeight: double.infinity,
-                                            child: SizedBox(
-                                              height: 90.0,
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: Text(
-                                                  'BENEFITS',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
-                                                        fontSize: 60.0,
-                                                        letterSpacing: 5.0,
-                                                        fontWeight: FontWeight.w900,
-                                                        color: Colors.black,
-                                                      ),
+                                            child: OverflowBox(
+                                              minWidth: 0,
+                                              minHeight: 0,
+                                              maxWidth: double.infinity,
+                                              maxHeight: double.infinity,
+                                              child: SizedBox(
+                                                height: 90.0,
+                                                child: Align(
+                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                  child: Text(
+                                                    'BENEFITS',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                          fontSize: 60.0,
+                                                          letterSpacing: 5.0,
+                                                          fontWeight: FontWeight.w900,
+                                                          color: Colors.black,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -2079,16 +2082,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: FittedBox(
-                                                child: Text(
-                                                  'Partnerships with\nCompanies',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
-                                                        color: Colors.white,
-                                                        fontSize: 33.0,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(8.0),
+                                                child: FittedBox(
+                                                  child: Text(
+                                                    'Partnerships with\nCompanies',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          
+                                                          color: Colors.white,
+                                                          fontSize: 33.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -3791,13 +3797,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                         ),
                                       ),
-                                      Text(
-                                        'Privacy Policy',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
+                                      GestureDetector(
+                                        onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                        child: Text(
+                                          'Privacy Policy',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                            color: Colors.white,
+                                            fontSize: 13.0,
+                                            fontWeight: FontWeight.w200,
+                                          ),
                                         ),
                                       ),
                                       Text(
@@ -4031,13 +4040,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                               ),
                                             ),
-                                            Text(
-                                              'Privacy Policy',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
+                                            GestureDetector(
+                                              onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                              child: Text(
+                                                'Privacy Policy',
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                  color: Colors.white,
+                                                  fontSize: 8.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                               ),
                                             ),
                                             Text(
@@ -4217,13 +4229,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   ),
                                                 ),
                                               ),
-                                              Text(
-                                                'Privacy Policy',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
+                                              GestureDetector(
+                                                onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                                child: Text(
+                                                  'Privacy Policy',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(height: 12),

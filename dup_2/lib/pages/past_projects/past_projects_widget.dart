@@ -13,6 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'past_projects_model.dart';
 export 'past_projects_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // make the pageview able to be dragged
 class YesScrollBehavior extends ScrollBehavior {
@@ -1353,13 +1354,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       ),
                                     ),
                                   ),
-                                  Text(
-                                    'Privacy Policy',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      fontFamily: 'Readex Pro',
-                                      color: Colors.white,
-                                      fontSize: 13.0,
-                                      fontWeight: FontWeight.w200,
+                                  GestureDetector(
+                                    onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                    child: Text(
+                                      'Privacy Policy',
+                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        fontFamily: 'Readex Pro',
+                                        color: Colors.white,
+                                        fontSize: 13.0,
+                                        fontWeight: FontWeight.w200,
+                                      ),
                                     ),
                                   ),
                                   Text(
@@ -1593,13 +1597,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                         ),
-                                        Text(
-                                          'Privacy Policy',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 8.0,
-                                            fontWeight: FontWeight.w200,
+                                        GestureDetector(
+                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                          child: Text(
+                                            'Privacy Policy',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                              fontSize: 8.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                           ),
                                         ),
                                         Text(
@@ -1779,13 +1786,16 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                           ),
-                                          Text(
-                                            'Privacy Policy',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              fontSize: 8.0,
-                                              fontWeight: FontWeight.w200,
+                                          GestureDetector(
+                                            onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                            child: Text(
+                                              'Privacy Policy',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                color: Colors.white,
+                                                fontSize: 8.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                             ),
                                           ),
                                           SizedBox(height: 12),
