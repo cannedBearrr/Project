@@ -2902,7 +2902,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Text(
-                                    'About Us',
+                                    'Career',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -3148,7 +3148,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,

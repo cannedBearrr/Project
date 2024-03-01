@@ -773,10 +773,6 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                         children: [
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-                            child: Text(
-                              'H8',
-                              style: FlutterFlowTheme.of(context).bodyMedium,
-                            ),
                           ),
                           Container(
                             width: screenWidth * 0.8 - 100,
@@ -803,6 +799,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: [
+                                          Text(
+                                          'Earthquake Signal Precursor',
+                                            style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/ESP web.gif',
@@ -815,7 +818,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.all(20.0),
+                                                padding: const EdgeInsetsDirectional.fromSTEB(200.0, 100.0, 100.0, 34.0),
                                                 child: Text(
                                                   'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                   style: FlutterFlowTheme.of(context).bodyLarge,
@@ -828,6 +831,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                             children: [
+                                              Text(
+                                                  'Northern Health App',
+                                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                    fontSize: 24,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                ),
                                               Container(
                                                 child: Image.asset(
                                                 'assets/images/Friendly bear@4x 2.png',
@@ -853,6 +863,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: [
+                                            Text(
+                                              'Covid Tool Kit',
+                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/CitySmart.gif',
@@ -878,6 +895,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: [
+                                            Text(
+                                              'CitySmart',
+                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/Covid TK.gif',
@@ -903,6 +927,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: [
+                                            Text(
+                                              'Invasive Species Heatmap',
+                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/ISH 2.gif',
@@ -928,6 +959,13 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: [
+                                            Text(
+                                              'World Heritage Site',
+                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                             Container(
                                               child: Image.asset(
                                                 'assets/images/Worldheritage.gif',
@@ -1163,7 +1201,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'About Us',
+                                      'Career',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
                                         color: Colors.white,
@@ -1409,7 +1447,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                           Text(
-                                            'About Us',
+                                            'Career',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
@@ -1593,7 +1631,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'About Us',
+                                              'Career',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
