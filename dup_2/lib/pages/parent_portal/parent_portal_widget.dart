@@ -3394,7 +3394,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             child: Image.asset(
-                                              'assets/images/2023NA_031.webp',
+                                              'images/2023NA_301.jpg',
                                               width: screenWidth * 0.8,
                                               height: screenHeight * 0.3,
                                               fit: BoxFit.cover,

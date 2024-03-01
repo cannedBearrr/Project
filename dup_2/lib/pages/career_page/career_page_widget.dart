@@ -524,7 +524,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/Anson.webp',
+                            'images/2023NA_289.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -583,7 +583,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/Anson.webp',
+                            'images/2023NA_289.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -1196,8 +1196,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   ClipPath(
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/307/600',
+                                    child: Image.asset(
+                                      'images/2023NA_231.jpg',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -1467,8 +1467,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   ClipPath(
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/307/600',
+                                    child: Image.asset(
+                                      'images/2023NA_073.jpg',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -2308,8 +2308,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.network(
-                                    'https://picsum.photos/seed/328/600',
+                                  Image.asset(
+                                    'images/2023NA_231.jpg',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -2560,8 +2560,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.network(
-                                    'https://picsum.photos/seed/328/600',
+                                  Image.asset(
+                                    'images/2023NA_073.jpg',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
