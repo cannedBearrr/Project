@@ -441,8 +441,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/693/600',
+                            child: Image.asset(
+                              'images/CopyofWCAwardCerts.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
@@ -480,8 +480,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/795/600',
+                            child: Image.asset(
+                              'images/CopyofWCAwardCerts.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
@@ -489,12 +489,16 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Text(
-                              'At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world.',
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).primaryBackground,
-                                  ),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                              child: Text(
+                                'At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world.',
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                      fontSize: 25,
+                                    ),
+                              ),
                             ),
                           ),
                         ],
@@ -514,7 +518,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/CopyofWCAwardCerts.jpg',
+                            'images/Anson.webp',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -569,7 +573,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/CopyofWCAwardCerts.jpg',
+                            'images/Anson.webp',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -588,20 +592,26 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     fontSize: 40,
                                   ),
                                 ),
-                                Text(
-                                  'Join our community and help define it.',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).primaryBackground,
-                                    fontSize: 70,
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  child: Text(
+                                    'Join our community and help define it.',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                      fontSize: 70,
+                                    ),
                                   ),
                                 ),
-                                Text(
-                                  'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).primaryBackground,
-                                    fontSize: 20,
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  child: Text(
+                                    'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -2036,8 +2046,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.network(
-                                    'https://picsum.photos/seed/328/600',
+                                  Image.asset(
+                                    'images/2023NA_030.webp',
                                     width: MediaQuery.sizeOf(context).width,
                                     height: 250,
                                     fit: BoxFit.cover,

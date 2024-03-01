@@ -1078,7 +1078,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     thickness: 1.0,
                                     indent: 100.0,
                                     endIndent: 100.0,
-                                    color: Color(0xCC000000),
+                                    color: Colors.white,
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                   Padding(
@@ -1094,7 +1094,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     thickness: 1.0,
                                     indent: 100.0,
                                     endIndent: 100.0,
-                                    color: Color(0xCC000000),
+                                    color: Colors.white,
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                 ].divide(const SizedBox(height: 25.0)),
@@ -1263,8 +1263,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      InkWell(
-                                        child: Text(
+                                      Text(
                                           'LEARN MORE',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
@@ -1273,13 +1272,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                      ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            context.pushNamed('parentPortal');
-                                          },
                                           child: Text(
                                             'Home',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1290,7 +1284,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             ),
                                           ),
                                         ),
-                                      ),
                                       Text(
                                         'About Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(

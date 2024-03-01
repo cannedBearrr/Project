@@ -151,13 +151,21 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                                child: Text(
-                                  'PLACE HERE LOGOS OF OUR PREVIOUS PARTNERS',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                child: Column(
+                                  children: [
+                                    Image.asset(
+                                        'images/USGS.png',
+                                        height: 50.0
+                                    ),  // Replace 'assets/logo1.png' with the actual path to your logo image// Adjust the height between logos as needed
+                                    Image.asset(
+                                        'images/NASA.png',
+                                        height: 50.0
+                                    ),  // Replace 'assets/logo2.png' with the actual path to your logo image// Adjust the height between logos as needed
+                                    Image.asset(
+                                        'images/UN.png',
+                                        height: 50.0
+                                    ),  // Replace 'assets/logo3.png' with the actual path to your logo image
+                                  ],
                                 ),
                               ),
                             ),
