@@ -211,28 +211,28 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
                                         alignment: AlignmentDirectional(0.0, 0.0),
                                         child: Text(
-                                          'PAST',
+                                          'PREVIOUS PROJECTS',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
-                                                fontSize: 60.0,
+                                                fontSize: MediaQuery.sizeOf(context).width * 0.1 - MediaQuery.sizeOf(context).width * 0.05,
                                               ),
                                         ),
                                       ),
-                                      Text(
-                                        'we may use this line',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Color(0xFF1F4477),
-                                              fontSize: 70.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
+                                      // Text(
+                                      //   'we may use this line',
+                                      //   style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                      //         fontFamily: 'Readex Pro',
+                                      //         color: Color(0xFF1F4477),
+                                      //         fontSize: 70.0,
+                                      //         fontWeight: FontWeight.bold,
+                                      //       ),
+                                      // ),
                                     ].addToStart(SizedBox(height: 10.0)),
                                   ),
                                 ),

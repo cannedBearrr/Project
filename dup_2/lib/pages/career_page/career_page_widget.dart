@@ -270,7 +270,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     context.pushNamed('parentPortal');
                                   },
                                   child: Text(
-                                    'PARENTS',
+                                    'FOR PARENTS',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
@@ -297,7 +297,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     context.pushNamed('businessPortal');
                                   },
                                   child: Text(
-                                    'BUSINESS',
+                                    'FOR BUSINESS',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
@@ -360,7 +360,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   context.pushNamed('parentPortal');
                                 },
                                 child: Text(
-                                  'PARENTS',
+                                  'FOR PARENTS',
                                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                                         fontFamily: 'Outfit',
                                         color: FlutterFlowTheme.of(context).primaryText,
@@ -384,7 +384,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   context.pushNamed('businessPortal');
                                 },
                                 child: Text(
-                                  'BUSINESS',
+                                  'FOR BUSINESS',
                                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                                         fontFamily: 'Outfit',
                                         color: FlutterFlowTheme.of(context).primaryText,
@@ -513,8 +513,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       ),
                       child: Stack(
                         children: [
-                          Image.network(
-                            'https://images.unsplash.com/photo-1624696941338-934bf86c28b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMHx8bWVjaGFuaWNhbCUyMGtleWJvYXJkfGVufDB8fHx8MTcwODc4NDgxOXww&ixlib=rb-4.0.3&q=80&w=1080',
+                          Image.asset(
+                            'images/CopyofWCAwardCerts.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -545,7 +545,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
+                                        color: Colors.white,
                                         fontSize: 30,
                                       ),
                                 ),
@@ -568,8 +568,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       ),
                       child: Stack(
                         children: [
-                          Image.network(
-                            'https://picsum.photos/seed/55/600',
+                          Image.asset(
+                            'images/CopyofWCAwardCerts.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -581,25 +581,28 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  'Hello Wor5ld',
+                                  'Life at Northern Horizon',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 40,
+                                  ),
                                 ),
                                 Text(
-                                  'Hello W56orld',
+                                  'Join our community and help define it.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 70,
+                                  ),
                                 ),
                                 Text(
-                                  'Hello Wo87rld',
+                                  'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context).primaryBackground,
-                                      ),
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ],
                             ),
@@ -631,8 +634,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   ClipPath(
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/307/600',
+                                    child: Image.asset(
+                                      'images/DSC_1606.JPG',
                                       width: MediaQuery.sizeOf(context).width,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -902,8 +905,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   ClipPath(
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/307/600',
+                                    child: Image.asset(
+                                      'images/2023NA_030.webp',
                                       width: MediaQuery.sizeOf(context).width,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -1781,8 +1784,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.network(
-                                    'https://picsum.photos/seed/328/600',
+                                  Image.asset(
+                                    'images/DSC_1606.JPG',
                                     width: MediaQuery.sizeOf(context).width,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -3016,7 +3019,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Text(
-                                    'bossemail@gmail.com',
+                                    'azhao@northernacademy.org',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -3251,7 +3254,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'bossemail@gmail.com',
+                                      'azhao@northernacademy.org',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,

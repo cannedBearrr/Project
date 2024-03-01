@@ -123,7 +123,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       context.pushNamed('parentPortal');
                                     },
                                     child: Text(
-                                      'PARENTS',
+                                      'FOR PARENTS',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context).headlineMedium.override(
                                         fontFamily: 'Outfit',
@@ -213,7 +213,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     context.pushNamed('parentPortal');
                                   },
                                   child: Text(
-                                    'PARENTS',
+                                    'FOR PARENTS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
                                           color: FlutterFlowTheme.of(context).primaryText,
@@ -773,7 +773,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         width: 300.0,
                                         child: Divider(
                                           thickness: 1.0,
-                                          color: Color(0xCCFFFFFF),
+                                          color: Color(0xCC000000),
                                         ),
                                       ),
                                       Text(
@@ -781,7 +781,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.black,
-                                              fontSize: 70.0,
+                                              fontSize: 115.0,
                                             ),
                                       ),
                                       FFButtonWidget(
@@ -791,8 +791,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         },
                                         text: 'PAST PROJECTS',
                                         options: FFButtonOptions(
-                                          width: 150,
-                                          height: 42.0,
+                                          width: 210,
+                                          height: 72.0,
                                           padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                           color: const Color(0x00FFFFFF),
@@ -826,7 +826,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 96.0,
+                                              fontSize: 125.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -838,7 +838,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 96.0,
+                                              fontSize: 125.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -850,7 +850,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
-                                              fontSize: 96.0,
+                                              fontSize: 125.0,
                                               letterSpacing: 2.0,
                                             ),
                                       ),
@@ -931,6 +931,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                       fontWeight: FontWeight.w600,
                                                       letterSpacing: 2.5,
                                                       lineHeight: 1.05,
+                                                      color: Colors.white,
                                                     ),
                                               ),
                                             ),
@@ -980,19 +981,19 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Icon(
                                         Icons.settings_outlined,
                                         color: FlutterFlowTheme.of(context).secondaryText,
-                                        size: 24.0,
+                                        size: 27.0,
                                       ),
                                       Text(
                                         'WHY US',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 50.0,
+                                              fontSize: 70.0,
                                             ),
                                       ),
                                       Icon(
                                         Icons.settings_outlined,
                                         color: FlutterFlowTheme.of(context).secondaryText,
-                                        size: 24.0,
+                                        size: 27.0,
                                       ),
                                     ].divide(const SizedBox(width: 8.0)),
                                   ),
@@ -1004,7 +1005,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 60.0, 0.0),
+                                    padding: const EdgeInsetsDirectional.fromSTEB(120.0, 0.0, 100.0, 0.0),
                                     child: Text(
                                       'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
                                       style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1137,7 +1138,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
                                             fontSize: 60.0,
-                                            fontWeight: FontWeight.w100,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                     ),
                                     FFButtonWidget(
@@ -1207,7 +1208,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
                                             fontSize: 30.0,
-                                            fontWeight: FontWeight.w100,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                     ),
                                     FFButtonWidget(
