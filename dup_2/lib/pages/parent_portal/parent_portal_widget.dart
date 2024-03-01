@@ -1,3 +1,4 @@
+// Imports all the required packages
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -14,7 +15,7 @@ import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// we send a post request to my website
+// To send post request to the website
 Future<http.Response> sendEmail(String email) {
   return http.post(
     Uri.parse('https://129.213.117.186/newsletter.php'),
@@ -25,7 +26,7 @@ Future<http.Response> sendEmail(String email) {
   );
 }
 
-// make the pageview able to be dragged
+// Allows page to scroll the Pageview
 class YesScrollBehavior extends ScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
@@ -51,6 +52,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
   bool contentExpanded = false;
   bool isEmailSent = false;
 
+  // To validate the email
   String? _validateEmail(String value) {
     if (value.isEmpty && !isEmailSent) {
       return 'Enter an email';
@@ -65,6 +67,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
     return RegExp(r'.+@.+').hasMatch(email);
   }
 
+  //
   Future<bool>? resetForm() {
     Future.delayed(const Duration(seconds: 2), () {
       _formKey.currentState?.reset();
@@ -93,7 +96,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
     } catch (e) {}
   }
 
-  //yu
   @override
   void dispose() {
     try {
