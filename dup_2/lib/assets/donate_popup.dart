@@ -237,6 +237,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     ),
                                     onPressed: () {
                                       if (selected != 1) {
+                                        m = 1;
                                         selected = 1;
                                         t = 1;
                                         setState(() {});
@@ -267,6 +268,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     ),
                                     onPressed: () {
                                       if (selected != 2) {
+                                        m = 5;
                                         selected = 2;
                                         t = 1;
                                         setState(() {});
@@ -297,6 +299,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                   ),
                                   onPressed: () {
                                     if (selected != 3) {
+                                      m = 10;
                                       selected = 3;
                                       t = 1;
                                       setState(() {});
@@ -377,7 +380,12 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                           style: FlutterFlowTheme.of(context).bodySmall.override(
                                                               fontSize:
                                                                   (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                              color: Colors.white))),
+                                                              color: Colors.white),
+                                                        onChanged: (value) {
+                                                          m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                          print(m);
+                                                        },
+                                                      )),
                                               ],
                                             ),
                                           ),
@@ -412,7 +420,12 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                         ),
                                                         style: FlutterFlowTheme.of(context).bodySmall.override(
                                                             fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                            color: Colors.white))),
+                                                            color: Colors.white),
+                                                      onChanged: (value) {
+                                                        m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                        print(m);
+                                                      },
+                                                    )),
                                               if (selected == 4) SizedBox(height: 15),
                                             ],
                                           ),

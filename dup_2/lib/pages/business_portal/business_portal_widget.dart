@@ -216,7 +216,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     context.pushNamed('parentPortal');
                                   },
                                   child: Text(
-                                    'FOR PARENTS',
+                                    'PARENTS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
                                           color: FlutterFlowTheme.of(context).primaryText,
@@ -408,31 +408,34 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 ),
                                 Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        print('Button pressed ...');
-                                        setState(() {
-                                          contentExpanded = true;
-                                        });
-                                        scrollController.animateTo(
-                                          screenHeight * 0.88,
-                                          duration: Duration(seconds: 2),
-                                          curve: Curves.easeInOut,
-                                        );
-                                      },
-                                      child: Container(
-                                        width: 120,
-                                        height: 120,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0x00FFFFFF),
-                                          border: Border.all(
-                                            color: Colors.white,
+                                    child: MouseRegion(
+                                      cursor: SystemMouseCursors.click,
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          print('Button pressed ...');
+                                          setState(() {
+                                            contentExpanded = true;
+                                          });
+                                          scrollController.animateTo(
+                                            screenHeight * 0.88,
+                                            duration: Duration(seconds: 2),
+                                            curve: Curves.easeInOut,
+                                          );
+                                        },
+                                        child: Container(
+                                          width: 120,
+                                          height: 120,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x00FFFFFF),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
                                           ),
-                                        ),
-                                        child: const Icon(
-                                          Icons.arrow_downward,
-                                          color: Colors.white,
-                                          size: 48.0,
+                                          child: const Icon(
+                                            Icons.arrow_downward,
+                                            color: Colors.white,
+                                            size: 48.0,
+                                          ),
                                         ),
                                       ),
                                     )),
@@ -449,7 +452,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          constraints: BoxConstraints(minHeight: screenHeight * 0.75,),
+                          constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -458,23 +461,23 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                width: screenWidth * 0.4,
+                                width: screenWidth * 0.6 - 50,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                 ),
                                 child: Align(
                                   alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(50.0, 100.0, 0.0, 0.0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(50.0, min(-22 + screenWidth / 9, 100), 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                                        SizedBox(
+                                          height: 70,
                                           child: Text(
-                                            'OUR \nSERVICES',
+                                            'OUR SERVICES',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   fontSize: 48.0,
@@ -562,40 +565,36 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 ),
                               ),
                             ),
+                            SizedBox(width: 50),
                             Container(
-                              width: screenWidth * 0.6,
+                              width: screenWidth * 0.4,
+                              constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
                               child: Stack(
                                 children: [
-                                    Align(
-                                      alignment: const AlignmentDirectional(1.0, -1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 200.0, 0.0),
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(0.0),
-                                          child: Image.asset(
-                                            'assets/images/FT_245_M.webp',
-                                            width: screenWidth * 0.3,
-                                            height: screenHeight * 0.35,
-                                            fit: BoxFit.cover,
-                                          ),
+                                    ConstrainedBox(
+                                      constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
+                                      child: Align(
+                                        alignment: Alignment(-0.2, 0.2),
+                                        child: Image.asset(
+                                          'assets/images/FT_245_M.webp',
+                                          width: 250,
+                                          height: screenHeight * 0.35,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),
-                                    Align(
-                                      alignment: const AlignmentDirectional(-1.0, 1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(200.0, 0.0, 0.0, 100.0),
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(0.0),
-                                          child: Image.asset(
-                                            'assets/images/NAM_007_M.webp',
-                                            width: screenWidth * 0.25,
-                                            height: screenHeight * 0.35,
-                                            fit: BoxFit.cover,
-                                          ),
+                                    ConstrainedBox(
+                                      constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
+                                      child: Align(
+                                        alignment: Alignment(0.2, -0.2),
+                                        child: Image.asset(
+                                          'assets/images/NAM_007_M.webp',
+                                          width: 250,
+                                          height: screenHeight * 0.35,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),
@@ -612,7 +611,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                       ))
                         Container(
                           width: double.infinity,
-                          constraints: BoxConstraints(minHeight: max(screenHeight * 0.8, 750),),
+                          constraints: BoxConstraints(minHeight: max(sqrt(screenHeight) * 25, 750),),
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryBackground,
                           ),
@@ -620,100 +619,102 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    width: screenWidth * 0.5,
-                                    height: screenHeight * 0.4,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                                    ),
-                                    child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(0.0),
-                                        child: Image.asset(
-                                          'images/FT_245_M.webp',
-                                          width: screenWidth * 0.5,
-                                          height: screenHeight * 0.4,
-                                          fit: BoxFit.cover,
+                              ConstrainedBox(
+                                constraints: BoxConstraints(minHeight: 260),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      width: screenWidth * 0.5,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                      ),
+                                      child: Align(
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(0.0),
+                                          child: Image.asset(
+                                            'images/FT_245_M.webp',
+                                            width: screenWidth * 0.5,
+                                            height: max(screenHeight * 0.4, 260),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    width: screenWidth * 0.5,
-                                    height: screenHeight * 0.4,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                                    ),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Align(
-                                          alignment: const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'OUR \nSERVICES',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 30.0,
-                                                ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: max(screenWidth * 0.25, 120),
-                                          height: 32,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFFD9D9D9),
-                                            borderRadius: BorderRadius.circular(24.0),
-                                            shape: BoxShape.rectangle,
-                                          ),
-                                          child: Center(
-                                            child: Text(
-                                              'Programming',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: screenWidth * 0.25,
-                                          height: 32,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFFD9D9D9),
-                                            borderRadius: BorderRadius.circular(24.0),
-                                            shape: BoxShape.rectangle,
-                                          ),
-                                          child: Align(
+                                    Container(
+                                      width: screenWidth * 0.5,
+                                      height: max(screenHeight * 0.4, 260),
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Align(
                                             alignment: const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Design',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                              'OUR \nSERVICES',
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontFamily: 'Readex Pro',
+                                                    fontSize: 30.0,
+                                                  ),
                                             ),
                                           ),
-                                        ),
-                                        Container(
-                                          width: max(screenWidth * 0.25, 95),
-                                          height: 32,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFFD9D9D9),
-                                            borderRadius: BorderRadius.circular(24.0),
-                                            shape: BoxShape.rectangle,
-                                          ),
-                                          child: Align(
-                                            alignment: const AlignmentDirectional(0.0, 0.0),
-                                            child: Text(
-                                              'Marketing',
-                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                          Container(
+                                            width: max(screenWidth * 0.25, 120),
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFFD9D9D9),
+                                              borderRadius: BorderRadius.circular(24.0),
+                                              shape: BoxShape.rectangle,
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                'Programming',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ].divide(const SizedBox(height: 15.0)),
+                                          Container(
+                                            width: screenWidth * 0.25,
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFFD9D9D9),
+                                              borderRadius: BorderRadius.circular(24.0),
+                                              shape: BoxShape.rectangle,
+                                            ),
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Text(
+                                                'Design',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: max(screenWidth * 0.25, 95),
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFFD9D9D9),
+                                              borderRadius: BorderRadius.circular(24.0),
+                                              shape: BoxShape.rectangle,
+                                            ),
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                              child: Text(
+                                                'Marketing',
+                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                              ),
+                                            ),
+                                          ),
+                                        ].divide(const SizedBox(height: 15.0)),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -979,29 +980,35 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.settings_outlined,
-                                        color: FlutterFlowTheme.of(context).secondaryText,
-                                        size: 27.0,
+                                  SizedBox(
+                                    height: 100,
+                                    child: OverflowBox(
+                                      maxWidth: double.infinity,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.settings_outlined,
+                                            color: FlutterFlowTheme.of(context).secondaryText,
+                                            size: 27.0,
+                                          ),
+                                          Text(
+                                            'WHY US',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: min(-38 + screenWidth / 8, 70),
+                                                ),
+                                          ),
+                                          Icon(
+                                            Icons.settings_outlined,
+                                            color: FlutterFlowTheme.of(context).secondaryText,
+                                            size: 27.0,
+                                          ),
+                                        ].divide(const SizedBox(width: 8.0)),
                                       ),
-                                      Text(
-                                        'WHY US',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 70.0,
-                                            ),
-                                      ),
-                                      Icon(
-                                        Icons.settings_outlined,
-                                        color: FlutterFlowTheme.of(context).secondaryText,
-                                        size: 27.0,
-                                      ),
-                                    ].divide(const SizedBox(width: 8.0)),
+                                    ),
                                   ),
                                   const StyledDivider(
                                     thickness: 1.0,
@@ -1089,11 +1096,12 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(12.0),
+                                    padding: EdgeInsets.all((responsiveVisibility(context: context, phone: false)) ? 18 : 12),
                                     child: Text(
                                       'Northern Horizon Career Adventure Lab offers engaging project-based learning and career skills for high school students with the mission of cultivating future leaders through hands-on business experiences and real projects.',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         color: Colors.white,
+                                        fontSize: (responsiveVisibility(context: context, phone: false)) ? 18 : 16,
                                       ),
                                     ),
                                   ),
@@ -1101,7 +1109,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     thickness: 1.0,
                                     indent: 100.0,
                                     endIndent: 100.0,
-                                    color: Color(0xCC000000),
+                                    color: Color(0xCCFFFFFF),
                                     lineStyle: DividerLineStyle.dashed,
                                   ),
                                 ].divide(const SizedBox(height: 25.0)),
@@ -1123,6 +1131,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 height: screenHeight * 0.75,
                                 fit: BoxFit.cover,
                               ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: screenHeight * 0.75,
+                            child: ColoredBox(color: Colors.black38),
                             ),
                             Align(
                               alignment: const AlignmentDirectional(-1.0, -1.0),
@@ -1725,7 +1738,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'About Us',
+                                                'Career',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,

@@ -830,7 +830,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 height: 225.0,
                                                 decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
-                                                    colors: [Color(0xE0054F2C), Color(0x80000000)],
+                                                    colors: [Color(0xA0000000), Color(0x80000000)],
                                                     stops: [0.0, 1.0],
                                                     begin: AlignmentDirectional(0.17, -1.0),
                                                     end: AlignmentDirectional(-0.17, 1.0),
@@ -989,7 +989,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 height: 330.0,
                                                 decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
-                                                    colors: [Color(0xE05C0014), Color(0x80000000)],
+                                                    colors: [Color(0xA0000000), Color(0x80000000)],
                                                     stops: [0.0, 1.0],
                                                     begin: AlignmentDirectional(0.17, -1.0),
                                                     end: AlignmentDirectional(-0.17, 1.0),
@@ -1190,7 +1190,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 height: 225.0,
                                                 decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
-                                                    colors: [Color(0xE0054F2C), Color(0x80000000)],
+                                                    colors: [Color(0xA0000000), Color(0x80000000)],
                                                     stops: [0.0, 1.0],
                                                     begin: AlignmentDirectional(0.17, -1.0),
                                                     end: AlignmentDirectional(-0.17, 1.0),
@@ -1349,7 +1349,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 height: 700.0,
                                                 decoration: const BoxDecoration(
                                                   gradient: LinearGradient(
-                                                    colors: [Color(0xE05C0014), Color(0x80000000)],
+                                                    colors: [Color(0xA0000000), Color(0x80000000)],
                                                     stops: [0.0, 1.0],
                                                     begin: AlignmentDirectional(0.17, -1.0),
                                                     end: AlignmentDirectional(-0.17, 1.0),
@@ -2434,7 +2434,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 50.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -2469,7 +2469,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 60.0)),
+                                ].divide(const SizedBox(width: 40.0)),
                               ),
                             ),
                           ),
@@ -2548,16 +2548,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                     ],
                                                   ),
-                                                  Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                    child: Text(
-                                                      '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            fontFamily: 'Readex Pro',
-                                                            color: Colors.white,
-                                                            fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
+                                                  SizedBox(
+                                                    width: 1000,
+                                                    child: Padding(
+                                                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                      child: Text(
+                                                        '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
+                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                              fontFamily: 'Readex Pro',
+                                                              color: Colors.white,
+                                                              fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
+                                                              fontWeight: FontWeight.w200,
+                                                            ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ].divide(const SizedBox(height: 20.0)),
@@ -3368,282 +3371,272 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, -1.0),
                                 child: Container(
                                   width: screenWidth * 0.9,
-                                  height: screenHeight * 0.76,
                                   decoration: const BoxDecoration(
                                     color: Color(0xFFD0CECE),
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0.0),
-                                      bottomRight: Radius.circular(0.0),
-                                      topLeft: Radius.circular(0.0),
-                                      topRight: Radius.circular(0.0),
                                     ),
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      InkWell(
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        child: Image.asset(
-                                          'assets/images/2023NA_031.webp',
-                                          width: screenWidth * 0.8,
-                                          height: screenHeight * 0.3,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                        tabletLandscape: false,
-                                      ))
-                                        Container(
-                                          width: screenWidth * 0.8,
-                                          height: screenHeight * 0.37,
-                                          decoration: const BoxDecoration(
-                                            color: Color(0x00FFFFFF),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 40.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          InkWell(
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            child: Image.asset(
+                                              'assets/images/2023NA_031.webp',
+                                              width: screenWidth * 0.8,
+                                              height: screenHeight * 0.3,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                            children: [
-                                              FittedBox(
-                                                child: Text(
-                                                  'SUBSCRIBE TO OUR NEWSLETTER',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          if (responsiveVisibility(
+                                            context: context,
+                                            phone: false,
+                                            tablet: false,
+                                            tabletLandscape: false,
+                                          ))
+                                            Container(
+                                              width: screenWidth * 0.8,
+                                              height: screenHeight * 0.37,
+                                              decoration: const BoxDecoration(
+                                                color: Color(0x00FFFFFF),
+                                              ),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                children: [
+                                                  FittedBox(
+                                                    child: Text(
+                                                      'SUBSCRIBE TO OUR NEWSLETTER',
+                                                      textAlign: TextAlign.center,
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         fontSize: 60.0,
                                                         letterSpacing: 8.0,
                                                         color: Colors.black,
                                                         fontWeight: FontWeight.w900,
                                                       ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
-                                                child: Text(
-                                                  'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
+                                                    child: Text(
+                                                      'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
+                                                      textAlign: TextAlign.center,
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
                                                         fontSize: 21.0,
                                                         color: Colors.black,
                                                       ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
-                                                  child: SizedBox(
-                                                    width: screenWidth * 0.5,
-                                                    child: Form(
-                                                      key: _formKey,
-                                                      child: TextFormField(
-                                                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                                                        onFieldSubmitted: (value) async {
-                                                          if (_formKey.currentState!.validate()) {
-                                                            setState(() {
-                                                              sendEmail(value);
-                                                              isEmailSent = true;
-                                                            });
-                                                            _model.textController1?.clear();
-                                                            await resetForm();
-                                                          }
-                                                        },
-                                                        controller: _model.textController1,
-                                                        focusNode: _model.textFieldFocusNode1,
-                                                        autofocus: false,
-                                                        obscureText: false,
-                                                        decoration: InputDecoration(
-                                                          labelText: isEmailSent ? 'Sent' : 'Enter your email',
-                                                          labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                          enabledBorder: OutlineInputBorder(
-                                                            borderSide: const BorderSide(
-                                                              color: Colors.black,
-                                                              width: 1.0,
+                                                    ),
+                                                  ),
+                                                  Flexible(
+                                                    child: Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
+                                                      child: SizedBox(
+                                                        width: screenWidth * 0.5,
+                                                        child: Form(
+                                                          key: _formKey,
+                                                          child: TextFormField(
+                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                            onFieldSubmitted: (value) async {
+                                                              if (_formKey.currentState!.validate()) {
+                                                                setState(() {
+                                                                  sendEmail(value);
+                                                                  isEmailSent = true;
+                                                                });
+                                                                _model.textController1?.clear();
+                                                                await resetForm();
+                                                              }
+                                                            },
+                                                            controller: _model.textController1,
+                                                            focusNode: _model.textFieldFocusNode1,
+                                                            autofocus: false,
+                                                            obscureText: false,
+                                                            decoration: InputDecoration(
+                                                              labelText: isEmailSent ? 'Sent' : 'Enter your email',
+                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              enabledBorder: OutlineInputBorder(
+                                                                borderSide: const BorderSide(
+                                                                  color: Colors.black,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              focusedBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              errorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              focusedErrorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              filled: true,
+                                                              fillColor: Colors.white,
+                                                              suffixIcon: const Icon(
+                                                                Icons.arrow_forward,
+                                                              ),
                                                             ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          focusedBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).primary,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          errorBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          focusedErrorBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          filled: true,
-                                                          fillColor: Colors.white,
-                                                          suffixIcon: const Icon(
-                                                            Icons.arrow_forward,
-                                                          ),
-                                                        ),
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               letterSpacing: 1.0,
                                                               lineHeight: 1.0,
                                                               color: Colors.black,
                                                             ),
-                                                        textAlign: TextAlign.start,
-                                                        validator: (value) {
-                                                          return _validateEmail(value!);
-                                                        },
+                                                            textAlign: TextAlign.start,
+                                                            validator: (value) {
+                                                              return _validateEmail(value!);
+                                                            },
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
-                                                ),
+                                                ].divide(const SizedBox(height: 22.0)).addToStart(const SizedBox(height: 25.0)),
                                               ),
-                                            ].divide(const SizedBox(height: 22.0)).addToStart(const SizedBox(height: 25.0)),
-                                          ),
-                                        ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        desktop: false,
-                                      ))
-                                        Container(
-                                          width: screenWidth * 0.8,
-                                          height: screenHeight * 0.37,
-                                          decoration: const BoxDecoration(
-                                            color: Color(0x00FFFFFF),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'SUBSCRIBE TO OUR NEWSLETTER',
-                                                textAlign: TextAlign.center,
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            ),
+                                          if (responsiveVisibility(
+                                            context: context,
+                                            desktop: false,
+                                          ))
+                                            Container(
+                                              width: screenWidth * 0.8,
+                                              decoration: const BoxDecoration(
+                                                color: Color(0x00FFFFFF),
+                                              ),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    'SUBSCRIBE TO OUR NEWSLETTER',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       fontFamily: 'Readex Pro',
                                                       fontSize: 18.0 + max(screenWidth * 0.02, 0),
                                                       letterSpacing: (18.0 + max(screenWidth * 0.02, 0))/5,
                                                       color: Colors.black,
                                                       fontWeight: FontWeight.w900,
                                                     ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                child: Text(
-                                                  'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 18.0,
+                                                  ),
+                                                  Padding(
+                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                    child: Text(
+                                                      'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
+                                                      textAlign: TextAlign.center,
+                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontSize: (responsiveVisibility(context: context, phone: false,)) ? 18.0 : 16.0,
                                                         color: Colors.black,
                                                       ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
-                                                  child: SizedBox(
-                                                    width: screenWidth * 0.55,
-                                                    child: Form(
-                                                      key: _formKey,
-                                                      child: TextFormField(
-                                                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                                                        onFieldSubmitted: (value) async {
-                                                          if (_formKey.currentState!.validate()) {
-                                                            setState(() {
-                                                              sendEmail(value);
-                                                              isEmailSent = true;
-                                                            });
-                                                            _model.textController2?.clear();
-                                                            await resetForm();
-                                                          }
-                                                        },
-                                                        controller: _model.textController2,
-                                                        focusNode: _model.textFieldFocusNode2,
-                                                        autofocus: false,
-                                                        obscureText: false,
-                                                        decoration: InputDecoration(
-                                                          labelText: isEmailSent ? 'Sent' : 'Enter your email',
-                                                          labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                                    ),
+                                                  ),
+                                                  Flexible(
+                                                    child: Padding(
+                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
+                                                      child: SizedBox(
+                                                        width: screenWidth * 0.55,
+                                                        child: Form(
+                                                          key: _formKey,
+                                                          child: TextFormField(
+                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                            onFieldSubmitted: (value) async {
+                                                              if (_formKey.currentState!.validate()) {
+                                                                setState(() {
+                                                                  sendEmail(value);
+                                                                  isEmailSent = true;
+                                                                });
+                                                                _model.textController2?.clear();
+                                                                await resetForm();
+                                                              }
+                                                            },
+                                                            controller: _model.textController2,
+                                                            focusNode: _model.textFieldFocusNode2,
+                                                            autofocus: false,
+                                                            obscureText: false,
+                                                            decoration: InputDecoration(
+                                                              labelText: isEmailSent ? 'Sent' : 'Enter your email',
+                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 fontSize: 14.0,
                                                               ),
-                                                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                          enabledBorder: OutlineInputBorder(
-                                                            borderSide: const BorderSide(
-                                                              color: Colors.black,
-                                                              width: 1.0,
+                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                              enabledBorder: OutlineInputBorder(
+                                                                borderSide: const BorderSide(
+                                                                  color: Colors.black,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              focusedBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              errorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              focusedErrorBorder: OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                  width: 1.0,
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(0.0),
+                                                              ),
+                                                              filled: true,
+                                                              fillColor: Colors.white,
+                                                              suffixIcon: const Icon(
+                                                                Icons.arrow_forward,
+                                                                //   onPressed(){
+                                                                //
+                                                                // }f
+                                                              ),
                                                             ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          focusedBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).primary,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          errorBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          focusedErrorBorder: OutlineInputBorder(
-                                                            borderSide: BorderSide(
-                                                              color: FlutterFlowTheme.of(context).error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(0.0),
-                                                          ),
-                                                          filled: true,
-                                                          fillColor: Colors.white,
-                                                          suffixIcon: const Icon(
-                                                            Icons.arrow_forward,
-                                                            //   onPressed(){
-                                                            //
-                                                            // }f
-                                                          ),
-                                                        ),
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               letterSpacing: 1.0,
                                                               lineHeight: 1.0,
                                                               color: Colors.black,
                                                             ),
-                                                        textAlign: TextAlign.start,
-                                                        validator: (value) {
-                                                          return _validateEmail(value!);
-                                                        },
+                                                            textAlign: TextAlign.start,
+                                                            validator: (value) {
+                                                              return _validateEmail(value!);
+                                                            },
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
-                                                ),
+                                                ].divide(const SizedBox(height: 15.0)).addToStart(const SizedBox(height: 25.0)),
                                               ),
-                                            ].divide(const SizedBox(height: 15.0)).addToStart(const SizedBox(height: 25.0)),
-                                          ),
-                                        ),
-                                    ].divide(const SizedBox(height: 20.0)),
-                                  ),
+                                            ),
+                                        ].divide(const SizedBox(height: 20.0)),
+                                      ),
+                                    ),
+
                                 ),
                               ),
                             ],
@@ -3700,7 +3693,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'About Us',
+                                        'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
@@ -3946,7 +3939,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'About Us',
+                                              'Career',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Readex Pro',
                                                 color: Colors.white,
@@ -4130,7 +4123,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                'About Us',
+                                                'Career',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                   fontFamily: 'Readex Pro',
                                                   color: Colors.white,

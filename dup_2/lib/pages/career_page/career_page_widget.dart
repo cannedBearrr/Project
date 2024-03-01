@@ -367,7 +367,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   context.pushNamed('parentPortal');
                                 },
                                 child: Text(
-                                  'FOR PARENTS',
+                                  'PARENTS',
                                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                                         fontFamily: 'Outfit',
                                         color: FlutterFlowTheme.of(context).primaryText,
@@ -391,7 +391,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   context.pushNamed('businessPortal');
                                 },
                                 child: Text(
-                                  'FOR BUSINESS',
+                                  'BUSINESS',
                                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                                         fontFamily: 'Outfit',
                                         color: FlutterFlowTheme.of(context).primaryText,
@@ -494,6 +494,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               fit: BoxFit.cover,
                             ),
                           ),
+                          SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
@@ -587,6 +588,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
+                          SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -597,17 +599,18 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
                                     color: FlutterFlowTheme.of(context).primaryBackground,
-                                    fontSize: 30,
+                                    fontSize: (screenWidth > 445) ? 30 : 24,
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                                   child: Text(
                                     'Join our community and help define it.',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: 50,
+                                      fontSize: (screenWidth > 445) ? 50 : 42,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                 ),
@@ -618,7 +621,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: 18,
+                                      fontSize: (screenWidth > 445) ? 18 : 17,
                                     ),
                                   ),
                                 ),
@@ -3332,7 +3335,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           ),
                                           Text(
-                                            'About Us',
+                                            'Career',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Readex Pro',
                                               color: Colors.white,
