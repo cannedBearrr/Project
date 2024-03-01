@@ -69,8 +69,8 @@ class _CareerOrientedSkillsWidgetState
                   ))
                     ClipRRect(
                       borderRadius: BorderRadius.circular(0.0),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1551553463-1af2d342c72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxncmF8ZW58MHx8fHwxNzAwNTI4NDA1fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                      child: Image.asset(
+                        'images/2023NA_039.webp',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
@@ -168,8 +168,8 @@ class _CareerOrientedSkillsWidgetState
                                 alignment: AlignmentDirectional(0.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHx3aGl0ZXxlbnwwfHx8fDE3MDA1MDI0NDF8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                  child: Image.asset(
+                                    'images/2023NA_039.webp',
                                     width: double.infinity,
                                     height:
                                         MediaQuery.sizeOf(context).height * 0.5,
@@ -205,8 +205,8 @@ class _CareerOrientedSkillsWidgetState
                     tablet: false,
                   ))
                     ClipRRect(
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1432604470246-f4f905367043?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxwZXJvc258ZW58MHx8fHwxNzAxNDQxNzUyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                      child: Image.asset(
+                        'images/2023NA_039.webp',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
