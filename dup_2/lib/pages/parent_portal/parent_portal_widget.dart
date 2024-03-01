@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:sticky_headers/sticky_headers.dart';
 import '/assets/animation/animation_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -347,14 +349,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   'WHERE LEARNING MEETS',
                                   style: FlutterFlowTheme.of(context).bodyLarge.override(
                                         color: Colors.white,
-                                      fontSize: (min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0))/ 2.6,
+                                      fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-82 + screenHeight / 10, 0)))/2.6,
                                       ),
                                 ),
                                 Text(
                                   'OPPORTUNITY',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         color: const Color(0xFFEEB609),
-                                        fontSize: min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0),
+                                        fontSize: min(-6 + screenWidth / 8.6, 45) + sqrt(max(-82 + screenHeight / 10, 0)) - 1,
                                         letterSpacing: 1.5,
                                         lineHeight: 1.05,
                                         fontWeight: FontWeight.bold,
@@ -401,7 +403,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 2.2,
+                                          fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) / 2.2,
                                         ),
                                       ),
                                     ),
@@ -422,15 +424,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   },
                                   text: 'Read More',
                                   options: FFButtonOptions(
-                                    width: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) * 2.5,
-                                    height: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 1.8,
+                                    width: max((min(-6 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) * 2.5, 115),
+                                    height: max((min(-6 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) / 1.8, 25),
                                     padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                     iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                     color: const Color(0x004B39EF),
                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
-                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 4,
+                                          fontSize: max((min(-2 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) / 4, 1),
                                         ),
                                     elevation: 3.0,
                                     borderSide: const BorderSide(
@@ -1666,7 +1668,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    fontSize: 30.0,
+                                    fontSize: min(-1 + screenWidth/13, 30),
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black,
                                   ),
@@ -2263,55 +2265,54 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 13.0, 0.0, 11.0),
-                          child: Container(
-                            width: double.infinity,
-                            height: 315.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).secondaryBackground,
-                            ),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(29.0, 0.0, 29.0, 0.0),
-                                    child: Text(
-                                      'How to get started?',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 45.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 300.0,
-                                    child: Divider(
-                                      thickness: 1.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 7.0),
-                                      child: Flexible(
-                                          child: Text(
-                                          'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 15.0,
-                                                  fontWeight: FontWeight.w300,
-                                                ),
-                                          ),
+                          child: widget(
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                              ),
+                              child: Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(29.0, 0.0, 29.0, 0.0),
+                                      child: Text(
+                                        'How to get started?',
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              fontSize: 45.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(
+                                      width: 300.0,
+                                      child: Divider(
+                                        thickness: 1.0,
+                                        color: Color(0xCC000000),
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 7.0),
+                                        child: Text(
+                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 15.0,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -2351,16 +2352,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 0.0),
-                                  child: Flexible(
-                                    child: Text(
-                                      'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w300,
-                                          ),
-                                    ),
+                                  child: Text(
+                                    'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w300,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -2405,19 +2404,13 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   child: Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
-                                      child: Container(
-                                        decoration: const BoxDecoration(),
-                                        child: Flexible(
-                                          child: Text(
-                                            'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 17.0,
-                                                  fontWeight: FontWeight.w300,
-                                                ),
-                                          ),
-                                        ),
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
+                                      child: Text(
+                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontSize: (screenWidth > 925) ? 17.0 : 15.0,
+                                              fontWeight: FontWeight.w300,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -2464,16 +2457,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                   Flexible(
-                                    child: Flexible(
-                                      child: Text(
-                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.w300,
-                                              color: Colors.black,
-                                            ),
-                                      ),
+                                    child: Text(
+                                      'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
                                     ),
                                   ),
                                 ].divide(const SizedBox(width: 60.0)),
