@@ -815,7 +815,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 100.0, 100.0, 34.0),
+                                                padding: const EdgeInsetsDirectional.fromSTEB(200.0, 100.0, 100.0, 34.0),
                                                 child: Text(
                                                   'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                                   style: FlutterFlowTheme.of(context).bodyLarge,
