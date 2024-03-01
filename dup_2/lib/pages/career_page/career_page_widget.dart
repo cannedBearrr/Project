@@ -446,15 +446,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       ),
                       child: Stack(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(
-                              'images/CopyofWCAwardCerts.jpg',
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
+                          Image.asset(
+                            'images/CopyofWCAwardCerts.jpg',
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.cover,
                           ),
+                          SizedBox.expand(child: ColoredBox(color: Colors.black26,)),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: SizedBox(
@@ -466,6 +464,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       color: FlutterFlowTheme.of(context).primaryBackground,
                                       fontSize: 35,
                                     ),
+                                textAlign: TextAlign.justify,
                               ),
                             ),
                           ),
@@ -499,11 +498,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                               child: Text(
-                                'At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world.',
+                                '"At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world."',
                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
                                       color: Colors.white,
                                       fontSize: 21,
                                     ),
+                                textAlign: TextAlign.justify,
                               ),
                             ),
                           ),

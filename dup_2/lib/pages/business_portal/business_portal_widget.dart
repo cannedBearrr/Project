@@ -1103,6 +1103,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         color: Colors.white,
                                         fontSize: (responsiveVisibility(context: context, phone: false)) ? 18 : 16,
                                       ),
+                                      textAlign: TextAlign.justify,
                                     ),
                                   ),
                                   const StyledDivider(
