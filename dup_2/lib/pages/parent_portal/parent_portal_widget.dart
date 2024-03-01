@@ -26,7 +26,7 @@ Future<http.Response> sendEmail(String email) {
   );
 }
 
-// Allows page to scroll the Pageview
+// Allows page to drag the Pageview
 class YesScrollBehavior extends ScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
@@ -156,7 +156,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       context.pushNamed('businessPortal');
                                     },
                                     child: Text(
-                                      'FOR BUSINESS',
+                                      'BUSINESS',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context).headlineMedium.override(
                                             fontFamily: 'Outfit',
@@ -246,7 +246,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     context.pushNamed('businessPortal');
                                   },
                                   child: Text(
-                                    'FOR BUSINESS',
+                                    'BUSINESS',
                                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                                           fontFamily: 'Outfit',
                                           color: Colors.black,
@@ -323,11 +323,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           Image.network(
                             'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDB8fHx8MTcwMDY4Mjk1Nnww&ixlib=rb-4.0.3&q=80',
                             width: screenWidth * 1.0,
-                            height: max(600.0, screenHeight * 1.0 - 40),
+                            height: MediaQuery.sizeOf(context).height - 40,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(
-                            height: screenHeight - 40,
+                            height: MediaQuery.sizeOf(context).height - 40,
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -344,112 +344,106 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                FittedBox(
-                                  child: SizedBox(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
-                                          child: Text(
-                                            'WHERE LEARNING MEETS',
-                                            style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                  color: Colors.white,
-                                                ),
-                                          ),
-                                        ),
-                                        Text(
-                                          'OPPORTUNITY',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                color: const Color(0xFFEEB609),
-                                                fontSize: 45.0,
-                                                letterSpacing: 1.5,
-                                                lineHeight: 1.05,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
-                                          child: RichText(
-                                            text: TextSpan(
-                                              children: const [
-                                                TextSpan(
-                                                  text: 'WE HELP STUDENTS DEFINE THEIR',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' CAREER',
-                                                  style: TextStyle(
-                                                    color: Color(0xFFEEB609),
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                  ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT\n-BASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' PORTFOLIOS',
-                                                  style: TextStyle(
-                                                    color: Color(0xFFEEB609),
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: '.',
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                  ),
-                                                )
-                                              ],
-                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                  fontSize: 19,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        FFButtonWidget(
-                                          onPressed: () {
-                                            setState(() {
-                                              // expand rest of content
-                                              contentExpanded = true;
-                                            });
-                                            scrollController.animateTo(
-                                              screenHeight * 0.95 - 50,
-                                              duration: const Duration(seconds: 1, milliseconds: 500),
-                                              curve: Curves.easeInOut,
-                                            );
-                                          },
-                                          text: 'Read More',
-                                          options: FFButtonOptions(
-                                            width: 115,
-                                            height: 25,
-                                            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0x004B39EF),
-                                            textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  fontSize: 1.0,
-                                                ),
-                                            elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                Spacer(flex: 2),
+                                Text(
+                                  'WHERE LEARNING MEETS',
+                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                        color: Colors.white,
+                                      fontSize: (min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0))/ 2.6,
+                                      ),
+                                ),
+                                Text(
+                                  'OPPORTUNITY',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        color: const Color(0xFFEEB609),
+                                        fontSize: min(-2 + screenWidth / 9, 45) + max(-82 + screenHeight / 10, 0),
+                                        letterSpacing: 1.5,
+                                        lineHeight: 1.05,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                                Spacer(flex: 2),
+                                ConstrainedBox(
+                                  constraints: BoxConstraints(maxWidth: 580),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05, vertical: 8.0),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: const [
+                                          TextSpan(
+                                            text: 'WE HELP STUDENTS DEFINE THEIR',
+                                            style: TextStyle(
                                               color: Colors.white,
-                                              width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.circular(22.0),
                                           ),
+                                          TextSpan(
+                                            text: ' CAREER',
+                                            style: TextStyle(
+                                              color: Color(0xFFEEB609),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text:
+                                            ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ' PORTFOLIOS',
+                                            style: TextStyle(
+                                              color: Color(0xFFEEB609),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '.',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                        style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 2.2,
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                                      Spacer(flex: 7),
+                                Spacer(flex: 2),
+                                FFButtonWidget(
+                                  onPressed: () {
+                                    setState(() {
+                                      // expand rest of content
+                                      contentExpanded = true;
+                                    });
+                                    scrollController.animateTo(
+                                      screenHeight * 0.95 - 50,
+                                      duration: const Duration(seconds: 1, milliseconds: 500),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  },
+                                  text: 'Read More',
+                                  options: FFButtonOptions(
+                                    width: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) * 2.5,
+                                    height: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 1.8,
+                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                    color: const Color(0x004B39EF),
+                                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                          fontSize: (min(-2 + screenWidth / 9, 45) + max(-41 + screenHeight / 20, 0)) / 4,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: const BorderSide(
+                                      color: Colors.white,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(22.0),
+                                  ),
+                                ),
+                                      Spacer(flex: 4),
+                                SizedBox(height: 20),
                               ],
                             ),
                           ),
@@ -1007,7 +1001,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1028,7 +1022,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1049,7 +1043,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1070,7 +1064,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 260.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1208,7 +1202,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 265.0,
                                                         height: 48.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1367,7 +1361,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 290.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1377,7 +1371,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Computer\nProgramming',
+                                                          'Computer Programming',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1451,7 +1445,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 275.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1461,7 +1455,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Financial\nManagement',
+                                                          'Financial Management',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -1535,7 +1529,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
+                                                        width: 275.0,
                                                         height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
@@ -1545,7 +1539,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                                         child: Text(
-                                                          'Business\nDevelopment',
+                                                          'Business Development',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                 fontFamily: 'Readex Pro',
                                                                 color: const Color(0xDDFFFFFF),
@@ -2306,16 +2300,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 7.0),
-                                      child: Flexible(
-                                          child: Text(
-                                          'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 15.0,
-                                                  fontWeight: FontWeight.w300,
-                                                ),
-                                          ),
+                                      child: Text(
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: 'Readex Pro',
+                                              fontSize: 15.0,
+                                              fontWeight: FontWeight.w300,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -2359,16 +2351,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 0.0),
-                                  child: Flexible(
-                                    child: Text(
-                                      'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w300,
-                                          ),
-                                    ),
+                                  child: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a molestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w300,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -2416,15 +2406,13 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
                                       child: Container(
                                         decoration: const BoxDecoration(),
-                                        child: Flexible(
-                                          child: Text(
-                                            'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 17.0,
-                                                  fontWeight: FontWeight.w300,
-                                                ),
-                                          ),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare finibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque mollis sed lacus a molestie. Nunc commodo nulla id lorem venenatis, porttitor rhoncus elit.',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 17.0,
+                                                fontWeight: FontWeight.w300,
+                                              ),
                                         ),
                                       ),
                                     ),
@@ -2446,46 +2434,39 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           color: Colors.white,
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'How to get\nstarted ?',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          fontFamily: 'Readex Pro',
-                                          fontSize: 90.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                          lineHeight: 1.12,
-                                        ),
-                                  ),
-                                  const SizedBox(
-                                    height: 180.0,
-                                    child: VerticalDivider(
-                                      thickness: 1.0,
-                                      width: 0.0,
-                                      color: Color(0xCC000000),
-                                    ),
-                                  ),
-                                  Flexible(
-                                    child: Flexible(
-                                      child: Text(
-                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.w300,
-                                              color: Colors.black,
-                                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'How to get\nstarted ?',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 90.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                        lineHeight: 1.12,
                                       ),
-                                    ),
+                                ),
+                                const SizedBox(
+                                  height: 180.0,
+                                  child: VerticalDivider(
+                                    thickness: 1.0,
+                                    width: 0.0,
+                                    color: Color(0xCC000000),
                                   ),
-                                ].divide(const SizedBox(width: 60.0)),
-                              ),
+                                ),
+                                Text(
+                                  'Lorem ipsum dolor sit amet, consectetur adipiscing\nelit. Proin ornare finibus cursus. Vestibulum ante\nipsum primis in faucibus orci luctus et ultrices\nposuere cubilia curae; Quisque mollis sed lacus a\nmolestie. Nunc commodo nulla id lorem venenatis,\nporttitor rhoncus elit.',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.black,
+                                      ),
+                                ),
+                              ].divide(const SizedBox(width: 60.0)),
                             ),
                           ),
                         ),
@@ -3446,15 +3427,15 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
-                                                child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too many emails.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontFamily: 'Readex Pro',
-                                                        fontSize: 21.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                ),
+                                                // child: Text(
+                                                //   'Subscribe for news and updates. We promise we won\'t send too much email.',
+                                                //   textAlign: TextAlign.center,
+                                                //   style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                //         fontFamily: 'Readex Pro',
+                                                //         fontSize: 21.0,
+                                                //         color: Colors.black,
+                                                //       ),
+                                                // ),
                                               ),
                                               Flexible(
                                                 child: Padding(
@@ -3560,17 +3541,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       color: Colors.black,
                                                       fontWeight: FontWeight.w900,
                                                     ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too many emails.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 18.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                ),
                                               ),
                                               Flexible(
                                                 child: Padding(
