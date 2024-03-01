@@ -57,7 +57,7 @@ class _ProjectBasedLearningWidgetState
               alignment: AlignmentDirectional(0.0, 0.0),
               child: Container(
                 width: MediaQuery.sizeOf(context).width * 0.8,
-                height: MediaQuery.sizeOf(context).height * 0.76,
+                height: 800,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.circular(24.0),
@@ -78,7 +78,10 @@ class _ProjectBasedLearningWidgetState
                     Text(
                       'Our Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjfOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjfOur Currisum is sndskdnskdnsknsfdfdf\n',
                       textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Readex Pro',
+                        fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
+                      ),
                     ),
                   ]
                       .divide(SizedBox(height: 40.0))
