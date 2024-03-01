@@ -8,8 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'donate_page_model.dart';
-export 'donate_page_model.dart';
 
 class DonatePageWidget extends StatefulWidget {
   const DonatePageWidget({super.key, required this.m});
@@ -50,7 +48,6 @@ class CCFormatter extends TextInputFormatter {
 }
 
 class _DonatePageWidgetState extends State<DonatePageWidget> {
-  late DonatePageModel _model;
 
   final double m;
   _DonatePageWidgetState(this.m);
@@ -135,7 +132,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                         Text(
                           aController3.text +
                               ((aController3.text.isNotEmpty && aController4.text.isNotEmpty) ? ", " : "") +
-                              ((aController4.text.isEmpty) ? " " : aController4.text) +
+                              ((aController3.text.isNotEmpty && aController5.text.isNotEmpty) ? " " : aController4.text) +
                               ((aController4.text.isNotEmpty && aController5.text.isNotEmpty) ? " " : "") +
                               aController5.text,
                           style: FlutterFlowTheme.of(context).bodyMedium,

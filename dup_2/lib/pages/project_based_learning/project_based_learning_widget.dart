@@ -57,7 +57,7 @@ class _ProjectBasedLearningWidgetState
               alignment: AlignmentDirectional(0.0, 0.0),
               child: Container(
                 width: MediaQuery.sizeOf(context).width * 0.8,
-                height: 800,
+                height: MediaQuery.sizeOf(context).height * 0.76,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.circular(24.0),
@@ -71,18 +71,20 @@ class _ProjectBasedLearningWidgetState
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            fontSize: 35.0,
+                            fontSize: 45.0,
                             fontWeight: FontWeight.bold,
                           ),
                     ),
-                    Text(
-                      'Our Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjfOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjf\nOur Currisum is sndskdnskdnsknsfdfdf\nsdfsdfdfkjdsfdsklfjlsdjfOur Currisum is sndskdnskdnsknsfdfdf\n',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
-                        fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(225.0, 0.0, 225.0, 0.0),
+                  child: Text(
+                    'Project-Based Learning (PBL) engages students in real-world projects, fostering critical thinking and collaboration. It mirrors authentic scenarios, promoting skills like inquiry-based learning and autonomy. Students actively contribute to project design, emphasizing the integration of subjects and the interconnectedness of real-world knowledge. PBL encourages reflection, self-assessment, and the development of essential skills. Assessment focuses on holistic growth, preparing students for the complexities of the real world.',
+                    textAlign: TextAlign.center,
+                    style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                      fontSize: 30.0,
+                        ),
                       ),
-                    ),
+                ),
                   ]
                       .divide(SizedBox(height: 40.0))
                       .addToStart(SizedBox(height: 60.0)),
