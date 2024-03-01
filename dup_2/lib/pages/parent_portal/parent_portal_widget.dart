@@ -3423,7 +3423,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 children: [
                                                   FittedBox(
                                                     child: Text(
-                                                      'SUBSCRIBE TO OUR NEWSLETTER',
+                                                      'SUBSCRIBE TO OUR NEWSLETTE1R',
                                                       textAlign: TextAlign.center,
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
 
@@ -3540,7 +3540,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   Text(
-                                                    'SUBSCRIBE TO OUR NEWSLETTER',
+                                                    'SUBSCRIBE TO OUR NEWSLETTE22R',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
 
