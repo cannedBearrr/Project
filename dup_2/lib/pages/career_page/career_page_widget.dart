@@ -100,7 +100,7 @@ class _EmailWidgetState extends State<EmailDialog> {
   Widget build(BuildContext context) {
 
     double screenWidth = MediaQuery.sizeOf(context).width;
-    
+
     return Padding(
       padding: const EdgeInsetsDirectional.all(12.0),
       child: ConstrainedBox(
@@ -448,8 +448,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/693/600',
+                            child: Image.asset(
+                              'images/CopyofWCAwardCerts.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
@@ -487,8 +487,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/795/600',
+                            child: Image.asset(
+                              'images/CopyofWCAwardCerts.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
@@ -496,12 +496,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                           Align(
                             child: Padding(
-                              padding: const EdgeInsets.all(16.0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                               child: Text(
                                 'At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world.',
                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                  fontSize: 21,
                                       color: Colors.white,
+                                      fontSize: 21,
                                     ),
                               ),
                             ),
@@ -523,7 +523,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/CopyofWCAwardCerts.jpg',
+                            'images/Anson.webp',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -582,39 +582,38 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/CopyofWCAwardCerts.jpg',
+                            'images/Anson.webp',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                          SizedBox.expand(child: ColoredBox(color: Colors.black45),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                            child: Align(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  SizedBox(),
-                                  Text(
-                                    'Life at Northern Horizon',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: 30,
-                                    ),
+                          Align(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'Life at Northern Horizon',
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primaryBackground,
+                                    fontSize: 30,
                                   ),
-                                  Text(
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  child: Text(
                                     'Join our community and help define it.',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context).primaryBackground,
                                       fontSize: 50,
-                                        fontWeight: FontWeight.w800,
                                     ),
                                   ),
-                                  Text(
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  child: Text(
                                     'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Readex Pro',
@@ -622,9 +621,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       fontSize: 18,
                                     ),
                                   ),
-                                      SizedBox(),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -2056,8 +2054,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.network(
-                                    'https://picsum.photos/seed/328/600',
+                                  Image.asset(
+                                    'images/2023NA_030.webp',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,

@@ -1273,8 +1273,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      InkWell(
-                                        child: Text(
+                                      Text(
                                           'LEARN MORE',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Readex Pro',
@@ -1283,13 +1282,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                      ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            context.pushNamed('parentPortal');
-                                          },
                                           child: Text(
                                             'Home',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1300,7 +1294,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             ),
                                           ),
                                         ),
-                                      ),
                                       Text(
                                         'About Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(

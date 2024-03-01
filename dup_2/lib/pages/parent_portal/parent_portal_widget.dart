@@ -752,7 +752,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrpfei.webp',
+                                      'assets/images/Trophie.jpg',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -818,7 +818,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrpfei2.webp',
+                                                'assets/images/Trophie.jpg',
                                                 width: double.infinity,
                                                 height: 225.0,
                                                 fit: BoxFit.cover,
@@ -911,7 +911,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrprsp.webp',
+                                      'assets/images/2023NA_036.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -977,7 +977,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrprsp2.webp',
+                                                'assets/images/2023NA_036.webp',
                                                 width: double.infinity,
                                                 height: 330.0,
                                                 fit: BoxFit.cover,
@@ -1111,8 +1111,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               children: [
                                 Stack(
                                   children: [
-                                    Image.network(
-                                      'https://images.unsplash.com/photo-1562845029-d1b530d4cfd3?auto=format&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw4fHxibGFja2JlcnJ5fGVufDB8fHx8MTcwNDkzNTc2OHww&ixlib=rb-4.0.3&q=80',
+                                    Image.asset(
+                                      'images/2023NA_040.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -1178,7 +1178,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrpfei2.webp',
+                                                'assets/images/2023NA_040.webp',
                                                 width: double.infinity,
                                                 height: 225.0,
                                                 fit: BoxFit.cover,
@@ -1271,7 +1271,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/images/photocrpblu.webp',
+                                      'assets/images/2023NA_034.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -1337,7 +1337,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           expanded: Stack(
                                             children: [
                                               Image.asset(
-                                                'assets/images/photocrprsp2.webp',
+                                                'assets/images/2023NA_034.webp',
                                                 width: double.infinity,
                                                 height: 700.0,
                                                 fit: BoxFit.fitHeight,
@@ -2856,14 +2856,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                             fontFamily: 'Readex Pro',
                                                             color: const Color(0xaaffffff),
-                                                            fontSize: 30.0,
+                                                            fontSize: 20.0,
                                                             fontWeight: FontWeight.bold,
                                                           ),
                                                     ),
                                                   ],
                                                 ),
                                                 SizedBox(
-                                                  width: 1000,
+                                                  width: 1200,
                                                   child: Padding(
                                                     padding: const EdgeInsets.symmetric(horizontal: 32.0),
                                                     child: Text(
@@ -3268,7 +3268,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  'assets/images/minh-picture.jpg',
+                                                  'assets/images/james-picture.jpg',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -3283,7 +3283,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisSize: MainAxisSize.max,
                                                     children: [
                                                       Text(
-                                                        'MINH PHAM',
+                                                        'JAMES ZHANG',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               color: Colors.white,
@@ -3292,7 +3292,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                             ),
                                                       ),
                                                       Text(
-                                                        'Undergraduate, Data Science',
+                                                        'Senior Programmer at NH',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                               fontFamily: 'Readex Pro',
                                                               color: const Color(0xaaffffff),
@@ -3307,7 +3307,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   width: screenWidth * 0.9,
                                                   decoration: const BoxDecoration(),
                                                   child: Text(
-                                                    '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
+                                                    '“Thank you, Northern Horizon,for providing me with an intuitive course introducing popular programming languages and giving me the opportunities to be involved in real-time projects which has prepared me for college and my future careers. Here is a big Thank-You!”\n',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontFamily: 'Readex Pro',
                                                           color: Colors.white,
@@ -3430,7 +3430,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                                                 child: Text(
-                                                  'Subscribe for news and updates. We promise we won\'t send too many emails.',
+                                                  'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontFamily: 'Readex Pro',
@@ -3543,6 +3543,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       color: Colors.black,
                                                       fontWeight: FontWeight.w900,
                                                     ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                child: Text(
+                                                  'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    fontSize: 18.0,
+                                                        color: Colors.black,
+                                                      ),
+                                                ),
                                               ),
                                               Flexible(
                                                 child: Padding(
