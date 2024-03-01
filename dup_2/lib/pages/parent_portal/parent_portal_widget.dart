@@ -3414,7 +3414,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           ))
                                             Container(
                                               width: screenWidth * 0.8,
-                                              height: screenHeight * 0.37,
+                                              height: screenHeight * 0.25,
                                               decoration: const BoxDecoration(
                                                 color: Color(0x00FFFFFF),
                                               ),
