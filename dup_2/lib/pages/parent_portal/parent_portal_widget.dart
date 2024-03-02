@@ -1712,25 +1712,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           decoration: const BoxDecoration(
                             color: Color(0xFFE7DCC6),
                           ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    text: (screenWidth > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[
-                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))
-                                    ],
+                          child: Align(
+                              child: Text('HOW TO ACHIEVE OUR GOALS?', 
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
                                           fontSize: 45.0,
-                                          color: Colors.red[700],
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ],
+                                          color: Colors.black,
+                              ),),
                           ),
                         ),
                       if (responsiveVisibility(
