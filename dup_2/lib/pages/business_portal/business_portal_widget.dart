@@ -903,7 +903,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   child: Padding(
                                     padding: EdgeInsets.fromLTRB((responsiveVisibility(context: context, phone: false)) ? 45 : 30, (responsiveVisibility(context: context, phone: false)) ? 55 : 40, 0, 0),
                                     child: SizedBox(
-                                        width: 233,
+                                        width: 242,
                                         height: 195,
                                         child: Text(
                                           "WHAT\nWE\nDO",

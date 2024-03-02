@@ -72,7 +72,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
-                                        fontSize: 55.0,
+                                        fontSize: (responsiveVisibility(context: context, phone: false)) ? 55 : 40,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
@@ -84,7 +84,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                                   'Project-Based Learning (PBL) engages students in real-world projects, fostering critical thinking and collaboration. It mirrors authentic scenarios, promoting skills like inquiry-based learning and autonomy. Students actively contribute to project design, emphasizing the integration of subjects and the interconnectedness of real-world knowledge. PBL encourages reflection, self-assessment, and the development of essential skills. Assessment focuses on holistic growth, preparing students for the complexities of the real world.',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
-                                        fontSize: 35.0,
+                                        fontSize: (responsiveVisibility(context: context, phone: false)) ? 24 : 18,
                                       ),
                                 ),
                               ),
