@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -119,7 +118,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                SizedBox.shrink(),
+                                const SizedBox.shrink(),
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
@@ -191,7 +190,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                SizedBox.shrink(),
+                                const SizedBox.shrink(),
                               ].divide(const Spacer()),
                             ),
                           ),
@@ -305,7 +304,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Spacer(),
+                                const Spacer(),
                                 Text(
                                   'WHERE LEARNING MEETS',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -326,7 +325,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 ),
                                 FFButtonWidget(
                                   onPressed: () {
-                                    print('Button pressed ...');
                                     setState(() {
                                       contentExpanded = true;
                                     });
@@ -354,7 +352,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     borderRadius: BorderRadius.circular(24.0),
                                   ),
                                 ),
-                                Spacer(flex: 6),
+                                const Spacer(flex: 6),
                               ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 90.0)),
                             ),
                           ),
@@ -381,7 +379,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                SizedBox(height: 40),
+                                const SizedBox(height: 40),
                                 Align(
                                   alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Text(
@@ -413,13 +411,12 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       cursor: SystemMouseCursors.click,
                                       child: GestureDetector(
                                         onTap: () {
-                                          print('Button pressed ...');
                                           setState(() {
                                             contentExpanded = true;
                                           });
                                           scrollController.animateTo(
                                             screenHeight * 0.88,
-                                            duration: Duration(seconds: 2),
+                                            duration: const Duration(seconds: 2),
                                             curve: Curves.easeInOut,
                                           );
                                         },
@@ -487,7 +484,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           ),
                                         ),
                                         ConstrainedBox(
-                                          constraints: BoxConstraints(maxWidth: 290),
+                                          constraints: const BoxConstraints(maxWidth: 290),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -560,13 +557,13 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
                                             style: FlutterFlowTheme.of(context).bodyMedium,
                                           ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                     ].divide(const SizedBox(height: 15.0)),
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(width: 50),
+                            const SizedBox(width: 50),
                             Container(
                               width: screenWidth * 0.4,
                               constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
@@ -578,7 +575,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ConstrainedBox(
                                       constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
                                       child: Align(
-                                        alignment: Alignment(-0.2, 0.2),
+                                        alignment: const Alignment(-0.2, 0.2),
                                         child: Image.asset(
                                           'assets/images/FT_245_M.webp',
                                           width: 250,
@@ -590,7 +587,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ConstrainedBox(
                                       constraints: BoxConstraints(minHeight: screenHeight * 0.5,),
                                       child: Align(
-                                        alignment: Alignment(0.2, -0.2),
+                                        alignment: const Alignment(0.2, -0.2),
                                         child: Image.asset(
                                           'assets/images/NAM_007_M.webp',
                                           width: 250,
@@ -621,7 +618,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               ConstrainedBox(
-                                constraints: BoxConstraints(minHeight: 260),
+                                constraints: const BoxConstraints(minHeight: 260),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -636,7 +633,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'images/FT_245_M.webp',
+                                            'assets/images/FT_245_M.webp',
                                             width: screenWidth * 0.5,
                                             height: max(screenHeight * 0.4, 260),
                                             fit: BoxFit.cover,
@@ -732,7 +729,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
-                                    'images/NAM_007_M.webp',
+                                    'assets/images/NAM_007_M.webp',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
@@ -790,7 +787,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       ),
                                       FFButtonWidget(
                                         onPressed: () {
-                                          print('Button pressed ...');
                                           context.pushNamed('pastProjects');
                                         },
                                         text: 'PAST PROJECTS',
@@ -883,7 +879,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           child: Stack(
                             children: [
                               Image.asset(
-                                'images/2023NA_037.webp',
+                                'assets/images/2023NA_037.webp',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,
@@ -927,7 +923,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         width: 344 - ((screenWidth < 600) ? 300 - screenWidth/2 : 0),
                                         height: 123,
                                         child: Align(
-                                          alignment: AlignmentDirectional(0.0, 0.5),
+                                          alignment: const AlignmentDirectional(0.0, 0.5),
                                           child: SizedBox(
                                             width: double.infinity,
                                             child: FittedBox(
@@ -1052,13 +1048,13 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             children: [
                               ClipRRect(
                                 child: Image.asset(
-                                  'images/FT_239_M.webp',
+                                  'assets/images/FT_239_M.webp',
                                   width: double.infinity,
                                   height: double.infinity,
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                              const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1069,7 +1065,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
-                                      Icon(
+                                      const Icon(
                                         Icons.settings_outlined,
                                         color: Colors.white,
                                         size: 24.0,
@@ -1082,7 +1078,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               color: Colors.white,
                                             ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.settings_outlined,
                                         color: Colors.white,
                                         size: 24.0,
@@ -1137,7 +1133,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             SizedBox(
                               width: double.infinity,
                               height: screenHeight * 0.75,
-                            child: ColoredBox(color: Colors.black38),
+                            child: const ColoredBox(color: Colors.black38),
                             ),
                             Align(
                               alignment: const AlignmentDirectional(-1.0, -1.0),
@@ -1165,7 +1161,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ),
                                     FFButtonWidget(
                                       onPressed: () {
-                                        print('Button pressed ...');
                                         context.pushNamed('parentPortal');
                                       },
                                       text: 'Take a look',
@@ -1204,7 +1199,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           children: [
                             ClipRRect( // whos the one that added moons+stars here????????
                               child: Image.asset(//moons+stars
-                                'images/2023NA_032.webp',
+                                'assets/images/2023NA_032.webp',
                                 width: double.infinity,
                                 height: screenHeight * 0.75,
                                 fit: BoxFit.cover,
@@ -1212,7 +1207,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                             ),
                             SizedBox(width: double.infinity,
                                 height: screenHeight * 0.75,
-                                child: ColoredBox(color: Colors.black45)),
+                                child: const ColoredBox(color: Colors.black45)),
                             Align(
                               alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: Padding(
@@ -1239,7 +1234,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     ),
                                     FFButtonWidget(
                                       onPressed: () {
-                                        print('Button pressed ...');
                                         context.pushNamed('parentPortal');
                                       },
                                       text: 'Take a look',
@@ -1520,7 +1514,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                         desktop: false,
                       ))
                         ConstrainedBox(
-                          constraints: BoxConstraints(minHeight: 155),
+                          constraints: const BoxConstraints(minHeight: 155),
                           child: Container(
                             width: double.infinity,
                             decoration: const BoxDecoration(
@@ -1770,7 +1764,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -1813,7 +1807,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -1853,7 +1847,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   ),
                                                 ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -1896,7 +1890,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   fontWeight: FontWeight.w200,
                                                 ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Row(

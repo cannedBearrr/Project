@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'project_based_learning_model.dart';
 export 'project_based_learning_model.dart';
 
@@ -46,7 +42,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
         body: Stack(
           children: [
             Image.asset(
-              'images/DSC_1630.webp',
+              'assets/images/DSC_1630.webp',
               width: double.infinity,
               height: MediaQuery.sizeOf(context).height,
               fit: BoxFit.cover,
@@ -92,7 +88,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                                       ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 40.0)).addToStart(SizedBox(height: 60.0)).addToEnd(SizedBox(height: 20.0)),
+                            ].divide(const SizedBox(height: 40.0)).addToStart(const SizedBox(height: 60.0)).addToEnd(const SizedBox(height: 20.0)),
                           ),
                         ),
                       ),

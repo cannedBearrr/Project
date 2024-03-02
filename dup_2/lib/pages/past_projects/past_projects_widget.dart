@@ -9,8 +9,6 @@ import '/assets/donate_popup.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart' as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'past_projects_model.dart';
 export 'past_projects_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -88,7 +86,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox.shrink(),
+                              const SizedBox.shrink(),
                               MouseRegion(
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
@@ -160,7 +158,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   ),
                                 ),
                               ),
-                              SizedBox.shrink(),
+                              const SizedBox.shrink(),
                             ].divide(const Spacer()),
                           ),
                         ),
@@ -257,7 +255,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     'Student Projects',
                     style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
                       fontSize: 40.0,
-                      color: Color(0xFF008dff),
+                      color: const Color(0xFF008dff),
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Poppins',// Set the font size to 40
                     ),
@@ -283,7 +281,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               width: screenWidth * 1.0,
                               height: max(screenHeight * 0.65 - 10, 540),
                               decoration: const BoxDecoration(),
-                              child: Container(
+                              child: SizedBox(
                                 width: screenWidth * 1.0,
                                 height: screenHeight * 0.5,
                                 child: Stack(
@@ -317,7 +315,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 fit: BoxFit.contain,
                                               ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -325,7 +323,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                         Column(
@@ -344,15 +342,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Container(
                                               width: screenWidth * 0.8,
                                               height: 220,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                               child: Image.asset(
                                                 'assets/images/Friendly bear@4x 2.png',
                                                 fit: BoxFit.contain,
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -360,7 +358,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                         Column(
@@ -379,15 +377,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Container(
                                               width: screenWidth * 0.8,
                                               height: 220,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                               child: Image.asset(
                                                 'assets/images/Covid TK.gif',
                                                 fit: BoxFit.contain,
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -395,7 +393,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                         Column(
@@ -414,15 +412,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Container(
                                               width: screenWidth * 0.8,
                                               height: 220,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                               child: Image.asset(
                                                 'assets/images/CitySmart.gif',
                                                 fit: BoxFit.contain,
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -430,7 +428,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                         Column(
@@ -449,15 +447,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Container(
                                               width: screenWidth * 0.8,
                                               height: 220,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                               child: Image.asset(
                                                 'assets/images/ISH 2.gif',
                                                 fit: BoxFit.contain,
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -465,7 +463,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                         Column(
@@ -484,15 +482,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Container(
                                               width: screenWidth * 0.8,
                                               height: 220,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                              ),
                                               child: Image.asset(
                                                 'assets/images/Worldheritage.gif',
                                                 fit: BoxFit.contain,
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
@@ -500,7 +498,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
-                                            Spacer(flex: 3),
+                                            const Spacer(flex: 3),
                                           ],
                                         ),
                                       ],
@@ -580,14 +578,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                         Container(
-                                          child: Image.asset(
-                                          'assets/images/ESP web.gif',
-                                          fit: BoxFit.contain,
-                                        ),
-                                        width: screenWidth * 0.8,
+                                          width: screenWidth * 0.8,
                                         height: 350,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        ),
+                                          child: Image.asset(
+                                          'assets/images/ESP web.gif',
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                       Padding(
@@ -599,7 +597,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                       ),
-                                        SizedBox(height:30),
+                                        const SizedBox(height:30),
                                     ],
                                                                             ),
                                   Column(
@@ -617,15 +615,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Container(
-                                        child: Image.asset(
-                                          'assets/images/Friendly bear@4x 2.png',
-                                          fit: BoxFit.contain,
-                                        ),
-                                          width: screenWidth * 0.8,
+                                        width: screenWidth * 0.8,
                                           height: 350,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context).secondaryBackground,
                                           ),
+                                        child: Image.asset(
+                                          'assets/images/Friendly bear@4x 2.png',
+                                          fit: BoxFit.contain,
+                                        ),
                                         ),
                                         Padding(
                                           padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
@@ -636,7 +634,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                         ),
-                                      SizedBox(height:30),
+                                      const SizedBox(height:30),
                                       ],
                                     ),
                                     Column(
@@ -654,14 +652,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                         Container(
-                                          child: Image.asset(
-                                            'assets/images/Covid TK.gif',
-                                            fit: BoxFit.contain,
-                                          ),
                                           width: screenWidth * 0.8,
                                           height: 350,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Covid TK.gif',
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
                                         Padding(
@@ -673,7 +671,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(height:30),
+                                        const SizedBox(height:30),
                                       ],
                                     ),
                                   Column(
@@ -691,14 +689,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                         Container(
-                                          child: Image.asset(
-                                          'assets/images/CitySmart.gif',
-                                          fit: BoxFit.contain,
-                                        ),
-                                        width: screenWidth * 0.8,
+                                          width: screenWidth * 0.8,
                                         height: 350,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        ),
+                                          child: Image.asset(
+                                          'assets/images/CitySmart.gif',
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                       Padding(
@@ -710,7 +708,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                       ),
-                                        SizedBox(height:30),
+                                        const SizedBox(height:30),
                                     ],
                                                                             ),
                                   Column(
@@ -728,14 +726,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Container(
-                                        child: Image.asset(
-                                          'assets/images/ISH 2.gif',
-                                          fit: BoxFit.contain,
-                                        ),
                                         width: screenWidth * 0.8,
                                         height: 350,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/ISH 2.gif',
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                       Padding(
@@ -747,7 +745,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height:30),
+                                      const SizedBox(height:30),
                                     ],
                                   ),
                                   Column(
@@ -765,14 +763,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         ),
                                       ),
                                       Container(
-                                        child: Image.asset(
-                                          'assets/images/Worldheritage.gif',
-                                          fit: BoxFit.contain,
-                                        ),
                                         width: screenWidth * 0.8,
                                         height: 350,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/Worldheritage.gif',
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                       Padding(
@@ -782,7 +780,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           style: FlutterFlowTheme.of(context).bodyMedium,
                                         ),
                                       ),
-                                      SizedBox(height:30),
+                                      const SizedBox(height:30),
                                     ],
                                   ),
                                 ],
@@ -835,8 +833,8 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                        const Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                         ),
                         Container(
                           width: screenWidth * 0.8 - 100,
@@ -849,7 +847,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               tablet: false,
                               tabletLandscape: false,
                             ),
-                            child: Container(
+                            child: SizedBox(
                               width: screenWidth * 1.0,
                               height: screenHeight * 0.5,
                               child: Stack(
@@ -871,15 +869,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                         ),
                                           Container(
-                                            child: Image.asset(
-                                              'assets/images/ESP web.gif',
-                                              fit: BoxFit.contain,
-                                            ),
-                                              width: screenWidth * 0.8,
+                                            width: screenWidth * 0.8,
                                               height: 350,
                                               decoration: BoxDecoration(
                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                               ),
+                                            child: Image.asset(
+                                              'assets/images/ESP web.gif',
+                                              fit: BoxFit.contain,
+                                            ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(200.0, 100.0, 100.0, 34.0),
@@ -888,7 +886,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyLarge,
                                               ),
                                             ),
-                                          SizedBox(height:30),
+                                          const SizedBox(height:30),
                                           ],
                                         ),
                                         Column(
@@ -903,14 +901,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 ),
                                               ),
                                             Container(
-                                              child: Image.asset(
-                                              'assets/images/Friendly bear@4x 2.png',
-                                              fit: BoxFit.contain,
-                                            ),
-                                            width: screenWidth * 0.8,
+                                              width: screenWidth * 0.8,
                                             height: 350,
                                             decoration: BoxDecoration(
                                               color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                              child: Image.asset(
+                                              'assets/images/Friendly bear@4x 2.png',
+                                              fit: BoxFit.contain,
                                             ),
                                           ),
                                           Padding(
@@ -920,7 +918,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                             ),
                                           ),
-                                            SizedBox(height:30),
+                                            const SizedBox(height:30),
                                         ],
                                                                                     ),
                                       Column(
@@ -935,14 +933,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                           Container(
-                                            child: Image.asset(
-                                              'assets/images/CitySmart.gif',
-                                              fit: BoxFit.contain,
-                                            ),
                                             width: screenWidth * 0.8,
                                             height: 350,
                                             decoration: BoxDecoration(
                                               color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/CitySmart.gif',
+                                              fit: BoxFit.contain,
                                             ),
                                           ),
                                           Padding(
@@ -952,7 +950,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                             ),
                                           ),
-                                          SizedBox(height:30),
+                                          const SizedBox(height:30),
                                         ],
                                       ),
                                       Column(
@@ -967,14 +965,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                           Container(
-                                            child: Image.asset(
-                                              'assets/images/Covid TK.gif',
-                                              fit: BoxFit.contain,
-                                            ),
                                             width: screenWidth * 0.8,
                                             height: 350,
                                             decoration: BoxDecoration(
                                               color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/Covid TK.gif',
+                                              fit: BoxFit.contain,
                                             ),
                                           ),
                                           Padding(
@@ -984,7 +982,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                             ),
                                           ),
-                                          SizedBox(height:30),
+                                          const SizedBox(height:30),
                                         ],
                                       ),
                                       Column(
@@ -999,14 +997,14 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                           Container(
-                                            child: Image.asset(
-                                              'assets/images/ISH 2.gif',
-                                              fit: BoxFit.contain,
-                                            ),
                                             width: screenWidth * 0.8,
                                             height: 350,
                                             decoration: BoxDecoration(
                                               color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/ISH 2.gif',
+                                              fit: BoxFit.contain,
                                             ),
                                           ),
                                           Padding(
@@ -1016,7 +1014,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                             ),
                                           ),
-                                          SizedBox(height:30),
+                                          const SizedBox(height:30),
                                         ],
                                       ),
                                       Column(
@@ -1031,15 +1029,15 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             ),
                                           ),
                                           Container(
-                                            child: Image.asset(
-                                              'assets/images/Worldheritage.gif',
-                                              fit: BoxFit.contain,
-                                            ),
-                                              width: screenWidth * 0.8,
+                                            width: screenWidth * 0.8,
                                               height: 350,
                                               decoration: BoxDecoration(
                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                               ),
+                                            child: Image.asset(
+                                              'assets/images/Worldheritage.gif',
+                                              fit: BoxFit.contain,
+                                            ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.all(20.0),
@@ -1048,7 +1046,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                                 style: FlutterFlowTheme.of(context).bodyLarge,
                                               ),
                                             ),
-                                          SizedBox(height:30),
+                                          const SizedBox(height:30),
                                           ],
                                         ),
                                       ],
@@ -1118,11 +1116,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   lineHeight: 1.13,
                                 ),
                               ),
-                            ].divide(SizedBox(height: 7)),
+                            ].divide(const SizedBox(height: 7)),
                           ),
                           FFButtonWidget(
                             onPressed: () {
-                              print('Button pressed ...');
                               showDialog<String>(
                                 context: context,
                                 builder: (BuildContext context) => const Dialog(
@@ -1150,7 +1147,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                        ].divide(SizedBox(height: 60)),
+                        ].divide(const SizedBox(height: 60)),
                       ),
                     ),
                   if (responsiveVisibility(
@@ -1180,11 +1177,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
                               style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
-                          ].divide(SizedBox(height: 5)),
+                          ].divide(const SizedBox(height: 5)),
                         ),
                         FFButtonWidget(
                           onPressed: () {
-                            print('Button pressed ...');
                             showDialog<String>(
                               context: context,
                               builder: (BuildContext context) => const Dialog(
@@ -1474,7 +1470,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     desktop: false,
                   ))
                     ConstrainedBox(
-                      constraints: BoxConstraints(minHeight: 155),
+                      constraints: const BoxConstraints(minHeight: 155),
                       child: Container(
                         width: double.infinity,
                         decoration: const BoxDecoration(
@@ -1724,7 +1720,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -1767,7 +1763,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -1807,7 +1803,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -1850,7 +1846,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Row(

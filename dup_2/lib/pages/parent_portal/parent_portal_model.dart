@@ -1,6 +1,4 @@
 import '/assets/animation/animation_widget.dart';
-import '/assets/mobilefixinfd/mobilefixinfd_widget.dart';
-import '/assets/mobilefixinfd_copy/mobilefixinfd_copy_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'parent_portal_widget.dart' show ParentPortalWidget;
@@ -14,8 +12,6 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // Model for mobilefixinfdCopy component.
-  late MobilefixinfdCopyModel mobilefixinfdCopyModel;
   // State field(s) for Expandable widget.
   late ExpandableController expandableController1;
 
@@ -28,9 +24,7 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
   // State field(s) for Expandable widget.
   late ExpandableController expandableController4;
 
-  // Model for mobilefixinfd component.
-  late MobilefixinfdModel mobilefixinfdModel;
-  // Model for deskrdyhj component.
+  // Model for animation component.
   late AnimationModel animationModel;
   // State field(s) for PageView widget.
   PageController? pageViewController1;
@@ -61,21 +55,16 @@ class ParentPortalModel extends FlutterFlowModel<ParentPortalWidget> {
 
   @override
   void initState(BuildContext context) {
-    mobilefixinfdCopyModel =
-        createModel(context, () => MobilefixinfdCopyModel());
-    mobilefixinfdModel = createModel(context, () => MobilefixinfdModel());
     animationModel = createModel(context, () => AnimationModel());
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    mobilefixinfdCopyModel.dispose();
     expandableController1.dispose();
     expandableController2.dispose();
     expandableController3.dispose();
     expandableController4.dispose();
-    mobilefixinfdModel.dispose();
     animationModel.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();

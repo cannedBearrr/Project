@@ -5,8 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'career_page_model.dart';
 export 'career_page_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -105,16 +103,16 @@ class _EmailWidgetState extends State<EmailDialog> {
     return Padding(
       padding: const EdgeInsetsDirectional.all(12.0),
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: 150),
+        constraints: const BoxConstraints(minHeight: 150),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Text(
               'In order to apply, please verify your email',
               style: FlutterFlowTheme.of(context).bodyLarge,
             ),
-            SizedBox(height: 7),
+            const SizedBox(height: 7),
             SizedBox(
               width: screenWidth * 0.8,
               child: Form(
@@ -140,7 +138,7 @@ class _EmailWidgetState extends State<EmailDialog> {
                     labelStyle: FlutterFlowTheme.of(context).labelMedium,
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
                     errorStyle: FlutterFlowTheme.of(context).labelSmall.override(
-                      color: Color(0xffbd434a),
+                      color: const Color(0xffbd434a),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
@@ -157,14 +155,14 @@ class _EmailWidgetState extends State<EmailDialog> {
                       borderRadius: BorderRadius.circular(0.0),
                     ),
                     errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffbd434a),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(0.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffd60035),
                         width: 1.0,
                       ),
@@ -189,7 +187,7 @@ class _EmailWidgetState extends State<EmailDialog> {
                 ),
               ),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Text(
               isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '',
               style: FlutterFlowTheme.of(context).bodySmall.override(
@@ -270,7 +268,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox.shrink(),
+                              const SizedBox.shrink(),
                               MouseRegion(
                                 cursor: SystemMouseCursors.click,
                                 child: GestureDetector(
@@ -342,7 +340,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   ),
                                 ),
                               ),
-                              SizedBox.shrink(),
+                              const SizedBox.shrink(),
                             ].divide(const Spacer()),
                           ),
                         ),
@@ -448,12 +446,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/CopyofWCAwardCerts.jpg',
+                            'assets/images/CopyofWCAwardCerts.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                          SizedBox.expand(child: ColoredBox(color: Colors.black26,)),
+                          const SizedBox.expand(child: ColoredBox(color: Colors.black26,)),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: SizedBox(
@@ -488,13 +486,13 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'images/CopyofWCAwardCerts.jpg',
+                              'assets/images/CopyofWCAwardCerts.jpg',
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
                             ),
                           ),
-                          SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                          const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
@@ -525,12 +523,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/2023NA_289.jpg',
+                            'assets/images/2023NA_289.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                      SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                      const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 24.0),
                             child: Align(
@@ -539,7 +537,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  SizedBox(),
+                                  const SizedBox(),
                                   Text(
                                     'Life at Northern Horizon',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -562,7 +560,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           fontSize: 26,
                                         ),
                                   ),
-                                  SizedBox(),
+                                  const SizedBox(),
                                 ],
                               ),
                             ),
@@ -584,12 +582,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            'images/2023NA_289.jpg',
+                            'assets/images/2023NA_289.jpg',
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                          SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                          const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -657,7 +655,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
                                     child: Image.asset(
-                                      'images/DSC_1606.JPG',
+                                      'assets/images/DSC_1606.JPG',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -690,7 +688,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            SizedBox(height: 4),
+                                            const SizedBox(height: 4),
                                             Text(
                                               'Minimum qualifications',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -757,7 +755,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               ),
                                             ),
                                             if (exp1[0]) ...[
-                                              SizedBox(height: 4),
+                                              const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -844,10 +842,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp1.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp1) {
-                                                    print(i);
                                                     exp1[i] = !exp1[i];
                                                   } else {
-                                                    print(exp1.length - i - 1);
                                                     exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -928,7 +924,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
                                     child: Image.asset(
-                                      'images/2023NA_030.webp',
+                                      'assets/images/2023NA_030.webp',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -1047,7 +1043,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               ),
                                             ),
                                             if (exp2[0]) ...[
-                                              SizedBox(height: 4),
+                                              const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1114,10 +1110,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp2.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp2) {
-                                                    print(i);
                                                     exp2[i] = !exp2[i];
                                                   } else {
-                                                    print(exp2.length - i - 1);
                                                     exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -1198,7 +1192,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
                                     child: Image.asset(
-                                      'images/2023NA_231.jpg',
+                                      'assets/images/2023NA_231.jpg',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -1298,7 +1292,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               ),
                                             ),
                                             if (exp3[0]) ...[
-                                              SizedBox(height: 4),
+                                              const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1385,10 +1379,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp3.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp3) {
-                                                    print(i);
                                                     exp3[i] = !exp3[i];
                                                   } else {
-                                                    print(exp3.length - i - 1);
                                                     exp3[exp3.length - i - 1] = !exp3[exp3.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -1469,7 +1461,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     clipper: CustomShape(),
                                     clipBehavior: Clip.antiAlias,
                                     child: Image.asset(
-                                      'images/2023NA_073.jpg',
+                                      'assets/images/2023NA_073.jpg',
                                       width: screenWidth,
                                       height: 450,
                                       fit: BoxFit.cover,
@@ -1569,7 +1561,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               ),
                                             ),
                                             if (exp4[0]) ...[
-                                              SizedBox(height: 4),
+                                              const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1716,10 +1708,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp4.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp4) {
-                                                    print(i);
                                                     exp4[i] = !exp4[i];
                                                   } else {
-                                                    print(exp4.length - i - 1);
                                                     exp4[exp4.length - i - 1] = !exp4[exp4.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -1807,7 +1797,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
-                                    'images/DSC_1606.JPG',
+                                    'assets/images/DSC_1606.JPG',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -1976,10 +1966,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp1.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp1) {
-                                                    print(i);
                                                     exp1[i] = !exp1[i];
                                                   } else {
-                                                    print(exp1.length - i - 1);
                                                     exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -2059,7 +2047,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
-                                    'images/2023NA_030.webp',
+                                    'assets/images/2023NA_030.webp',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -2227,10 +2215,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp2.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp2) {
-                                                    print(i);
                                                     exp2[i] = !exp2[i];
                                                   } else {
-                                                    print(exp2.length - i - 1);
                                                     exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -2310,7 +2296,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
-                                    'images/2023NA_231.jpg',
+                                    'assets/images/2023NA_231.jpg',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -2479,10 +2465,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp3.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp3) {
-                                                    print(i);
                                                     exp3[i] = !exp3[i];
                                                   } else {
-                                                    print(exp3.length - i - 1);
                                                     exp3[exp3.length - i - 1] = !exp3[exp3.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -2562,7 +2546,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
-                                    'images/2023NA_073.jpg',
+                                    'assets/images/2023NA_073.jpg',
                                     width: screenWidth,
                                     height: 250,
                                     fit: BoxFit.cover,
@@ -2785,10 +2769,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               for (int i = 0; i < exp4.length; i++) {
                                                 Future.delayed(Duration(milliseconds: i * 10), () {
                                                   if (_exp4) {
-                                                    print(i);
                                                     exp4[i] = !exp4[i];
                                                   } else {
-                                                    print(exp4.length - i - 1);
                                                     exp4[exp4.length - i - 1] = !exp4[exp4.length - i - 1];
                                                   }
                                                   setState(() {});
@@ -3115,7 +3097,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                     desktop: false,
                   ))
                     ConstrainedBox(
-                    constraints: BoxConstraints(minHeight: 155),
+                    constraints: const BoxConstraints(minHeight: 155),
                       child: Container(
                         width: double.infinity,
                         decoration: const BoxDecoration(
@@ -3365,7 +3347,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -3408,7 +3390,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -3448,7 +3430,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Column(
@@ -3491,7 +3473,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               fontWeight: FontWeight.w200,
                                             ),
                                           ),
-                                          SizedBox(height: 12),
+                                          const SizedBox(height: 12),
                                         ].divide(const SizedBox(height: 2.0)),
                                       ),
                                       Row(

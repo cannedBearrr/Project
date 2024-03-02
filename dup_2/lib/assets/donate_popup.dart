@@ -1,9 +1,6 @@
 import 'dart:ui';
 
-import 'package:dup_2/index.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 import '../pages/donate_page/donate_page_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -392,7 +389,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                         if (responsiveVisibility(context: context, tablet: false, tabletLandscape: false))
                                           Column(
                                             children: [
-                                              if (selected == 4) SizedBox(height: 20),
+                                              if (selected == 4) const SizedBox(height: 20),
                                               Text(
                                                 (selected == 4) ? "other amount: " : "other amount",
                                                 style: FlutterFlowTheme.of(context).bodySmall.override(
@@ -426,7 +423,7 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                         print(m);
                                                       },
                                                     )),
-                                              if (selected == 4) SizedBox(height: 15),
+                                              if (selected == 4) const SizedBox(height: 15),
                                             ],
                                           ),
                                       ],

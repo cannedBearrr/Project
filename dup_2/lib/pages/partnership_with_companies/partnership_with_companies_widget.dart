@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -51,8 +50,8 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
-            child: Container(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width * 1.0,
               height: MediaQuery.sizeOf(context).height * 1.0,
               child: Stack(
@@ -65,7 +64,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                     ClipRRect(
                       borderRadius: BorderRadius.circular(0.0),
                       child: Image.asset(
-                        'images/DSC_1614.webp',
+                        'assets/images/DSC_1614.webp',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
@@ -79,7 +78,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                     Container(
                       width: double.infinity,
                       height: MediaQuery.sizeOf(context).height * 0.5,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x00FFFFFF),
                       ),
                       child: Stack(
@@ -90,26 +89,26 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             desktop: false,
                           ))
                             Align(
-                                alignment: AlignmentDirectional(0.0, -0.5),
+                                alignment: const AlignmentDirectional(0.0, -0.5),
                                 child: Padding(
                                   padding: const EdgeInsets.all(12.0),
                                   child: FittedBox(
                                     child: Container(
                                       height: 150,
-                                      padding: EdgeInsets.all(18.0),
+                                      padding: const EdgeInsets.all(18.0),
                                       decoration: BoxDecoration(
-                                        color: Color(0x00FFFFFF),
+                                        color: const Color(0x00FFFFFF),
                                         border: Border.all(
                                           color: Colors.white,
                                         ),
                                       ),
                                       child: Align(
-                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'PREVIOUS\nPROJECTS',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 
-                                                color: Color(0xFFFFD34C),
+                                                color: const Color(0xFFFFD34C),
                                                 fontSize: 38.0,
                                                 letterSpacing: 10.0,
                                                 fontWeight: FontWeight.w900,
@@ -128,11 +127,11 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                     desktop: false,
                   ))
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: double.infinity,
                         height: MediaQuery.sizeOf(context).height * 0.7,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0x00FFFFFF),
                         ),
                         child: Stack(
@@ -140,11 +139,11 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             Opacity(
                               opacity: 0.4,
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   // child: Image.asset(
-                                  //   'images/DSC_1614.webp',
+                                  //   'assets/images/DSC_1614.webp',
                                   //   width: double.infinity,
                                   //   height: MediaQuery.sizeOf(context).height * 0.5,
                                   //   fit: BoxFit.cover,
@@ -153,31 +152,31 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.symmetric(horizontal: 12),
+                                padding: const EdgeInsetsDirectional.symmetric(horizontal: 12),
                                 child: Column(
                                   children: [
-                                    Spacer(),
+                                    const Spacer(),
                                     Expanded(
                                       flex: 4,
                                       child: Image.asset(
-                                          'images/USGS.png',
+                                          'assets/images/USGS.png',
                                       ),
                                     ), // Replace 'assets/logo1.png' with the actual path to your logo image// Adjust the height between logos as needed
                                     Expanded(
                                       flex: 4,
                                       child: Image.asset(
-                                          'images/NASA.png',
+                                          'assets/images/NASA.png',
                                       ),
                                     ), // Replace 'assets/logo2.png' with the actual path to your logo image// Adjust the height between logos as needed
                                     Expanded(
                                       flex: 4,
                                       child: Image.asset(
-                                          'images/UN.png',
+                                          'assets/images/UN.png',
                                       ),
                                     ), // Replace 'assets/logo3.png' with the actual path to your logo image
-                                  ].divide(Spacer()).addToStart(Spacer()).addToEnd(Spacer()),
+                                  ].divide(const Spacer()).addToStart(const Spacer()).addToEnd(const Spacer()),
                                 ),
                               ),
                             ),
@@ -192,7 +191,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                   ))
                     ClipRRect(
                       child: Image.asset(
-                        'images/DSC_1614.webp',
+                        'assets/images/DSC_1614.webp',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
@@ -206,7 +205,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                     Container(
                       width: MediaQuery.sizeOf(context).width * 0.6,
                       height: double.infinity,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x00FFFFFF),
                       ),
                       child: Stack(
@@ -217,18 +216,18 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             tablet: false,
                           ))
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.55,
                                 height: MediaQuery.sizeOf(context).height * 0.2,
                                 decoration: BoxDecoration(
-                                  color: Color(0x00FFFFFF),
+                                  color: const Color(0x00FFFFFF),
                                   border: Border.all(
                                     color: Colors.white,
                                   ),
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -255,7 +254,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                       //         fontWeight: FontWeight.bold,
                                       //       ),
                                       // ),
-                                    ].addToStart(SizedBox(height: 10.0)),
+                                    ].addToStart(const SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ),
@@ -269,11 +268,11 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                     tablet: false,
                   ))
                     Align(
-                      alignment: AlignmentDirectional(1.0, -1.0),
+                      alignment: const AlignmentDirectional(1.0, -1.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.4,
                         height: double.infinity,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0x00FFFFFF),
                         ),
                         child: Stack(
@@ -281,7 +280,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                             Opacity(
                               opacity: 0.4,
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.network(
@@ -300,13 +299,13 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Spacer(flex: 2),
+                                    const Spacer(flex: 2),
                                     Expanded(flex: 3, child: Image.asset('assets/images/NASA.png')),
-                                    Spacer(),
+                                    const Spacer(),
                                     Expanded(flex: 3, child: Image.asset('assets/images/USGS.png')),
-                                    Spacer(),
+                                    const Spacer(),
                                     Expanded(flex: 3, child: Image.asset('assets/images/UN.png')),
-                                    Spacer(flex: 2),
+                                    const Spacer(flex: 2),
                                   ],
                                 ),
                               ),
