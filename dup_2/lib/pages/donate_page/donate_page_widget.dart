@@ -127,7 +127,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                         Text(
                           aController3.text +
                               ((aController3.text.isNotEmpty && aController4.text.isNotEmpty) ? ", " : "") +
-                              ((aController3.text.isNotEmpty && aController5.text.isNotEmpty) ? " " : aController4.text) +
+                              ((aController3.text.isNotEmpty && aController4.text.isEmpty && aController5.text.isNotEmpty) ? "${aController4.text} " : aController4.text) +
                               ((aController4.text.isNotEmpty && aController5.text.isNotEmpty) ? " " : "") +
                               aController5.text,
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -572,7 +572,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                                 Text(
                                   aController3.text +
                                       ((aController3.text.isNotEmpty && aController4.text.isNotEmpty) ? ", " : "") +
-                                      ((aController4.text.isEmpty) ? " " : aController4.text) +
+                                      ((aController3.text.isNotEmpty && aController4.text.isEmpty && aController5.text.isNotEmpty) ? "${aController4.text} " : aController4.text) +
                                       ((aController4.text.isNotEmpty && aController5.text.isNotEmpty) ? " " : "") +
                                       aController5.text,
                                   style: FlutterFlowTheme.of(context).bodyMedium,
