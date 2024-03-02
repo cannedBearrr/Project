@@ -1148,9 +1148,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const SizedBox(
-                                      width: 300.0,
+                                      width: 615.0,
                                       child: Divider(
-                                        thickness: 1.0,
+                                        thickness: 3.0,
                                         color: Color(0xCCFFFFFF),
                                       ),
                                     ),
@@ -1159,7 +1159,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             
                                             color: Colors.white,
-                                            fontSize: 60.0,
+                                            fontSize: 80.0,
                                             fontWeight: FontWeight.w300,
                                           ),
                                     ),
@@ -1170,8 +1170,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       },
                                       text: 'Take a look',
                                       options: FFButtonOptions(
-                                        width: 150,
-                                        height: screenHeight * 0.09,
+                                        width: 350,
+                                        height: screenHeight * 0.10,
                                         padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                         color: Colors.white,
@@ -1179,6 +1179,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               
                                               color: Colors.black,
                                               fontWeight: FontWeight.w100,
+                                              fontSize: 30,
                                             ),
                                         elevation: 0.0,
                                         borderSide: const BorderSide(

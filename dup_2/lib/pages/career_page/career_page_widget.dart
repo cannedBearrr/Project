@@ -463,7 +463,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       
                                       color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: 35,
+                                      fontSize: 45,
                                     ),
                                 textAlign: TextAlign.justify,
                               ),
