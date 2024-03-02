@@ -108,7 +108,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                         child: Text(
                                           'PREVIOUS\nPROJECTS',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontFamily: 'Readex Pro',
+                                                
                                                 color: Color(0xFFFFD34C),
                                                 fontSize: 38.0,
                                                 letterSpacing: 10.0,
@@ -239,7 +239,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                           child: Text(
                                             'PREVIOUS PROJECTS',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  fontFamily: 'Readex Pro',
+                                                  
                                                   color: Colors.white,
                                                   fontSize: MediaQuery.sizeOf(context).width * 0.1 - MediaQuery.sizeOf(context).width * 0.05 - 2,
                                                 ),
@@ -249,7 +249,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                       // Text(
                                       //   'we may use this line',
                                       //   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      //         fontFamily: 'Readex Pro',
+                                      //         
                                       //         color: Color(0xFF1F4477),
                                       //         fontSize: 70.0,
                                       //         fontWeight: FontWeight.bold,

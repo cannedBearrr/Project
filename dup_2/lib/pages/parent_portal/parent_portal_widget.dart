@@ -126,7 +126,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus
+            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+            : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
@@ -389,7 +391,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                           ),
                                           TextSpan(
-                                            text: ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
+                                            text:
+                                            ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
                                             style: TextStyle(
                                               color: Colors.white,
                                             ),
@@ -3664,13 +3667,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Terms of Service',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                color: Colors.white,
-                                                fontSize: 13.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                        child: GestureDetector(
+                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                          child: Text(
+                                            'Terms and Conditions',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       GestureDetector(
@@ -3891,13 +3898,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                              child: Text(
-                                                'Terms of Service',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                              child: GestureDetector(
+                                                onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                                child: Text(
+                                                  'Terms and Conditions',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                             GestureDetector(
@@ -4064,13 +4075,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                                child: Text(
-                                                  'Terms of Service',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        color: Colors.white,
-                                                        fontSize: 8.0,
-                                                        fontWeight: FontWeight.w200,
-                                                      ),
+                                                child: GestureDetector(
+                                                  onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                                  child: Text(
+                                                    'Terms and Conditions',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                               GestureDetector(
