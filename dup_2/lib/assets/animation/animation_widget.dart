@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +108,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
 
     double screenWidth = MediaQuery.sizeOf(context).width;
     double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
-    
+
     return Stack(children: [
       Indexer(children: [
         Indexed(
@@ -120,7 +119,6 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             left: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
@@ -202,10 +200,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             lerpT = lerpT == 0 ? 1 : 0;
                                             if (tV == 0.6) {
                                               tlPri = 2;
-                                              print("hi");
                                               _05to1tl = true;
                                             }
-                                            print(tV);
                                           });
                                         },
                                         child: Container(
@@ -257,7 +253,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                     opacity: lerpDouble(0, 1, t)!,
                                                     child: Stack(
                                                       children: [
-                                                        SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                        const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
                                                         Column(
                                                           mainAxisAlignment: MainAxisAlignment.center,
                                                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -345,7 +341,6 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             right: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
@@ -413,10 +408,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                   lerpY = lerpY == 0 ? 1 : 0;
                                   if (yV == 0.75) {
                                     trPri = 2;
-                                    print("hi1");
                                     _05to1tr = true;
                                   }
-                                  print(yV);
                                 });
                               },
                               child: Align(
@@ -472,7 +465,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               opacity: lerpDouble(0, 1, t)!,
                                               child: Stack(
                                                 children: [
-                                                  SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                  const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
                                                   Align(
                                                     alignment: Alignment.center,
                                                     child: UnconstrainedBox(
@@ -578,7 +571,6 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             left: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
@@ -715,7 +707,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               opacity: lerpDouble(0, 1, t)!,
                                               child: Stack(
                                                 children: [
-                                                  SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                  const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
                                                   Center(
                                                     child: Column(
                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -904,7 +896,6 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             right: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
@@ -994,10 +985,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                 lerpI = lerpI == 0 ? 1 : 0;
                                                 if (iV == 0.69) {
                                                   brPri = 2;
-                                                  print("hi");
                                                   _05to1br = true;
                                                 }
-                                                print(tV);
                                               });
                                             },
                                             child: Container(
@@ -1056,7 +1045,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                         opacity: lerpDouble(0, 1, t)!,
                                                         child: Stack(
                                                           children: [
-                                                            SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                            const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
                                                             Align(
                                                               alignment: Alignment.center,
                                                               child: Column(

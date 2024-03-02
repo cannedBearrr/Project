@@ -7,7 +7,6 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -83,7 +82,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: const ScrollbarThemeData(),
-          textSelectionTheme: TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
+          textSelectionTheme: const TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
         // pageTransitionsTheme: const PageTransitionsTheme(
         //   builders: <TargetPlatform, PageTransitionsBuilder>{
         //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
@@ -97,7 +96,7 @@ class _MyAppState extends State<MyApp> {
       darkTheme: ThemeData(
           brightness: Brightness.dark,
           scrollbarTheme: const ScrollbarThemeData(),
-          textSelectionTheme: TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
+          textSelectionTheme: const TextSelectionThemeData(selectionColor: Color(0x55245ffe)),
           // pageTransitionsTheme: const PageTransitionsTheme(
           //   builders: <TargetPlatform, PageTransitionsBuilder>{
           //     TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),

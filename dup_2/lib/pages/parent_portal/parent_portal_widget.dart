@@ -12,7 +12,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 import 'parent_portal_model.dart';
 export 'parent_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -155,7 +154,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                SizedBox.shrink(),
+                                const SizedBox.shrink(),
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
@@ -227,7 +226,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                SizedBox.shrink(),
+                                const SizedBox.shrink(),
                               ].divide(const Spacer()),
                             ),
                           ),
@@ -339,7 +338,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Spacer(flex: 3),
+                                const Spacer(flex: 3),
                                 Align(
                                   alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
@@ -352,7 +351,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                Spacer(flex: 2),
+                                const Spacer(flex: 2),
                                 Text(
                                   'WHERE LEARNING MEETS',
                                   style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -370,9 +369,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
-                                Spacer(flex: 2),
+                                const Spacer(flex: 2),
                                 ConstrainedBox(
-                                  constraints: BoxConstraints(maxWidth: 580),
+                                  constraints: const BoxConstraints(maxWidth: 580),
                                   child: Padding(
                                     padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05, vertical: 8.0),
                                     child: RichText(
@@ -417,7 +416,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     ),
                                   ),
                                 ),
-                                Spacer(flex: 2),
+                                const Spacer(flex: 2),
                                 FFButtonWidget(
                                   onPressed: () {
                                     setState(() {
@@ -449,8 +448,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     borderRadius: BorderRadius.circular(22.0),
                                   ),
                                 ),
-                                Spacer(flex: 4),
-                                SizedBox(height: 20),
+                                      const Spacer(flex: 4),
+                                const SizedBox(height: 20),
                               ],
                             ),
                           ),
@@ -1100,7 +1099,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Stack(
                                   children: [
                                     Image.asset(
-                                      'images/2023NA_040.webp',
+                                      'assets/images/2023NA_040.webp',
                                       width: double.infinity,
                                       height: 135.0,
                                       fit: BoxFit.cover,
@@ -1683,22 +1682,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           decoration: const BoxDecoration(
                             color: Color(0xFFE7DCC6),
                           ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    text: (screenWidth > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
+                          child: Align(
+                              child: Text('HOW TO ACHIEVE OUR GOALS?', 
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                           fontSize: 45.0,
-                                          color: Colors.red[700],
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ],
+                                          color: Colors.black,
+                              ),),
                           ),
                         ),
                       if (responsiveVisibility(
@@ -1873,13 +1862,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                             child: Align(
                                               alignment: const AlignmentDirectional(0.0, 0.0),
-                                              child: Text(
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(8.0),
+                                                child: FittedBox(child: Text(
                                                 'Partnerships with Companies',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                       color: Colors.white,
                                                       fontSize: 22.0,
                                                       fontWeight: FontWeight.w500,
-                                                    ),
+                                                    ),),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -2182,7 +2174,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             GestureDetector(
                               onTap: () async {
                                 context.pushNamed('partnershipWithCompanies');
-                                print("Ore");
                               },
                               child: Stack(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
@@ -2240,7 +2231,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 13.0, 0.0, 11.0),
                           child: ConstrainedBox(
-                            constraints: BoxConstraints(minHeight: 315),
+                            constraints: const BoxConstraints(minHeight: 315),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
@@ -2848,7 +2839,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                         SizedBox(
                           width: screenWidth * 1.0,
-                          height: 420.0,
+                          height: 470,
                           child: Stack(
                             children: [
                               PageView(
@@ -3291,7 +3282,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           child: Image.asset(
-                                            'images/2023NA_301.jpg',
+                                            'assets/images/2023NA_301.jpg',
                                             width: screenWidth * 0.8,
                                             height: screenHeight * 0.3,
                                             fit: BoxFit.cover,
@@ -3305,18 +3296,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         ))
                                           Container(
                                             width: screenWidth * 0.8,
-                                            height: screenHeight * 0.25,
+                                            
                                             decoration: const BoxDecoration(
                                               color: Color(0x00FFFFFF),
                                             ),
                                             child: Column(
-                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment: MainAxisAlignment.start,
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 FittedBox(
                                                   child: Text(
-                                                    'SUBSCRIBE TO OUR NEWSLETTE1R',
+                                                    'SUBSCRIBE TO OUR NEWSLETTER',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                           fontSize: 60.0,
@@ -3430,7 +3421,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  'SUBSCRIBE TO OUR NEWSLETTE22R',
+                                                  'SUBSCRIBE TO OUR NEWSLETTER',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                         fontSize: 18.0 + max(screenWidth * 0.02, 0),
@@ -3791,7 +3782,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         desktop: false,
                       ))
                         ConstrainedBox(
-                          constraints: BoxConstraints(minHeight: 155),
+                          constraints: const BoxConstraints(minHeight: 155),
                           child: Container(
                             width: double.infinity,
                             decoration: const BoxDecoration(
@@ -4022,7 +4013,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       fontWeight: FontWeight.w200,
                                                     ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -4061,7 +4052,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       fontWeight: FontWeight.w200,
                                                     ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -4099,7 +4090,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       ),
                                                 ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Column(
@@ -4138,7 +4129,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       fontWeight: FontWeight.w200,
                                                     ),
                                               ),
-                                              SizedBox(height: 12),
+                                              const SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
                                           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [

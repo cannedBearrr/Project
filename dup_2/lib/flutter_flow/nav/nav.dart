@@ -47,11 +47,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const BusinessPortalWidget(),
         ),
         FFRoute(
-          name: 'aboutUs',
-          path: '/aboutUs',
-          builder: (context, params) => const AboutUsWidget(),
-        ),
-        FFRoute(
             name: 'careerPage',
             path: '/careerPage',
             builder: (context, params) => const CareerPageWidget(),

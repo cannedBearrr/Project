@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'project_based_learning_model.dart';
 export 'project_based_learning_model.dart';
 
@@ -67,7 +63,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white70,
                           borderRadius: BorderRadius.circular(24.0),
                         ),
                         child: ConstrainedBox(
@@ -83,7 +79,7 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Readex Pro',
-                            fontSize: 35.0,
+                                        fontSize: 55.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
@@ -95,11 +91,11 @@ class _ProjectBasedLearningWidgetState extends State<ProjectBasedLearningWidget>
                                   'Project-Based Learning (PBL) engages students in real-world projects, fostering critical thinking and collaboration. It mirrors authentic scenarios, promoting skills like inquiry-based learning and autonomy. Students actively contribute to project design, emphasizing the integration of subjects and the interconnectedness of real-world knowledge. PBL encourages reflection, self-assessment, and the development of essential skills. Assessment focuses on holistic growth, preparing students for the complexities of the real world.',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
-                                        fontSize: 16.0,
+                                        fontSize: 35.0,
                                       ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 40.0)).addToStart(SizedBox(height: 60.0)).addToEnd(SizedBox(height: 20.0)),
+                            ].divide(const SizedBox(height: 40.0)).addToStart(const SizedBox(height: 60.0)).addToEnd(const SizedBox(height: 20.0)),
                           ),
                         ),
                       ),
