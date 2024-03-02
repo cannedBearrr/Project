@@ -11,6 +11,7 @@ import 'business_portal_model.dart';
 export 'business_portal_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// CustomShape help create an cliping shape for the image
 class CustomShape extends CustomClipper<Path> {
 
   @override
@@ -18,10 +19,13 @@ class CustomShape extends CustomClipper<Path> {
     double height = size.height; //i
     double width = size.width;
 
+    //calculate the respond for the cliping shape
     double screenWidth = width + 150;
     double respond = (screenWidth < 600) ? 300 - screenWidth/2 : 0;
 
+    // Initialize a path object to define the clipping shape
     var path = Path();
+    // Define the starting point of and subsequent lines to form the shape
     path.moveTo(width, 0);
     path.lineTo(203, 0); //x
     path.lineTo(203, 160);
@@ -58,6 +62,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
   @override
   void initState() {
     super.initState();
+    // handle exceptions when initializing the model
     try {
       _model = createModel(context, () => BusinessPortalModel());
     } catch (e) {
