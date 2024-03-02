@@ -309,7 +309,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 Text(
                                   'WHERE LEARNING MEETS',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
+
                                         fontSize: 28.0,
                                         letterSpacing: 3.0,
                                         fontWeight: FontWeight.w800,
@@ -318,7 +318,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 Text(
                                   'OPPORTUNITY',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
+
                                         fontSize: 60.0,
                                         letterSpacing: 6.0,
                                         fontWeight: FontWeight.w800,
@@ -343,7 +343,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                     color: const Color(0x00FFFFFF),
                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                          
+
                                           color: Colors.black,
                                         ),
                                     elevation: 0.0,
@@ -387,7 +387,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                   child: Text(
                                     'OPPORTUNITY',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           fontSize: valueOrDefault<double>(
                                             () {
                                               if (screenWidth < kBreakpointSmall) {
@@ -480,7 +480,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Text(
                                             'OUR SERVICES',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   fontSize: 48.0,
                                                   fontWeight: FontWeight.normal,
                                                 ),
@@ -494,7 +494,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             children: [
                                               Container(
                                                 width: 100,
-                                                height: 26,
+                                                height: 40,
                                                 decoration: BoxDecoration(
                                                   color: const Color(0xFFD9D9D9),
                                                   borderRadius: BorderRadius.circular(24.0),
@@ -512,7 +512,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               ),
                                               Container(
                                                 width: 65,
-                                                height: 26,
+                                                height: 40,
                                                 decoration: BoxDecoration(
                                                   color: const Color(0xFFD9D9D9),
                                                   borderRadius: BorderRadius.circular(24.0),
@@ -530,7 +530,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               ),
                                               Container(
                                                 width: 80,
-                                                height: 26,
+                                                height: 40,
                                                 decoration: BoxDecoration(
                                                   color: const Color(0xFFD9D9D9),
                                                   borderRadius: BorderRadius.circular(24.0),
@@ -558,7 +558,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         ),
                                         Text(
                                             'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
-                                            style: FlutterFlowTheme.of(context).bodyMedium,
+                                            style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                                              fontSize: 25,
+                                            ),
                                           ),
                                         SizedBox(height: 10),
                                     ].divide(const SizedBox(height: 15.0)),
@@ -659,7 +661,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             child: Text(
                                               'OUR \nSERVICES',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     fontSize: 30.0,
                                                   ),
                                             ),
@@ -722,7 +724,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                 child: Text(
                                   'At Northern Horizon, we believe in the power of project-based learning and hands-on business practices to prepare high school students for the future. Through opportunities given to us companies, we offer students the opportunity to gain real-world experience and develop career-oriented skills.',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
+
                                         fontSize: 14.0,
                                       ),
                                 ),
@@ -783,7 +785,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'WHAT WE DO',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               color: Colors.black,
                                               fontSize: 115.0,
                                             ),
@@ -801,7 +803,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                           color: const Color(0x00FFFFFF),
                                           textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                
+
                                                 color: Colors.black,
                                               ),
                                           elevation: 0.0,
@@ -828,7 +830,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       child: Text(
                                         'DESIGN',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               color: Colors.white,
                                               fontSize: min(20.0 + pow(screenHeight, 1/3)*10, 125.0),
                                               letterSpacing: 2.0,
@@ -840,7 +842,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       child: Text(
                                         'MARKETING',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               color: Colors.white,
                                           fontSize: min(20.0 + pow(screenHeight, 1/3)*10, 125.0),
                                               letterSpacing: 2.0,
@@ -855,7 +857,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: Text(
                                           'PROFESSIONAL',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                             fontSize: min(20.0 + pow(screenHeight, 1/3)*10, 125.0),
                                                 letterSpacing: 2.0,
@@ -910,7 +912,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: Text(
                                           "WHAT\nWE\nDO",
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 fontSize: 60,
                                                 fontWeight: FontWeight.w900,
                                                 letterSpacing: 10,
@@ -935,7 +937,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 "DESIGN\nMARKETING\nPROFESSIONAL",
                                                 textAlign: TextAlign.right,
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
+
                                                       fontWeight: FontWeight.w600,
                                                       letterSpacing: 2.5,
                                                       lineHeight: 1.05,
@@ -998,7 +1000,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           Text(
                                             'WHY US',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   fontSize: min(-38 + screenWidth / 8, 70),
                                                 ),
                                           ),
@@ -1077,7 +1079,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'WHY US',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               fontSize: 50.0,
                                               color: Colors.white,
                                             ),
@@ -1157,7 +1159,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     Text(
                                       'INTERESTED AS \nA PARENT?',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 80.0,
                                             fontWeight: FontWeight.w300,
@@ -1176,7 +1178,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                         color: Colors.white,
                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                              
+
                                               color: Colors.black,
                                               fontWeight: FontWeight.w100,
                                               fontSize: 30,
@@ -1231,7 +1233,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                     Text(
                                       'INTERESTED AS \nA PARENT?',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 30.0,
                                             fontWeight: FontWeight.w300,
@@ -1250,7 +1252,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                         color: Colors.white,
                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                              
+
                                               color: Colors.black,
                                               fontWeight: FontWeight.w100,
                                             ),
@@ -1292,7 +1294,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                           'LEARN MORE',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.bold,
@@ -1303,7 +1305,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Text(
                                             'Home',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               color: Colors.white,
                                               fontSize: 13.0,
                                               fontWeight: FontWeight.w200,
@@ -1313,7 +1315,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1322,7 +1324,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'Our Projects',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1337,7 +1339,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'WHAT WE DO',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.bold,
@@ -1348,7 +1350,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: Text(
                                           'Marketing Solutions',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 13.0,
                                             fontWeight: FontWeight.w200,
@@ -1358,7 +1360,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'Website Building',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1367,7 +1369,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'Tailored Solutions',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1382,7 +1384,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'LEGAL',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.bold,
@@ -1395,7 +1397,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                           child: Text(
                                             'Terms and Conditions',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
+
                                               color: Colors.white,
                                               fontSize: 13.0,
                                               fontWeight: FontWeight.w200,
@@ -1408,7 +1410,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: Text(
                                           'Privacy Policy',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 13.0,
                                             fontWeight: FontWeight.w200,
@@ -1418,7 +1420,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         '',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1433,7 +1435,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'Contact Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.bold,
@@ -1444,7 +1446,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                         child: Text(
                                           '+1 (845)-281-9257',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
+
                                             color: Colors.white,
                                             fontSize: 13.0,
                                             fontWeight: FontWeight.w200,
@@ -1454,7 +1456,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         'azhao@northernacademy.org',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1463,7 +1465,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                       Text(
                                         '1 Ashley Ave Middletown, NY',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
+
                                           color: Colors.white,
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w200,
@@ -1541,7 +1543,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'LEARN MORE',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -1554,7 +1556,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 child: Text(
                                                   'Home',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     color: Colors.white,
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
@@ -1565,7 +1567,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'Career',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1574,7 +1576,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'Our Projects',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1588,7 +1590,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'WHAT WE DO',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -1597,7 +1599,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               child: Text(
                                                 'Marketing Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1607,7 +1609,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'Website Building',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1616,7 +1618,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'Tailored Solutions',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1630,7 +1632,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'LEGAL',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -1641,7 +1643,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 child: Text(
                                                   'Terms and Conditions',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     color: Colors.white,
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
@@ -1654,7 +1656,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               child: Text(
                                                 'Privacy Policy',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1664,7 +1666,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               '',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1678,7 +1680,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'CONTACT US',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -1687,7 +1689,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               child: Text(
                                                 '+1 (845)-281-9257',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1697,7 +1699,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               'azhao@northernacademy.org',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1706,7 +1708,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                             Text(
                                               '1 Ashley Ave Middletown, NY',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: Colors.white,
                                                 fontSize: 8.0,
                                                 fontWeight: FontWeight.w200,
@@ -1731,7 +1733,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'LEARN MORE',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -1744,7 +1746,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   child: Text(
                                                     'Home',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
+
                                                       color: Colors.white,
                                                       fontSize: 8.0,
                                                       fontWeight: FontWeight.w200,
@@ -1755,7 +1757,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'Career',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1764,7 +1766,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'Our Projects',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1779,7 +1781,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'WHAT WE DO',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -1788,7 +1790,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 child: Text(
                                                   'Marketing Solutions',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     color: Colors.white,
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
@@ -1798,7 +1800,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'Website Building',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1807,7 +1809,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'Tailored Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1822,7 +1824,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'LEGAL',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -1833,7 +1835,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                   child: Text(
                                                     'Terms and Conditions',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
+
                                                       color: Colors.white,
                                                       fontSize: 8.0,
                                                       fontWeight: FontWeight.w200,
@@ -1846,7 +1848,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 child: Text(
                                                   'Privacy Policy',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     color: Colors.white,
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
@@ -1862,7 +1864,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'CONTACT US',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -1871,7 +1873,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                                 child: Text(
                                                   '+1 (845)-281-9257',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
+
                                                     color: Colors.white,
                                                     fontSize: 8.0,
                                                     fontWeight: FontWeight.w200,
@@ -1881,7 +1883,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 'azhao@northernacademy.org',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
@@ -1890,7 +1892,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                                               Text(
                                                 '1 Ashley Ave Middletown, NY',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: 8.0,
                                                   fontWeight: FontWeight.w200,
