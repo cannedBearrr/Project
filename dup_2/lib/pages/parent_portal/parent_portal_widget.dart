@@ -3787,13 +3787,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Terms of Service',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
+                                        child: GestureDetector(
+                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                          child: Text(
+                                            'Terms and Conditions',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -4030,13 +4033,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                              child: Text(
-                                                'Terms of Service',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
+                                              child: GestureDetector(
+                                                onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                                child: Text(
+                                                  'Terms and Conditions',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -4219,13 +4225,16 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                                child: Text(
-                                                  'Terms of Service',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
+                                                child: GestureDetector(
+                                                  onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                                  child: Text(
+                                                    'Terms and Conditions',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                                   ),
                                                 ),
                                               ),

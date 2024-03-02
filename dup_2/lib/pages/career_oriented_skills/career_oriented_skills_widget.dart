@@ -119,7 +119,7 @@ class _CareerOrientedSkillsWidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                
                                                 fontSize: 30,
                                                 color: Colors.white,
                                                 letterSpacing: 4.0,
@@ -132,7 +132,7 @@ class _CareerOrientedSkillsWidgetState
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              
                                               color: Color(0xFFFFD34C),
                                               fontSize: 30,
                                               letterSpacing: 20.0,
@@ -188,7 +188,7 @@ class _CareerOrientedSkillsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -255,7 +255,7 @@ class _CareerOrientedSkillsWidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                
                                                 color: Colors.white,
                                                 fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
                                               ),
@@ -266,7 +266,7 @@ class _CareerOrientedSkillsWidgetState
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              
                                               color: Color(0xFF1F4477),
                                               fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 4, 65),
                                               letterSpacing: 30.0,
@@ -319,7 +319,7 @@ class _CareerOrientedSkillsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
                                     ),

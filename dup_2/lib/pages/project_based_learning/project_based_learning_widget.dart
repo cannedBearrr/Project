@@ -67,10 +67,10 @@ class _ProjectBasedLearningWidgetState
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      'Project - Based Learning',
+                      'Project - Based Learning',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            
                             fontSize: 45.0,
                             fontWeight: FontWeight.bold,
                           ),
