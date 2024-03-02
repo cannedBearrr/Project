@@ -69,7 +69,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
     return RegExp(r'.+@.+').hasMatch(email);
   }
 
-  //
+  // Resets the form fields after a delay of 2 seconds.
+  // It also resets the `isEmailSent` flag to false to reflect that an email has not been sent after form reset.
+  // Returns `null` because the actual reset operation is asynchronous and doesn't directly result in a value.
   Future<bool>? resetForm() {
     Future.delayed(const Duration(seconds: 2), () {
       _formKey.currentState?.reset();
@@ -80,6 +82,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
     return null;
   }
 
+  // To initiate all the controllers and focus nodes
   @override
   void initState() {
     super.initState();
@@ -123,15 +126,14 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
       double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
 
       return GestureDetector(
-        onTap: () => _model.unfocusNode.canRequestFocus
-            ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-            : FocusScope.of(context).unfocus(),
+        onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: Colors.white,
           body: SafeArea(
             top: true,
             child: SingleChildScrollView(
+              // To allow the page to scroll
               controller: scrollController,
               child: StickyHeader(
                 header: Stack(
@@ -147,6 +149,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5),
                             child: Row(
+                              // Navigation bar mobile view
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -238,6 +241,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                         child: ColoredBox(
                           color: Colors.white,
                           child: Row(
+                            // Navigation bar desktop view
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -331,7 +335,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           SizedBox(
                             height: MediaQuery.sizeOf(context).height - 40,
                             child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Spacer(flex: 3),
                                 Align(
@@ -351,7 +355,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   'WHERE LEARNING MEETS',
                                   style: FlutterFlowTheme.of(context).bodyLarge.override(
                                         color: Colors.white,
-                                      fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-82 + screenHeight / 10, 0)))/2.6,
+                                        fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-82 + screenHeight / 10, 0))) / 2.6,
                                       ),
                                 ),
                                 Text(
@@ -385,8 +389,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             ),
                                           ),
                                           TextSpan(
-                                            text:
-                                            ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
+                                            text: ' PATHS THROUGH HANDS-ON EXPERIENCES AND PROJECT-BASED LEARNING, BUILDING PRACTICAL SKILLS AND IMPRESSIVE',
                                             style: TextStyle(
                                               color: Colors.white,
                                             ),
@@ -405,8 +408,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                          fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) / 2.2,
-                                        ),
+                                              fontSize: (min(-6 + screenWidth / 8.6, 45) + sqrt(max(-42 + screenHeight / 20, 0))) / 2.2,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -443,7 +446,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     borderRadius: BorderRadius.circular(22.0),
                                   ),
                                 ),
-                                      Spacer(flex: 4),
+                                Spacer(flex: 4),
                                 SizedBox(height: 20),
                               ],
                             ),
@@ -524,7 +527,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     'WHERE LEARNING MEETS',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 40.0,
                                                           letterSpacing: 1.0,
@@ -535,7 +537,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 Text(
                                                   'OPPORTUNITY',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
                                                         color: const Color(0xFFEEB609),
                                                         fontSize: 90.0,
                                                         letterSpacing: 2.0,
@@ -548,7 +549,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       TextSpan(
                                                         text: 'WE HELP STUDENTS DEFINE THEIR',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 20.0,
                                                               fontWeight: FontWeight.normal,
@@ -561,8 +561,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       const TextSpan(
-                                                        text:
-                                                            ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT-\nBASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
+                                                        text: ' PATHS\nTHROUGH HANDS-ON EXPERIENCES AND PROJECT-\nBASED LEARNING, BUILDING PRACTICAL SKILLS AND\nIMPRESSIVE',
                                                         style: TextStyle(
                                                           color: Colors.white,
                                                         ),
@@ -581,7 +580,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       )
                                                     ],
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           fontSize: 20.0,
                                                         ),
                                                   ),
@@ -597,7 +595,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         shape: const StadiumBorder(),
                                                         side: const BorderSide(width: 1.5, color: Colors.white),
                                                         textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 20.5,
                                                             ),
@@ -613,11 +610,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                                 : 0
                                                             : 40;
                                                         scrollController.animateTo(
-                                                          (screenHeight +
-                                                                      min(screenWidth * 3 / 4,
-                                                                          screenHeight)) /
-                                                                  2 +
-                                                              x,
+                                                          (screenHeight + min(screenWidth * 3 / 4, screenHeight)) / 2 + x,
                                                           duration: const Duration(seconds: 2),
                                                           curve: Curves.easeInOut,
                                                         );
@@ -690,7 +683,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               child: Text(
                                                 'BENEFITS',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
                                                       fontSize: 57.0,
                                                       letterSpacing: 5.0,
                                                       fontWeight: FontWeight.w900,
@@ -736,7 +728,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: Text(
                                   'OUR BENEFITS',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
                                         color: Colors.black,
                                         fontSize: 30.0,
                                         letterSpacing: 1.5,
@@ -799,7 +790,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     child: Text(
                                                       'Reward',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
                                                             color: Colors.white,
                                                             fontSize: 22.0,
                                                             fontWeight: FontWeight.w500,
@@ -855,7 +845,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Scholarship Credit',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -876,7 +865,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Cash Award',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -958,7 +946,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     child: Text(
                                                       'Networking',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
                                                             color: Colors.white,
                                                             fontSize: 22.0,
                                                             fontWeight: FontWeight.w500,
@@ -1014,7 +1001,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Investor Connections',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1035,7 +1021,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Career Connections',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1056,7 +1041,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Business Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1077,7 +1061,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Career Opportunity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1159,7 +1142,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     child: Text(
                                                       'Build Portfolio',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
                                                             color: Colors.white,
                                                             fontSize: 22.0,
                                                             fontWeight: FontWeight.w500,
@@ -1215,7 +1197,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Internship Cerificates',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1236,7 +1217,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Achievements',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1318,7 +1298,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     child: Text(
                                                       'Professional Skills',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
                                                             color: Colors.white,
                                                             fontSize: 22.0,
                                                             fontWeight: FontWeight.w500,
@@ -1374,7 +1353,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Computer Programming',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1395,7 +1373,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Researching',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1416,7 +1393,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Communication',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1437,7 +1413,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Strategic Planning',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1458,7 +1433,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Financial Management',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1479,7 +1453,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Leadership',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1500,7 +1473,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Creativity',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1521,7 +1493,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Problem Solving',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1542,7 +1513,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         child: Text(
                                                           'Business Development',
                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                
                                                                 color: const Color(0xDDFFFFFF),
                                                                 fontSize: 19.0,
                                                                 letterSpacing: 2.0,
@@ -1601,7 +1571,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       child: Align(
                                         alignment: const AlignmentDirectional(0.0, 0.0),
                                         child: Transform.scale(
-                                          scale: (1/450)/(2/screenWidth + 1/screenHeight),
+                                          scale: (1 / 450) / (2 / screenWidth + 1 / screenHeight),
                                           child: Container(
                                             width: 374.0,
                                             height: 77.0,
@@ -1623,7 +1593,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     'BENEFITS',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-
                                                           fontSize: 60.0,
                                                           letterSpacing: 5.0,
                                                           fontWeight: FontWeight.w900,
@@ -1671,8 +1640,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               'HOW TO ACHIEVE OUR GOALS?',
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                    
-                                    fontSize: min(-1 + screenWidth/13, 30),
+                                    fontSize: min(-1 + screenWidth / 13, 30),
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black,
                                   ),
@@ -1693,13 +1661,12 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                           child: Center(
                             child: Text(
-                                                              'HOW TO ACHIEVE OUR GOALS?',
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                
-                                fontSize: 25.0,
-                                color: Colors.black,
-                              ),
-                                                            ),
+                              'HOW TO ACHIEVE OUR GOALS?',
+                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontSize: 25.0,
+                                    color: Colors.black,
+                                  ),
+                            ),
                           ),
                         ),
                       if (responsiveVisibility(
@@ -1720,11 +1687,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: RichText(
                                   text: TextSpan(
                                     text: (screenWidth > 950) ? '⸻ ' : '',
-                                    children: const <TextSpan>[
-                                      TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))
-                                    ],
+                                    children: const <TextSpan>[TextSpan(text: 'HOW TO ACHIEVE OUR GOALS?', style: TextStyle(color: Colors.black))],
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
                                           fontSize: 45.0,
                                           color: Colors.red[700],
                                         ),
@@ -1790,7 +1754,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               child: Text(
                                                 'Project - Based Learning',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
                                                       color: Colors.white,
                                                       fontSize: 22.0,
                                                       fontWeight: FontWeight.w500,
@@ -1850,7 +1813,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             child: Text(
                                               'Career - Oriented Skills',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
                                                     color: Colors.white,
                                                     fontSize: 22.0,
                                                     fontWeight: FontWeight.w500,
@@ -1911,7 +1873,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               child: Text(
                                                 'Partnerships with Companies',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
                                                       color: Colors.white,
                                                       fontSize: 22.0,
                                                       fontWeight: FontWeight.w500,
@@ -1978,7 +1939,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   'Project - Based\nLearning',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
                                                         color: Colors.white,
                                                         fontSize: 33.0,
                                                         fontWeight: FontWeight.bold,
@@ -2033,7 +1993,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   'Career - Oriented\nSkills',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
                                                         color: Colors.white,
                                                         fontSize: 33.0,
                                                         fontWeight: FontWeight.bold,
@@ -2089,7 +2048,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     'Partnerships with\nCompanies',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 33.0,
                                                           fontWeight: FontWeight.bold,
@@ -2157,7 +2115,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               'Project - Based\nLearning',
                                               textAlign: TextAlign.center,
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
                                                     color: Colors.white,
                                                     fontSize: 39.0,
                                                     fontWeight: FontWeight.bold,
@@ -2208,7 +2165,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             'Career - Oriented\nSkills',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
                                                   color: Colors.white,
                                                   fontSize: 39.0,
                                                   fontWeight: FontWeight.bold,
@@ -2259,7 +2215,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             'Partnerships with\nCompanies',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
                                                   color: Colors.white,
                                                   fontSize: 39.0,
                                                   fontWeight: FontWeight.bold,
@@ -2300,7 +2255,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         'How to get started?',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
                                               fontSize: 45.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -2318,10 +2272,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 15.0, 7.0),
                                         child: Text(
-                                        'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
+                                          'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
                                                 fontSize: 15.0,
                                                 fontWeight: FontWeight.w300,
                                               ),
@@ -2351,11 +2304,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 child: Text(
                                   'How to get started?',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
                                         fontSize: 45.0,
                                         fontWeight: FontWeight.bold,
                                       ),
-                                      textAlign: TextAlign.center,
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               const SizedBox(
@@ -2373,7 +2325,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w300,
                                         ),
@@ -2405,7 +2356,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 Text(
                                   'How to get\nstarted ?',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        
                                         fontSize: 60.0,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -2458,7 +2408,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   Text(
                                     'How to get\nstarted ?',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
                                           fontSize: 90.0,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black,
@@ -2477,7 +2426,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                     child: Text(
                                       'Embark on a transformative NH journey by exploring our website and connecting with representatives for key insights. Delve into our documentation to grasp the essence of our project-based learning program. Express your interest as a student, mentor, or supporter and discover unique collaboration opportunities. Your NH experience begins here, where curiosity meets boundless possibilities.',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
                                             fontSize: 20.0,
                                             fontWeight: FontWeight.w300,
                                             color: Colors.black,
@@ -2512,76 +2460,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: min(35 + screenWidth / 10, 200),
-                                              height: min(35 + screenWidth / 10, 200),
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/Anson.webp',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 9,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: min(35 + screenWidth / 10, 200),
+                                          height: min(35 + screenWidth / 10, 200),
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Anson.webp',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 9,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'ANSON ZHAO',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min(-10.0 + screenWidth / 24, 60),
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
-                                                      Text(
-                                                        'Director of Northern Horizon',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 20.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'ANSON ZHAO',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min(-10.0 + screenWidth / 24, 60),
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 1000,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                      child: Text(
-                                                        '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
-                                                              fontWeight: FontWeight.w200,
-                                                            ),
-                                                      ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
+                                                  Text(
+                                                    'Director of Northern Horizon',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 20.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 1000,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                  child: Text(
+                                                    '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2592,76 +2531,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: min(35 + screenWidth / 10, 200),
-                                              height: min(35 + screenWidth / 10, 200),
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/richard-image.jpeg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 14,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: min(35 + screenWidth / 10, 200),
+                                          height: min(35 + screenWidth / 10, 200),
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/richard-image.jpeg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 14,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'RICHARD CUI',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min(-10.0 + screenWidth / 24, 60),
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Computer Science',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 20.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'RICHARD CUI',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min(-10.0 + screenWidth / 24, 60),
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 1100,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                      child: Text(
-                                                        '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min((-10.0 + screenWidth / 24) * 0.6, 27),
-                                                              fontWeight: FontWeight.w200,
-                                                            ),
-                                                      ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Computer Science',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 20.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 1100,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                  child: Text(
+                                                    '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min((-10.0 + screenWidth / 24) * 0.6, 27),
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2672,76 +2602,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: min(35 + screenWidth / 10, 200),
-                                              height: min(35 + screenWidth / 10, 200),
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/giang-picture.jpeg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 15,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: min(35 + screenWidth / 10, 200),
+                                          height: min(35 + screenWidth / 10, 200),
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/giang-picture.jpeg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 15,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'GIANG NGUYEN',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min(-10.0 + screenWidth / 24, 60),
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 8),
-                                                          child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Biomedical Sciences',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 20.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'GIANG NGUYEN',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min(-10.0 + screenWidth / 24, 60),
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 950,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                      child: Text(
-                                                        '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
-                                                              fontWeight: FontWeight.w200,
-                                                            ),
-                                                      ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 8), child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Biomedical Sciences',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 20.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 950,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                  child: Text(
+                                                    '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(
@@ -2752,76 +2673,67 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         height: double.infinity,
                                         fit: BoxFit.cover,
                                       ),
-                                      Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            const Expanded(child: SizedBox()),
-                                            Container(
-                                              width: min(35 + screenWidth / 10, 200),
-                                              height: min(35 + screenWidth / 10, 200),
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/minh-picture.jpg',
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 13,
-                                              child: Column(
+                                      Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                        const Expanded(child: SizedBox()),
+                                        Container(
+                                          width: min(35 + screenWidth / 10, 200),
+                                          height: min(35 + screenWidth / 10, 200),
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/minh-picture.jpg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 13,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        'MINH PHAM',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min(-10.0 + screenWidth / 24, 60),
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                      ConstrainedBox(
-                                                          constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
-                                                          child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
-                                                      Text(
-                                                        'Undergraduate, Data Science',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: const Color(0xaaffffff),
-                                                              fontSize: 20.0,
-                                                              fontWeight: FontWeight.bold,
-                                                            ),
-                                                      ),
-                                                    ],
+                                                  Text(
+                                                    'MINH PHAM',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min(-10.0 + screenWidth / 24, 60),
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 1200,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                      child: Text(
-                                                        '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              color: Colors.white,
-                                                              fontSize: min((-10.0 + screenWidth / 24) * 0.6, 25),
-                                                              fontWeight: FontWeight.w200,
-                                                            ),
-                                                      ),
-                                                    ),
+                                                  ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
+                                                  Text(
+                                                    'Undergraduate, Data Science',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: const Color(0xaaffffff),
+                                                          fontSize: 20.0,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
                                                   ),
-                                                ].divide(const SizedBox(height: 20.0)),
+                                                ],
                                               ),
-                                            ),
-                                          ]),
+                                              SizedBox(
+                                                width: 1200,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                  child: Text(
+                                                    '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          color: Colors.white,
+                                                          fontSize: min((-10.0 + screenWidth / 24) * 0.6, 25),
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ].divide(const SizedBox(height: 20.0)),
+                                          ),
+                                        ),
+                                      ]),
                                     ],
                                   ),
                                   Stack(children: [
@@ -2831,77 +2743,68 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       height: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
-                                    Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          const Expanded(child: SizedBox()),
-                                          Container(
-                                            width: min(35 + screenWidth / 10, 200),
-                                            height: min(35 + screenWidth / 10, 200),
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.asset(
-                                              'assets/images/james-picture.jpg',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 9,
-                                            child: Column(
+                                    Row(mainAxisSize: MainAxisSize.max, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                                      const Expanded(child: SizedBox()),
+                                      Container(
+                                        width: min(35 + screenWidth / 10, 200),
+                                        height: min(35 + screenWidth / 10, 200),
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/james-picture.jpg',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 9,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
-                                                    Text(
-                                                      'JAMES ZHANG',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
-                                                            color: Colors.white,
-                                                            fontSize: min(-10.0 + screenWidth / 24, 60),
-                                                            fontWeight: FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                    ConstrainedBox(
-                                                        constraints: const BoxConstraints(maxWidth: 35, minWidth: 14),
-                                                        child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
-                                                    Text(
-                                                      'Senior Programmer at NH',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
-                                                            color: const Color(0xaaffffff),
-                                                            fontSize: 20.0,
-                                                            fontWeight: FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                Text(
+                                                  'JAMES ZHANG',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        color: Colors.white,
+                                                        fontSize: min(-10.0 + screenWidth / 24, 60),
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
-                                                SizedBox(
-                                                  width: 1200,
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                                                    child: Text(
-                                                      '“Thank you, Northern Horizon,for providing me with an intuitive course introducing popular programming languages and giving me the opportunities to be involved in real-time projects which has prepared me for college and my future careers. Here is a big Thank-You!”\n',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            
-                                                            color: Colors.white,
-                                                            fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
-                                                            fontWeight: FontWeight.w200,
-                                                          ),
-                                                      textAlign: TextAlign.center,
-                                                    ),
-                                                  ),
+                                                ConstrainedBox(constraints: const BoxConstraints(maxWidth: 35, minWidth: 14), child: SizedBox(width: max(screenWidth / 2 - 690, 0))),
+                                                Text(
+                                                  'Senior Programmer at NH',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        color: const Color(0xaaffffff),
+                                                        fontSize: 20.0,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                 ),
-                                              ].divide(const SizedBox(height: 20.0)),
+                                              ],
                                             ),
-                                          ),
-                                        ]),
+                                            SizedBox(
+                                              width: 1200,
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                                child: Text(
+                                                  '“Thank you, Northern Horizon,for providing me with an intuitive course introducing popular programming languages and giving me the opportunities to be involved in real-time projects which has prepared me for college and my future careers. Here is a big Thank-You!”\n',
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        color: Colors.white,
+                                                        fontSize: min((-10.0 + screenWidth / 24) * 0.6, 30),
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(height: 20.0)),
+                                        ),
+                                      ),
+                                    ]),
                                   ]),
                                 ],
                               ),
@@ -2989,7 +2892,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'ANSON ZHAO',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
@@ -2998,7 +2900,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'Director of Northern Horizon',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: const Color(0xaaffffff),
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.bold,
@@ -3013,7 +2914,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     '“Opting for Northern Horizon is the ideal decision for your children if you seek a direct and shortest path to their successful careers.”',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 17.0,
                                                           fontWeight: FontWeight.w200,
@@ -3068,7 +2968,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'RICHARD CUI',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
@@ -3077,7 +2976,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'Undergraduate, Computer Science',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: const Color(0xaaffffff),
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.bold,
@@ -3092,7 +2990,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     '“Northern Horizon gave me a valuable opportunity to explore different facets of web development and helped develop my problem solving and presentation skills. I think it’d be nice to have more involvement from the mentors but I know they’re busy. Honestly, I think it’s the only reason I have a software engineering internship this summer.”',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 14.0,
                                                           fontWeight: FontWeight.w200,
@@ -3147,7 +3044,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'GIANG NGUYEN',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
@@ -3156,7 +3052,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'Undergraduate, Biomedical Sciences',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: const Color(0xaaffffff),
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.bold,
@@ -3171,7 +3066,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     '“I have learned to solve problem more efficiently on my own. With an experienced teacher and other friends, I have enjoyed working on Northern Horizon’s projects with my peers!”',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 17.0,
                                                           fontWeight: FontWeight.w200,
@@ -3226,7 +3120,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'MINH PHAM',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
@@ -3235,7 +3128,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'Undergraduate, Data Science',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: const Color(0xaaffffff),
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.bold,
@@ -3250,7 +3142,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     '“My time at Northern Horizon has been awesome. Northern Horizon has provided me with great opportunities to work on my passion which is programming that I otherwise would not have had the discipline to do. Ultimately, the program has helped me polish my resume with experiences and projects, as well as deciding my major and future career in the foreseeable future.”',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 14.0,
                                                           fontWeight: FontWeight.w200,
@@ -3305,7 +3196,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'JAMES ZHANG',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: Colors.white,
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
@@ -3314,7 +3204,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'Senior Programmer at NH',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
                                                               color: const Color(0xaaffffff),
                                                               fontSize: 17.0,
                                                               fontWeight: FontWeight.bold,
@@ -3329,7 +3218,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     '“Thank you, Northern Horizon,for providing me with an intuitive course introducing popular programming languages and giving me the opportunities to be involved in real-time projects which has prepared me for college and my future careers. Here is a big Thank-You!”\n',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                          
                                                           color: Colors.white,
                                                           fontSize: 14.0,
                                                           fontWeight: FontWeight.w200,
@@ -3388,270 +3276,268 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   width: screenWidth * 0.9,
                                   decoration: const BoxDecoration(
                                     color: Color(0xFFD0CECE),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 40.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          InkWell(
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            child: Image.asset(
-                                              'images/2023NA_301.jpg',
-                                              width: screenWidth * 0.8,
-                                              height: screenHeight * 0.3,
-                                              fit: BoxFit.cover,
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 40.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        InkWell(
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          child: Image.asset(
+                                            'images/2023NA_301.jpg',
+                                            width: screenWidth * 0.8,
+                                            height: screenHeight * 0.3,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          phone: false,
+                                          tablet: false,
+                                          tabletLandscape: false,
+                                        ))
+                                          Container(
+                                            width: screenWidth * 0.8,
+                                            height: screenHeight * 0.25,
+                                            decoration: const BoxDecoration(
+                                              color: Color(0x00FFFFFF),
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                FittedBox(
+                                                  child: Text(
+                                                    'SUBSCRIBE TO OUR NEWSLETTE1R',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontSize: 60.0,
+                                                          letterSpacing: 8.0,
+                                                          color: Colors.black,
+                                                          fontWeight: FontWeight.w900,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
+                                                  child: Text(
+                                                    'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                          fontSize: 21.0,
+                                                          color: Colors.black,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Flexible(
+                                                  child: Padding(
+                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
+                                                    child: SizedBox(
+                                                      width: screenWidth * 0.5,
+                                                      child: Form(
+                                                        key: _formKey,
+                                                        child: TextFormField(
+                                                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                          onFieldSubmitted: (value) async {
+                                                            if (_formKey.currentState!.validate()) {
+                                                              setState(() {
+                                                                sendEmail(value);
+                                                                isEmailSent = true;
+                                                              });
+                                                              _model.textController1?.clear();
+                                                              await resetForm();
+                                                            }
+                                                          },
+                                                          controller: _model.textController1,
+                                                          focusNode: _model.textFieldFocusNode1,
+                                                          autofocus: false,
+                                                          obscureText: false,
+                                                          decoration: InputDecoration(
+                                                            labelText: isEmailSent ? 'Sent' : 'Enter your email',
+                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                            hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                            enabledBorder: OutlineInputBorder(
+                                                              borderSide: const BorderSide(
+                                                                color: Colors.black,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            focusedBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).primary,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            errorBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).error,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            focusedErrorBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).error,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            filled: true,
+                                                            fillColor: Colors.white,
+                                                            suffixIcon: const Icon(
+                                                              Icons.arrow_forward,
+                                                            ),
+                                                          ),
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                letterSpacing: 1.0,
+                                                                lineHeight: 1.0,
+                                                                color: Colors.black,
+                                                              ),
+                                                          textAlign: TextAlign.start,
+                                                          validator: (value) {
+                                                            return _validateEmail(value!);
+                                                          },
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ].divide(const SizedBox(height: 22.0)).addToStart(const SizedBox(height: 25.0)),
                                             ),
                                           ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Container(
-                                              width: screenWidth * 0.8,
-                                              height: screenHeight * 0.25,
-                                              decoration: const BoxDecoration(
-                                                color: Color(0x00FFFFFF),
-                                              ),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  FittedBox(
-                                                    child: Text(
-                                                      'SUBSCRIBE TO OUR NEWSLETTE1R',
-                                                      textAlign: TextAlign.center,
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
-                                                        fontSize: 60.0,
-                                                        letterSpacing: 8.0,
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          desktop: false,
+                                        ))
+                                          Container(
+                                            width: screenWidth * 0.8,
+                                            decoration: const BoxDecoration(
+                                              color: Color(0x00FFFFFF),
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  'SUBSCRIBE TO OUR NEWSLETTE22R',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        fontSize: 18.0 + max(screenWidth * 0.02, 0),
+                                                        letterSpacing: (18.0 + max(screenWidth * 0.02, 0)) / 5,
                                                         color: Colors.black,
                                                         fontWeight: FontWeight.w900,
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding: const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
-                                                    child: Text(
-                                                      'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
-                                                      textAlign: TextAlign.center,
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        
-                                                        fontSize: 21.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Flexible(
-                                                    child: Padding(
-                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
-                                                      child: SizedBox(
-                                                        width: screenWidth * 0.5,
-                                                        child: Form(
-                                                          key: _formKey,
-                                                          child: TextFormField(
-                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
-                                                            onFieldSubmitted: (value) async {
-                                                              if (_formKey.currentState!.validate()) {
-                                                                setState(() {
-                                                                  sendEmail(value);
-                                                                  isEmailSent = true;
-                                                                });
-                                                                _model.textController1?.clear();
-                                                                await resetForm();
-                                                              }
-                                                            },
-                                                            controller: _model.textController1,
-                                                            focusNode: _model.textFieldFocusNode1,
-                                                            autofocus: false,
-                                                            obscureText: false,
-                                                            decoration: InputDecoration(
-                                                              labelText: isEmailSent ? 'Sent' : 'Enter your email',
-                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                              enabledBorder: OutlineInputBorder(
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.black,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              focusedBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).primary,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              errorBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).error,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              focusedErrorBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).error,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              filled: true,
-                                                              fillColor: Colors.white,
-                                                              suffixIcon: const Icon(
-                                                                Icons.arrow_forward,
-                                                              ),
-                                                            ),
-                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              letterSpacing: 1.0,
-                                                              lineHeight: 1.0,
-                                                              color: Colors.black,
-                                                            ),
-                                                            textAlign: TextAlign.start,
-                                                            validator: (value) {
-                                                              return _validateEmail(value!);
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ].divide(const SizedBox(height: 22.0)).addToStart(const SizedBox(height: 25.0)),
-                                              ),
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            desktop: false,
-                                          ))
-                                            Container(
-                                              width: screenWidth * 0.8,
-                                              decoration: const BoxDecoration(
-                                                color: Color(0x00FFFFFF),
-                                              ),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    'SUBSCRIBE TO OUR NEWSLETTE22R',
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                  child: Text(
+                                                    'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
-                                                      fontSize: 18.0 + max(screenWidth * 0.02, 0),
-                                                      letterSpacing: (18.0 + max(screenWidth * 0.02, 0))/5,
-                                                      color: Colors.black,
-                                                      fontWeight: FontWeight.w900,
-                                                    ),
+                                                          fontSize: (responsiveVisibility(
+                                                            context: context,
+                                                            phone: false,
+                                                          ))
+                                                              ? 18.0
+                                                              : 16.0,
+                                                          color: Colors.black,
+                                                        ),
                                                   ),
-                                                  Padding(
-                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                    child: Text(
-                                                      'Subscribe to our newsletter through the website and unlock a world of exclusive insights. Stay in the loop with program updates, receive invitations to events, and enjoy inspiring success stories. Get early access to collaboration opportunities, industry trends, and special offers. Join our community, where staying informed means staying ahead.',
-                                                      textAlign: TextAlign.center,
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                        fontSize: (responsiveVisibility(context: context, phone: false,)) ? 18.0 : 16.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Flexible(
-                                                    child: Padding(
-                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
-                                                      child: SizedBox(
-                                                        width: screenWidth * 0.55,
-                                                        child: Form(
-                                                          key: _formKey,
-                                                          child: TextFormField(
-                                                            autovalidateMode: AutovalidateMode.onUserInteraction,
-                                                            onFieldSubmitted: (value) async {
-                                                              if (_formKey.currentState!.validate()) {
-                                                                setState(() {
-                                                                  sendEmail(value);
-                                                                  isEmailSent = true;
-                                                                });
-                                                                _model.textController2?.clear();
-                                                                await resetForm();
-                                                              }
-                                                            },
-                                                            controller: _model.textController2,
-                                                            focusNode: _model.textFieldFocusNode2,
-                                                            autofocus: false,
-                                                            obscureText: false,
-                                                            decoration: InputDecoration(
-                                                              labelText: isEmailSent ? 'Sent' : 'Enter your email',
-                                                              labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                
-                                                                fontSize: 14.0,
-                                                              ),
-                                                              hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                                                              enabledBorder: OutlineInputBorder(
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.black,
-                                                                  width: 1.0,
+                                                ),
+                                                Flexible(
+                                                  child: Padding(
+                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 11.0),
+                                                    child: SizedBox(
+                                                      width: screenWidth * 0.55,
+                                                      child: Form(
+                                                        key: _formKey,
+                                                        child: TextFormField(
+                                                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                                                          onFieldSubmitted: (value) async {
+                                                            if (_formKey.currentState!.validate()) {
+                                                              setState(() {
+                                                                sendEmail(value);
+                                                                isEmailSent = true;
+                                                              });
+                                                              _model.textController2?.clear();
+                                                              await resetForm();
+                                                            }
+                                                          },
+                                                          controller: _model.textController2,
+                                                          focusNode: _model.textFieldFocusNode2,
+                                                          autofocus: false,
+                                                          obscureText: false,
+                                                          decoration: InputDecoration(
+                                                            labelText: isEmailSent ? 'Sent' : 'Enter your email',
+                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                  fontSize: 14.0,
                                                                 ),
-                                                                borderRadius: BorderRadius.circular(0.0),
+                                                            hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                            enabledBorder: OutlineInputBorder(
+                                                              borderSide: const BorderSide(
+                                                                color: Colors.black,
+                                                                width: 1.0,
                                                               ),
-                                                              focusedBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).primary,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              errorBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).error,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              focusedErrorBorder: OutlineInputBorder(
-                                                                borderSide: BorderSide(
-                                                                  color: FlutterFlowTheme.of(context).error,
-                                                                  width: 1.0,
-                                                                ),
-                                                                borderRadius: BorderRadius.circular(0.0),
-                                                              ),
-                                                              filled: true,
-                                                              fillColor: Colors.white,
-                                                              suffixIcon: const Icon(
-                                                                Icons.arrow_forward,
-                                                                //   onPressed(){
-                                                                //
-                                                                // }f
-                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
                                                             ),
-                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              
-                                                              letterSpacing: 1.0,
-                                                              lineHeight: 1.0,
-                                                              color: Colors.black,
+                                                            focusedBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).primary,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
                                                             ),
-                                                            textAlign: TextAlign.start,
-                                                            validator: (value) {
-                                                              return _validateEmail(value!);
-                                                            },
+                                                            errorBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).error,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            focusedErrorBorder: OutlineInputBorder(
+                                                              borderSide: BorderSide(
+                                                                color: FlutterFlowTheme.of(context).error,
+                                                                width: 1.0,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(0.0),
+                                                            ),
+                                                            filled: true,
+                                                            fillColor: Colors.white,
+                                                            suffixIcon: const Icon(
+                                                              Icons.arrow_forward,
+                                                              //   onPressed(){
+                                                              //
+                                                              // }f
+                                                            ),
                                                           ),
+                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                letterSpacing: 1.0,
+                                                                lineHeight: 1.0,
+                                                                color: Colors.black,
+                                                              ),
+                                                          textAlign: TextAlign.start,
+                                                          validator: (value) {
+                                                            return _validateEmail(value!);
+                                                          },
                                                         ),
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(height: 15.0)).addToStart(const SizedBox(height: 25.0)),
-                                              ),
+                                                ),
+                                              ].divide(const SizedBox(height: 15.0)).addToStart(const SizedBox(height: 25.0)),
                                             ),
-                                        ].divide(const SizedBox(height: 20.0)),
-                                      ),
+                                          ),
+                                      ].divide(const SizedBox(height: 20.0)),
                                     ),
-
+                                  ),
                                 ),
                               ),
                             ],
@@ -3683,11 +3569,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         child: Text(
                                           'LEARN MORE',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
-                                            color: Colors.white,
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                                color: Colors.white,
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                         ),
                                       ),
                                       Padding(
@@ -3699,31 +3584,28 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                           child: Text(
                                             'Home',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              
-                                              color: Colors.white,
-                                              fontSize: 13.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
+                                                  color: Colors.white,
+                                                  fontSize: 13.0,
+                                                  fontWeight: FontWeight.w200,
+                                                ),
                                           ),
                                         ),
                                       ),
                                       Text(
                                         'Career',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         'Our Projects',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -3734,41 +3616,37 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       Text(
                                         'WHAT WE DO',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           'Marketing Solutions',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'Website Building',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         'Tailored Solutions',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -3779,22 +3657,20 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       Text(
                                         'LEGAL',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           'Terms of Service',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       GestureDetector(
@@ -3802,21 +3678,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         child: Text(
                                           'Privacy Policy',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         '',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -3827,41 +3701,37 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       Text(
                                         'Contact Us',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           '+1 (845)-281-9257',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            
-                                            color: Colors.white,
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w200,
+                                              ),
                                         ),
                                       ),
                                       Text(
                                         'azhao@northernacademy.org',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                       Text(
                                         '1 Ashley Ave Middletown, NY',
                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                          
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
+                                              color: Colors.white,
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                       ),
                                     ].divide(const SizedBox(height: 5.0)),
                                   ),
@@ -3935,9 +3805,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             Text(
                                               'LEARN MORE',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                              ),
+                                                    color: Colors.white,
+                                                  ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
@@ -3948,31 +3817,28 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 child: Text(
                                                   'Home',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                        color: Colors.white,
+                                                        fontSize: 8.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
                                                 ),
                                               ),
                                             ),
                                             Text(
                                               'Career',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                             Text(
                                               'Our Projects',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),
@@ -3982,39 +3848,35 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             Text(
                                               'WHAT WE DO',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                              ),
+                                                    color: Colors.white,
+                                                  ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 'Marketing Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                             ),
                                             Text(
                                               'Website Building',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                             Text(
                                               'Tailored Solutions',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),
@@ -4024,20 +3886,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             Text(
                                               'LEGAL',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                              ),
+                                                    color: Colors.white,
+                                                  ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 'Terms of Service',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                             ),
                                             GestureDetector(
@@ -4045,21 +3905,19 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               child: Text(
                                                 'Privacy Policy',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                             ),
                                             Text(
                                               '',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),
@@ -4069,39 +3927,35 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             Text(
                                               'CONTACT US',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                              ),
+                                                    color: Colors.white,
+                                                  ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                               child: Text(
                                                 '+1 (845)-281-9257',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                             ),
                                             Text(
                                               'azhao@northernacademy.org',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                             Text(
                                               '1 Ashley Ave Middletown, NY',
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: 8.0,
-                                                fontWeight: FontWeight.w200,
-                                              ),
+                                                    color: Colors.white,
+                                                    fontSize: 8.0,
+                                                    fontWeight: FontWeight.w200,
+                                                  ),
                                             ),
                                           ].divide(const SizedBox(height: 2.0)),
                                         ),
@@ -4122,9 +3976,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Text(
                                                 'LEARN MORE',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                ),
+                                                      color: Colors.white,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
@@ -4135,31 +3988,28 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                   child: Text(
                                                     'Home',
                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      
-                                                      color: Colors.white,
-                                                      fontSize: 8.0,
-                                                      fontWeight: FontWeight.w200,
-                                                    ),
+                                                          color: Colors.white,
+                                                          fontSize: 8.0,
+                                                          fontWeight: FontWeight.w200,
+                                                        ),
                                                   ),
                                                 ),
                                               ),
                                               Text(
                                                 'Career',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               Text(
                                                 'Our Projects',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
@@ -4170,39 +4020,35 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Text(
                                                 'WHAT WE DO',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                ),
+                                                      color: Colors.white,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                                 child: Text(
                                                   'Marketing Solutions',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                        color: Colors.white,
+                                                        fontSize: 8.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
                                                 ),
                                               ),
                                               Text(
                                                 'Website Building',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               Text(
                                                 'Tailored Solutions',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
@@ -4213,20 +4059,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Text(
                                                 'LEGAL',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                ),
+                                                      color: Colors.white,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                                 child: Text(
                                                   'Terms of Service',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                        color: Colors.white,
+                                                        fontSize: 8.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
                                                 ),
                                               ),
                                               GestureDetector(
@@ -4234,11 +4078,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 child: Text(
                                                   'Privacy Policy',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                        color: Colors.white,
+                                                        fontSize: 8.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
                                                 ),
                                               ),
                                               SizedBox(height: 12),
@@ -4250,63 +4093,56 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                               Text(
                                                 'CONTACT US',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                ),
+                                                      color: Colors.white,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                                 child: Text(
                                                   '+1 (845)-281-9257',
                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    
-                                                    color: Colors.white,
-                                                    fontSize: 8.0,
-                                                    fontWeight: FontWeight.w200,
-                                                  ),
+                                                        color: Colors.white,
+                                                        fontSize: 8.0,
+                                                        fontWeight: FontWeight.w200,
+                                                      ),
                                                 ),
                                               ),
                                               Text(
                                                 'azhao@northernacademy.org',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               Text(
                                                 '1 Ashley Ave Middletown, NY',
                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
-                                                  color: Colors.white,
-                                                  fontSize: 8.0,
-                                                  fontWeight: FontWeight.w200,
-                                                ),
+                                                      color: Colors.white,
+                                                      fontSize: 8.0,
+                                                      fontWeight: FontWeight.w200,
+                                                    ),
                                               ),
                                               SizedBox(height: 12),
                                             ].divide(const SizedBox(height: 2.0)),
                                           ),
-                                          Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                              children: [
-                                                Image.asset(
-                                                  'assets/images/linkedin.png',
-                                                  height: 30,
-                                                  color: Colors.white,
-                                                ),
-                                                Image.asset(
-                                                  'assets/images/facebook.png',
-                                                  height: 30,
-                                                  color: Colors.white,
-                                                ),
-                                                Image.asset(
-                                                  'assets/images/twitter.png',
-                                                  height: 30,
-                                                  color: Colors.white,
-                                                ),
-                                              ]
-                                          )
+                                          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                                            Image.asset(
+                                              'assets/images/linkedin.png',
+                                              height: 30,
+                                              color: Colors.white,
+                                            ),
+                                            Image.asset(
+                                              'assets/images/facebook.png',
+                                              height: 30,
+                                              color: Colors.white,
+                                            ),
+                                            Image.asset(
+                                              'assets/images/twitter.png',
+                                              height: 30,
+                                              color: Colors.white,
+                                            ),
+                                          ])
                                         ],
                                       ),
                                     ),
@@ -4348,7 +4184,6 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                       ),
                                     ),
                                   ),
-
                                 ],
                               ],
                             ),
