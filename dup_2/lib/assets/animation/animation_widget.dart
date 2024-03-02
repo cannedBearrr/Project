@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +108,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
 
     double screenWidth = MediaQuery.sizeOf(context).width;
     double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
-    
+
     return Stack(children: [
       Indexer(children: [
         Indexed(

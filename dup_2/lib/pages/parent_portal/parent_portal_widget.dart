@@ -785,8 +785,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Container(
-                                                  width: 200.0,
-                                                  height: 52.0,
+                                                  width: 290.0,
+                                                  height: 60.0,
                                                   decoration: BoxDecoration(
                                                     color: const Color(0x00FFFFFF),
                                                     shape: BoxShape.rectangle,
@@ -843,8 +843,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 240.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -864,8 +864,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -944,8 +944,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Container(
-                                                  width: 230.0,
-                                                  height: 52.0,
+                                                  width: 290.0,
+                                                  height: 60.0,
                                                   decoration: BoxDecoration(
                                                     color: const Color(0x00FFFFFF),
                                                     shape: BoxShape.rectangle,
@@ -1002,8 +1002,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 260.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1023,8 +1023,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 260.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1044,8 +1044,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 260.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1065,8 +1065,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 260.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1145,8 +1145,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Container(
-                                                  width: 250.0,
-                                                  height: 52.0,
+                                                  width: 290.0,
+                                                  height: 60.0,
                                                   decoration: BoxDecoration(
                                                     color: const Color(0x00FFFFFF),
                                                     shape: BoxShape.rectangle,
@@ -1203,8 +1203,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     children: [
                                                       Container(
-                                                        width: 265.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1224,8 +1224,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        width: 240.0,
-                                                        height: 48.0,
+                                                        width: 290.0,
+                                                        height: 60.0,
                                                         decoration: BoxDecoration(
                                                           color: Colors.transparent,
                                                           border: Border.all(
@@ -1304,8 +1304,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                 ),
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: Container(
-                                                  width: 270.0,
-                                                  height: 52.0,
+                                                  width: 290.0,
+                                                  height: 60.0,
                                                   decoration: BoxDecoration(
                                                     color: const Color(0x00FFFFFF),
                                                     shape: BoxShape.rectangle,
