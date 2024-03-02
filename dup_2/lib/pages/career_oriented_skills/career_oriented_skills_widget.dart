@@ -161,12 +161,16 @@ class _CareerOrientedSkillsWidgetState extends State<CareerOrientedSkillsWidget>
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    25.0, 0.0, 25.0, 0.0),
                                 child: Text(
-                                  'WE PREPARE',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  '\n\"WE PREPARE STUDENTS FOR FUTURE SUCCESS BY EQUIPPING THEM WITH THE SKILLS AND KNOWLEDGE NEEDED TO EXCEL IN THEIR CHOSEN CAREER PATHS.”',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
+                                        fontSize: 25,
                                       ),
                                 ),
                               ),
