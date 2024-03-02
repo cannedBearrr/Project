@@ -96,50 +96,51 @@ class _CareerOrientedSkillsWidgetState
                           ))
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Container(
-                                width: 400,
-                                height: 125,
-                                decoration: BoxDecoration(
-                                  color: Color(0x00FFFFFF),
-                                  border: Border.all(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'CAREER - ORIENTED',
+                              child: FittedBox(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(14.0),
+                                  child: Container(
+                                    width: 400,
+                                    decoration: BoxDecoration(
+                                      color: Color(0x00FFFFFF),
+                                      border: Border.all(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Text(
+                                            'CAREER - ORIENTED',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                  
+                                                  fontSize: 30,
+                                                  color: Colors.white,
+                                                  letterSpacing: 4.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'SKILLS',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                
+                                  
+                                                color: Color(0xFFFFD34C),
                                                 fontSize: 30,
-                                                color: Colors.white,
-                                                letterSpacing: 4.0,
-                                                fontWeight: FontWeight.w600,
+                                                letterSpacing: 20.0,
+                                                fontWeight: FontWeight.w900,
                                               ),
                                         ),
-                                      ),
-                                      Text(
-                                        'SKILLS',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              
-                                              color: Color(0xFFFFD34C),
-                                              fontSize: 30,
-                                              letterSpacing: 20.0,
-                                              fontWeight: FontWeight.w900,
-                                            ),
-                                      ),
-                                    ].addToStart(SizedBox(height: 10.0)),
+                                      ].addToStart(SizedBox(height: 13.0)).addToEnd(SizedBox(height: 10.0)),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -162,22 +163,7 @@ class _CareerOrientedSkillsWidgetState
                         ),
                         child: Stack(
                           children: [
-                            Opacity(
-                              opacity: 0.4,
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.asset(
-                                    'images/2023NA_039.webp',
-                                    width: double.infinity,
-                                    height:
-                                        MediaQuery.sizeOf(context).height * 0.5,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            SizedBox(width: double.infinity, height: MediaQuery.sizeOf(context).height * 0.5, child: ColoredBox(color: Colors.black45,)),
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
@@ -234,47 +220,43 @@ class _CareerOrientedSkillsWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.55,
-                                height: MediaQuery.sizeOf(context).height * 0.2,
                                 decoration: BoxDecoration(
                                   color: Color(0x00FFFFFF),
                                   border: Border.all(
                                     color: Colors.white,
                                   ),
                                 ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'CAREER - ORIENTED',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                
-                                                color: Colors.white,
-                                                fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
-                                              ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'SKILLS',
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(0.0, 0.0),
+                                      child: Text(
+                                        'CAREER - ORIENTED',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              
-                                              color: Color(0xFF1F4477),
-                                              fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 4, 65),
-                                              letterSpacing: 30.0,
-                                              fontWeight: FontWeight.bold,
+
+                                              color: Colors.white,
+                                              fontSize: min(-100.0 + MediaQuery.sizeOf(context).width / 4, 40),
                                             ),
                                       ),
-                                    ].addToStart(SizedBox(height: 10.0)),
-                                  ),
+                                    ),
+                                    Text(
+                                      'SKILLS',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+
+                                            color: Color(0xFF1F4477),
+                                            fontSize: min(-130.0 + MediaQuery.sizeOf(context).width / 4, 65),
+                                            letterSpacing: 30.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  ].addToStart(SizedBox(height: 12.0)).addToEnd(SizedBox(height: 5.0)),
                                 ),
                               ),
                             ),

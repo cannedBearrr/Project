@@ -159,9 +159,25 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Enter card details',
-                          style: FlutterFlowTheme.of(context).headlineLarge,
+                        Transform.translate(
+                          offset: Offset(-20, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () => context.pop(),
+                                    child: Icon(Icons.arrow_back)
+                                ),
+                              ),
+                              SizedBox(width: 5,),
+                              Text(
+                                'Enter card details',
+                                style: FlutterFlowTheme.of(context).headlineLarge,
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(height: 25),
                         SizedBox(
@@ -598,7 +614,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                               backgroundColor: const Color(0xFF1F4477),
                             ),
                             child: Text(
-                              'Continue',
+                              'Submit',
                               style: FlutterFlowTheme.of(context).bodyLarge.override(
                                     color: Colors.white,
                                   ),
