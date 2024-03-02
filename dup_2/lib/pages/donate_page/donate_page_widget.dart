@@ -1,12 +1,7 @@
-import 'package:flutter/cupertino.dart';
-
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class DonatePageWidget extends StatefulWidget {
@@ -15,7 +10,7 @@ class DonatePageWidget extends StatefulWidget {
   final double m;
 
   @override
-  State<DonatePageWidget> createState() => _DonatePageWidgetState(this.m);
+  State<DonatePageWidget> createState() => _DonatePageWidgetState(m);
 }
 
 var dateFormatter = MaskTextInputFormatter(
@@ -106,12 +101,12 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                       ),
                       borderRadius: BorderRadius.circular(12.0),
                     ),
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Text(
@@ -141,12 +136,12 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                           aController6.text,
                           style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           'Total: \$${formatter.format(m)}',
                           style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                       ],
@@ -159,11 +154,25 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Enter card details',
-                          style: FlutterFlowTheme.of(context).headlineLarge,
+                        Transform.translate(
+                          offset: const Offset(-25, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(icon: const Icon(Icons.arrow_back), onPressed: () {
+                                context.pop();
+                                context.pop();
+                              }
+                              ),
+                              const SizedBox(width: 4,),
+                              Text(
+                                'Enter card details',
+                                style: FlutterFlowTheme.of(context).headlineLarge,
+                              ),
+                            ],
+                          ),
                         ),
-                        SizedBox(height: 25),
+                        const SizedBox(height: 25),
                         SizedBox(
                           width: 180,
                           child: TextFormField(
@@ -201,7 +210,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                             },
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                         SizedBox(
                           width: 220,
                           child: TextFormField(
@@ -239,7 +248,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                             },
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                         Row(
                           children: [
                             SizedBox(
@@ -281,7 +290,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                                 },
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 70,
                             ),
                             SizedBox(
@@ -321,13 +330,13 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 25),
+                        const SizedBox(height: 25),
                         Text('Billing address',
                             style: FlutterFlowTheme.of(context).bodyLarge.override(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
                                 )),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         SizedBox(
                           width: 250,
                           child: TextFormField(
@@ -362,7 +371,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                             },
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         SizedBox(
                           width: 250,
                           child: TextFormField(
@@ -380,7 +389,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                             onChanged: (value) => setState(() {}),
                           ),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                         Row(
                           children: [
                             SizedBox(
@@ -451,9 +460,9 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                                 },
                               ),
                             ),
-                          ].divide(SizedBox(width: 20)),
+                          ].divide(const SizedBox(width: 20)),
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                         Row(
                           children: [
                             SizedBox(
@@ -524,9 +533,9 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                                 },
                               ),
                             ),
-                          ].divide(SizedBox(width: 65)),
+                          ].divide(const SizedBox(width: 65)),
                         ),
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         if (MediaQuery.sizeOf(context).width <= 666) ...[
                           Container(
                             width: 250,
@@ -537,12 +546,12 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                               ),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
                                 Text(
@@ -572,23 +581,23 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                                   aController6.text,
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Text(
                                   'Total: \$${formatter.format(m)}',
                                   style: FlutterFlowTheme.of(context).bodyMedium,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
                               ],
                             ),
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                       ],
                         FilledButton(
                             onPressed: () async {
                               if (!_formKey.currentState!.validate()) {
-                                print("no");
+
                               }
                               else {
                                 context.pushNamed("donatePageSubmit");
@@ -598,7 +607,7 @@ class _DonatePageWidgetState extends State<DonatePageWidget> {
                               backgroundColor: const Color(0xFF1F4477),
                             ),
                             child: Text(
-                              'Continue',
+                              'Submit',
                               style: FlutterFlowTheme.of(context).bodyLarge.override(
                                     color: Colors.white,
                                   ),
