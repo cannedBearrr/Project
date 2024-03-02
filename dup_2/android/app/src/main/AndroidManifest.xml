@@ -5,7 +5,7 @@
 
 
     <application
-        android:label="Dup 2"
+        android:label="Northern Horizon CVLE"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
