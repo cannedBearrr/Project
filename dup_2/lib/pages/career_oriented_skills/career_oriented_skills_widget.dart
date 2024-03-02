@@ -119,7 +119,7 @@ class _CareerOrientedSkillsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                  
+
                                                   fontSize: 30,
                                                   color: Colors.white,
                                                   letterSpacing: 4.0,
@@ -132,7 +132,7 @@ class _CareerOrientedSkillsWidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                  
+
                                                 color: Color(0xFFFFD34C),
                                                 fontSize: 30,
                                                 letterSpacing: 20.0,
@@ -174,7 +174,7 @@ class _CareerOrientedSkillsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        
+
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -284,8 +284,8 @@ class _CareerOrientedSkillsWidgetState
                                 alignment: AlignmentDirectional(0.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHx3aGl0ZXxlbnwwfHx8fDE3MDA1MDI0NDF8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                  child: Image.asset(
+                                    'images/white.png',
                                     width: double.infinity,
                                     height: double.infinity,
                                     fit: BoxFit.cover,
@@ -301,7 +301,7 @@ class _CareerOrientedSkillsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      
+
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
                                     ),
