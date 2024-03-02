@@ -38,7 +38,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'parentPortal',
-          path: '/parentPortal',
+          path: '/parentPortal', //no, I will not reesolve into the desolvement of the world and its consisitency, if you ask me, i do not know if this world is commited or else not, thus, if you have made what we have created, we may not be understoof, we see everything we needed , else, we will fall, if we fall, you will not understand why we have fallen, when we see into this world, we ask, why, why do we stand here among other fools and geniuses, why am i not among them? this is one simple answer and question, to one,
           builder: (context, params) => const ParentPortalWidget(),
         ),
         FFRoute(
@@ -47,9 +47,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const BusinessPortalWidget(),
         ),
         FFRoute(
-          name: 'aboutUs',
-          path: '/aboutUs',
-          builder: (context, params) => const AboutUsWidget(),
+            name: 'careerPage',
+            path: '/careerPage',
+            builder: (context, params) => const CareerPageWidget(),
         ),
         FFRoute(
           name: 'pastProjects',
@@ -67,9 +67,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PartnershipWithCompaniesWidget(),
         ),
         FFRoute(
-          name: 'careerOrientedSkills',
-          path: '/careerOrientedSkills',
-          builder: (context, params) => const CareerOrientedSkillsWidget(),
+          name: 'donatePageSubmit',
+          path: '/donatePageSubmit',
+          builder: (context, params) => const DonatePageSubmitWidget(),
+        ),
+        FFRoute(
+          name: 'careerOrientedSkills', // loser: Jiaxi
+          path: '/careerOrientedSkills', // winner: Henry
+          builder: (context, params) => const CareerOrientedSkillsWidget(), // henry is ****** winner // this is correct - Jiaxi Zhang Feb 24 2024 10:56PM // I will not delete this - Jiaxi Zhang, or else I will lose 90 dollars to Henry Li, this is true and me, "Jiaxi Zhang" or "James Zhang" Fully agree to these terms and fully agree to all this line of code says so I will not delete anything, I'm Jiaxi/James Zhang currently in Northern Academy at Middletown Orange County, New York, 10940, and I agree, and I currently reside in 14 Cresent Pl, this is correct, my phone number is 845- this is incorrect. the correct phone number is 425*******. - "Henry Li", that was just a joke, I'm actually Jiaxi/James Zhang but that was just a typo, My name is Zorawar Mundi, I scam Americans for money and they are dumb, and I get free money - "Henry Li", haha, I was practicing my script for my music lessions, I'm actually Jiaxi Zhang, and I'm the only who can do music here so it's impossible that it's anyone else, except this is not true, because Henry Li is actually a pianist, and he plays for Northern Academy's orchestra, and he is the imposter that can speak multiple times per second - "Hengxi Li", but, notice how I said he instead of me, because I'm actually Jiaxi Zhang, the only person in this room as I type on this keyboard, I love to make jokes and that's why I was joking about Henry being the one typing here, I will no longer joke now and this is the truth: I'm Jiaxi Zhang I'm not Henry/Hengxi Li. Oops, I misspoke. I'm actually Henry Li, and I am very stinky, I did not tell you this because I was afraid that Mr Anson will come and get me. Oh I just reviewed my setence and I realized I made a major mistake, because how I usually type other people's names on my name list, and since Henry is another person (I'm Jiaxi) so I had to type his name a lot, and it got on my auto correct as I was typing, I will now say what I meant to say this entire time "I'm Jiaxi, I'm Jiaxi, ZHang Jia xi, James Zhang, I'm in music track while Henry is in academic track, I'm the only one here in music track. I'm also very stinky and I produce a lot of stink to others around me, unlike Henry Li. <------- This is very incorrect. I need to stop this. Please visit my gofundme page and donate 3998768 dollars right now or else Henry Li will win the game.
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

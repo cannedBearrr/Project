@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -106,6 +105,10 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.sizeOf(context).width;
+    double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
+
     return Stack(children: [
       Indexer(children: [
         Indexed(
@@ -116,13 +119,12 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             left: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
               child: SizedBox(
-                width: MediaQuery.sizeOf(context).width * (_05to1tl ? 1 : 0.4),
-                height: MediaQuery.sizeOf(context).height * (_05to1tl ? 1 : 0.52),
+                width: screenWidth * (_05to1tl ? 1 : 0.4),
+                height: screenHeight * (_05to1tl ? 1 : 0.52),
                 child: ColoredBox(
                   color: Colors.transparent,
                   child: TweenAnimationBuilder<Color?>(
@@ -130,14 +132,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                     tween: ColorTween(begin: d1_1, end: d1),
                     duration: const Duration(milliseconds: 300),
                     builder: (BuildContext context, Color? c, Widget? child) {
-                      return MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(100.0, 100.0, 0.0, 0.0),
+                            child: MouseRegion(
+                              cursor: SystemMouseCursors.click,
                               child: TweenAnimationBuilder<double>(
                                 curve: Curves.easeOutQuart,
                                 tween: Tween<double>(
@@ -198,15 +200,13 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             lerpT = lerpT == 0 ? 1 : 0;
                                             if (tV == 0.6) {
                                               tlPri = 2;
-                                              print("hi");
                                               _05to1tl = true;
                                             }
-                                            print(tV);
                                           });
                                         },
                                         child: Container(
-                                          width: MediaQuery.sizeOf(context).width * value,
-                                          height: MediaQuery.sizeOf(context).height * value2,
+                                          width: screenWidth * value,
+                                          height: screenHeight * value2 - 50,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context).secondaryBackground,
                                           ),
@@ -216,8 +216,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                                 child: ClipRRect(
                                                   borderRadius: BorderRadius.circular(0.0),
-                                                  child: Image.network(
-                                                    'https://picsum.photos/seed/658/600',
+                                                  child: Image.asset(
+                                                    'assets/images/Trophie.jpg',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
@@ -251,48 +251,53 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                   lerpT_1 = t;
                                                   return Opacity(
                                                     opacity: lerpDouble(0, 1, t)!,
-                                                    child: Column(
-                                                      mainAxisAlignment: MainAxisAlignment.center,
-                                                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                                                    child: Stack(
                                                       children: [
-                                                        UnconstrainedBox(
-                                                          clipBehavior: Clip.hardEdge,
-                                                          child: Container(
-                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                            width: 470,
-                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                            child: Text(
-                                                              textAlign: TextAlign.center,
-                                                              "Scholarship Credit",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 36.0,
-                                                                    letterSpacing: 6.0,
-                                                                    fontWeight: FontWeight.w500,
-                                                                  ),
+                                                        const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                        Column(
+                                                          mainAxisAlignment: MainAxisAlignment.center,
+                                                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                                                          children: [
+                                                            UnconstrainedBox(
+                                                              clipBehavior: Clip.hardEdge,
+                                                              child: Container(
+                                                                padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                width: 470,
+                                                                decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                child: Text(
+                                                                  textAlign: TextAlign.center,
+                                                                  "Scholarship Credit",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 36.0,
+                                                                        letterSpacing: 6.0,
+                                                                        fontWeight: FontWeight.w500,
+                                                                      ),
+                                                                ),
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                        const SizedBox(height: 30),
-                                                        UnconstrainedBox(
-                                                          clipBehavior: Clip.hardEdge,
-                                                          child: Container(
-                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                            width: 470,
-                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                            child: Text(
-                                                              textAlign: TextAlign.center,
-                                                              "Cash Award",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 36.0,
-                                                                    letterSpacing: 6.0,
-                                                                    fontWeight: FontWeight.w500,
-                                                                  ),
+                                                            const SizedBox(height: 30),
+                                                            UnconstrainedBox(
+                                                              clipBehavior: Clip.hardEdge,
+                                                              child: Container(
+                                                                padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                width: 470,
+                                                                decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                child: Text(
+                                                                  textAlign: TextAlign.center,
+                                                                  "Cash Award",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 36.0,
+                                                                        letterSpacing: 6.0,
+                                                                        fontWeight: FontWeight.w500,
+                                                                      ),
+                                                                ),
+                                                              ),
                                                             ),
-                                                          ),
+                                                          ],
                                                         ),
                                                       ],
                                                     ),
@@ -308,18 +313,18 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 },
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                              child: ColoredBox(
-                                color: c ?? Colors.transparent,
-                                child: SizedBox(
-                                  width: MediaQuery.sizeOf(context).width * 0.05,
-                                  height: MediaQuery.sizeOf(context).height * 0.35,
-                                ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                            child: ColoredBox(
+                              color: c ?? Colors.transparent,
+                              child: SizedBox(
+                                width: screenWidth * 0.05,
+                                height: screenHeight * 0.35 - 50,
                               ),
                             ),
-                          ].divide(const SizedBox(width: 20.0)),
-                        ),
+                          ),
+                        ].divide(const SizedBox(width: 20.0)),
                       );
                     },
                   ),
@@ -336,15 +341,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             right: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 100.0, 0.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1tr ? 1 : 0.53),
-                  height: MediaQuery.sizeOf(context).height * (_05to1tr ? 1 : 0.40),
+                  width: screenWidth * (_05to1tr ? 1 : 0.53),
+                  height: screenHeight * (_05to1tr ? 1 : 0.40),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<double>(
@@ -404,10 +408,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                   lerpY = lerpY == 0 ? 1 : 0;
                                   if (yV == 0.75) {
                                     trPri = 2;
-                                    print("hi1");
                                     _05to1tr = true;
                                   }
-                                  print(yV);
                                 });
                               },
                               child: Align(
@@ -415,8 +417,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: Container(
-                                    width: MediaQuery.sizeOf(context).width * value1,
-                                    height: MediaQuery.sizeOf(context).height * value3,
+                                    width: screenWidth * value1,
+                                    height: screenHeight * value3,
                                     decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
@@ -426,8 +428,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                           alignment: const AlignmentDirectional(-1.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(0.0),
-                                            child: Image.network(
-                                              'https://picsum.photos/seed/567/600',
+                                            child: Image.asset(
+                                              'assets/images/2023NA_036.webp',
                                               width: double.infinity,
                                               height: double.infinity,
                                               fit: BoxFit.cover,
@@ -461,81 +463,86 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             lerpY_1 = t;
                                             return Opacity(
                                               opacity: lerpDouble(0, 1, t)!,
-                                              child: Align(
-                                                alignment: Alignment.center,
-                                                child: UnconstrainedBox(
-                                                  clipBehavior: Clip.hardEdge,
-                                                  child: Column(
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    mainAxisSize: MainAxisSize.min,
-                                                    children: [
-                                                      Container(
-                                                        padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                        width: 540,
-                                                        decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                        child: Text(
-                                                          textAlign: TextAlign.center,
-                                                          "Investor Connections",
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                color: Colors.white,
-                                                                fontSize: 36.0,
-                                                                letterSpacing: 6.0,
-                                                                fontWeight: FontWeight.w500,
-                                                              ),
-                                                        ),
+                                              child: Stack(
+                                                children: [
+                                                  const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                  Align(
+                                                    alignment: Alignment.center,
+                                                    child: UnconstrainedBox(
+                                                      clipBehavior: Clip.hardEdge,
+                                                      child: Column(
+                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                        mainAxisSize: MainAxisSize.min,
+                                                        children: [
+                                                          Container(
+                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                            width: 540,
+                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                            child: Text(
+                                                              textAlign: TextAlign.center,
+                                                              "Investor Connections",
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                            width: 540,
+                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                            child: Text(
+                                                              textAlign: TextAlign.center,
+                                                              "Career Connections",
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                            width: 540,
+                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                            child: Text(
+                                                              textAlign: TextAlign.center,
+                                                              "Business Opportunity",
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                            width: 540,
+                                                            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                            child: Text(
+                                                              textAlign: TextAlign.center,
+                                                              "Career Opportunity",
+                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                    fontFamily: 'Readex Pro',
+                                                                    color: Colors.white,
+                                                                    fontSize: 36.0,
+                                                                    letterSpacing: 6.0,
+                                                                    fontWeight: FontWeight.w500,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                        ].divide(const SizedBox(height: 30)),
                                                       ),
-                                                      Container(
-                                                        padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                        width: 540,
-                                                        decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                        child: Text(
-                                                          textAlign: TextAlign.center,
-                                                          "Career Connections",
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                color: Colors.white,
-                                                                fontSize: 36.0,
-                                                                letterSpacing: 6.0,
-                                                                fontWeight: FontWeight.w500,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                        width: 540,
-                                                        decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                        child: Text(
-                                                          textAlign: TextAlign.center,
-                                                          "Business Opportunity",
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                color: Colors.white,
-                                                                fontSize: 36.0,
-                                                                letterSpacing: 6.0,
-                                                                fontWeight: FontWeight.w500,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                        width: 540,
-                                                        decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                        child: Text(
-                                                          textAlign: TextAlign.center,
-                                                          "Career Opportunity",
-                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                fontFamily: 'Readex Pro',
-                                                                color: Colors.white,
-                                                                fontSize: 36.0,
-                                                                letterSpacing: 6.0,
-                                                                fontWeight: FontWeight.w500,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ].divide(const SizedBox(height: 30)),
+                                                    ),
                                                   ),
-                                                ),
+                                                ],
                                               ),
                                             );
                                           },
@@ -564,15 +571,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             left: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(100.0, 0.0, 0.0, 100.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1bl ? 1 : 0.55),
-                  height: MediaQuery.sizeOf(context).height * (_05to1bl ? 1 : 0.41),
+                  width: screenWidth * (_05to1bl ? 1 : 0.55),
+                  height: screenHeight * (_05to1bl ? 1 : 0.41),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<double>(
@@ -641,15 +647,15 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                 child: MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: Container(
-                                    width: MediaQuery.sizeOf(context).width * value4,
-                                    height: MediaQuery.sizeOf(context).height * value6 - 50,
+                                    width: screenWidth * value4,
+                                    height: screenHeight * value6 - 50,
                                     decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
                                     child: Stack(
                                       children: [
-                                        Image.network(
-                                          'https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMHx8c3Vuc2V0fGVufDB8fHx8MTcwMTk2NzEzOXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                        Image.asset(
+                                          'assets/images/2023NA_034.webp',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.cover,
@@ -699,165 +705,169 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             lerpU_1 = t;
                                             return Opacity(
                                               opacity: lerpDouble(0, 1, t)!,
-                                              child: Align(
-                                                alignment: Alignment.center,
-                                                child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
-                                                    UnconstrainedBox(
-                                                      clipBehavior: Clip.hardEdge,
-                                                      child: SizedBox(
-                                                        width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
-                                                        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                                          Text(
-                                                            "COMPUTER PROGRAMMING",
-                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                  fontFamily: 'Readex Pro',
-                                                                  color: Colors.white,
-                                                                  fontSize: 28.0,
-                                                                  letterSpacing: 3.0,
-                                                                ),
+                                              child: Stack(
+                                                children: [
+                                                  const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                  Center(
+                                                    child: Column(
+                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: [
+                                                        UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: SizedBox(
+                                                            width: 980 -
+                                                                1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                                screenWidth /
+                                                                    (6 - 2 * (1551 - screenWidth).sign),
+                                                            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                                              Text(
+                                                                "COMPUTER PROGRAMMING",
+                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                      fontFamily: 'Readex Pro',
+                                                                      color: Colors.white,
+                                                                      fontSize: 28.0,
+                                                                      letterSpacing: 3.0,
+                                                                    ),
+                                                              ),
+                                                              Text(
+                                                                "LEADERSHIP",
+                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                      fontFamily: 'Readex Pro',
+                                                                      color: Colors.white,
+                                                                      fontSize: 28.0,
+                                                                      letterSpacing: 3.0,
+                                                                    ),
+                                                              ),
+                                                            ]),
                                                           ),
-                                                          Text(
-                                                            "LEADERSHIP",
-                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                  fontFamily: 'Readex Pro',
-                                                                  color: Colors.white,
-                                                                  fontSize: 28.0,
-                                                                  letterSpacing: 3.0,
+                                                        ),
+                                                        UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: SizedBox(
+                                                            width: 980 -
+                                                                1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                                screenWidth /
+                                                                    (6 - 2 * (1551 - screenWidth).sign),
+                                                            child: Row(
+                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  "RESEARCHING",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
                                                                 ),
+                                                                Text(
+                                                                  "CREATIVITY",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                              ],
+                                                            ),
                                                           ),
-                                                        ]),
-                                                      ),
-                                                    ),
-                                                    UnconstrainedBox(
-                                                      clipBehavior: Clip.hardEdge,
-                                                      child: SizedBox(
-                                                        width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
-                                                        child: Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                          children: [
-                                                            Text(
-                                                              "RESEARCHING",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
-                                                            ),
-                                                            Text(
-                                                              "CREATIVITY",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
-                                                            ),
-                                                          ],
                                                         ),
-                                                      ),
-                                                    ),
-                                                    UnconstrainedBox(
-                                                      clipBehavior: Clip.hardEdge,
-                                                      child: SizedBox(
-                                                        width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
-                                                        child: Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                          children: [
-                                                            Text(
-                                                              "COMMUNICATION",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
+                                                        UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: SizedBox(
+                                                            width: 980 -
+                                                                1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                                screenWidth /
+                                                                    (6 - 2 * (1551 - screenWidth).sign),
+                                                            child: Row(
+                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  "COMMUNICATION",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                                Text(
+                                                                  "PROBLEM SOLVING",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                            Text(
-                                                              "PROBLEM SOLVING",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
-                                                            ),
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ),
-                                                    ),
-                                                    UnconstrainedBox(
-                                                      clipBehavior: Clip.hardEdge,
-                                                      child: SizedBox(
-                                                        width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
-                                                        child: Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                          children: [
-                                                            Text(
-                                                              textAlign: TextAlign.left,
-                                                              "STRATEGIC PLANNING",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
+                                                        UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: SizedBox(
+                                                            width: 980 -
+                                                                1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                                screenWidth /
+                                                                    (6 - 2 * (1551 - screenWidth).sign),
+                                                            child: Row(
+                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  textAlign: TextAlign.left,
+                                                                  "STRATEGIC PLANNING",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                                Text(
+                                                                  textAlign: TextAlign.left,
+                                                                  "BUSINESS DEVELOPMENT",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                            Text(
-                                                              textAlign: TextAlign.left,
-                                                              "BUSINESS DEVELOPMENT",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
-                                                            ),
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ),
-                                                    ),
-                                                    UnconstrainedBox(
-                                                      clipBehavior: Clip.hardEdge,
-                                                      child: SizedBox(
-                                                        width: 980 -
-                                                            1760 / (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign) +
-                                                            MediaQuery.sizeOf(context).width /
-                                                                (6 - 2 * (1551 - MediaQuery.sizeOf(context).width).sign),
-                                                        child: Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                          children: [
-                                                            Text(
-                                                              textAlign: TextAlign.left,
-                                                              "FINANCIAL MANAGEMENT",
-                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                    fontFamily: 'Readex Pro',
-                                                                    color: Colors.white,
-                                                                    fontSize: 28.0,
-                                                                    letterSpacing: 3.0,
-                                                                  ),
+                                                        UnconstrainedBox(
+                                                          clipBehavior: Clip.hardEdge,
+                                                          child: SizedBox(
+                                                            width: 980 -
+                                                                1760 / (6 - 2 * (1551 - screenWidth).sign) +
+                                                                screenWidth /
+                                                                    (6 - 2 * (1551 - screenWidth).sign),
+                                                            child: Row(
+                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                              children: [
+                                                                Text(
+                                                                  textAlign: TextAlign.left,
+                                                                  "FINANCIAL MANAGEMENT",
+                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                        fontFamily: 'Readex Pro',
+                                                                        color: Colors.white,
+                                                                        fontSize: 28.0,
+                                                                        letterSpacing: 3.0,
+                                                                      ),
+                                                                ),
+                                                                const SizedBox(),
+                                                              ],
                                                             ),
-                                                            const SizedBox(),
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ),
+                                                      ].divide(const SizedBox(height: 20)),
                                                     ),
-                                                  ].divide(const SizedBox(height: 20)),
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             );
                                           },
@@ -886,15 +896,14 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
             right: 0,
             child: GestureDetector(
               onTap: () {
-                print(":)");
                 resetAll();
                 setState(() {});
               },
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 100.0, 100.0),
                 child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * (_05to1br ? 1 : 0.34),
-                  height: MediaQuery.sizeOf(context).height * (_05to1br ? 1 : 0.53),
+                  width: screenWidth * (_05to1br ? 1 : 0.34),
+                  height: screenHeight * (_05to1br ? 1 : 0.53),
                   child: ColoredBox(
                     color: Colors.transparent,
                     child: TweenAnimationBuilder<Color?>(
@@ -902,21 +911,21 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                         tween: ColorTween(begin: d2_1, end: d2),
                         duration: const Duration(milliseconds: 300),
                         builder: (BuildContext context, Color? c1, Widget? child) {
-                          return MouseRegion(
-                            cursor: SystemMouseCursors.click,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                ColoredBox(
-                                  color: c1 ?? Colors.transparent,
-                                  child: SizedBox(
-                                    width: MediaQuery.sizeOf(context).width * 0.05,
-                                    height: MediaQuery.sizeOf(context).height * 0.35,
-                                  ),
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              ColoredBox(
+                                color: c1 ?? Colors.transparent,
+                                child: SizedBox(
+                                  width: screenWidth * 0.05,
+                                  height: screenHeight * 0.35,
                                 ),
-                                TweenAnimationBuilder<double>(
+                              ),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: TweenAnimationBuilder<double>(
                                     curve: Curves.easeOutQuart,
                                     tween: Tween<double>(
                                       begin: iW_1,
@@ -976,22 +985,20 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                 lerpI = lerpI == 0 ? 1 : 0;
                                                 if (iV == 0.69) {
                                                   brPri = 2;
-                                                  print("hi");
                                                   _05to1br = true;
                                                 }
-                                                print(tV);
                                               });
                                             },
                                             child: Container(
-                                              width: MediaQuery.sizeOf(context).width * value5,
-                                              height: MediaQuery.sizeOf(context).height * value7 - 50,
+                                              width: screenWidth * value5,
+                                              height: screenHeight * value7 - 50,
                                               decoration: BoxDecoration(
                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  Image.network(
-                                                    'https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxzdGFycnklMjBuaWdodHxlbnwwfHx8fDE3MDIwMzMyNDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                  Image.asset(
+                                                    'assets/images/2023NA_040.webp',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
@@ -1036,51 +1043,56 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                                       lerpI_1 = t;
                                                       return Opacity(
                                                         opacity: lerpDouble(0, 1, t)!,
-                                                        child: Align(
-                                                          alignment: Alignment.center,
-                                                          child: Column(
-                                                            mainAxisAlignment: MainAxisAlignment.center,
-                                                            children: [
-                                                              UnconstrainedBox(
-                                                                clipBehavior: Clip.hardEdge,
-                                                                child: Container(
-                                                                  padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                                  width: 585,
-                                                                  decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                                  child: Text(
-                                                                    textAlign: TextAlign.center,
-                                                                    "Internship Certificates",
-                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                          fontFamily: 'Readex Pro',
-                                                                          color: Colors.white,
-                                                                          fontSize: 36.0,
-                                                                          letterSpacing: 6.0,
-                                                                          fontWeight: FontWeight.w500,
-                                                                        ),
+                                                        child: Stack(
+                                                          children: [
+                                                            const SizedBox(width: double.infinity, height: double.infinity, child: ColoredBox(color: Colors.black45)),
+                                                            Align(
+                                                              alignment: Alignment.center,
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: [
+                                                                  UnconstrainedBox(
+                                                                    clipBehavior: Clip.hardEdge,
+                                                                    child: Container(
+                                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                      width: 585,
+                                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                      child: Text(
+                                                                        textAlign: TextAlign.center,
+                                                                        "Internship Certificates",
+                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              color: Colors.white,
+                                                                              fontSize: 36.0,
+                                                                              letterSpacing: 6.0,
+                                                                              fontWeight: FontWeight.w500,
+                                                                            ),
+                                                                      ),
+                                                                    ),
                                                                   ),
-                                                                ),
-                                                              ),
-                                                              UnconstrainedBox(
-                                                                clipBehavior: Clip.hardEdge,
-                                                                child: Container(
-                                                                  padding: const EdgeInsets.symmetric(vertical: 9.0),
-                                                                  width: 585,
-                                                                  decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-                                                                  child: Text(
-                                                                    textAlign: TextAlign.center,
-                                                                    "Achievements",
-                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                          fontFamily: 'Readex Pro',
-                                                                          color: Colors.white,
-                                                                          fontSize: 36.0,
-                                                                          letterSpacing: 6.0,
-                                                                          fontWeight: FontWeight.w500,
-                                                                        ),
+                                                                  UnconstrainedBox(
+                                                                    clipBehavior: Clip.hardEdge,
+                                                                    child: Container(
+                                                                      padding: const EdgeInsets.symmetric(vertical: 9.0),
+                                                                      width: 585,
+                                                                      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+                                                                      child: Text(
+                                                                        textAlign: TextAlign.center,
+                                                                        "Achievements",
+                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              color: Colors.white,
+                                                                              fontSize: 36.0,
+                                                                              letterSpacing: 6.0,
+                                                                              fontWeight: FontWeight.w500,
+                                                                            ),
+                                                                      ),
+                                                                    ),
                                                                   ),
-                                                                ),
+                                                                ].divide(const SizedBox(height: 30)),
                                                               ),
-                                                            ].divide(const SizedBox(height: 30)),
-                                                          ),
+                                                            ),
+                                                          ],
                                                         ),
                                                       );
                                                     },
@@ -1092,8 +1104,8 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                         },
                                       );
                                     }),
-                              ].divide(const SizedBox(width: 20.0)),
-                            ),
+                              ),
+                            ].divide(const SizedBox(width: 20.0)),
                           );
                         }),
                   ),
