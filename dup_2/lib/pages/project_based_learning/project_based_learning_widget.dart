@@ -80,16 +80,16 @@ class _ProjectBasedLearningWidgetState
                             fontWeight: FontWeight.bold,
                           ),
                     ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(225.0, 0.0, 225.0, 0.0),
-                  child: Text(
-                    'Project-Based Learning (PBL) engages students in real-world projects, fostering critical thinking and collaboration. It mirrors authentic scenarios, promoting skills like inquiry-based learning and autonomy. Students actively contribute to project design, emphasizing the integration of subjects and the interconnectedness of real-world knowledge. PBL encourages reflection, self-assessment, and the development of essential skills. Assessment focuses on holistic growth, preparing students for the complexities of the real world.',
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
-                      fontSize: 16.0,
-                        ),
-                      ),
-                    ),
+                // Padding(
+                //   padding: const EdgeInsetsDirectional.fromSTEB(225.0, 0.0, 225.0, 0.0),
+                //   child: Text(
+                //     'Project-Based Learning (PBL) engages students in real-world projects, fostering critical thinking and collaboration. It mirrors authentic scenarios, promoting skills like inquiry-based learning and autonomy. Students actively contribute to project design, emphasizing the integration of subjects and the interconnectedness of real-world knowledge. PBL encourages reflection, self-assessment, and the development of essential skills. Assessment focuses on holistic growth, preparing students for the complexities of the real world.',
+                //     textAlign: TextAlign.center,
+                //     style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
+                //       fontSize: 16.0,
+                //         ),
+                //       ),
+                //     ),
                   ]
                       .divide(SizedBox(height: 40.0))
                       .addToStart(SizedBox(height: 60.0)),
