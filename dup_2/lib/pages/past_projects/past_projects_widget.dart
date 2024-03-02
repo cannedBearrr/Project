@@ -289,7 +289,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 child: Stack(
                                   children: [
                                     PageView(
-                                      controller: _model.pageViewController1 ??= PageController(initialPage: 1),
+                                      controller: _model.pageViewController1 ??= PageController(initialPage: 0),
                                       scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                       scrollDirection: Axis.horizontal,
                                       children: [
@@ -510,7 +510,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                         child: smooth_page_indicator.SmoothPageIndicator(
-                                          controller: _model.pageViewController1 ??= PageController(initialPage: 1),
+                                          controller: _model.pageViewController1 ??= PageController(initialPage: 0),
                                           count: 6,
                                           axisDirection: Axis.horizontal,
                                           onDotClicked: (i) async {
@@ -561,7 +561,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                             child: Stack(
                               children: [
                                 PageView(
-                                  controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                  controller: _model.pageViewController2 ??= PageController(initialPage: 0),
                                   scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                   scrollDirection: Axis.horizontal,
                                   children: [
@@ -792,7 +792,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                   child: smooth_page_indicator.SmoothPageIndicator(
-                                    controller: _model.pageViewController2 ??= PageController(initialPage: 1),
+                                    controller: _model.pageViewController2 ??= PageController(initialPage: 0),
                                     count: 6,
                                     axisDirection: Axis.horizontal,
                                     onDotClicked: (i) async {
@@ -855,7 +855,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               child: Stack(
                                 children: [
                                   PageView(
-                                    controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                    controller: _model.pageViewController3 ??= PageController(initialPage: 0),
                                     scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
                                     scrollDirection: Axis.horizontal,
                                     children: [
@@ -1058,7 +1058,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 16.0),
                                         child: smooth_page_indicator.SmoothPageIndicator(
-                                          controller: _model.pageViewController3 ??= PageController(initialPage: 1),
+                                          controller: _model.pageViewController3 ??= PageController(initialPage: 0),
                                           count: 6,
                                           axisDirection: Axis.horizontal,
                                           onDotClicked: (i) async {
