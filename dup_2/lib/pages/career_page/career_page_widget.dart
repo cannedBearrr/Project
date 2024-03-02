@@ -170,9 +170,22 @@ class _EmailWidgetState extends State<EmailDialog> {
                     ),
                     filled: true,
                     fillColor: Colors.white,
-                    suffixIcon: const Icon(
-                      Icons.arrow_forward,
-                    ),
+                    suffixIcon: GestureDetector(
+                      onTap: () async {
+                if (_formKey.currentState!.validate()) {
+                FocusManager.instance.primaryFocus?.unfocus();
+                setState(() {
+                sendEmail(_controller.text, job);
+                isEmailSent = true;
+                });
+                _controller.clear();
+                await resetForm();
+                }
+                },
+                  child: const Icon(
+                    Icons.arrow_forward,
+                  ),
+                ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
 

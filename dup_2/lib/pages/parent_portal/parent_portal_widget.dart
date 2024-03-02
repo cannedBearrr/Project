@@ -3507,8 +3507,21 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               ),
                                                               filled: true,
                                                               fillColor: Colors.white,
-                                                              suffixIcon: const Icon(
-                                                                Icons.arrow_forward,
+                                                              suffixIcon: GestureDetector(
+                                                                onTap: () async {
+                                                                  if (_formKey.currentState!.validate()) {
+                                                                    FocusManager.instance.primaryFocus?.unfocus();
+                                                                  setState(() {
+                                                                    sendEmail(_model.textController1.text);
+                                                                    isEmailSent = true;
+                                                                  });
+                                                                  _model.textController1?.clear();
+                                                                  await resetForm();
+                                                                }
+                                                                  },
+                                                                child: const Icon(
+                                                                  Icons.arrow_forward,
+                                                                ),
                                                               ),
                                                             ),
                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3625,11 +3638,21 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                               ),
                                                               filled: true,
                                                               fillColor: Colors.white,
-                                                              suffixIcon: const Icon(
-                                                                Icons.arrow_forward,
-                                                                //   onPressed(){
-                                                                //
-                                                                // }f
+                                                              suffixIcon: GestureDetector(
+                                                                onTap: () async {
+                                                                  if (_formKey.currentState!.validate()) {
+                                                                    FocusManager.instance.primaryFocus?.unfocus();
+                                                                    setState(() {
+                                                                      sendEmail(_model.textController2.text);
+                                                                      isEmailSent = true;
+                                                                    });
+                                                                    _model.textController2?.clear();
+                                                                    await resetForm();
+                                                                  }
+                                                                },
+                                                                child: const Icon(
+                                                                  Icons.arrow_forward,
+                                                                ),
                                                               ),
                                                             ),
                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
