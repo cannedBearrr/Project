@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'partnership_with_companies_widget.dart'
-    show PartnershipWithCompaniesWidget;
+import 'partnership_with_companies_widget.dart' show PartnershipWithCompaniesWidget;
 import 'package:flutter/material.dart';
 
 class PartnershipWithCompaniesModel
@@ -19,7 +18,7 @@ class PartnershipWithCompaniesModel
     unfocusNode.dispose();
   }
 
-  /// Action blocks are added here.
+/// Action blocks are added here.
 
-  /// Additional helper methods are added here.
+/// Additional helper methods are added here.
 }

@@ -107,7 +107,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                         child: Text(
                                           'PREVIOUS\nPROJECTS',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                
+
                                                 color: const Color(0xFFFFD34C),
                                                 fontSize: 38.0,
                                                 letterSpacing: 10.0,
@@ -136,21 +136,6 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                         ),
                         child: Stack(
                           children: [
-                            Opacity(
-                              opacity: 0.4,
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 1.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  // child: Image.asset(
-                                  //   'assets/images/DSC_1614.webp',
-                                  //   width: double.infinity,
-                                  //   height: MediaQuery.sizeOf(context).height * 0.5,
-                                  //   fit: BoxFit.cover,
-                                  // ),
-                                ),
-                              ),
-                            ),
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
@@ -238,7 +223,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                           child: Text(
                                             'PREVIOUS PROJECTS',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                  
+
                                                   color: Colors.white,
                                                   fontSize: MediaQuery.sizeOf(context).width * 0.1 - MediaQuery.sizeOf(context).width * 0.05 - 2,
                                                 ),
@@ -248,7 +233,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                                       // Text(
                                       //   'we may use this line',
                                       //   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                      //         
+                                      //
                                       //         color: Color(0xFF1F4477),
                                       //         fontSize: 70.0,
                                       //         fontWeight: FontWeight.bold,
@@ -277,21 +262,7 @@ class _PartnershipWithCompaniesWidgetState extends State<PartnershipWithCompanie
                         ),
                         child: Stack(
                           children: [
-                            Opacity(
-                              opacity: 0.4,
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 1.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHx3aGl0ZXxlbnwwfHx8fDE3MDA1MDI0NDF8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            SizedBox.expand(child: ColoredBox(color: Colors.white38),),
                             Padding(
                               padding: const EdgeInsets.all(12.0),
                               child: SizedBox(

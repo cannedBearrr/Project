@@ -265,21 +265,7 @@ class _CareerOrientedSkillsWidgetState extends State<CareerOrientedSkillsWidget>
                         ),
                         child: Stack(
                           children: [
-                            Opacity(
-                              opacity: 0.4,
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 1.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.asset(
-                                    'assets/images/white.png',
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            SizedBox.expand(child: ColoredBox(color: Colors.white38)),
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(

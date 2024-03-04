@@ -445,32 +445,29 @@ class _DonateWidgetState extends State<DonateDialog> {
               duration: const Duration(milliseconds: 200),
               builder: (BuildContext context, double v, Widget? child) {
                 return SizedBox(
-                  child: Opacity(
-                    opacity: v,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        ConstrainedBox(constraints: BoxConstraints(maxHeight: v*22), child: const SizedBox(height: 22)),
-                        ConstrainedBox(
-                          constraints: BoxConstraints(maxHeight: v*35),
-                          child: FilledButton(
-                              onPressed: () async {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => DonatePageWidget(m: m),
-                                    ));
-                                },
-                              style: OutlinedButton.styleFrom(backgroundColor: const Color(0xFF1F4477),),
-                              child: Text(
-                                'Continue',
-                                style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                      color: Colors.white,
-                                    ),
-                              )),
-                        ),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ConstrainedBox(constraints: BoxConstraints(maxHeight: v*22), child: const SizedBox(height: 22)),
+                      ConstrainedBox(
+                        constraints: BoxConstraints(maxHeight: v*35),
+                        child: FilledButton(
+                            onPressed: () async {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => DonatePageWidget(m: m),
+                                  ));
+                              },
+                            style: OutlinedButton.styleFrom(backgroundColor: const Color(0xFF1F4477),),
+                            child: Text(
+                              'Continue',
+                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                    color: Colors.white,
+                                  ),
+                            )),
+                      ),
+                    ],
                   ),
                 );
               },
