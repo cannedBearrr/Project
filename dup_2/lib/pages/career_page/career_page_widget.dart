@@ -1,6 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:sticky_headers/sticky_headers.dart';
 
+import 'package:transparent_image/transparent_image.dart';
 import '../../assets/footer.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -459,8 +460,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       ),
                       child: Stack(
                         children: [
-                          Image.asset(
-                            'assets/images/CopyofWCAwardCerts.jpg',
+                          FadeInImage(
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: const AssetImage('assets/images/CopyofWCAwardCerts.jpg'),
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
@@ -499,8 +501,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(
-                              'assets/images/CopyofWCAwardCerts.jpg',
+                            child: FadeInImage(
+                              placeholder: MemoryImage(kTransparentImage),
+                              image: const AssetImage('assets/images/CopyofWCAwardCerts.jpg'),
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,

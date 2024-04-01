@@ -476,24 +476,76 @@ class FooterWidget extends StatelessWidget {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  'LEARN MORE',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                SizedBox(
+                                  width: screenWidth/2.25,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Text(
+                                        'LEARN MORE',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
 
-                                    color: Colors.white,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                        child: GestureDetector(
+                                          onTap: () async {
+                                            context.pushNamed('parentPortal');
+                                          },
+                                          child: Text(
+                                            'Home',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                              color: Colors.white,
+                                              fontSize: 8.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Text(
+                                        'Career',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                          color: Colors.white,
+                                          fontSize: 8.0,
+                                          fontWeight: FontWeight.w200,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Our Projects',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                          color: Colors.white,
+                                          fontSize: 8.0,
+                                          fontWeight: FontWeight.w200,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 12),
+                                    ].divide(const SizedBox(height: 2.0)),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                  child: GestureDetector(
-                                    onTap: () async {
-                                      context.pushNamed('parentPortal');
-                                    },
+                                SizedBox(
+                                  width: screenWidth/2.25,
+                                  child: Column(
+                                                                mainAxisSize: MainAxisSize.max,
+                                                                children: [
+                                  Text(
+                                    'WHAT WE DO',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                     child: Text(
-                                      'Home',
+                                      'Marketing Solutions',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
 
                                         color: Colors.white,
@@ -502,42 +554,8 @@ class FooterWidget extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                ),
-                                Text(
-                                  'Career',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                                Text(
-                                  'Our Projects',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                                const SizedBox(height: 12),
-                              ].divide(const SizedBox(height: 2.0)),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Text(
-                                  'WHAT WE DO',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                  child: Text(
-                                    'Marketing Solutions',
+                                  Text(
+                                    'Website Building',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
 
                                       color: Colors.white,
@@ -545,44 +563,83 @@ class FooterWidget extends StatelessWidget {
                                       fontWeight: FontWeight.w200,
                                     ),
                                   ),
-                                ),
-                                Text(
-                                  'Website Building',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  Text(
+                                    'Tailored Solutions',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
 
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
+                                      color: Colors.white,
+                                      fontSize: 8.0,
+                                      fontWeight: FontWeight.w200,
+                                    ),
                                   ),
+                                  const SizedBox(height: 12),
+                                                                ].divide(const SizedBox(height: 2.0)),
+                                                              ),
                                 ),
-                                Text(
-                                  'Tailored Solutions',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                                const SizedBox(height: 12),
-                              ].divide(const SizedBox(height: 2.0)),
+                              ],
                             ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  'LEGAL',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                SizedBox(
+                                  width: screenWidth/2.25,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Text(
+                                        'LEGAL',
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
 
-                                    color: Colors.white,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                        child: GestureDetector(
+                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                          child: Text(
+                                            'Terms and Conditions',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                              color: Colors.white,
+                                              fontSize: 8.0,
+                                              fontWeight: FontWeight.w200,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                        child: Text(
+                                          'Privacy Policy',
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                            color: Colors.white,
+                                            fontSize: 8.0,
+                                            fontWeight: FontWeight.w200,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 12),
+                                    ].divide(const SizedBox(height: 2.0)),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                  child: GestureDetector(
-                                    onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                SizedBox(
+                                  width: screenWidth/2.25,
+                                  child: Column(
+                                                                mainAxisSize: MainAxisSize.max,
+                                                                children: [
+                                  Text(
+                                    'CONTACT US',
+                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                     child: Text(
-                                      'Terms and Conditions',
+                                      '+1 (845)-281-9257',
                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
 
                                         color: Colors.white,
@@ -591,11 +648,8 @@ class FooterWidget extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                ),
-                                GestureDetector(
-                                  onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
-                                  child: Text(
-                                    'Privacy Policy',
+                                  Text(
+                                    'azhao@northernacademy.org',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
 
                                       color: Colors.white,
@@ -603,24 +657,8 @@ class FooterWidget extends StatelessWidget {
                                       fontWeight: FontWeight.w200,
                                     ),
                                   ),
-                                ),
-                                const SizedBox(height: 12),
-                              ].divide(const SizedBox(height: 2.0)),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Text(
-                                  'CONTACT US',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                  child: Text(
-                                    '+1 (845)-281-9257',
+                                  Text(
+                                    '1 Ashley Ave Middletown, NY',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
 
                                       color: Colors.white,
@@ -628,27 +666,11 @@ class FooterWidget extends StatelessWidget {
                                       fontWeight: FontWeight.w200,
                                     ),
                                   ),
+                                  const SizedBox(height: 12),
+                                                                ].divide(const SizedBox(height: 2.0)),
+                                                              ),
                                 ),
-                                Text(
-                                  'azhao@northernacademy.org',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                                Text(
-                                  '1 Ashley Ave Middletown, NY',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                                const SizedBox(height: 12),
-                              ].divide(const SizedBox(height: 2.0)),
+                              ],
                             ),
                             Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -677,7 +699,7 @@ class FooterWidget extends StatelessWidget {
                   if (screenWidth > 430) ...[
                     Positioned(
                       bottom: 0,
-                      left: 0,
+                      left: screenWidth / 2 - 160,
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 20.0),
                         child: Image.asset(
@@ -701,7 +723,7 @@ class FooterWidget extends StatelessWidget {
                     ),
                     Positioned(
                       bottom: 0,
-                      right: 0,
+                      right: screenWidth / 2 - 160,
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 20.0),
                         child: Image.asset(

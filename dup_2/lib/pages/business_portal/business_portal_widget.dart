@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:sticky_headers/sticky_headers.dart';
+import 'package:transparent_image/transparent_image.dart';
 import '../../assets/footer.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -107,6 +108,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
             top: true,
             child: SingleChildScrollView(
               controller: scrollController,
+              physics: contentExpanded ? const ScrollPhysics() : const NeverScrollableScrollPhysics(),
               child: StickyHeader(
                 header: Stack(
                   children: [
@@ -295,8 +297,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                     ))
                       Stack(
                         children: [
-                          Image.asset(
-                            'assets/images/unsplash_gG-YEEDSppM_(1).webp',
+                          FadeInImage(
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: const AssetImage('assets/images/unsplash_gG-YEEDSppM_(1).webp'),
                             width: double.infinity,
                             height: screenHeight * 1.0 - 50,
                             fit: BoxFit.cover,
@@ -369,8 +372,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                     ))
                       Stack(
                         children: [
-                          Image.asset(
-                            'assets/images/unsplash_gG-YEEDSppM_(1).webp',
+                          FadeInImage(
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: const AssetImage('assets/images/unsplash_gG-YEEDSppM_(1).webp'),
                             width: double.infinity,
                             height: screenHeight * 1.0 - 40,
                             fit: BoxFit.cover,
@@ -444,7 +448,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           ),
                         ],
                       ),
-                    if (contentExpanded) ...[
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
@@ -1243,8 +1246,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget> {
                           ],
                         ),
                       const FooterWidget(),
-                    ]
-                  ],
+                    ],
                 ),
               ),
             ),

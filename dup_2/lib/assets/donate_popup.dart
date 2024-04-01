@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../pages/donate_page/donate_page_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +22,15 @@ class _DonateWidgetState extends State<DonateDialog> {
   double t = 0;
   bool otherexp = false;
   double m = 0;
+
+  _launchURL(double amount) async {
+    final url = 'https://129.213.117.186/rd-to-stripe.php?amount=${amount.round()}';
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -186,26 +195,26 @@ class _DonateWidgetState extends State<DonateDialog> {
                                     if (selected == 4)
                                       IntrinsicWidth(
                                           child: TextField(
-                                            autofocus: true,
-                                              inputFormatters: [
-                                            LengthLimitingTextInputFormatter(9),
-                                          ],
-                                              controller: moneyController,
-                                              decoration: const InputDecoration(
-                                                enabledBorder: UnderlineInputBorder(
-                                                  borderSide: BorderSide(color: Colors.white70),
-                                                ),
-                                                focusedBorder: UnderlineInputBorder(
-                                                  borderSide: BorderSide(color: Colors.white38),
-                                                ),
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white),
-                                          onChanged: (value) {
-                                                m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
-                                                print(m);
-                                          },
-                                          )),
+                                        autofocus: true,
+                                        inputFormatters: [
+                                          FilteringTextInputFormatter.allow(RegExp(r'[0-9.,$]')),
+                                          LengthLimitingTextInputFormatter(9),
+                                        ],
+                                        controller: moneyController,
+                                        decoration: const InputDecoration(
+                                          enabledBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.white70),
+                                          ),
+                                          focusedBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.white38),
+                                          ),
+                                        ),
+                                        style: FlutterFlowTheme.of(context).bodySmall.override(fontSize: 20, color: Colors.white),
+                                        onChanged: (value) {
+                                          m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                          print(m);
+                                        },
+                                      )),
                                   ],
                                 ),
                               )),
@@ -361,28 +370,28 @@ class _DonateWidgetState extends State<DonateDialog> {
                                                 if (selected == 4)
                                                   IntrinsicWidth(
                                                       child: TextField(
-                                                        autofocus: true,
-                                                          inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(9),
-                                                      ],
-                                                          controller: moneyController,
-                                                          decoration: const InputDecoration(
-                                                            enabledBorder: UnderlineInputBorder(
-                                                              borderSide: BorderSide(color: Colors.white70),
-                                                            ),
-                                                            focusedBorder: UnderlineInputBorder(
-                                                              borderSide: BorderSide(color: Colors.white38),
-                                                            ),
-                                                          ),
-                                                          style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                              fontSize:
-                                                                  (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                              color: Colors.white),
-                                                        onChanged: (value) {
-                                                          m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
-                                                          print(m);
-                                                        },
-                                                      )),
+                                                    autofocus: true,
+                                                    inputFormatters: [
+                                                      FilteringTextInputFormatter.allow(RegExp(r'[0-9.,$]')),
+                                                      LengthLimitingTextInputFormatter(9),
+                                                    ],
+                                                    controller: moneyController,
+                                                    decoration: const InputDecoration(
+                                                      enabledBorder: UnderlineInputBorder(
+                                                        borderSide: BorderSide(color: Colors.white70),
+                                                      ),
+                                                      focusedBorder: UnderlineInputBorder(
+                                                        borderSide: BorderSide(color: Colors.white38),
+                                                      ),
+                                                    ),
+                                                    style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                        fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                        color: Colors.white),
+                                                    onChanged: (value) {
+                                                      m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                      print(m);
+                                                    },
+                                                  )),
                                               ],
                                             ),
                                           ),
@@ -402,27 +411,29 @@ class _DonateWidgetState extends State<DonateDialog> {
                                               if (selected == 4)
                                                 IntrinsicWidth(
                                                     child: TextField(
-                                                        inputFormatters: [
-                                                      LengthLimitingTextInputFormatter(9),
-                                                    ],
-                                                        controller: moneyController,
-                                                        decoration: const InputDecoration(
-                                                          isDense: true,
-                                                          enabledBorder: UnderlineInputBorder(
-                                                            borderSide: BorderSide(color: Colors.white70),
-                                                          ),
-                                                          focusedBorder: UnderlineInputBorder(
-                                                            borderSide: BorderSide(color: Colors.white38),
-                                                          ),
-                                                        ),
-                                                        style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                            fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
-                                                            color: Colors.white),
-                                                      onChanged: (value) {
-                                                        m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
-                                                        print(m);
-                                                      },
-                                                    )),
+                                                  autofocus: true,
+                                                  inputFormatters: [
+                                                    FilteringTextInputFormatter.allow(RegExp(r'[0-9.,$]')),
+                                                    LengthLimitingTextInputFormatter(9),
+                                                  ],
+                                                  controller: moneyController,
+                                                  decoration: const InputDecoration(
+                                                    isDense: true,
+                                                    enabledBorder: UnderlineInputBorder(
+                                                      borderSide: BorderSide(color: Colors.white70),
+                                                    ),
+                                                    focusedBorder: UnderlineInputBorder(
+                                                      borderSide: BorderSide(color: Colors.white38),
+                                                    ),
+                                                  ),
+                                                  style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                      fontSize: (responsiveVisibility(context: context, phone: false)) ? 20 : 18,
+                                                      color: Colors.white),
+                                                  onChanged: (value) {
+                                                    m = double.parse(value.replaceAll(RegExp(r'[$,]'), ''));
+                                                    print(m);
+                                                  },
+                                                )),
                                               if (selected == 4) const SizedBox(height: 15),
                                             ],
                                           ),
@@ -448,18 +459,16 @@ class _DonateWidgetState extends State<DonateDialog> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      ConstrainedBox(constraints: BoxConstraints(maxHeight: v*22), child: const SizedBox(height: 22)),
+                      ConstrainedBox(constraints: BoxConstraints(maxHeight: v * 22), child: const SizedBox(height: 22)),
                       ConstrainedBox(
-                        constraints: BoxConstraints(maxHeight: v*35),
+                        constraints: BoxConstraints(maxHeight: v * 35),
                         child: FilledButton(
                             onPressed: () async {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => DonatePageWidget(m: m),
-                                  ));
-                              },
-                            style: OutlinedButton.styleFrom(backgroundColor: const Color(0xFF1F4477),),
+                              _launchURL(m * 100);
+                            },
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: const Color(0xFF1F4477),
+                            ),
                             child: Text(
                               'Continue',
                               style: FlutterFlowTheme.of(context).bodyLarge.override(

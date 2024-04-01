@@ -495,7 +495,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             Padding(
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
-                                                'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
+                                                'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
                                                 style: FlutterFlowTheme.of(context).bodyMedium,
                                               ),
                                             ),
@@ -749,41 +749,43 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                       const SizedBox(height:30),
                                     ],
                                   ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-                                        child: Text(
-                                          'World Heritage Site',
-                                          style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w500,
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                          child: Text(
+                                            'World Heritage Site',
+                                            style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        width: screenWidth * 0.8,
-                                        height: 350,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        Container(
+                                          width: screenWidth * 0.8,
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Worldheritage.gif',
+                                            fit: BoxFit.contain,
+                                          ),
                                         ),
-                                        child: Image.asset(
-                                          'assets/images/Worldheritage.gif',
-                                          fit: BoxFit.contain,
+                                        Padding(
+                                          padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
+                                          child: Text(
+                                            'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.all((responsiveVisibility(context: context, tablet: false)) ? 30 : 12),
-                                        child: Text(
-                                          'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                          style: FlutterFlowTheme.of(context).bodyMedium,
-                                        ),
-                                      ),
-                                      const SizedBox(height:30),
-                                    ],
-                                  ),
+                                        const SizedBox(height:30),
+                                      ],
+                                    ),
                                 ],
                               ),
                               Align(
@@ -1031,25 +1033,25 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           ),
                                           Container(
                                             width: screenWidth * 0.8,
-                                              height: 350,
-                                              decoration: BoxDecoration(
-                                                color: FlutterFlowTheme.of(context).secondaryBackground,
-                                              ),
+                                            height: 350,
+                                            decoration: BoxDecoration(
+                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
                                             child: Image.asset(
                                               'assets/images/Worldheritage.gif',
                                               fit: BoxFit.contain,
                                             ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(20.0),
+                                            child: Text(
+                                              'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
+                                              style: FlutterFlowTheme.of(context).bodyLarge,
                                             ),
-                                            Padding(
-                                              padding: const EdgeInsets.all(20.0),
-                                              child: Text(
-                                                'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                style: FlutterFlowTheme.of(context).bodyLarge,
-                                              ),
-                                            ),
+                                          ),
                                           const SizedBox(height:30),
-                                          ],
-                                        ),
+                                        ],
+                                      ),
                                       ],
                                     ),
                                     Align(

@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'dart:ui';
+import 'package:flutter/services.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -84,6 +87,16 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
     _05to1br = false;
   }
 
+  Image? image1;
+  Image? image2;
+  Image? image3;
+  Image? image4;
+
+  Future<String> loadImage2(url) async {
+    String text = await rootBundle.loadString(url);
+    return text;
+  }
+
   @override
   void setState(VoidCallback callback) {
     super.setState(callback);
@@ -93,6 +106,62 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
   @override
   void initState() {
     super.initState();
+
+    //black magic
+    loadImage2('assets/images/1.txt').then(
+            (url) {String imagenJson = url;
+        Uint8List _image1 = base64Decode(imagenJson);
+        image1 = Image.memory(
+          _image1,
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        );
+        precacheImage(image1!.image, context);
+        }
+    );
+
+    loadImage2('assets/images/2.txt').then(
+            (url) {String imagenJson = url;
+        Uint8List _image2 = base64Decode(imagenJson);
+        image2 = Image.memory(
+          _image2,
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        );
+        precacheImage(image2!.image, context);
+        setState(() {});
+        }
+    );
+
+    loadImage2('assets/images/3.txt').then(
+            (url) {String imagenJson = url;
+        Uint8List _image3 = base64Decode(imagenJson);
+        image3 = Image.memory(
+          _image3,
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        );
+        precacheImage(image3!.image, context);
+        }
+    );
+
+    loadImage2('assets/images/4.txt').then(
+            (url) {String imagenJson = url;
+        Uint8List _image4 = base64Decode(imagenJson);
+        image4 = Image.memory(
+          _image4,
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        );
+        precacheImage(image4!.image, context);
+        }
+    );
+
+
     _model = createModel(context, () => AnimationModel());
   }
 
@@ -108,6 +177,10 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
 
     double screenWidth = MediaQuery.sizeOf(context).width;
     double screenHeight = max(MediaQuery.sizeOf(context).height, (screenWidth > 600) ? 750 : 550);
+
+    if (image2 == null) {
+      return Container();
+    }
 
     return Stack(children: [
       Indexer(children: [
@@ -214,12 +287,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                             children: [
                                               Align(
                                                 alignment: const AlignmentDirectional(0.0, 0.0),
-                                                child: Image.asset(
-                                                  'assets/images/Trophie.jpg',
-                                                  width: double.infinity,
-                                                  height: double.infinity,
-                                                  fit: BoxFit.cover,
-                                                ),
+                                                child: image2,
                                               ),
                                               Align(
                                                 alignment: const AlignmentDirectional(1.0, 1.0),
@@ -420,12 +488,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                       children: [
                                         Align(
                                           alignment: const AlignmentDirectional(-1.0, 0.0),
-                                          child: Image.asset(
-                                            'assets/images/2023NA_036.webp',
-                                            width: double.infinity,
-                                            height: double.infinity,
-                                            fit: BoxFit.cover,
-                                          ),
+                                          child: image3,
                                         ),
                                         Align(
                                           alignment: const AlignmentDirectional(-1.0, 1.0),
@@ -642,12 +705,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                     ),
                                     child: Stack(
                                       children: [
-                                        Image.asset(
-                                          'assets/images/2023NA_034.webp',
-                                          width: double.infinity,
-                                          height: double.infinity,
-                                          fit: BoxFit.cover,
-                                        ),
+                                        image1!,
                                         Align(
                                           alignment: const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
@@ -982,12 +1040,7 @@ class _AnimationWidgetState extends State<AnimationWidget> with TickerProviderSt
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  Image.asset(
-                                                    'assets/images/2023NA_040.webp',
-                                                    width: double.infinity,
-                                                    height: double.infinity,
-                                                    fit: BoxFit.cover,
-                                                  ),
+                                                  image4!,
                                                   Padding(
                                                     padding: const EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 0.0, 0.0),
                                                     child: Column(
