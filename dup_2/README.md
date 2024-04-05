@@ -44,7 +44,7 @@ The website of Northern Horizon CVLE, showcasing the offers and opportunities at
 To deploy this project run
 
 ```bash
-  flutter build web
+  flutter build web --web-renderer html
 ```
 
 
