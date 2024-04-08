@@ -97,14 +97,6 @@ Start the server
 For support, email jiaxi.zhang@g.northernacademy.org or henry.li@g.northernacademy.org
 
 
-## Screenshots
-
-![App Screenshot](assets/images/ParentP.png)
-![App Screenshot](assets/images/BusinessP.png)
-![App Screenshot](assets/images/BenefitP.png)
-![App Screenshot](assets/images/HowtoAchieveP.png)
-
-
 ## Tech Stack
 
 **Client:** Flutter
