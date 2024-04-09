@@ -44,7 +44,7 @@ The website of Northern Horizon CVLE, showcasing the offers and opportunities at
 To deploy this project run
 
 ```bash
-  flutter build web --web-renderer html
+  flutter build web
 ```
 
 
@@ -95,14 +95,6 @@ Start the server
 ## Support
 
 For support, email jiaxi.zhang@g.northernacademy.org or henry.li@g.northernacademy.org
-
-
-## Screenshots
-
-![App Screenshot](assets/images/ParentP.png)
-![App Screenshot](assets/images/BusinessP.png)
-![App Screenshot](assets/images/BenefitP.png)
-![App Screenshot](assets/images/HowtoAchieveP.png)
 
 
 ## Tech Stack
