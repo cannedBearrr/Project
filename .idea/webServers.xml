@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="11dec5f1-52b2-4e12-98c7-67c136cb20c0" name="jobs2024.nh">
-        <fileTransfer rootFolder="/var/www/jobs2024/current" accessType="SFTP" host="jobs2024.northernhorizon.org" port="5532" sshConfigId="4a604b4b-2767-4193-9f74-0c385b76219d" sshConfig="ansonz@jobs2024.northernhorizon.org:5532 password">
+        <fileTransfer rootFolder="/var/www/jobs2024/" accessType="SFTP" host="jobs2024.northernhorizon.org" port="5532" sshConfigId="4a604b4b-2767-4193-9f74-0c385b76219d" sshConfig="ansonz@jobs2024.northernhorizon.org:5532 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
