@@ -29,7 +29,8 @@ shell_exec("sudo sed -i.old '1s;^;$prep3\\n;' submit.$newsubmit.php");
 shell_exec("sudo rm form.*.php.old");
 shell_exec("sudo rm submit.*.php.old");
 
-shell_exec("echo \"Thanks for applying!\n\nHere is the link to the form:\n\n\n\nhttps://129.213.117.186/form.$newform.php\" | neomutt -s 'Verify Your Email' '$email'");
+shell_exec("echo \"Thanks for applying!\n\nHere is the link to the form:\n\n\n\nhttps://jobs2024.northernhorizon.org/form.$newform.php\" | neomutt -s 'Verify Your Email' '$email'");
+
 shell_exec("echo \"sudo rm form.$newform.php #\" | at now + 30 minutes");
 shell_exec("echo \"sudo rm form.$newform.php\" | at now + 12 hours");
 shell_exec("echo \"sudo rm submit.$newsubmit.php #\" | at now + 30 minutes");

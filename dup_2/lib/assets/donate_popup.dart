@@ -24,7 +24,7 @@ class _DonateWidgetState extends State<DonateDialog> {
   double m = 0;
 
   _launchURL(double amount) async {
-    final url = 'https://129.213.117.186/rd-to-stripe.php?amount=${amount.round()}';
+    final url = 'https://jobs2024.northernhorizon.org/rd-to-stripe.php?amount=${amount.round()}';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     } else {

@@ -15,7 +15,7 @@ String? job = '';
 
 Future<http.Response> sendEmail(String email, String? job) {
   return http.post(
-    Uri.parse('https://129.213.117.186/email.php'),
+    Uri.parse('https://jobs2024.northernhorizon.org/email.php'),
     headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String?>{
       'email': email,

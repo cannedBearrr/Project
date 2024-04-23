@@ -21,7 +21,7 @@ export 'parent_portal_model.dart';
 // To send post request to the website
 Future<http.Response> sendEmail(String email) {
   return http.post(
-    Uri.parse('https://129.213.117.186/newsletter.php'),
+    Uri.parse('https://jobs2024.northernhorizon.org/newsletter.php'),
     headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
     body: jsonEncode(<String, String>{
       'email': email,

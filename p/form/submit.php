@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($email)) {
 array(&$_POST["fname"],&$_POST["lname"],&$_POST["phnum"],&$_POST["startdate"],&$_POST["cvletter"]);
-$mysqli = new mysqli("127.0.0.1", "root", "", "job", 3306);
+$mysqli = new mysqli("127.0.0.1", "AppUser", "Special888%", "job", 3306);
 $iname = $_POST["fname"];
 $lname = $_POST["lname"];
 $phnum = $_POST["phnum"];

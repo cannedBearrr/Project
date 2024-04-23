@@ -142,7 +142,7 @@ class FooterWidget extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                           child: GestureDetector(
-                            onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                            onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/tc.html')),
                             child: Text(
                               'Terms and Conditions',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -155,7 +155,7 @@ class FooterWidget extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                          onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/pp.html')),
                           child: Text(
                             'Privacy Policy',
                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -388,7 +388,7 @@ class FooterWidget extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                 child: GestureDetector(
-                                  onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                  onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/tc.html')),
                                   child: Text(
                                     'Terms and Conditions',
                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -401,7 +401,7 @@ class FooterWidget extends StatelessWidget {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/pp.html')),
                                 child: Text(
                                   'Privacy Policy',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -596,7 +596,7 @@ class FooterWidget extends StatelessWidget {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                                         child: GestureDetector(
-                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
+                                          onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/tc.html')),
                                           child: Text(
                                             'Terms and Conditions',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -609,7 +609,7 @@ class FooterWidget extends StatelessWidget {
                                         ),
                                       ),
                                       GestureDetector(
-                                        onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
+                                        onTap: () => launchUrl(Uri.parse('https://jobs2024.northernhorizon.org/pp.html')),
                                         child: Text(
                                           'Privacy Policy',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(

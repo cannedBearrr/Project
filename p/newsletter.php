@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 $data = json_decode(file_get_contents("php://input"));
 if (isset($data->{"email"})) {
 	$email = $data->{"email"};
-	$mysqli = new mysqli("127.0.0.1", "root", "", "job", 3306);
+	$mysqli = new mysqli("127.0.0.1", "AppUser", "Special888%", "job", 3306);
 
 	$mysqli->query("INSERT IGNORE INTO newsletter (email) VALUES (\"$email\")");
 
