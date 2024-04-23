@@ -2,8 +2,8 @@
 if (!isset($email)) { exit(); }
 else {
 	$fname = basename($_SERVER["SCRIPT_FILENAME"])." #";
-	shell_exec("sudo rm -f `sudo find /var/spool/cron/atjobs | sudo xargs grep -ls \"$fname\"`");
-	shell_exec("sudo rm -f `sudo find /var/spool/cron/atjobs | sudo xargs grep -ls \"$submitaddr #\"`");
+	shell_exec("rm -f `find /var/spool/cron/atjobs | xargs grep -ls \"$fname\"`");
+	shell_exec("rm -f `find /var/spool/cron/atjobs | xargs grep -ls \"$submitaddr #\"`");
 }
 ?>
 <!DOCTYPE html>

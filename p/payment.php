@@ -1,7 +1,7 @@
 <?php
 session_start();
 $donate_amount = $_SESSION["donate_amount"];
-	require '/home/ubuntu/stripe-php-13.14.0-beta.1/init.php';
+	require_once '../stripe-php-14.4.0-beta.1/init.php';
 	require_once '../secrets.php';
 
 \Stripe\Stripe::setApiKey($stripeSecretKey);

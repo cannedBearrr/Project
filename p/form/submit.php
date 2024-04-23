@@ -14,14 +14,14 @@ $ok = $ex->fetch_row();
 if ($ok[0]) {
 	$delt = $mysqli->query("SELECT filelocation FROM advform WHERE email=\"$email\"");
 	$del = $delt->fetch_row();
-	shell_exec("sudo rm -r u/$del[0]");
+	shell_exec("rm -r u/$del[0]");
 	$mysqli->query("DELETE FROM advform WHERE email=\"$email\"");
 }
 
 $prepdir = rtrim(strtr(base64_encode(random_bytes(8)), '+/', '-_'), '=');
-shell_exec("sudo mkdir u/$prepdir");
-shell_exec("sudo mkdir u/$prepdir/a");
-shell_exec("sudo chmod -R 733 u/$prepdir");
+shell_exec("mkdir u/$prepdir");
+shell_exec("mkdir u/$prepdir/a");
+shell_exec("chmod -R 733 u/$prepdir");
 $tmp_name = $_FILES["resume"]["tmp_name"];
 $fname = basename($_FILES["resume"]["name"]);
 move_uploaded_file($tmp_name, "u/$prepdir/$fname");
