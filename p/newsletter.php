@@ -9,6 +9,6 @@ if (isset($data->{"email"})) {
 
 	$mysqli->close();
 
-	shell_exec("echo \"Thanks for subscribing to our newsletter!\" | neomutt -s 'Welcome to the Northern Horizon newsletter' '$email'");
+        shell_exec("echo \"Thanks for subscribing to our newsletter!\" | neomutt -s 'Welcome to the Northern Horizon newsletter' '$email'");
 }
 ?>
