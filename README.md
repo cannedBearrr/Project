@@ -35,7 +35,7 @@ The website of Northern Horizon CVLE, showcasing the offers and opportunities at
 ## Authors
 
 - [@cannedBearrr](https://github.com/cannedBearrr)
-- [@brcjk2](https://github.com/brcjk2)
+- [@ysmundi](https://github.com/ysmundi)
 
 
 
