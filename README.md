@@ -94,7 +94,7 @@ Start the server
 
 ## Support
 
-For support, email jiaxi.zhang@g.northernacademy.org or henry.li@g.northernacademy.org
+For support, email yuvraj.mundi@g.northernacademy.org or henry.li@g.northernacademy.org
 
 
 ## Tech Stack
