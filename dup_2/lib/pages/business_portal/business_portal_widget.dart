@@ -898,26 +898,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               child: Column(
                                                 children: [
                                                   Text(
-                                                    'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.',
+                                                    'Northern Horizon (NH) stands out for your educational needs with personalized career counseling, skill development programs, industry exposure, and mentorship. Led by President Anson Zhao, with over 30 years of diverse corporate experience, NH empowers students to become leaders and innovators. We are not just an institution; we are a pathway to realizing potential into real-world achievements.',
                                                     textAlign:
-                                                        TextAlign.justify,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Inria Serif',
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                  SizedBox(
-                                                      height:
-                                                          10.0), // Add spacing between the two text sections if needed
-                                                  Text(
-                                                    'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.',
-                                                    textAlign:
-                                                        TextAlign.justify,
+                                                        TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium

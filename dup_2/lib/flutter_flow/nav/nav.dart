@@ -80,7 +80,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'legalPage',
           path: '/legalPage',
           builder: (context, params) => const LegalPageWidget(),
-        )
+        ),
+        FFRoute(
+          name: 'contactUs',
+          path: '/contactUs',
+          builder: (context, params) => const ContactUsWidget(),
+        ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 
