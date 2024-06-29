@@ -2262,7 +2262,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 1.5,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -2272,14 +2272,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                           children: [
                             SizedBox(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height * 0.333,
+                              height: MediaQuery.sizeOf(context).height * 0.5,
                               child: Stack(
                                 children: [
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: MediaQuery.sizeOf(context).height *
-                                        0.333,
+                                        0.5,
                                     decoration: const BoxDecoration(
                                       color: Color(0xFFEEB609),
                                     ),
@@ -2315,7 +2315,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            MainAxisAlignment.spaceEvenly,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
                                         children: [
@@ -2366,14 +2366,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                             ),
                             SizedBox(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height * 0.333,
+                              height: MediaQuery.sizeOf(context).height * 0.5,
                               child: Stack(
                                 children: [
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: MediaQuery.sizeOf(context).height *
-                                        0.333,
+                                        0.5,
                                     decoration: const BoxDecoration(
                                       color: Color(0xFFE7DDC6),
                                     ),
@@ -2460,14 +2460,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                             ),
                             SizedBox(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height * 0.333,
+                              height: MediaQuery.sizeOf(context).height * 0.5,
                               child: Stack(
                                 children: [
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: MediaQuery.sizeOf(context).height *
-                                        0.333,
+                                        0.5,
                                     decoration: const BoxDecoration(
                                       color: Color(0xFFD9D9D9),
                                     ),
@@ -2562,7 +2562,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 0.9,
+                        height: MediaQuery.sizeOf(context).height * 1.5,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -2575,7 +2575,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.3,
+                                      MediaQuery.sizeOf(context).height * 0.5,
                                   child: Stack(
                                     children: [
                                       Container(
@@ -2584,7 +2584,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                 1.0,
                                         height:
                                             MediaQuery.sizeOf(context).height *
-                                                0.333,
+                                                0.5,
                                         decoration: const BoxDecoration(
                                           color: Color(0xFFEEB609),
                                         ),
@@ -2598,7 +2598,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                   0.9,
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
-                                              0.255,
+                                              0.5,
                                           decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -2620,7 +2620,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
-                                                        0.45,
+                                                        0.30,
                                                     height: MediaQuery.sizeOf(
                                                                 context)
                                                             .height *
@@ -2684,7 +2684,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.3,
+                                      MediaQuery.sizeOf(context).height * 0.5,
                                   child: Stack(
                                     children: [
                                       Container(
@@ -2693,7 +2693,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                 1.0,
                                         height:
                                             MediaQuery.sizeOf(context).height *
-                                                0.333,
+                                                0.5,
                                         decoration: const BoxDecoration(
                                           color: Color(0xFFE7DDC6),
                                         ),
@@ -2707,7 +2707,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                   0.9,
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
-                                              0.255,
+                                              0.5,
                                           decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -2793,7 +2793,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.3,
+                                      MediaQuery.sizeOf(context).height * 0.5,
                                   child: Stack(
                                     children: [
                                       Container(
@@ -2802,7 +2802,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                 1.0,
                                         height:
                                             MediaQuery.sizeOf(context).height *
-                                                0.333,
+                                                0.5,
                                         decoration: const BoxDecoration(
                                           color: Color(0xFFD9D9D9),
                                         ),
@@ -2816,7 +2816,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                   0.9,
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
-                                              0.255,
+                                              0.5,
                                           decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
