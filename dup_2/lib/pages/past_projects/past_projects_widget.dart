@@ -256,7 +256,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                     'Student Projects',
                     style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
                       fontSize: 40.0,
-                      color: const Color(0xFF008dff),
+                      color: const Color(0xFFEEB609),
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Poppins',// Set the font size to 40
                     ),
