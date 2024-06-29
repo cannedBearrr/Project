@@ -472,8 +472,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
                                                       onPressed: () {
-                                                        print(
-                                                            'Button pressed ...');
+                                                        contentExpanded = true;
+                                                        print('Button pressed ...');
                                                       },
                                                       text: 'LEARN MORE',
                                                       options: FFButtonOptions(
@@ -741,8 +741,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                           0.0, 20.0, 0.0, 0.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () {
-                                                      print(
-                                                          'Button pressed ...');
+                                                      contentExpanded = true;
+                                                      print('Button pressed ...');
                                                     },
                                                     text: 'LEARN MORE',
                                                     options: FFButtonOptions(
