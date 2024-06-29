@@ -3901,7 +3901,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                       Builder (
                         builder: (BuildContext context) {
-                          Container(
+                          return Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 0.15,
                           decoration: const BoxDecoration(
@@ -3919,6 +3919,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () {
+                                    print("pressed");
                                     if (mounted) {
                                       WidgetsBinding.instance.addPostFrameCallback((_) {
                                         if (mounted) {
@@ -3926,10 +3927,10 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                             0,
                                             duration: Duration(milliseconds: 500),
                                             curve: Curves.easeInOut,
-                                          );
-                                        }
-                                      });
-                                    }
+                                        );
+                                      }
+                                    });
+                                  }
                                   },
                                   child: Text(
                                     'NORTHERN HORIZON',
