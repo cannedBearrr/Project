@@ -474,6 +474,16 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       onPressed: () {
                                                         contentExpanded = true;
                                                         print('Button pressed ...');
+                                                          int x = responsiveVisibility(context: context, desktop: false)
+                                                              ? responsiveVisibility(context: context, tabletLandscape: false)
+                                                                  ? -25
+                                                                  : 0
+                                                              : 40;
+                                                          scrollController.animateTo(
+                                                            (screenHeight + min(screenWidth * 3 / 4, screenHeight)) / 2 + x,
+                                                            duration: const Duration(seconds: 2),
+                                                            curve: Curves.easeInOut,
+                                                          );
                                                       },
                                                       text: 'LEARN MORE',
                                                       options: FFButtonOptions(
@@ -743,6 +753,16 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                     onPressed: () {
                                                       contentExpanded = true;
                                                       print('Button pressed ...');
+                                                          int x = responsiveVisibility(context: context, desktop: false)
+                                                              ? responsiveVisibility(context: context, tabletLandscape: false)
+                                                                  ? -25
+                                                                  : 0
+                                                              : 40;
+                                                          scrollController.animateTo(
+                                                            (screenHeight + min(screenWidth * 3 / 4, screenHeight)) / 2 + x,
+                                                            duration: const Duration(seconds: 2),
+                                                            curve: Curves.easeInOut,
+                                                          );
                                                     },
                                                     text: 'LEARN MORE',
                                                     options: FFButtonOptions(
