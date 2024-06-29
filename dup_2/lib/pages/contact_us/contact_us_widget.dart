@@ -81,7 +81,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                     size: 24.0,
                                   ),
                                   onPressed: () async {
-                                    context.pushNamed('homePage');
+                                    context.pushNamed('parentPortal');
                                   },
                                 ),
                               ),
@@ -110,7 +110,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                     size: 24.0,
                                   ),
                                   onPressed: () async {
-                                    context.pushNamed('homePage');
+                                    context.pushNamed('parentPortal');
                                   },
                                 ),
                               ),
@@ -323,7 +323,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Yuvraj Mundi, a high school student, \nexcels in software development. \nHe has completed advanced \ncoding courses and participated \nin national competitions. Yuvraj\'s \nskills and dedication make him a \nkey member of our coding team.',
+                                        'Yuvraj Mundi, a high school \nstudent, excels in software \ndevelopment. He has \ncompleted advanced \ncoding courses and \nparticipated in national \ncompetitions. Yuvraj\'s \nskills and dedication \nmake him a key member \nof our coding team.',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -453,7 +453,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Richard Vu, a high school \nstudent, has a talent for \ndesign and user experience. \nHe has won awards for his \ncreative work and is skilled \nin using various design \ntools. Richard\'s fresh perspective \nbrings innovative ideas to our \nUI/UX projects.',
+                                        'Richard Vu, a high school \nstudent, has a talent for \ndesign and user experience. \nHe has won awards for his \ncreative work and is skilled \nin using various design \ntools. Richard\'s fresh \nperspective brings \ninnovative ideas to our \nUI/UX projects.',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -583,7 +583,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                         ),
                                       ),
                                       Text(
-                                        'Angel Yuan, an ambitious high school \nstudent, has a strong interest in \nmarketing. She has been involved in \nschool marketing projects and is \nproactive in learning about digital \nmarketing trends. Angel\'s \ncreativity and drive are \nassets to our marketing team.',
+                                        'Angel Yuan, an ambitious high \nschool student, has a strong \ninterest in marketing. She has \nbeen involved in school \nmarketing projects and is \nproactive in learning about \ndigital marketing trends. \nAngel\'s creativity and drive \nare assets to our marketing team.',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
