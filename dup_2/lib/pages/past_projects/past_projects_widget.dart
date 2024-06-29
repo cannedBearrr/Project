@@ -255,9 +255,9 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                   Text(
                     'Student Projects',
                     style: FlutterFlowTheme.of(context).bodyMedium.copyWith(
-                      fontSize: 40.0,
+                      fontSize: 60.0,
                       color: const Color(0xFFEEB609),
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w900,
                       fontFamily: 'Poppins',// Set the font size to 40
                     ),
                   ),
@@ -321,7 +321,12 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontFamily: 'Plus Jakarta Sans',
+                                                  fontSize: 12,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -356,7 +361,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 15,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -391,7 +400,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 15,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -426,7 +439,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 15,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -461,7 +478,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 15,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -496,7 +517,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(10),
                                               child: Text(
                                                 'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
-                                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 15,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                             const Spacer(flex: 3),
@@ -594,8 +619,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Text(
                                           'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                            fontSize: 15,
+                                            letterSpacing: 0.0,
                                           ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
                                         const SizedBox(height:30),
@@ -631,8 +658,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           child: Text(
                                             'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                              fontSize: 15,
+                                              letterSpacing: 0.0,
                                             ),
+                                            textAlign: TextAlign.center,
                                           ),
                                         ),
                                       const SizedBox(height:30),
@@ -668,8 +697,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           child: Text(
                                             'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                              fontSize: 15,
+                                              letterSpacing: 0.0,
                                             ),
+                                            textAlign: TextAlign.center,
                                           ),
                                         ),
                                         const SizedBox(height:30),
@@ -705,8 +736,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Text(
                                           'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                            fontSize: 15,
+                                            letterSpacing: 0.0,
                                           ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
                                         const SizedBox(height:30),
@@ -742,8 +775,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                         child: Text(
                                           'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                              fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                            fontSize: 15,
+                                            letterSpacing: 0.0,
                                           ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
                                       const SizedBox(height:30),
@@ -779,8 +814,10 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                           child: Text(
                                             'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                fontSize: (responsiveVisibility(context: context, tablet: false)) ? 16 : 14
+                                              fontSize: 15,
+                                              letterSpacing: 0.0,
                                             ),
+                                            textAlign: TextAlign.center,
                                           ),
                                         ),
                                         const SizedBox(height:30),
@@ -886,7 +923,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                               padding: const EdgeInsets.all(20.0),
                                               child: Text(
                                                 'ESP is a collaborative project between Northern Horizon, Fei Tian College and NASA earth scientists. The project aims to create an innovative way of predicting earthquakes using our own specifically developed machine learning model, and our data are collected from our self-constructed sensor stations.',
-                                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  fontSize: 20,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                                textAlign: TextAlign.center,
                                               ),
                                             ),
                                           const SizedBox(height:30),
@@ -918,7 +959,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Text(
                                               'Northern Health App is a user-friendly mobile application powered by AI that allows individuals to ask health-related questions and receive accurate and personalized responses, providing convenient access to reliable healthcare information.',
-                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: 20,
+                                                letterSpacing: 0.0,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
                                             const SizedBox(height:30),
@@ -950,7 +995,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Text(
                                               'Covid Tool Kit is a web-based project that allows users to access real-time data on death, recovered, and confirmed cases of COVID-19 in countries around the world, providing accurate and up-to-date information for researchers, healthcare professionals, and individuals seeking to understand the global impact of the pandemic.',
-                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: 20,
+                                                letterSpacing: 0.0,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
                                           const SizedBox(height:30),
@@ -982,7 +1031,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Text(
                                               'CitySmart is an offline project that provides real-time information about available food and water sources in a city during emergencies, ensuring efficient resource utilization and enhancing public safety.',
-                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: 20,
+                                                letterSpacing: 0.0,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
                                           const SizedBox(height:30),
@@ -1014,7 +1067,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Text(
                                               'Invasive Species Heatmap: Africa\'s data-driven pre-alert system for locust season. This innovative program equips farmers, communities, and authorities with timely information, empowering proactive measures to combat locust swarms. By harnessing data analysis and real-time monitoring, it safeguards agriculture and food security, revolutionizing locust control strategies in Africa.',
-                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: 20,
+                                                letterSpacing: 0.0,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
                                           const SizedBox(height:30),
@@ -1046,7 +1103,11 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Text(
                                               'World Heritage Site is a project made by Northern Horizon students showing a 3d globe that contains placemarks with the location of World Heritage sites. If the user would like to acquire more information on a site they can click on any placemark and get more information on that specific site.',
-                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                fontSize: 20,
+                                                letterSpacing: 0.0,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
                                           const SizedBox(height:30),
@@ -1110,6 +1171,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                   fontSize: 10 + 2 * min(5, screenWidth / 150),
                                   fontWeight: FontWeight.w600,
                                   lineHeight: 1.13,
+                                  color: const Color(0xFFEEB609),
                                 ),
                               ),
                               Text(
@@ -1174,6 +1236,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 fontSize: 15 + min(5, screenWidth / 150),
                                 fontWeight: FontWeight.w600,
                                 lineHeight: 1.15,
+                                color: const Color(0xFFEEB609),
                               ),
                             ),
                             Text(

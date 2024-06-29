@@ -132,7 +132,7 @@ class _LegalPageWidgetState extends State<LegalPageWidget> {
                                       size: 24.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('homePage');
+                                      context.pushNamed('parentPortal');
                                     },
                                   ),
                                 ),
@@ -396,7 +396,7 @@ class _LegalPageWidgetState extends State<LegalPageWidget> {
                                       size: 24.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('homePage');
+                                      context.pushNamed('parentPortal');
                                     },
                                   ),
                                 ),

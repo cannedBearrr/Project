@@ -849,7 +849,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.asset(
-                                      'assets/images/FT_239_M.webp',
+                                      'images/FT_239_M.webp',
                                       width: MediaQuery.sizeOf(context).width *
                                           0.35,
                                       height:
@@ -1048,7 +1048,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'WHY US?2',
+                                                  'WHY US?',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -1780,7 +1780,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                               0.0),
                                                                   child: Image
                                                                       .asset(
-                                                                    'assets/images/NAM_007_M.webp',
+                                                                    'images/NAM_007_M.webp',
                                                                     width: MediaQuery.sizeOf(context)
                                                                             .width *
                                                                         1.0,
@@ -2629,7 +2629,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'assets/images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
+                                                    'images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -2738,7 +2738,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'assets/images/Mask_group.png',
+                                                    'images/Mask_group.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -2852,7 +2852,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                         BorderRadius.circular(
                                                             8.0),
                                                     child: Image.asset(
-                                                      'assets/images/USGS.png',
+                                                      'images/USGS.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -3732,7 +3732,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  context.pushNamed('homePage');
+                                  context.pushNamed('parentPortal');
                                 },
                                 child: Text(
                                   'NORTHERN HORIZON',
@@ -3973,7 +3973,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  context.pushNamed('homePage');
+                                  context.pushNamed('parentPortal');
                                 },
                                 child: Text(
                                   'NORTHERN HORIZON',
