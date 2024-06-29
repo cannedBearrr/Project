@@ -16,7 +16,10 @@ String? job = '';
 Future<http.Response> sendEmail(String email, String? job) {
   return http.post(
     Uri.parse('https://129.213.117.186/email.php'),
-    headers: <String, String>{'Access-Control-Allow-Origin': "*", 'Content-Type': 'application/json'},
+    headers: <String, String>{
+      'Access-Control-Allow-Origin': "*",
+      'Content-Type': 'application/json'
+    },
     body: jsonEncode(<String, String?>{
       'email': email,
       'job': job,
@@ -33,9 +36,11 @@ class CustomShape extends CustomClipper<Path> {
     var path = Path();
     path.moveTo(60, height * 0.8);
     path.lineTo(60, height - 24);
-    path.arcToPoint(Offset(60 + 24, height), radius: const Radius.circular(24), clockwise: false);
+    path.arcToPoint(Offset(60 + 24, height),
+        radius: const Radius.circular(24), clockwise: false);
     path.lineTo(width - 60 - 24, height);
-    path.arcToPoint(Offset(width - 60, height - 24), radius: const Radius.circular(24), clockwise: false);
+    path.arcToPoint(Offset(width - 60, height - 24),
+        radius: const Radius.circular(24), clockwise: false);
     path.lineTo(width - 60, height * 0.8);
     path.conicTo(width - 60, 60, width, 0, 1);
     path.lineTo(0, 0);
@@ -99,7 +104,6 @@ class _EmailWidgetState extends State<EmailDialog> {
 
   @override
   Widget build(BuildContext context) {
-
     double screenWidth = MediaQuery.sizeOf(context).width;
 
     return Padding(
@@ -136,12 +140,15 @@ class _EmailWidgetState extends State<EmailDialog> {
                   autofocus: false,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: isEmailSent ? 'Sent' : 'Submit mail for enrollment form',
+                    labelText: isEmailSent
+                        ? 'Sent'
+                        : 'Submit mail for enrollment form',
                     labelStyle: FlutterFlowTheme.of(context).labelMedium,
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                    errorStyle: FlutterFlowTheme.of(context).labelSmall.override(
-                      color: const Color(0xffbd434a),
-                    ),
+                    errorStyle:
+                        FlutterFlowTheme.of(context).labelSmall.override(
+                              color: const Color(0xffbd434a),
+                            ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
                         color: Colors.black,
@@ -174,27 +181,26 @@ class _EmailWidgetState extends State<EmailDialog> {
                     fillColor: Colors.white,
                     suffixIcon: GestureDetector(
                       onTap: () async {
-                if (_formKey.currentState!.validate()) {
-                FocusManager.instance.primaryFocus?.unfocus();
-                setState(() {
-                sendEmail(_controller.text, job);
-                isEmailSent = true;
-                });
-                _controller.clear();
-                await resetForm();
-                }
-                },
-                  child: const Icon(
-                    Icons.arrow_forward,
-                  ),
-                ),
+                        if (_formKey.currentState!.validate()) {
+                          FocusManager.instance.primaryFocus?.unfocus();
+                          setState(() {
+                            sendEmail(_controller.text, job);
+                            isEmailSent = true;
+                          });
+                          _controller.clear();
+                          await resetForm();
+                        }
+                      },
+                      child: const Icon(
+                        Icons.arrow_forward,
+                      ),
+                    ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                    letterSpacing: 1.0,
-                    lineHeight: 1.0,
-                    color: Colors.black,
-                  ),
+                        letterSpacing: 1.0,
+                        lineHeight: 1.0,
+                        color: Colors.black,
+                      ),
                   textAlign: TextAlign.start,
                   validator: (value) {
                     return _validateEmail(value!);
@@ -204,10 +210,12 @@ class _EmailWidgetState extends State<EmailDialog> {
             ),
             const SizedBox(height: 2),
             Text(
-              isEmailSent ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.' : '',
+              isEmailSent
+                  ? 'Nice! A confirmation email was sent to you and will expire in 30 minutes.'
+                  : '',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                color: Colors.green,
-              ),
+                    color: Colors.green,
+                  ),
             ),
           ],
         ),
@@ -252,7 +260,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-
     double screenWidth = MediaQuery.sizeOf(context).width;
     double screenHeight = MediaQuery.sizeOf(context).height;
 
@@ -293,9 +300,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   child: Text(
                                     'PARENTS',
                                     textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineMedium
+                                        .override(
                                           fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
                                           fontSize: 16.0,
                                         ),
                                   ),
@@ -320,9 +330,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   child: Text(
                                     'BUSINESS',
                                     textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineMedium
+                                        .override(
                                           fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context).primaryText,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
                                           fontSize: 16.0,
                                         ),
                                   ),
@@ -347,7 +360,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                   child: Text(
                                     'PAST PROJECTS',
                                     textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineMedium
+                                        .override(
                                           fontFamily: 'Outfit',
                                           color: Colors.black,
                                           fontSize: 16.0,
@@ -382,9 +397,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 },
                                 child: Text(
                                   'PARENTS',
-                                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineMedium
+                                      .override(
                                         fontFamily: 'Outfit',
-                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 20.0,
                                       ),
                                 ),
@@ -406,9 +424,12 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 },
                                 child: Text(
                                   'BUSINESS',
-                                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineMedium
+                                      .override(
                                         fontFamily: 'Outfit',
-                                        color: FlutterFlowTheme.of(context).primaryText,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 20.0,
                                       ),
                                 ),
@@ -430,7 +451,9 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                 },
                                 child: Text(
                                   'PAST PROJECTS',
-                                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineMedium
+                                      .override(
                                         fontFamily: 'Outfit',
                                         color: Colors.black,
                                         fontSize: 20.0,
@@ -462,21 +485,27 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                         children: [
                           FadeInImage(
                             placeholder: MemoryImage(kTransparentImage),
-                            image: const AssetImage('assets/images/CopyofWCAwardCerts.jpg'),
+                            image: const AssetImage(
+                                'assets/images/CopyofWCAwardCerts.jpg'),
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                          const SizedBox.expand(child: ColoredBox(color: Colors.black26,)),
+                          const SizedBox.expand(
+                              child: ColoredBox(
+                            color: Colors.black26,
+                          )),
                           Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
                             child: SizedBox(
                               width: screenWidth * 0.8,
                               child: Text(
                                 '"At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world."',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
                                       fontSize: 45,
                                     ),
                                 textAlign: TextAlign.justify,
@@ -503,19 +532,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             borderRadius: BorderRadius.circular(8.0),
                             child: FadeInImage(
                               placeholder: MemoryImage(kTransparentImage),
-                              image: const AssetImage('assets/images/CopyofWCAwardCerts.jpg'),
+                              image: const AssetImage(
+                                  'assets/images/CopyofWCAwardCerts.jpg'),
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                          const SizedBox.expand(
+                              child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 0.0, 20.0, 0.0),
                               child: Text(
                                 '"At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world."',
-                                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
                                       color: Colors.white,
                                       fontSize: 21,
                                     ),
@@ -545,34 +579,43 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                      const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                          const SizedBox.expand(
+                              child: ColoredBox(color: Colors.black45)),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 24.0),
                             child: Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   const SizedBox(),
                                   Text(
                                     'Life at Northern Horizon',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
                                           color: Colors.white,
                                           fontSize: 50,
                                         ),
                                   ),
                                   Text(
                                     'Join Our Community and Help Define It',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
                                           color: Colors.white,
                                           fontSize: 80,
-                                      fontWeight: FontWeight.w800,
+                                          fontWeight: FontWeight.w800,
                                         ),
                                   ),
                                   Text(
                                     'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
                                           color: Colors.white,
                                           fontSize: 26,
                                         ),
@@ -604,7 +647,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                          const SizedBox.expand(child: ColoredBox(color: Colors.black45)),
+                          const SizedBox.expand(
+                              child: ColoredBox(color: Colors.black45)),
                           Align(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -612,33 +656,43 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               children: [
                                 Text(
                                   'Life at Northern Horizon',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: FlutterFlowTheme.of(context).primaryBackground,
-                                    fontSize: (screenWidth > 445) ? 30 : 24,
-                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        fontSize: (screenWidth > 445) ? 30 : 24,
+                                      ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      25.0, 0.0, 25.0, 0.0),
                                   child: Text(
                                     'Join Our Community and Help Define It',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: (screenWidth > 445) ? 50 : 42,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          fontSize:
+                                              (screenWidth > 445) ? 50 : 42,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      20.0, 0.0, 20.0, 0.0),
                                   child: Text(
                                     'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: FlutterFlowTheme.of(context).primaryBackground,
-                                      fontSize: (screenWidth > 445) ? 18 : 17,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          fontSize:
+                                              (screenWidth > 445) ? 18 : 17,
+                                        ),
                                   ),
                                 ),
                               ],
@@ -656,17 +710,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 20.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 40.0, 0.0, 20.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
                               width: screenWidth * 0.55 + 200,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   ClipPath(
                                     clipper: CustomShape(),
@@ -679,12 +736,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 15.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 15.0, 0.0, 0.0),
                                       child: Text(
                                         'Software Developer',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 45,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -696,193 +758,298 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 60.0,
                                     endIndent: 60.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 10.0, 0.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 10.0, 0.0, 15.0),
                                       child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             const SizedBox(height: 4),
                                             Text(
                                               'Minimum qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                             ),
                                             const SizedBox(height: 4),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Bachelor’s degree or equivalent practical experience',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       '2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       '2 years of experience with data structures or algorithms in either an academic or industry setting',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             if (exp1[0]) ...[
                                               const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 20,
-                                                      fontWeight: FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ],
                                             if (exp1[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Master\'s degree or PhD in Computer Science or related technical field',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             ],
                                             if (exp1[2])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         '2 years of experience with front-end frameworks, full-stack development, and/or API development',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp1[3])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience developing accessible technologies',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                          ].divide(const SizedBox(height: 5.0))),
+                                          ].divide(
+                                              const SizedBox(height: 5.0))),
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 30.0, 15.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp1 = !_exp1;
-                                              for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp1.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp1) {
                                                     exp1[i] = !exp1[i];
                                                   } else {
-                                                    exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
+                                                    exp1[exp1.length - i - 1] =
+                                                        !exp1[exp1.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp1 ? 'Read Less' : 'Read More',
+                                            text: _exp1
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -890,8 +1057,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Software Developer';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -900,19 +1070,28 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 15)),
@@ -925,17 +1104,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 20.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
                               width: screenWidth * 0.55 + 200,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   ClipPath(
                                     clipper: CustomShape(),
@@ -948,12 +1130,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 15.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 15.0, 0.0, 0.0),
                                       child: Text(
                                         'Graphic Designer',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 45,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -965,222 +1152,338 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 60.0,
                                     endIndent: 60.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 10.0, 0.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 10.0, 0.0, 15.0),
                                       child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             const SizedBox(height: 4),
                                             Text(
                                               'Minimum qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                             ),
                                             const SizedBox(height: 4),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Bachelor’s degree or equivalent practical experience',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'At least 3 years of graphic design experience with strong portfolio',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Excellent communication and interpersonal skills',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Strong attention to detail and ability to meet deadlines',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             if (exp2[0]) ...[
                                               const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 20,
-                                                      fontWeight: FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ],
                                             if (exp2[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         '5+ years experience in production and graphic design',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             ],
                                             if (exp2[2])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Expert knowledge of Adobe Creative Suite (InDesign, Illustrator, Photoshop), and/or Microsoft Office',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                          ].divide(const SizedBox(height: 5.0))),
+                                          ].divide(
+                                              const SizedBox(height: 5.0))),
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 30.0, 15.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp2 = !_exp2;
-                                              for (int i = 0; i < exp2.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp2.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp2) {
                                                     exp2[i] = !exp2[i];
                                                   } else {
-                                                    exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
+                                                    exp2[exp2.length - i - 1] =
+                                                        !exp2[exp2.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp2 ? 'Read Less' : 'Read More',
+                                            text: _exp2
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
                                             onPressed: () {
-    job = 'Graphic Designer';
-    showDialog<String>(
-    context: context,
-    builder: (BuildContext context) => const Dialog(
-    shape: ContinuousRectangleBorder(),
-    surfaceTintColor: Colors.grey,
-    child: EmailDialog(),
-    ),
-    );
-    },
+                                              job = 'Graphic Designer';
+                                              showDialog<String>(
+                                                context: context,
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
+                                                  surfaceTintColor: Colors.grey,
+                                                  child: EmailDialog(),
+                                                ),
+                                              );
+                                            },
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 15)),
@@ -1193,17 +1496,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 20.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
                               width: screenWidth * 0.55 + 200,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   ClipPath(
                                     clipper: CustomShape(),
@@ -1216,12 +1522,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 15.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 15.0, 0.0, 0.0),
                                       child: Text(
                                         'Sales Manager',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 45,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -1233,193 +1544,298 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 60.0,
                                     endIndent: 60.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 10.0, 0.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 10.0, 0.0, 15.0),
                                       child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             const SizedBox(height: 4),
                                             Text(
                                               'Minimum qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                             ),
                                             const SizedBox(height: 4),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Bachelor’s degree or equivalent practical experience',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       '5 years of experience leading and managing a team',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Experience engaging with accounts, selling a portfolio of products at C-level',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             if (exp3[0]) ...[
                                               const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 20,
-                                                      fontWeight: FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ],
                                             if (exp3[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience leading a team of sellers working with customers that span multiple industries and aligning technology solutions to drive high value business outcomes',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             ],
                                             if (exp3[2])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience leveraging cross-functional leaders including engineering, marketing, partner sales managers, external partners, and solution specialists to build and implement business strategies that yield positive outcomes and results',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp3[3])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Knowledge of startup customers and the differentiated value that Nothern Horizon can provide in this industry',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                          ].divide(const SizedBox(height: 5.0))),
+                                          ].divide(
+                                              const SizedBox(height: 5.0))),
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 30.0, 15.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp3 = !_exp3;
-                                              for (int i = 0; i < exp3.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp3.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp3) {
                                                     exp3[i] = !exp3[i];
                                                   } else {
-                                                    exp3[exp3.length - i - 1] = !exp3[exp3.length - i - 1];
+                                                    exp3[exp3.length - i - 1] =
+                                                        !exp3[exp3.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp3 ? 'Read Less' : 'Read More',
+                                            text: _exp3
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -1427,8 +1843,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Sales Manager';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -1437,19 +1856,28 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 15)),
@@ -1462,17 +1890,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 40.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 40.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(24.0),
                             child: Container(
                               width: screenWidth * 0.55 + 200,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   ClipPath(
                                     clipper: CustomShape(),
@@ -1485,12 +1916,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 15.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 15.0, 0.0, 0.0),
                                       child: Text(
                                         'Marketing Director',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 45,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -1502,253 +1938,394 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 60.0,
                                     endIndent: 60.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 10.0, 0.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 10.0, 0.0, 15.0),
                                       child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             const SizedBox(height: 4),
                                             Text(
                                               'Minimum qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                             ),
                                             const SizedBox(height: 4),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Bachelor\'s degree or equivalent experience',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       '4 years of experience in marketing',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(15, 0, 35, 0),
                                               child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
                                                   const Padding(
-                                                      padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                      padding: EdgeInsets.only(
+                                                          top: 8),
+                                                      child: Icon(
+                                                          Icons.circle_sharp,
+                                                          size: 5)),
                                                   Flexible(
                                                     child: Text(
                                                       'Experience managing cross-functional or cross-team projects',
-                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
                                                             fontSize: 15,
                                                             lineHeight: 1.17,
                                                           ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 5)),
+                                                ].divide(
+                                                    const SizedBox(width: 5)),
                                               ),
                                             ),
                                             if (exp4[0]) ...[
                                               const SizedBox(height: 4),
                                               Text(
                                                 'Preferred qualifications',
-                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                      fontSize: 20,
-                                                      fontWeight: FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ],
                                             if (exp4[1]) ...[
                                               const SizedBox(height: 4),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience translating complex ideas and making them human and relatable',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             ],
                                             if (exp4[2])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience working with product/product marketing disciplines',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp4[3])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience working with creative agencies',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp4[4])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience in program management',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp4[5])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience managing cross-functional teams and stakeholders',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
                                             if (exp4[6])
                                               Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 35, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(15, 0, 35, 0),
                                                 child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     const Padding(
-                                                        padding: EdgeInsets.only(top: 8), child: Icon(Icons.circle_sharp, size: 5)),
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 8),
+                                                        child: Icon(
+                                                            Icons.circle_sharp,
+                                                            size: 5)),
                                                     Flexible(
                                                       child: Text(
                                                         'Experience landing marketing programs across global, regional, and local audiences',
-                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
                                                               fontSize: 16,
                                                               lineHeight: 1.17,
                                                             ),
                                                       ),
                                                     ),
-                                                  ].divide(const SizedBox(width: 5)),
+                                                  ].divide(
+                                                      const SizedBox(width: 5)),
                                                 ),
                                               ),
-                                          ].divide(const SizedBox(height: 5.0))),
+                                          ].divide(
+                                              const SizedBox(height: 5.0))),
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 15.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 30.0, 15.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp4 = !_exp4;
-                                              for (int i = 0; i < exp4.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp4.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp4) {
                                                     exp4[i] = !exp4[i];
                                                   } else {
-                                                    exp4[exp4.length - i - 1] = !exp4[exp4.length - i - 1];
+                                                    exp4[exp4.length - i - 1] =
+                                                        !exp4[exp4.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp4 ? 'Read Less' : 'Read More',
+                                            text: _exp4
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -1756,8 +2333,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Marketing Director';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -1766,19 +2346,28 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 15)),
@@ -1801,17 +2390,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 25.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14.0),
                             child: Container(
                               width: screenWidth * 0.85,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
                                     'assets/images/DSC_1606.webp',
@@ -1820,12 +2412,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     fit: BoxFit.cover,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 17.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 17.0, 0.0, 0.0),
                                       child: Text(
                                         'Software Developer',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 24.5,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -1837,32 +2434,47 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 25.0,
                                     endIndent: 25.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 25.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 10.0, 25.0, 8.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Minimum qualifications',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Bachelor’s degree or equivalent practical experience',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -1871,15 +2483,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   '2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -1888,15 +2508,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   '2 years of experience with data structures or algorithms in either an academic or industry setting',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -1907,22 +2535,35 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           if (exp1[0])
                                             Text(
                                               'Preferred qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
                                             ),
                                           if (exp1[1])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Master\'s degree or PhD in Computer Science or related technical field',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -1932,15 +2573,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp1[2])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     '2 years of experience with front-end frameworks, full-stack development, and/or API development',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -1950,15 +2600,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp1[3])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience developing accessible technologies',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -1971,43 +2630,65 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp1 = !_exp1;
-                                              for (int i = 0; i < exp1.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp1.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp1) {
                                                     exp1[i] = !exp1[i];
                                                   } else {
-                                                    exp1[exp1.length - i - 1] = !exp1[exp1.length - i - 1];
+                                                    exp1[exp1.length - i - 1] =
+                                                        !exp1[exp1.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp1 ? 'Read Less' : 'Read More',
+                                            text: _exp1
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white70,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -2015,8 +2696,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Software Developer';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -2025,20 +2709,29 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 10)),
@@ -2051,17 +2744,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14.0),
                             child: Container(
                               width: screenWidth * 0.85,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
                                     'assets/images/2023NA_030.webp',
@@ -2070,12 +2766,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     fit: BoxFit.cover,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 17.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 17.0, 0.0, 0.0),
                                       child: Text(
                                         'Graphic Designer',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 24.5,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -2087,32 +2788,47 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 25.0,
                                     endIndent: 25.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 25.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 10.0, 25.0, 8.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Minimum qualifications',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Bachelor’s degree or equivalent practical experience',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2121,15 +2837,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'At least 3 years of graphic design experience with strong portfolio',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2138,15 +2862,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Excellent communication and interpersonal skills',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2155,15 +2887,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   '5+ years experience in production and graphic design',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2174,22 +2914,35 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           if (exp2[0])
                                             Text(
                                               'Preferred qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
                                             ),
                                           if (exp2[1])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Master\'s degree or PhD in Computer Science or related technical field',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2199,15 +2952,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp2[2])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Expert knowledge of Adobe Creative Suite (InDesign, Illustrator, Photoshop), and/or Microsoft Office',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2220,43 +2982,65 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp2 = !_exp2;
-                                              for (int i = 0; i < exp2.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp2.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp2) {
                                                     exp2[i] = !exp2[i];
                                                   } else {
-                                                    exp2[exp2.length - i - 1] = !exp2[exp2.length - i - 1];
+                                                    exp2[exp2.length - i - 1] =
+                                                        !exp2[exp2.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp2 ? 'Read Less' : 'Read More',
+                                            text: _exp2
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white70,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -2264,8 +3048,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Graphic Designer';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -2274,20 +3061,29 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 10)),
@@ -2300,17 +3096,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14.0),
                             child: Container(
                               width: screenWidth * 0.85,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
                                     'assets/images/2023NA_231.jpg',
@@ -2319,12 +3118,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     fit: BoxFit.cover,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 17.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 17.0, 0.0, 0.0),
                                       child: Text(
                                         'Sales Manager',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 24.5,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -2336,32 +3140,47 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 25.0,
                                     endIndent: 25.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 25.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 10.0, 25.0, 8.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Minimum qualifications',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Bachelor’s degree or equivalent practical experience',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2370,15 +3189,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   '5 years of experience leading and managing a team',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2387,15 +3214,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Experience engaging with accounts, selling a portfolio of products at C-level',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2406,22 +3241,35 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           if (exp3[0])
                                             Text(
                                               'Preferred qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
                                             ),
                                           if (exp3[1])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience leading a team of sellers working with customers that span multiple industries and aligning technology solutions to drive high value business outcomes',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2431,15 +3279,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp3[2])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience leveraging cross-functional leaders including engineering, marketing, partner sales managers, external partners, and solution specialists to build and implement business strategies that yield positive outcomes and results',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2449,15 +3306,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp3[3])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Knowledge of startup customers and the differentiated value that Northern Horizon can provide in this industry',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2470,43 +3336,65 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp3 = !_exp3;
-                                              for (int i = 0; i < exp3.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp3.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp3) {
                                                     exp3[i] = !exp3[i];
                                                   } else {
-                                                    exp3[exp3.length - i - 1] = !exp3[exp3.length - i - 1];
+                                                    exp3[exp3.length - i - 1] =
+                                                        !exp3[exp3.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp3 ? 'Read Less' : 'Read More',
+                                            text: _exp3
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white70,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -2514,8 +3402,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Sales Manager';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -2524,20 +3415,29 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 10)),
@@ -2550,17 +3450,20 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 25.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 25.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(14.0),
                             child: Container(
                               width: screenWidth * 0.85,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Image.asset(
                                     'assets/images/2023NA_073.jpg',
@@ -2569,12 +3472,17 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     fit: BoxFit.cover,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 17.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 17.0, 0.0, 0.0),
                                       child: Text(
                                         'Marketing Director',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
                                               fontSize: 24.5,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -2586,32 +3494,47 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     height: 0,
                                     indent: 25.0,
                                     endIndent: 25.0,
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 25.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              25.0, 10.0, 25.0, 8.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Minimum qualifications',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Bachelor\'s degree or equivalent experience',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2620,15 +3543,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   '4 years of experience in marketing',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2637,15 +3568,23 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ],
                                           ),
                                           Row(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               const Padding(
-                                                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                  child: Icon(Icons.circle_sharp, size: 4)),
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          5.0, 6.0, 3.0, 0.0),
+                                                  child: Icon(
+                                                      Icons.circle_sharp,
+                                                      size: 4)),
                                               Flexible(
                                                 child: Text(
                                                   'Experience managing cross-functional or cross-team projects',
-                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
                                                         fontSize: 14,
                                                         lineHeight: 1.15,
                                                       ),
@@ -2656,22 +3595,35 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           if (exp4[0])
                                             Text(
                                               'Preferred qualifications',
-                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
                                             ),
                                           if (exp4[1])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience translating complex ideas and making them human and relatable',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2681,15 +3633,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp4[2])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience working with product/product marketing disciplines',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2699,15 +3660,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp4[3])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience working with creative agencies',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2717,15 +3687,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp4[4])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience in program management',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2735,15 +3714,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp4[5])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience managing cross-functional teams and stakeholders',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2753,15 +3741,24 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             ),
                                           if (exp4[6])
                                             Row(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 const Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 6.0, 3.0, 0.0),
-                                                    child: Icon(Icons.circle_sharp, size: 4)),
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(5.0, 6.0,
+                                                                3.0, 0.0),
+                                                    child: Icon(
+                                                        Icons.circle_sharp,
+                                                        size: 4)),
                                                 Flexible(
                                                   child: Text(
                                                     'Experience landing marketing programs across global, regional, and local audiences',
-                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
                                                           fontSize: 14,
                                                           lineHeight: 1.15,
                                                         ),
@@ -2774,43 +3771,65 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 8.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 12.0, 8.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           FFButtonWidget(
                                             onPressed: () {
                                               _exp4 = !_exp4;
-                                              for (int i = 0; i < exp4.length; i++) {
-                                                Future.delayed(Duration(milliseconds: i * 10), () {
+                                              for (int i = 0;
+                                                  i < exp4.length;
+                                                  i++) {
+                                                Future.delayed(
+                                                    Duration(
+                                                        milliseconds: i * 10),
+                                                    () {
                                                   if (_exp4) {
                                                     exp4[i] = !exp4[i];
                                                   } else {
-                                                    exp4[exp4.length - i - 1] = !exp4[exp4.length - i - 1];
+                                                    exp4[exp4.length - i - 1] =
+                                                        !exp4[exp4.length -
+                                                            i -
+                                                            1];
                                                   }
                                                   setState(() {});
                                                 });
                                               }
                                             },
-                                            text: _exp4 ? 'Read Less' : 'Read More',
+                                            text: _exp4
+                                                ? 'Read Less'
+                                                : 'Read More',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: Colors.white70,
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.black87,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.black87,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 0.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                           FFButtonWidget(
@@ -2818,8 +3837,11 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                               job = 'Marketing Director';
                                               showDialog<String>(
                                                 context: context,
-                                                builder: (BuildContext context) => const Dialog(
-                                                  shape: ContinuousRectangleBorder(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        const Dialog(
+                                                  shape:
+                                                      ContinuousRectangleBorder(),
                                                   surfaceTintColor: Colors.grey,
                                                   child: EmailDialog(),
                                                 ),
@@ -2828,20 +3850,29 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                             text: 'APPLY NOW',
                                             options: FFButtonOptions(
                                               height: 35.0,
-                                              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      18.0, 0.0, 18.0, 0.0),
+                                              iconPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                      0.0, 0.0, 0.0, 0.0),
                                               color: const Color(0xFF1F4477),
-                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-
-                                                    color: Colors.white,
-                                                    fontSize: 15.0,
-                                                  ),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        color: Colors.white,
+                                                        fontSize: 15.0,
+                                                      ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ].divide(const SizedBox(width: 10)),
