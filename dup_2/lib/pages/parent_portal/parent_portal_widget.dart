@@ -2527,7 +2527,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'ANSON ZHAO',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                              color: const Color(0xFFEEB609),
                                                               fontSize: min(-10.0 + screenWidth / 24, 60),
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -2604,7 +2604,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'RICHARD CUI',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: min(-10.0 + screenWidth / 24, 60),
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -2681,7 +2681,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'GIANG NGUYEN',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: min(-10.0 + screenWidth / 24, 60),
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -2758,7 +2758,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'MINH PHAM',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: min(-10.0 + screenWidth / 24, 60),
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -2834,7 +2834,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                     Text(
                                                       'JAMES ZHANG',
                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                            color: Colors.white,
+                                                        color: const Color(0xFFEEB609),
                                                             fontSize: min(-10.0 + screenWidth / 24, 60),
                                                             fontWeight: FontWeight.bold,
                                                           ),
@@ -2958,7 +2958,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'ANSON ZHAO',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -3034,7 +3034,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'RICHARD CUI',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -3110,7 +3110,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'GIANG NGUYEN',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                              color: const Color(0xFFEEB609),
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -3186,7 +3186,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'MINH PHAM',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
                                                             ),
@@ -3262,7 +3262,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                                       Text(
                                                         'JAMES ZHANG',
                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                              color: Colors.white,
+                                                          color: const Color(0xFFEEB609),
                                                               fontSize: 30.0,
                                                               fontWeight: FontWeight.bold,
                                                             ),

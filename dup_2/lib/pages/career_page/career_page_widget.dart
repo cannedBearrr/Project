@@ -477,6 +477,151 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                   ))
                     Container(
                       width: double.infinity,
+                      height: screenHeight * 1.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            'assets/images/2023NA_289.webp',
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox.expand(
+                              child: ColoredBox(color: Colors.black45)),
+                          Padding(
+                            padding:
+                            const EdgeInsets.symmetric(horizontal: 24.0),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const SizedBox(),
+                                  Text(
+                                    'Life at Northern Horizon',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      color: Colors.white,
+                                      fontSize: 50,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Join Our Community and Help Define It',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      color: Colors.white,
+                                      fontSize: 80,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                    ),
+                                  ),
+                                  const SizedBox(),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  if (responsiveVisibility(
+                    context: context,
+                    tabletLandscape: false,
+                    desktop: false,
+                  ))
+                    Container(
+                      width: double.infinity,
+                      height: screenHeight * 1.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            'assets/images/2023NA_289.webp',
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox.expand(
+                              child: ColoredBox(color: Colors.black45)),
+                          Align(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'Life at Northern Horizon',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: (screenWidth > 445) ? 30 : 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      25.0, 0.0, 25.0, 0.0),
+                                  child: Text(
+                                    'Join Our Community and Help Define It',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize:
+                                      (screenWidth > 445) ? 50 : 42,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      20.0, 0.0, 20.0, 0.0),
+                                  child: Text(
+                                    'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize:
+                                      (screenWidth > 445) ? 18 : 17,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  if (responsiveVisibility(
+                    context: context,
+                    phone: false,
+                    tablet: false,
+                  ))
+                    Container(
+                      width: double.infinity,
                       height: screenHeight * 1.0 - 50,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -501,6 +646,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                               width: screenWidth * 0.8,
                               child: Text(
                                 '"At NH, we turn dreams into projects, and projects into purpose. Join us in shaping the future, where every student\'s innovation adds value to the world."',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -508,7 +654,6 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                           .primaryBackground,
                                       fontSize: 45,
                                     ),
-                                textAlign: TextAlign.justify,
                               ),
                             ),
                           ),
@@ -553,149 +698,8 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                       color: Colors.white,
                                       fontSize: 21,
                                     ),
-                                textAlign: TextAlign.justify,
+                                textAlign: TextAlign.center,
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  if (responsiveVisibility(
-                    context: context,
-                    phone: false,
-                    tablet: false,
-                  ))
-                    Container(
-                      width: double.infinity,
-                      height: screenHeight * 1.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            'assets/images/2023NA_289.webp',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          const SizedBox.expand(
-                              child: ColoredBox(color: Colors.black45)),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 24.0),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  const SizedBox(),
-                                  Text(
-                                    'Life at Northern Horizon',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          color: Colors.white,
-                                          fontSize: 50,
-                                        ),
-                                  ),
-                                  Text(
-                                    'Join Our Community and Help Define It',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          color: Colors.white,
-                                          fontSize: 80,
-                                          fontWeight: FontWeight.w800,
-                                        ),
-                                  ),
-                                  Text(
-                                    'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          color: Colors.white,
-                                          fontSize: 26,
-                                        ),
-                                  ),
-                                  const SizedBox(),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  if (responsiveVisibility(
-                    context: context,
-                    tabletLandscape: false,
-                    desktop: false,
-                  ))
-                    Container(
-                      width: double.infinity,
-                      height: screenHeight * 1.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            'assets/images/2023NA_289.webp',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          const SizedBox.expand(
-                              child: ColoredBox(color: Colors.black45)),
-                          Align(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  'Life at Northern Horizon',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        fontSize: (screenWidth > 445) ? 30 : 24,
-                                      ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: Text(
-                                    'Join Our Community and Help Define It',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          fontSize:
-                                              (screenWidth > 445) ? 50 : 42,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 0.0, 20.0, 0.0),
-                                  child: Text(
-                                    'Explore a collaborative culture of inclusion, growth, and originality, supported by resources that make a difference in your life.',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          fontSize:
-                                              (screenWidth > 445) ? 18 : 17,
-                                        ),
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
                         ],
@@ -1078,7 +1082,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -1470,7 +1474,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -1864,7 +1868,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -2354,7 +2358,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -2717,7 +2721,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -3069,7 +3073,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -3423,7 +3427,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -3858,7 +3862,7 @@ class _CareerPageWidgetState extends State<CareerPageWidget> {
                                                   const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                       0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFF1F4477),
+                                              color: const Color(0xFFEEB609),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
