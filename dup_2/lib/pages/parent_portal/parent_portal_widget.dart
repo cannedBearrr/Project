@@ -1700,7 +1700,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                           child: Center(
                             child: Text(
-                              'HOW TO ACHIEVE OUR GOALS?',
+                              'HOW TO ACHIEVE YOUR GOALS?',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontSize: 25.0,
                                     color: Colors.black,
@@ -1721,7 +1721,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                           child: Align(
                             child: Text(
-                              'HOW TO ACHIEVE OUR GOALS?',
+                              'HOW TO ACHIEVE YOUR GOALS?',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontSize: 45.0,
                                     color: Colors.black,
