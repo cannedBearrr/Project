@@ -3743,7 +3743,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 50.0, 0.0, 0.0),
+                                      0.0, 15.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -3802,7 +3802,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 50.0, 0.0, 0.0),
+                                      0.0, 15.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -4003,7 +4003,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 20.0,
+                                  height: 0.0,
                                   child: VerticalDivider(
                                     thickness: 1.0,
                                     color: Color(0xCC000000),
