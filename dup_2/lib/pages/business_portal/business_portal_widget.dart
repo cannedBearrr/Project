@@ -875,7 +875,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                           borderRadius:
                                               BorderRadius.circular(0.0),
                                           child: Image.asset(
-                                            'assets/images/FT_239_M.webp',
+                                            'images/FT_239_M.webp',
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.35,
@@ -1825,7 +1825,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                             BorderRadius.circular(0.0),
                                                                         child: Image
                                                                             .asset(
-                                                                          'assets/images/NAM_007_M.webp',
+                                                                          'images/NAM_007_M.webp',
                                                                           width:
                                                                               MediaQuery.sizeOf(context).width * 1.0,
                                                                           height:
@@ -2660,7 +2660,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                         BorderRadius
                                                             .circular(8.0),
                                                         child: Image.asset(
-                                                          'assets/images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
+                                                          'images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
                                                           width:
                                                           MediaQuery.sizeOf(
                                                               context)
@@ -2779,7 +2779,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                         BorderRadius
                                                             .circular(8.0),
                                                         child: Image.asset(
-                                                          'assets/images/Mask_group.png',
+                                                          'images/Mask_group.png',
                                                           width:
                                                           MediaQuery.sizeOf(
                                                               context)
@@ -2907,7 +2907,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                               .circular(
                                                               8.0),
                                                           child: Image.asset(
-                                                            'assets/images/USGS.png',
+                                                            'images/USGS.png',
                                                             width: MediaQuery
                                                                 .sizeOf(
                                                                 context)
