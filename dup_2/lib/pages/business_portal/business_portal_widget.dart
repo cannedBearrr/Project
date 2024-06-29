@@ -864,65 +864,75 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width:
-                                            MediaQuery.sizeOf(context).width *
-                                                0.65,
-                                        height:
-                                            MediaQuery.sizeOf(context).height *
-                                                0.8,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryBackground,
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              'WHY US?',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'NORD',
-                                                        fontSize: 40.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w900,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                            ),
-                                            Align(
-                                              alignment:
-                                                  const AlignmentDirectional(
-                                                      0.0, 0.0),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        10.0, 0.0, 10.0, 0.0),
-                                                child: Text(
-                                                  'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.\n\nProin in elit diam. Nulla molestie magna in elit laoreet, a tincidunt odio varius. Fusce non suscipit quam. Nam cursus efficitur erat ac posuere. Cras vel neque lectus. Suspendisse ut accumsan dui, in placerat metus. Vivamus dictum diam sit amet suscipit lobortis. Nullam aliquam leo non tellus placerat ornare ac vel ex.',
-                                                  textAlign: TextAlign.justify,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inria Serif',
-                                                        fontSize: 14.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                    Container(
+                                      width: MediaQuery.sizeOf(context).width *
+                                          0.65,
+                                      height:
+                                          MediaQuery.sizeOf(context).height *
+                                              0.8,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'WHY US?',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'NORD',
+                                                  fontSize: 40.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
                                                 ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(10.0, 0.0, 10.0, 0.0),
+                                            child: Center(
+                                              child: Column(
+                                                children: [
+                                                  Text(
+                                                    'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Inria Serif',
+                                                          fontSize: 14.0,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                  ),
+                                                  SizedBox(
+                                                      height:
+                                                          10.0), // Add spacing between the two text sections if needed
+                                                  Text(
+                                                    'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Inria Serif',
+                                                          fontSize: 14.0,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
@@ -1038,7 +1048,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'WHY US?',
+                                                  'WHY US?2',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -1100,7 +1110,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                             ),
                           ),
                         ),
-                      ), // Why Us
+                      ),
                     if (responsiveVisibility(
                       context: context,
                       phone: false,
