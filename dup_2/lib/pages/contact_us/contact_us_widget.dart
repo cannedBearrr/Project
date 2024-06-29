@@ -61,7 +61,6 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                             context: context,
                             phone: false,
                             tablet: false,
-                            tabletLandscape: false,
                           ))
                             Align(
                               alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -81,14 +80,13 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                     size: 24.0,
                                   ),
                                   onPressed: () async {
-                                    context.pushNamed('homePage');
+                                    context.pushNamed('parentPortal');
                                   },
                                 ),
                               ),
                             ),
                           if (responsiveVisibility(
                             context: context,
-                            tablet: false,
                             tabletLandscape: false,
                             desktop: false,
                           ))
@@ -110,7 +108,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                     size: 24.0,
                                   ),
                                   onPressed: () async {
-                                    context.pushNamed('homePage');
+                                    context.pushNamed('parentPortal');
                                   },
                                 ),
                               ),
@@ -119,7 +117,6 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                             context: context,
                             phone: false,
                             tablet: false,
-                            tabletLandscape: false,
                           ))
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -655,7 +652,6 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                             ),
                           if (responsiveVisibility(
                             context: context,
-                            tablet: false,
                             tabletLandscape: false,
                             desktop: false,
                           ))

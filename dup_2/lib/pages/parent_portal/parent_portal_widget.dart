@@ -3634,6 +3634,11 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                         ),
                       ),
+                      if (responsiveVisibility(
+                        context: context,
+                        tablet: false,
+                        phone: false,
+                      ))
                       Builder(
                         builder: (BuildContext context) {
                           return Container(
@@ -3896,7 +3901,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                       ))
                       Builder (
                         builder: (BuildContext context) {
-                          return Container(
+                          Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 0.15,
                           decoration: const BoxDecoration(
@@ -3933,7 +3938,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         .override(
                                       fontFamily: 'NORD',
                                       color: const Color(0xFFEEB609),
-                                      fontSize: 10.0,
+                                      fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w900,
                                       useGoogleFonts: false,
