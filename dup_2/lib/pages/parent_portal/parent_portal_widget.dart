@@ -2917,6 +2917,8 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               PageView(
                                 controller: _model.pageViewController2 ??= PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
+                                scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                allowImplicitScrolling: true,
                                 children: [
                                   Stack(
                                     children: [

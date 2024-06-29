@@ -1,5 +1,6 @@
 // import 'dart:math';
 
+import '../past_projects/past_projects_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import 'dart:ui';
@@ -1151,6 +1152,8 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       PageController(
                                                           initialPage: 0),
                                               scrollDirection: Axis.horizontal,
+                                              scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                              allowImplicitScrolling: true,
                                               children: [
                                                 SizedBox(
                                                   width:
@@ -1730,8 +1733,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                             .pageViewController2 ??=
                                                         PageController(
                                                             initialPage: 0),
-                                                    scrollDirection:
-                                                        Axis.horizontal,
+                                                    scrollDirection: Axis.horizontal,
+                                                    scrollBehavior: YesScrollBehavior().copyWith(scrollbars: false),
+                                                    allowImplicitScrolling: true,
                                                     children: [
                                                       Align(
                                                         alignment:
