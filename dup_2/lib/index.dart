@@ -13,3 +13,4 @@ export 'pages/donate_page_submit/donate_page_submit_widget.dart'
 export 'pages/past_projects/past_projects_widget.dart'
     show PastProjectsWidget;
 export 'pages/career_page/career_page_widget.dart' show CareerPageWidget;
+export '/pages/legal_page/legal_page_widget.dart' show LegalPageWidget;
