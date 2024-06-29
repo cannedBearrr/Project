@@ -1113,7 +1113,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                                 ),
                               ),
                               Text(
-                                'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
+                                'As a newly established non-profit, Northern Horizon needs your support to provide essential resources and skilled educators for our students. Your donations will help us grow and significantly impact the future leaders we nurture. By supporting us, you’re not just making a donation, you’re making a difference.',
                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                   fontSize: 7 + 1.5 * min(5, screenWidth / 150),
                                   lineHeight: 1.13,
@@ -1177,7 +1177,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                               ),
                             ),
                             Text(
-                              'Invest in the future generation of leaders by supporting Northern Horizon’s mission',
+                              'As a newly established non-profit, Northern Horizon needs your support to provide \nessential resources and skilled educators for our students. Your donations will help \nus grow and significantly impact the future leaders we nurture. By supporting us, \nyou’re not just making a donation, you’re making a difference.',
                               style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                           ].divide(const SizedBox(height: 5)),

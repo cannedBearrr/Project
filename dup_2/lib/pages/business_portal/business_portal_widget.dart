@@ -3243,11 +3243,10 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: FFButtonWidget(
-                                                        onPressed: () {
-                                                          print(
-                                                              'Button pressed ...');
+                                                        onPressed: () async {
+                                                          context.pushNamed('pastProjects');
                                                         },
-                                                        text: 'DONATE NOW',
+                                                        text: 'Learn More',
                                                         options:
                                                             FFButtonOptions(
                                                           height:
@@ -3681,11 +3680,10 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 0.0),
                                                   child: FFButtonWidget(
-                                                    onPressed: () {
-                                                      print(
-                                                          'Button pressed ...');
+                                                    onPressed: () async {
+                                                      context.pushNamed('pastProjects');
                                                     },
-                                                    text: 'DONATE NOW',
+                                                    text: 'Learn More',
                                                     options: FFButtonOptions(
                                                       height: MediaQuery.sizeOf(
                                                                   context)
@@ -4290,7 +4288,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                   ),
                                 ],
                               ),
-                            ),
+                            ), //bottomBar
                         ],
                 ),
               ),
