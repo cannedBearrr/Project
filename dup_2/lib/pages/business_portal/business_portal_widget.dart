@@ -473,7 +473,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                     child: FFButtonWidget(
                                                       onPressed: () {
                                                         contentExpanded = true;
-                                                        print('Button pressed ...');
                                                           int x = responsiveVisibility(context: context, desktop: false)
                                                               ? responsiveVisibility(context: context, tabletLandscape: false)
                                                                   ? -25
@@ -3244,10 +3243,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                   0.0),
                                                       child: FFButtonWidget(
                                                         onPressed: () {
-                                                          print(
-                                                              'Button pressed ...');
+                                                          context.pushNamed('pastProjects');
                                                         },
-                                                        text: 'DONATE NOW',
+                                                        text: 'LEARN MORE',
                                                         options:
                                                             FFButtonOptions(
                                                           height:
@@ -3682,10 +3680,9 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                           0.0, 10.0, 0.0, 0.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () {
-                                                      print(
-                                                          'Button pressed ...');
+                                                      context.pushNamed('pastProjects');
                                                     },
-                                                    text: 'DONATE NOW',
+                                                    text: 'LEARN MORE',
                                                     options: FFButtonOptions(
                                                       height: MediaQuery.sizeOf(
                                                                   context)
