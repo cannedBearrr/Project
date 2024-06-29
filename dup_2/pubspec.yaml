@@ -93,6 +93,38 @@ flutter:
     - assets/pdfs/
     - lib/icons/
 
+  fonts:
+    - family: 'NORD'
+      fonts:
+        - asset: assets/fonts/Nord-Book.ttf
+          weight: 200
+        - asset: assets/fonts/Nord-BookItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Nord-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Nord-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Nord-Regular.ttf
+        - asset: assets/fonts/Nord-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Nord-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Nord-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Nord-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Nord-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Nord-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Nord-BlackItalic.ttf
+          weight: 900
+          style: italic
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
