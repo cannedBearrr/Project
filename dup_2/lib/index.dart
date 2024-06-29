@@ -14,3 +14,4 @@ export 'pages/past_projects/past_projects_widget.dart'
     show PastProjectsWidget;
 export 'pages/career_page/career_page_widget.dart' show CareerPageWidget;
 export '/pages/legal_page/legal_page_widget.dart' show LegalPageWidget;
+export '/pages/contact_us/contact_us_widget.dart' show ContactUsWidget;
