@@ -959,7 +959,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                   10.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Proin in elit diam. Nulla molestie \nmagna in elit laoreet, a tincidunt \nodio varius. Fusce non suscipit \nquam. Nam cursus efficitur erat ac \nposuere. Cras vel neque lectus. \nSuspendisse ut accumsan dui, in \nplacerat metus. Vivamus dictum \ndiam sit amet suscipit lobortis. \nNullam aliquam leo non tellus \nplacerat ornare ac vel ex.\n\nProin in elit diam. Nulla molestie magna in elit laoreet, a tincidunt odio varius. Fusce non suscipit quam. Nam cursus efficitur erat ac posuere. Cras vel neque lectus. Suspendisse ut accumsan dui, in placerat metus. Vivamus dictum diam sit amet suscipit lobortis. Nullam aliquam leo non tellus placerat ornare ac vel ex.',
+                                                        'Northern Horizon (NH) stands out for your educational needs with personalized career counseling, skill development programs, industry exposure, and mentorship. Led by President Anson Zhao, with over 30 years of diverse corporate experience, NH empowers students to become leaders and innovators. We are not just an institution; we are a pathway to realizing potential into real-world achievements.',
                                                         textAlign:
                                                             TextAlign.justify,
                                                         style: FlutterFlowTheme
