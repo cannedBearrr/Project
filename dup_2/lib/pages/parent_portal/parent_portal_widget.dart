@@ -3632,7 +3632,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                           ),
                         ),
                       ),
-                      Container(
+                      Builder(
+                        builder: (BuildContext context) {
+                          return Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         height: MediaQuery.sizeOf(context).height * 0.22,
                         decoration: const BoxDecoration(
@@ -3650,8 +3652,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                 focusColor: Colors.transparent,
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed('homePage');
+                                onTap: () {
+                                  if (mounted) {
+                                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                                      if (mounted) {
+                                        Scrollable.of(context)?.position.animateTo(
+                                          0,
+                                          duration: Duration(milliseconds: 500),
+                                          curve: Curves.easeInOut,
+                                        );
+                                      }
+                                    });
+                                  }
                                 },
                                 child: Text(
                                   'NORTHERN HORIZON',
@@ -3872,13 +3884,17 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                             ),
                           ],
                         ),
+                      );
+                        },
                       ),
                       if (responsiveVisibility(
                         context: context,
                         tabletLandscape: false,
                         desktop: false,
                       ))
-                        Container(
+                      Builder (
+                        builder: (BuildContext context) {
+                          return Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 0.15,
                           decoration: const BoxDecoration(
@@ -3895,8 +3911,18 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                   focusColor: Colors.transparent,
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed('homePage');
+                                  onTap: () {
+                                    if (mounted) {
+                                      WidgetsBinding.instance.addPostFrameCallback((_) {
+                                        if (mounted) {
+                                          Scrollable.of(context)?.position.animateTo(
+                                            0,
+                                            duration: Duration(milliseconds: 500),
+                                            curve: Curves.easeInOut,
+                                          );
+                                        }
+                                      });
+                                    }
                                   },
                                   child: Text(
                                     'NORTHERN HORIZON',
@@ -3905,7 +3931,7 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                                         .override(
                                       fontFamily: 'NORD',
                                       color: const Color(0xFFEEB609),
-                                      fontSize: 24.0,
+                                      fontSize: 10.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w900,
                                       useGoogleFonts: false,
@@ -4025,7 +4051,9 @@ class _ParentPortalWidgetState extends State<ParentPortalWidget> {
                               ),
                             ],
                           ),
-                        ),
+                        );
+                        },
+                      )
                     ],
                   ),
                 ),
