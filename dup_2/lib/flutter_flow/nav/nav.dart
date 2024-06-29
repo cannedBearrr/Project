@@ -78,7 +78,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'legalPage',
-          path: 'legalPage',
+          path: '/legalPage',
           builder: (context, params) => const LegalPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
