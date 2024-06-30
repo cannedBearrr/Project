@@ -850,7 +850,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.asset(
-                                      'images/FT_239_M.webp',
+                                      'assets/images/FT_239_M.webp',
                                       width: MediaQuery.sizeOf(context).width *
                                           0.35,
                                       height:
@@ -1776,7 +1776,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                               0.0),
                                                                   child: Image
                                                                       .asset(
-                                                                    'images/NAM_007_M.webp',
+                                                                    'assets/images/NAM_007_M.webp',
                                                                     width: MediaQuery.sizeOf(context)
                                                                             .width *
                                                                         1.0,
@@ -2625,7 +2625,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
+                                                    'assets/images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -2734,7 +2734,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'images/Mask_group.png',
+                                                    'assets/images/Mask_group.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -2848,7 +2848,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                         BorderRadius.circular(
                                                             8.0),
                                                     child: Image.asset(
-                                                      'images/USGS.png',
+                                                      'assets/images/USGS.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -4031,9 +4031,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
-                                          fontSize: 18.0,
-                                          letterSpacing: 0.0,
+                                      fontFamily: 'NORD',
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.normal,
+                                      useGoogleFonts: false,
                                         ),
                                   ),
                                 ),

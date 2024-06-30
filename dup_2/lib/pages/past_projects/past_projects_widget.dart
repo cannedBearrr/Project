@@ -258,7 +258,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                       fontSize: 60.0,
                       color: const Color(0xFFEEB609),
                       fontWeight: FontWeight.w900,
-                      fontFamily: 'Poppins',// Set the font size to 40
+                      fontFamily: 'Poppins', // Set the font size to 40
                     ),
                   ),
 
