@@ -1,5 +1,7 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -19,726 +21,402 @@ class FooterWidget extends StatelessWidget {
           phone: false,
           tablet: false,
         ))
-          ConstrainedBox(
-            constraints: const BoxConstraints(
-              minWidth: double.infinity,
-            ),
-            child: ColoredBox(
-              color: const Color(0xFF4C6A7D),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'LEARN MORE',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+          if (responsiveVisibility(
+                      context: context,
+                      phone: false,
+                      tablet: false,
+                    ))
+                      Container(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 0.22,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFE7DCC6),
                         ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                          child: GestureDetector(
-                            onTap: () async {
-                              context.pushNamed('parentPortal');
-                            },
-                            child: Text(
-                              'Home',
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                color: Colors.white,
-                                fontSize: 13.0,
-                                fontWeight: FontWeight.w200,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Career',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                        Text(
-                          'Our Projects',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ].divide(const SizedBox(height: 5.0)),
-                    ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'WHAT WE DO',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                          child: Text(
-                            'Marketing Solutions',
-                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                              color: Colors.white,
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Website Building',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                        Text(
-                          'Tailored Solutions',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ].divide(const SizedBox(height: 5.0)),
-                    ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'LEGAL',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                          child: GestureDetector(
-                            onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
-                            child: Text(
-                              'Terms and Conditions',
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                color: Colors.white,
-                                fontSize: 13.0,
-                                fontWeight: FontWeight.w200,
-                              ),
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
-                          child: Text(
-                            'Privacy Policy',
-                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                              color: Colors.white,
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ].divide(const SizedBox(height: 5.0)),
-                    ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Contact Us',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                          child: Text(
-                            '+1 (845)-281-9257',
-                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                              color: Colors.white,
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w200,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'azhao@northernacademy.org',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                        Text(
-                          '1 Ashley Ave Middletown, NY',
-                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                            color: Colors.white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w200,
-                          ),
-                        ),
-                      ].divide(const SizedBox(height: 5.0)),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                            child: Image.asset(
-                              'assets/images/linkedin.png',
-                              height: 50,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                            child: Image.asset(
-                              'assets/images/facebook.png',
-                              height: 50,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 25.0),
-                            child: Image.asset(
-                              'assets/images/twitter.png',
-                              height: 50,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ].divide(const SizedBox(width: 20.0)),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        if (responsiveVisibility(
-          context: context,
-          tabletLandscape: false,
-          desktop: false,
-        ))
-          ConstrainedBox(
-            constraints: const BoxConstraints(minHeight: 155),
-            child: Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xFF4C6A7D),
-              ),
-              child: Stack(
-                children: [
-                  if (screenWidth > 430)
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'LEARN MORE',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                child: GestureDetector(
-                                  onTap: () async {
-                                    context.pushNamed('parentPortal');
-                                  },
-                                  child: Text(
-                                    'Home',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                'Career',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                              Text(
-                                'Our Projects',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 2.0)),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'WHAT WE DO',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                child: Text(
-                                  'Marketing Solutions',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                'Website Building',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                              Text(
-                                'Tailored Solutions',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 2.0)),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'LEGAL',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                child: GestureDetector(
-                                  onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
-                                  child: Text(
-                                    'Terms and Conditions',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
-                                child: Text(
-                                  'Privacy Policy',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                '',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 2.0)),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'CONTACT US',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                child: Text(
-                                  '+1 (845)-281-9257',
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                    fontWeight: FontWeight.w200,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                'azhao@northernacademy.org',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                              Text(
-                                '1 Ashley Ave Middletown, NY',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                  color: Colors.white,
-                                  fontSize: 8.0,
-                                  fontWeight: FontWeight.w200,
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 2.0)),
-                          ),
-                        ],
-                      ),
-                    ),
-                  if (screenWidth <= 430)
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
-                      child: SizedBox(
-                        width: screenWidth,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('parentPortal');
+                                },
+                                child: Text(
+                                  'NORTHERN HORIZON',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'NORD',
+                                        color: const Color(0xFFEEB609),
+                                        fontSize: 40.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w900,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                              ),
+                            ),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  width: screenWidth/2.25,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Text(
-                                        'LEARN MORE',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                        child: GestureDetector(
-                                          onTap: () async {
-                                            context.pushNamed('parentPortal');
-                                          },
-                                          child: Text(
-                                            'Home',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                              color: Colors.white,
-                                              fontSize: 8.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 15.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('legalPage');
+                                    },
+                                    child: Text(
+                                      'LEGAL',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NORD',
+                                            color: const Color(0xFFEEB609),
+                                            fontSize: 36.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Career',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                          color: Colors.white,
-                                          fontSize: 8.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Our Projects',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                          color: Colors.white,
-                                          fontSize: 8.0,
-                                          fontWeight: FontWeight.w200,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 12),
-                                    ].divide(const SizedBox(height: 2.0)),
+                                    ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: screenWidth/2.25,
-                                  child: Column(
-                                                                mainAxisSize: MainAxisSize.max,
-                                                                children: [
-                                  Text(
-                                    'WHAT WE DO',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                    ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 0.0),
+                                  child: Text(
+                                    'PRIVACY POLICY',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Inria Serif',
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Marketing Solutions',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                        color: Colors.white,
-                                        fontSize: 8.0,
-                                        fontWeight: FontWeight.w200,
+                                ),
+                                Text(
+                                  'Terms and Conditions',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inria Serif',
+                                        color: Colors.black,
+                                        fontSize: 20.0,
+                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                  ),
-                                  Text(
-                                    'Website Building',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Tailored Solutions',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 12),
-                                                                ].divide(const SizedBox(height: 2.0)),
-                                                              ),
                                 ),
                               ],
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  width: screenWidth/2.25,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Text(
-                                        'LEGAL',
-                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                        child: GestureDetector(
-                                          onTap: () => launchUrl(Uri.parse('https://129.213.117.186/tc.html')),
-                                          child: Text(
-                                            'Terms and Conditions',
-                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                              color: Colors.white,
-                                              fontSize: 8.0,
-                                              fontWeight: FontWeight.w200,
-                                            ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 15.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('contactUs');
+                                    },
+                                    child: Text(
+                                      'CONTACT US',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NORD',
+                                            color: const Color(0xFFEEB609),
+                                            fontSize: 36.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
-                                        ),
-                                      ),
-                                      GestureDetector(
-                                        onTap: () => launchUrl(Uri.parse('https://129.213.117.186/pp.html')),
-                                        child: Text(
-                                          'Privacy Policy',
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                            color: Colors.white,
-                                            fontSize: 8.0,
-                                            fontWeight: FontWeight.w200,
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(height: 12),
-                                    ].divide(const SizedBox(height: 2.0)),
+                                    ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: screenWidth/2.25,
-                                  child: Column(
-                                                                mainAxisSize: MainAxisSize.max,
-                                                                children: [
-                                  Text(
-                                    'CONTACT US',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                    ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 0.0),
+                                  child: Text(
+                                    '(845)-281-9257',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Inria Serif',
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                    child: Text(
-                                      '+1 (845)-281-9257',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                        color: Colors.white,
-                                        fontSize: 8.0,
-                                        fontWeight: FontWeight.w200,
+                                ),
+                                Text(
+                                  'azhao@northernacademy.org',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inria Serif',
+                                        color: Colors.black,
+                                        fontSize: 20.0,
+                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                  ),
-                                  Text(
-                                    'azhao@northernacademy.org',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                  Text(
-                                    '1 Ashley Ave Middletown, NY',
-                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-
-                                      color: Colors.white,
-                                      fontSize: 8.0,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 12),
-                                                                ].divide(const SizedBox(height: 2.0)),
-                                                              ),
+                                ),
+                                Text(
+                                  '1 Ashley Ave Middletown, NY',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inria Serif',
+                                        color: Colors.black,
+                                        fontSize: 20.0,
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
                               ],
                             ),
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 0.14,
+                              height: MediaQuery.sizeOf(context).height * 1.0,
+                              decoration: const BoxDecoration(),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image.asset(
-                                    'assets/images/linkedin.png',
-                                    height: 30,
-                                    color: Colors.white,
+                                  FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 0.0,
+                                    borderWidth: 1.0,
+                                    buttonSize:
+                                        MediaQuery.sizeOf(context).width *
+                                            0.035,
+                                    fillColor: const Color(0x004B39EF),
+                                    icon: FaIcon(
+                                      FontAwesomeIcons.facebook,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 40.0,
+                                    ),
+                                    onPressed: () async {
+                                      await launchURL(
+                                          'https://www.facebook.com/nh122223/');
+                                    },
                                   ),
-                                  Image.asset(
-                                    'assets/images/facebook.png',
-                                    height: 30,
-                                    color: Colors.white,
+                                  FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 0.0,
+                                    borderWidth: 1.0,
+                                    buttonSize:
+                                        MediaQuery.sizeOf(context).width *
+                                            0.035,
+                                    fillColor: const Color(0x004B39EF),
+                                    icon: FaIcon(
+                                      FontAwesomeIcons.instagram,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 40.0,
+                                    ),
+                                    onPressed: () async {
+                                      await launchURL(
+                                          'https://www.instagram.com/northernhorizonn/');
+                                    },
                                   ),
-                                  Image.asset(
-                                    'assets/images/twitter.png',
-                                    height: 30,
-                                    color: Colors.white,
+                                  FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 0.0,
+                                    borderWidth: 1.0,
+                                    buttonSize:
+                                        MediaQuery.sizeOf(context).width *
+                                            0.035,
+                                    fillColor: const Color(0x004B39EF),
+                                    icon: FaIcon(
+                                      FontAwesomeIcons.youtube,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 40.0,
+                                    ),
+                                    onPressed: () async {
+                                      await launchURL(
+                                          'https://www.youtube.com/@ansonz6701/featured');
+                                    },
                                   ),
-                                ]
-                            )
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                    ),
-                  if (screenWidth > 430) ...[
-                    Positioned(
-                      bottom: 0,
-                      left: screenWidth / 2 - 160,
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 20.0),
-                        child: Image.asset(
-                          'assets/images/linkedin.png',
-                          height: 30,
-                          color: Colors.white,
+                    if (responsiveVisibility(
+                      context: context,
+                      tabletLandscape: false,
+                      desktop: false,
+                    ))
+                      Container(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 0.15,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFE7DCC6),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('parentPortal');
+                                },
+                                child: Text(
+                                  'NORTHERN HORIZON',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'NORD',
+                                        color: const Color(0xFFEEB609),
+                                        fontSize: 24.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w900,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('legalPage');
+                                  },
+                                  child: Text(
+                                    'LEGAL',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'NORD',
+                                          fontSize: 18.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 0.0,
+                                  child: VerticalDivider(
+                                    thickness: 1.0,
+                                    color: Color(0xCC000000),
+                                  ),
+                                ),
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('contactUs');
+                                  },
+                                  child: Text(
+                                    'CONTACT US',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                      fontFamily: 'NORD',
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.normal,
+                                      useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 0.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 40.0,
+                                  fillColor: const Color(0x004B39EF),
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.facebook,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 24.0,
+                                  ),
+                                  onPressed: () async {
+                                    await launchURL(
+                                        'https://www.facebook.com/nh122223/');
+                                  },
+                                ),
+                                FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 0.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 40.0,
+                                  fillColor: const Color(0x004B39EF),
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.instagram,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 24.0,
+                                  ),
+                                  onPressed: () async {
+                                    await launchURL(
+                                        'https://www.instagram.com/northernhorizonn/');
+                                  },
+                                ),
+                                FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 0.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 40.0,
+                                  fillColor: const Color(0x004B39EF),
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.youtube,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 24.0,
+                                  ),
+                                  onPressed: () async {
+                                    await launchURL(
+                                        'https://www.youtube.com/@ansonz6701/featured');
+                                  },
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      width: screenWidth,
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
-                        child: Image.asset(
-                          'assets/images/facebook.png',
-                          height: 30,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      right: screenWidth / 2 - 160,
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 80.0, 20.0),
-                        child: Image.asset(
-                          'assets/images/twitter.png',
-                          height: 30,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-
-                  ],
-                ],
-              ),
-            ),
-          ),
       ],
     );
   }

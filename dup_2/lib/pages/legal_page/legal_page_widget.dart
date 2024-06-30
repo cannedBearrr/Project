@@ -102,7 +102,6 @@ class _LegalPageWidgetState extends State<LegalPageWidget> {
                       context: context,
                       phone: false,
                       tablet: false,
-                      tabletLandscape: false,
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
@@ -328,7 +327,6 @@ class _LegalPageWidgetState extends State<LegalPageWidget> {
                       ),
                     if (responsiveVisibility(
                       context: context,
-                      tablet: false,
                       tabletLandscape: false,
                       desktop: false,
                     ))
