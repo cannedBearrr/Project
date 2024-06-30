@@ -865,7 +865,7 @@ class _PastProjectsWidgetState extends State<PastProjectsWidget> {
                   tabletLandscape: false,
                 ))
                   Container(
-                    width: screenWidth * 0.8 - 300,
+                    width: screenWidth * 1 - 300,
                     height: max(screenHeight * 0.7, 630),
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,

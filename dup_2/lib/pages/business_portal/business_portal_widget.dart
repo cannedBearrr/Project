@@ -2584,7 +2584,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.5,
+                                      MediaQuery.sizeOf(context).height * 0.4,
                                   child: Stack(
                                     children: [
                                       Container(
@@ -2693,7 +2693,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.5,
+                                      MediaQuery.sizeOf(context).height * 0.4,
                                   child: Stack(
                                     children: [
                                       Container(
@@ -2802,7 +2802,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 SizedBox(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.sizeOf(context).height * 0.5,
+                                      MediaQuery.sizeOf(context).height * 0.4,
                                   child: Stack(
                                     children: [
                                       Container(
