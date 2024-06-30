@@ -174,7 +174,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'NORD',
-                                              fontSize: 24.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w300,
                                               fontStyle: FontStyle.italic,
@@ -182,7 +182,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             ),
                                       ),
                                       const SizedBox(
-                                        width: 280.0,
+                                        width: 200.0,
                                         child: Divider(
                                           height: 20.0,
                                           thickness: 1.0,
@@ -197,7 +197,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
                                               letterSpacing: 0.0,
-                                              fontSize: 22.0,
+                                              fontSize: 16.0,
                                             ),
                                       ),
                                       Align(
@@ -304,7 +304,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'NORD',
-                                              fontSize: 24.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w300,
                                               fontStyle: FontStyle.italic,
@@ -312,7 +312,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             ),
                                       ),
                                       const SizedBox(
-                                        width: 280.0,
+                                        width: 200.0,
                                         child: Divider(
                                           height: 20.0,
                                           thickness: 1.0,
@@ -327,7 +327,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
                                               letterSpacing: 0.0,
-                                              fontSize: 22.0,
+                                              fontSize: 16.0,
                                             ),
                                       ),
                                       Align(
@@ -434,7 +434,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'NORD',
-                                              fontSize: 24.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w300,
                                               fontStyle: FontStyle.italic,
@@ -442,7 +442,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             ),
                                       ),
                                       const SizedBox(
-                                        width: 280.0,
+                                        width: 200.0,
                                         child: Divider(
                                           height: 20.0,
                                           thickness: 1.0,
@@ -457,7 +457,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
                                               letterSpacing: 0.0,
-                                              fontSize: 22,
+                                              fontSize: 16,
                                             ),
                                       ),
                                       Align(
@@ -564,7 +564,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'NORD',
-                                              fontSize: 24.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w300,
                                               fontStyle: FontStyle.italic,
@@ -572,7 +572,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             ),
                                       ),
                                       const SizedBox(
-                                        width: 280.0,
+                                        width: 200.0,
                                         child: Divider(
                                           height: 20.0,
                                           thickness: 1.0,
@@ -587,7 +587,7 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
                                               letterSpacing: 0.0,
-                                              fontSize: 22,
+                                              fontSize: 16,
                                             ),
                                       ),
                                       Align(

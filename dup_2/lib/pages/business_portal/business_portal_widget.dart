@@ -1217,7 +1217,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                   padding:
                                                                       const EdgeInsetsDirectional
                                                                           .fromSTEB(
-                                                                          0.0,
+                                                                          80.0,
                                                                           0.0,
                                                                           0.0,
                                                                           15.0),
@@ -1248,24 +1248,33 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                                     const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
-                                                                child: Text(
-                                                                  'Northern Horizon offers businesses the chance to engage with talented students \neager to tackle real-world problems for free. By providing your projects to NH, \nyou gain innovative solutions and fresh perspectives while helping students gain \nhands-on experience. This collaboration benefits your company through potential \nfuture hires, enhanced community involvement, and contributions \nto the development of the next generation of professionals.',
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .end,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Inria Serif',
-                                                                        color: Colors
-                                                                            .white,
-                                                                        fontSize:
-                                                                            20.0,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
+                                                                child: Padding(
+                                                                    padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                                  child: Text(
+                                                                    'Northern Horizon offers businesses the chance to engage with talented students \neager to tackle real-world problems for free. By providing your projects to NH, \nyou gain innovative solutions and fresh perspectives while helping students gain \nhands-on experience. This collaboration benefits your company through potential \nfuture hires, enhanced community involvement, and contributions \nto the development of the next generation of professionals.',
+                                                                    textAlign:
+                                                                    TextAlign
+                                                                        .end,
+                                                                    style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                      fontFamily:
+                                                                      'Inria Serif',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                      20.0,
+                                                                      letterSpacing:
+                                                                      0.0,
+                                                                    ),
+                                                                  ),
                                                                 ),
                                                               ),
                                                               Padding(
