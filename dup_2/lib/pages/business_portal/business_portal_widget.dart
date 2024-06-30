@@ -2571,7 +2571,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                     ))
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 1.5,
+                        height: MediaQuery.sizeOf(context).height * 1.2,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
