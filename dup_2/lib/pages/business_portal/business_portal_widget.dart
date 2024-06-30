@@ -431,7 +431,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inria Serif',
-                                                fontSize: 30.0,
+                                                fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -2289,7 +2289,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                             0.0, 0.0),
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional
-                                              .fromSTEB(0.0, 0.0, 100.0, 0.0),
+                                              .fromSTEB(0.0, 0.0, 20.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(0.0),
@@ -2297,7 +2297,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               'images/7422495_nasa_space_shuttle_universe_explore_icon_1.png',
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
-                                                  0.3,
+                                                  0.25,
                                               height: MediaQuery.sizeOf(context)
                                                       .height *
                                                   1.0,
@@ -2430,7 +2430,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                             0.0, 0.0),
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional
-                                              .fromSTEB(100.0, 0.0, 0.0, 0.0),
+                                              .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -2438,7 +2438,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               'images/Mask_group.png',
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
-                                                  0.3,
+                                                  0.25,
                                               height: MediaQuery.sizeOf(context)
                                                       .height *
                                                   1.0,
@@ -2477,7 +2477,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                             0.0, 0.0),
                                         child: Padding(
                                           padding: const EdgeInsetsDirectional
-                                              .fromSTEB(0.0, 0.0, 100.0, 0.0),
+                                              .fromSTEB(0.0, 0.0, 25.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -2485,7 +2485,7 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               'images/USGS.png',
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
-                                                  0.3,
+                                                  0.25,
                                               height: MediaQuery.sizeOf(context)
                                                       .height *
                                                   1.0,
