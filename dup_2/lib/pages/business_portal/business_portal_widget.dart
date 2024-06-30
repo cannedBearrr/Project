@@ -3027,11 +3027,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                     child: Stack(
                                       children: [
                                         ClipRect(
-                                          child: ImageFiltered(
-                                            imageFilter: ImageFilter.blur(
-                                              sigmaX: 10.0,
-                                              sigmaY: 10.0,
-                                            ),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(0.0),
@@ -3049,7 +3044,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                               ),
                                             ),
                                           ),
-                                        ),
+                                          Container(
+                                      width: MediaQuery.sizeOf(context).width * 1.0,
+                                      height: MediaQuery.sizeOf(context).width * 0.45,
+                                      color: Colors.black.withOpacity(0.7),
+                                    ),
                                         Align(
                                           alignment: const AlignmentDirectional(
                                               0.0, 0.0),
@@ -3234,11 +3233,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                     child: Stack(
                                       children: [
                                         ClipRect(
-                                          child: ImageFiltered(
-                                            imageFilter: ImageFilter.blur(
-                                              sigmaX: 10.0,
-                                              sigmaY: 10.0,
-                                            ),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(0.0),
@@ -3255,8 +3249,12 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
-                                          ),
                                         ),
+                                        Container(
+                                      width: MediaQuery.sizeOf(context).width * 1.0,
+                                      height: MediaQuery.sizeOf(context).width * 0.45,
+                                      color: Colors.black.withOpacity(0.7),
+                                    ),
                                         Align(
                                           alignment: const AlignmentDirectional(
                                               0.0, 0.0),
@@ -3439,14 +3437,14 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 child: Stack(
                                   children: [
                                     ClipRect(
-                                      child: ImageFiltered(
-                                        imageFilter: ImageFilter.blur(
-                                          sigmaX: 10.0,
-                                          sigmaY: 10.0,
-                                        ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(0.0),
+                                      // child: ImageFiltered(
+                                      //   imageFilter: ImageFilter.blur(
+                                      //     sigmaX: 10.0,
+                                      //     sigmaY: 10.0,
+                                      //   ),
+                                      //   child: ClipRRect(
+                                      //     borderRadius:
+                                      //         BorderRadius.circular(0.0),
                                           child: Image.network(
                                             'https://images.unsplash.com/photo-1716223996696-ad6252a7fe7c?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                                             width: MediaQuery.sizeOf(context)
@@ -3457,8 +3455,13 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                                 0.45,
                                             fit: BoxFit.cover,
                                           ),
-                                        ),
-                                      ),
+                                        // ),
+                                      // ),
+                                    ),
+                                    Container(
+                                      width: MediaQuery.sizeOf(context).width * 1.0,
+                                      height: MediaQuery.sizeOf(context).width * 0.45,
+                                      color: Colors.black.withOpacity(0.7),
                                     ),
                                     Align(
                                       alignment:
@@ -3617,11 +3620,6 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                 child: Stack(
                                   children: [
                                     ClipRect(
-                                      child: ImageFiltered(
-                                        imageFilter: ImageFilter.blur(
-                                          sigmaX: 10.0,
-                                          sigmaY: 10.0,
-                                        ),
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(0.0),
@@ -3636,7 +3634,11 @@ class _BusinessPortalWidgetState extends State<BusinessPortalWidget>
                                             fit: BoxFit.cover,
                                           ),
                                         ),
-                                      ),
+                                    ),
+                                    Container(
+                                      width: MediaQuery.sizeOf(context).width * 1.0,
+                                      height: MediaQuery.sizeOf(context).width * 0.45,
+                                      color: Colors.black.withOpacity(0.7),
                                     ),
                                     Align(
                                       alignment:
